@@ -1,7 +1,7 @@
 {
   "version": "0.1-draft",
   "status": "proposed generation methods for evaluator-first development; no production policy or model selected",
-  "canonical_snapshot": "incept-learning_truths:records-sha256:8adc5f0e5026741866a01fb1978d3333f55a616e6fdabf14afd51db858df5b55",
+  "canonical_snapshot": "incept-ela-learning-truths:records-sha256:8adc5f0e5026741866a01fb1978d3333f55a616e6fdabf14afd51db858df5b55",
   "population": {
     "all_method_records": 562,
     "universal_scope_method_records": 553,

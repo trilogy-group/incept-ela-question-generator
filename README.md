@@ -1,8 +1,8 @@
-# Incept question generator
+# Incept ELA question generator
 
 This starter builds a lesson's questions in order from its public context. Start with [AGENTS.md](AGENTS.md).
 The first target is the authored Othello 1.1 reference in
-[learning-truths/contract/examples/othello-1-1](https://github.com/trilogy-group/incept-learning_truths/tree/main/contract/examples/othello-1-1),
+[learning-truths/contract/examples/othello-1-1](https://github.com/trilogy-group/incept-ela-learning-truths/tree/main/contract/examples/othello-1-1),
 starting with its reading checks. The reference has 40 extracted units, including guided tasks and paragraph
 subchecks; they are not 40 independent tests of mastery.
 
