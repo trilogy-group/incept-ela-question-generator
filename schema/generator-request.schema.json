@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Question lane public generator request 0.1",
+  "description": "Public course context only; references and transport fields require validation.",
+  "type": "object",
+  "required": ["protocol", "request_id", "course_context", "sequence_blueprint"],
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {"const": "question-lane-generation/0.1"},
+    "request_id": {"type": "string"},
+    "course_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "core_knowledge": {"type": "array", "items": {
+          "type": "object", "required": ["id", "claim", "performance"], "additionalProperties": false,
+          "properties": {
+            "id": {"type": "string"}, "claim": {"type": "string"}, "performance": {"type": "string"},
+            "prerequisite_refs": {"$ref": "#/$defs/ids"}
+          }
+        }},
+        "prerequisites": {"type": "array", "items": {"type": "string"}},
+        "source_assets": {"type": "array", "items": {
+          "type": "object", "required": ["id"], "additionalProperties": false,
+          "properties": {
+            "id": {"type": "string"}, "text": {"type": "string"}, "url": {"type": "string"},
+            "revision": {"type": "string"}, "rights": {"type": "string"}, "media_kind": {"type": "string"}
+          }
+        }},
+        "prior_exposure": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "role": {"type": "string"}, "content": {"type": "string"},
+            "source_refs": {"$ref": "#/$defs/ids"}, "timing": {"type": "string"}
+          }
+        }},
+        "authorized_procedure": {},
+        "curriculum_revision": {"type": "string"},
+        "lesson_position": {},
+        "lesson_plan": {
+          "type": "object", "required": ["id", "phases"], "additionalProperties": false,
+          "properties": {
+            "id": {"type": "string"}, "revision": {"type": "string"}, "title": {"type": "string"},
+            "phases": {"type": "array", "items": {
+              "type": "object", "required": ["id", "role", "target_refs"], "additionalProperties": false,
+              "properties": {
+                "id": {"type": "string"}, "role": {"type": "string"},
+                "target_refs": {"$ref": "#/$defs/ids"}, "source_refs": {"$ref": "#/$defs/ids"},
+                "content_key_refs": {"$ref": "#/$defs/ids"}, "after": {"$ref": "#/$defs/ids"}
+              }
+            }}
+          }
+        },
+        "content_keys": {"type": "array", "items": {
+          "type": "object", "required": ["id", "claim", "target_refs"], "additionalProperties": false,
+          "properties": {
+            "id": {"type": "string"}, "claim": {"type": "string"}, "kind": {"type": "string"},
+            "target_refs": {"$ref": "#/$defs/ids"}, "source_refs": {"$ref": "#/$defs/ids"},
+            "phase_refs": {"$ref": "#/$defs/ids"}
+          }
+        }},
+        "knowledge_map": {
+          "type": "object", "required": ["nodes", "edges"], "additionalProperties": false,
+          "properties": {
+            "revision": {"type": "string"},
+            "nodes": {"type": "array", "items": {
+              "type": "object", "required": ["id", "role"], "additionalProperties": false,
+              "properties": {
+                "id": {"type": "string"}, "role": {"enum": ["core", "prerequisite"]},
+                "claim": {"type": "string"}, "source_refs": {"$ref": "#/$defs/ids"}
+              }
+            }},
+            "edges": {"type": "array", "items": {
+              "type": "object", "required": ["from", "to", "relation"], "additionalProperties": false,
+              "properties": {
+                "from": {"type": "string"}, "to": {"type": "string"}, "relation": {"type": "string"}
+              }
+            }}
+          }
+        },
+        "pairing_tables": {"type": "array", "items": {
+          "type": "object", "required": ["id", "pairs"], "additionalProperties": false,
+          "properties": {
+            "id": {"type": "string"}, "purpose": {"type": "string"},
+            "pairs": {"type": "array", "items": {
+              "type": "object", "required": ["id", "target_ref", "source_ref"], "additionalProperties": false,
+              "properties": {
+                "id": {"type": "string"}, "target_ref": {"type": "string"},
+                "source_ref": {"type": "string"}, "content_key_ref": {"type": "string"},
+                "phase_ref": {"type": "string"}, "rationale": {"type": "string"}
+              }
+            }}
+          }
+        }}
+      }
+    },
+    "sequence_blueprint": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "role": {"type": "string"}, "target": {"$ref": "#/$defs/ids"},
+        "formats": {"$ref": "#/$defs/ids"}, "support": {"type": "string"}, "position": {}
+      }
+    }},
+    "student_context": {"type": "object", "additionalProperties": false, "properties": {
+      "grade": {}, "prerequisite_response_evidence": {}, "individual_difficulty": {},
+      "language": {"type": "string"}, "access_needs": {}
+    }},
+    "known_constraints": {"type": "array", "items": {"type": "string"}},
+    "example_status": {"type": "string"}
+  },
+  "$defs": {"ids": {"type": "array", "items": {"type": "string", "minLength": 1}}}
+}

@@ -1,0 +1,1561 @@
+{
+  "version": "0.1",
+  "description": "Two original authored public course packets. Source fiction and semantic kernels support a bounded compiler, not universal prose interpretation or measured academic quality. Seven tasks per lesson; the final task uses a fresh passage.",
+  "lessons": [
+    {
+      "id": "character-credit",
+      "title": "Words, actions and credit",
+      "request": {
+        "protocol": "question-lane-generation/0.1",
+        "request_id": "character-credit",
+        "course_context": {
+          "core_knowledge": [
+            {
+              "id": "K1",
+              "claim": "Public statements, physical actions and privately stated wishes are distinct evidence kinds.",
+              "performance": "Classify source statements by the exclusive evidence categories given."
+            },
+            {
+              "id": "K2",
+              "claim": "A bounded character interpretation accounts for the local evidence without reversing events or overstating conduct.",
+              "performance": "Select the interpretation that matches the character's statements, contribution and credit request."
+            },
+            {
+              "id": "K3",
+              "claim": "A quotation can support one specific claim without proving every claim about a character.",
+              "performance": "Select the quoted lines relevant to the stated credit claim."
+            },
+            {
+              "id": "K4",
+              "claim": "A source-based explanation links a quotation to the contrast between an opening principle and later conduct.",
+              "performance": "Write an explanation of the opening statement/conduct contrast and explain the quotation's relevance."
+            },
+            {
+              "id": "K5",
+              "claim": "An interpretive question is answerable from the source and requires reasoning about the declared contrast.",
+              "performance": "Formulate an interpretive question and explain which source line a good answer must discuss."
+            },
+            {
+              "id": "K6",
+              "claim": "A rebuttal checks a claim against conflicting source evidence without inferring a permanent trait.",
+              "performance": "Refute the shared-credit overclaim and replace it with a bounded conclusion."
+            },
+            {
+              "id": "K7",
+              "claim": "Fresh evidence can require a different interpretation even when a similar credit problem appears.",
+              "performance": "Integrate a conclusion, quotation, explained link and uncertainty about intent on the fresh passage."
+            }
+          ],
+          "prerequisites": [
+            "Read short prose and identify who says or does what; prerequisite attainment is not yet evidenced.",
+            "Use a quotation to support a claim, then explain its relevance."
+          ],
+          "source_assets": [
+            {
+              "id": "S0",
+              "text": "At the art table, Kai said, \"Everyone may use my pencils.\" He slipped the blue pencil into his pocket. In private, he added, \"I want to save this one for my drawing.\"",
+              "revision": "authored-prototype-model-0.1",
+              "rights": "Original fictional worked example.",
+              "media_kind": "text"
+            },
+            {
+              "id": "S1",
+              "text": "At the workshop door, Mira told the visitors, \"A repair belongs to everyone who helped.\"\nTomas fitted the loose hinge while Mira found the screws. Together they checked that the door would close.\nWhen the visitors returned, Mira moved the repair card so it covered Tomas's name. \"I did this one,\" she told them.\n\"But you asked me to mend the hinge,\" Tomas said quietly.\nMira drew him aside and whispered, \"Let me have the credit today; I need the prize.\"\nThe door stayed open while the visitors inspected the table.",
+              "revision": "authored-prototype-0.1",
+              "rights": "Original authored fiction; no external factual authority claimed.",
+              "media_kind": "text"
+            },
+            {
+              "id": "S2",
+              "text": "During the food-drive meeting, Leena said, \"Our collection is a team effort.\"\nLater, she showed the organizer a list headed \"Collected by Leena\". The list included the bags that Sam had brought.\nSam asked her to add his name. Leena picked up a pen and wrote it beneath her own.\n\"I had only put down one name because the form had one box,\" she said. \"We both brought food.\"\nThe organizer replaced the form with a blank sheet, and Leena wrote both names at the top.",
+              "revision": "authored-prototype-0.1",
+              "rights": "Original authored fiction; no external factual authority claimed.",
+              "media_kind": "text"
+            }
+          ],
+          "prior_exposure": [
+            {
+              "role": "procedure-and-worked-model",
+              "content": "First distinguish what a person says publicly, what they do, and what they report wanting. Then form a claim, choose a quotation, and explain the link. Treat a later passage as new evidence: the earlier answer may not fit it.\n\nModel passage:\nAt the art table, Kai said, \"Everyone may use my pencils.\" He slipped the blue pencil into his pocket. In private, he added, \"I want to save this one for my drawing.\"\n\nWorked example: Kai's offer is a public statement; putting the pencil in his pocket is a physical action; the private line reports a wish. A bounded conclusion is that he offers pencils generally but keeps one back. \"He slipped the blue pencil into his pocket\" supports that exception because it removes that pencil from the shared supply. This does not prove that Kai never shares or reveal what he will do later.",
+              "source_refs": [
+                "S0"
+              ],
+              "timing": "Before the sequence; the transfer passage is withheld until the final task."
+            }
+          ],
+          "authorized_procedure": "First distinguish what a person says publicly, what they do, and what they report wanting. Then form a claim, choose a quotation, and explain the link. Treat a later passage as new evidence: the earlier answer may not fit it.",
+          "curriculum_revision": "authored-prototype-0.1-not-adopted-curriculum",
+          "lesson_plan": {
+            "id": "LP-character-credit",
+            "revision": "authored-prototype-0.1",
+            "title": "Words, actions and credit",
+            "phases": [
+              {
+                "id": "F1",
+                "role": "observation",
+                "target_refs": [
+                  "K1"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C1"
+                ]
+              },
+              {
+                "id": "F2",
+                "role": "claim",
+                "target_refs": [
+                  "K2"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C2"
+                ],
+                "after": [
+                  "F1"
+                ]
+              },
+              {
+                "id": "F3",
+                "role": "evidence",
+                "target_refs": [
+                  "K3"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C3"
+                ],
+                "after": [
+                  "F2"
+                ]
+              },
+              {
+                "id": "F4",
+                "role": "explain",
+                "target_refs": [
+                  "K4"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C4"
+                ],
+                "after": [
+                  "F3"
+                ]
+              },
+              {
+                "id": "F5",
+                "role": "question",
+                "target_refs": [
+                  "K5"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C5"
+                ],
+                "after": [
+                  "F4"
+                ]
+              },
+              {
+                "id": "F6",
+                "role": "rebuttal",
+                "target_refs": [
+                  "K6"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C6"
+                ],
+                "after": [
+                  "F5"
+                ]
+              },
+              {
+                "id": "F7",
+                "role": "transfer",
+                "target_refs": [
+                  "K7"
+                ],
+                "source_refs": [
+                  "S2"
+                ],
+                "content_key_refs": [
+                  "C7"
+                ],
+                "after": [
+                  "F6"
+                ]
+              }
+            ]
+          },
+          "content_keys": [
+            {
+              "id": "C1",
+              "claim": "Public statements, physical actions and privately stated wishes are distinct evidence kinds.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K1"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F1"
+              ]
+            },
+            {
+              "id": "C2",
+              "claim": "A bounded character interpretation accounts for the local evidence without reversing events or overstating conduct.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K2"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F2"
+              ]
+            },
+            {
+              "id": "C3",
+              "claim": "A quotation can support one specific claim without proving every claim about a character.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K3"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F3"
+              ]
+            },
+            {
+              "id": "C4",
+              "claim": "A source-based explanation links a quotation to the contrast between an opening principle and later conduct.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K4"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F4"
+              ]
+            },
+            {
+              "id": "C5",
+              "claim": "An interpretive question is answerable from the source and requires reasoning about the declared contrast.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K5"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F5"
+              ]
+            },
+            {
+              "id": "C6",
+              "claim": "A rebuttal checks a claim against conflicting source evidence without inferring a permanent trait.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K6"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F6"
+              ]
+            },
+            {
+              "id": "C7",
+              "claim": "Fresh evidence can require a different interpretation even when a similar credit problem appears.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K7"
+              ],
+              "source_refs": [
+                "S2"
+              ],
+              "phase_refs": [
+                "F7"
+              ]
+            }
+          ],
+          "knowledge_map": {
+            "revision": "authored-prototype-0.1",
+            "nodes": [
+              {
+                "id": "K1",
+                "role": "core",
+                "claim": "Public statements, physical actions and privately stated wishes are distinct evidence kinds.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K2",
+                "role": "core",
+                "claim": "A bounded character interpretation accounts for the local evidence without reversing events or overstating conduct.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K3",
+                "role": "core",
+                "claim": "A quotation can support one specific claim without proving every claim about a character.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K4",
+                "role": "core",
+                "claim": "A source-based explanation links a quotation to the contrast between an opening principle and later conduct.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K5",
+                "role": "core",
+                "claim": "An interpretive question is answerable from the source and requires reasoning about the declared contrast.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K6",
+                "role": "core",
+                "claim": "A rebuttal checks a claim against conflicting source evidence without inferring a permanent trait.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K7",
+                "role": "core",
+                "claim": "Fresh evidence can require a different interpretation even when a similar credit problem appears.",
+                "source_refs": [
+                  "S2"
+                ]
+              }
+            ],
+            "edges": [
+              {
+                "from": "K1",
+                "to": "K2",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K2",
+                "to": "K3",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K3",
+                "to": "K4",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K4",
+                "to": "K5",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K5",
+                "to": "K6",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K6",
+                "to": "K7",
+                "relation": "supports-practice-sequence"
+              }
+            ]
+          },
+          "pairing_tables": [
+            {
+              "id": "PAIR1",
+              "purpose": "Connect declared target, task, source, phase and authored reference.",
+              "pairs": [
+                {
+                  "id": "P1",
+                  "target_ref": "K1",
+                  "source_ref": "S1",
+                  "content_key_ref": "C1",
+                  "phase_ref": "F1",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P2",
+                  "target_ref": "K2",
+                  "source_ref": "S1",
+                  "content_key_ref": "C2",
+                  "phase_ref": "F2",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P3",
+                  "target_ref": "K3",
+                  "source_ref": "S1",
+                  "content_key_ref": "C3",
+                  "phase_ref": "F3",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P4",
+                  "target_ref": "K4",
+                  "source_ref": "S1",
+                  "content_key_ref": "C4",
+                  "phase_ref": "F4",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P5",
+                  "target_ref": "K5",
+                  "source_ref": "S1",
+                  "content_key_ref": "C5",
+                  "phase_ref": "F5",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P6",
+                  "target_ref": "K6",
+                  "source_ref": "S1",
+                  "content_key_ref": "C6",
+                  "phase_ref": "F6",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P7",
+                  "target_ref": "K7",
+                  "source_ref": "S2",
+                  "content_key_ref": "C7",
+                  "phase_ref": "F7",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                }
+              ]
+            }
+          ]
+        },
+        "sequence_blueprint": [
+          {
+            "role": "observation",
+            "target": [
+              "K1"
+            ],
+            "formats": [
+              "classification"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 1
+          },
+          {
+            "role": "claim",
+            "target": [
+              "K2"
+            ],
+            "formats": [
+              "single_choice"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 2
+          },
+          {
+            "role": "evidence",
+            "target": [
+              "K3"
+            ],
+            "formats": [
+              "evidence_selection"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 3
+          },
+          {
+            "role": "explain",
+            "target": [
+              "K4"
+            ],
+            "formats": [
+              "short_explanation"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 4
+          },
+          {
+            "role": "question",
+            "target": [
+              "K5"
+            ],
+            "formats": [
+              "learner_question"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 5
+          },
+          {
+            "role": "rebuttal",
+            "target": [
+              "K6"
+            ],
+            "formats": [
+              "rebuttal"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 6
+          },
+          {
+            "role": "transfer",
+            "target": [
+              "K7"
+            ],
+            "formats": [
+              "integrated_response"
+            ],
+            "support": "fresh-source-visible; no worked answer or sentence frame",
+            "position": 7
+          }
+        ],
+        "student_context": {
+          "language": "English",
+          "prerequisite_response_evidence": null,
+          "individual_difficulty": null,
+          "access_needs": {
+            "required_modality": "text",
+            "audio_not_required": true
+          }
+        },
+        "known_constraints": [
+          "Keep scoring references, feedback and authoring notes out of the pre-attempt learner packet.",
+          "The learner can reopen the current passage; later passages stay hidden.",
+          "No measured ZPD, difficulty, learning gain or academic approval is claimed.",
+          "A raw first attempt and all refusals remain in the teacher trace."
+        ],
+        "example_status": "Original bounded authoring example; independent academic review pending."
+      },
+      "content_notes": {
+        "version": "bounded-authored/0.1",
+        "domain": "character-inference",
+        "authoring_status": "Original semantic kernel and draft scoring references; not an independently approved question bank.",
+        "kernels": [
+          {
+            "id": "main",
+            "source_ref": "S1",
+            "focus": {
+              "subject": "Mira and the repair",
+              "explanation_focus": "the contrast between Mira's initial statement about sharing a repair and her later treatment of Tomas's contribution",
+              "question_focus": "the contrast between Mira's initial statement about sharing a repair and her private request for the credit",
+              "transfer_question": "Does the new passage show the same deliberate attempt to take someone else's credit? Explain what the evidence does and does not support.",
+              "feedback_direction": "Re-read what Mira tells the visitors, what Tomas says he did, and what Mira asks in private. Connect the details rather than labelling her whole character."
+            },
+            "categories": [
+              {
+                "id": "public",
+                "label": "A statement Mira makes to the visitors"
+              },
+              {
+                "id": "action",
+                "label": "A physical action Mira takes, other than speaking"
+              },
+              {
+                "id": "wanted",
+                "label": "A request or wish Mira states in private"
+              }
+            ],
+            "classifications": [
+              {
+                "id": "e1",
+                "text": "She says the repair belongs to everyone who helped.",
+                "category": "public"
+              },
+              {
+                "id": "e2",
+                "text": "She covers Tomas's name with the repair card.",
+                "category": "action"
+              },
+              {
+                "id": "e3",
+                "text": "She asks to receive the credit because she wants the prize.",
+                "category": "wanted"
+              },
+              {
+                "id": "e4",
+                "text": "She tells the visitors she did the repair.",
+                "category": "public"
+              }
+            ],
+            "claim": "Mira praises shared effort, but asks to receive credit for a repair that Tomas helped make.",
+            "evidence_claim": "Mira seeks credit for herself.",
+            "distractors": [
+              {
+                "id": "d1",
+                "claim": "Mira credits Tomas with mending the hinge, but asks to receive the prize for finding the screws.",
+                "why": "The source shows her claiming the repair publicly, not publicly crediting Tomas with the hinge."
+              },
+              {
+                "id": "d2",
+                "claim": "Mira first claims the repair as her own, but then corrects the card and gives Tomas public credit.",
+                "why": "Imports an unreported correction: the passage ends with a private request for the credit."
+              },
+              {
+                "id": "d3",
+                "claim": "Mira helps with the repair, so her later request is only to receive credit for her own contribution.",
+                "why": "Her genuine contribution does not cancel the broader public claim and private request."
+              }
+            ],
+            "evidence": [
+              {
+                "id": "q1",
+                "quote": "Tomas fitted the loose hinge while Mira found the screws.",
+                "supports": false,
+                "why": "This line establishes who contributed to the repair, but does not itself show Mira seeking the credit."
+              },
+              {
+                "id": "q2",
+                "quote": "\"I did this one,\" she told them.",
+                "supports": true,
+                "why": "Claiming \"I did this one\" to the visitors is evidence that Mira presents the repair as her own."
+              },
+              {
+                "id": "q3",
+                "quote": "\"Let me have the credit today; I need the prize.\"",
+                "supports": true,
+                "why": "The private request directly states that Mira wants the credit for herself."
+              },
+              {
+                "id": "q4",
+                "quote": "\"A repair belongs to everyone who helped.\"",
+                "supports": false,
+                "why": "This is Mira's stated principle about sharing credit; by itself it is not evidence that she seeks the credit for herself."
+              }
+            ],
+            "reasoning_requirements": [
+              "Identify the contrast between Mira's public praise of shared effort and her attempt to receive the credit.",
+              "Connect a quoted detail about the credit claim or private request to that contrast.",
+              "Acknowledge that Tomas did part of the repair; do not claim Mira contributed nothing or infer a permanent trait from one scene."
+            ],
+            "rival_claim": "Mira says a repair belongs to everyone who helped, so she gives Tomas fair credit throughout the passage.",
+            "rebuttal_requirement": "Explain why Mira's public statement alone cannot establish that she shares the credit: her later words and actions conflict with it.",
+            "claim_reason": "Mira contributes screws, while Tomas fits the hinge. Her public claim \"I did this one\" and private request for the credit conflict with her opening statement about shared work.",
+            "answer_examples": {
+              "explain": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "Mira first says a repair belongs to everyone who helped, but later tells the visitors, \"I did this one\" That claims the shared repair for herself, even though Tomas fitted the hinge. It does not mean she did no work: she found the screws.",
+                  "review_note": "R1-R3 can be met: the response establishes the contrast, explains the quotation, and preserves the scope of the evidence.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "\"I did this one,\" she told them.",
+                  "review_note": "A quotation is relevant, but the contrast and its link are not explained; no full reasoning credit yet.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Mira never helps anyone and Tomas did the entire repair alone.",
+                  "review_note": "The claim conflicts with Mira finding the screws and extends beyond this scene; no credit for the overbroad conclusion.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ],
+              "rebuttal": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "Mira first says a repair belongs to everyone who helped, but later tells the visitors, \"I did this one\" That claims the shared repair for herself, even though Tomas fitted the hinge. It does not mean she did no work: she found the screws.",
+                  "review_note": "R1-R3 can be met: the response establishes the contrast, explains the quotation, and preserves the scope of the evidence.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "\"I did this one,\" she told them.",
+                  "review_note": "A quotation is relevant, but the contrast and its link are not explained; no full reasoning credit yet.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Mira never helps anyone and Tomas did the entire repair alone.",
+                  "review_note": "The claim conflicts with Mira finding the screws and extends beyond this scene; no credit for the overbroad conclusion.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ],
+              "question": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "How does Mira's private request for the credit conflict with her opening statement about shared effort? A good answer would discuss \"Let me have the credit today; I need the prize.\" because asking for the credit for herself contrasts with her statement that the repair belongs to everyone who helped.",
+                  "review_note": "The question elicits the declared contrast; the quoted line is relevant and its role is explained, so all three drafted criteria can be met.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "What did Mira say? \"I did this one\"",
+                  "review_note": "A factual question and quotation alone do not meet the required contrast or relevance explanation.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Why is Mira always cruel?",
+                  "review_note": "The question assumes an unsupported permanent trait and supplies no answerable evidence.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ]
+            },
+            "classification_feedback": "Check whom Mira is addressing for a spoken statement; separate physical actions from speech; reserve the private-request category for what she states away from the visitors."
+          },
+          {
+            "id": "fresh",
+            "source_ref": "S2",
+            "focus": {
+              "subject": "Leena and the collection",
+              "transfer_question": "Does this passage show the same deliberate attempt to take someone else's credit? Explain what the evidence does and does not support.",
+              "feedback_direction": "Compare the first list with what Leena does after Sam asks. An initially missing name and a continued refusal to share credit are different claims."
+            },
+            "claim": "Leena initially lists only herself, but adds Sam's name and later writes both names; the passage does not establish that she deliberately keeps his credit.",
+            "evidence": [
+              {
+                "id": "tq1",
+                "quote": "Leena picked up a pen and wrote it beneath her own.",
+                "supports": true
+              },
+              {
+                "id": "tq2",
+                "quote": "\"I had only put down one name because the form had one box,\" she said.",
+                "supports": true
+              },
+              {
+                "id": "tq3",
+                "quote": "Leena wrote both names at the top.",
+                "supports": true
+              }
+            ],
+            "reasoning_requirements": [
+              "State a source-bounded conclusion that distinguishes the initial missing name from Leena's later sharing of credit.",
+              "Include an exact relevant quotation from the fresh passage.",
+              "Explain how that detail limits the claim that Leena deliberately keeps Sam's credit.",
+              "Leave Leena's private intention uncertain; her reported explanation and observed corrections are different kinds of evidence. Defensible alternative interpretations must account for both."
+            ],
+            "answer_examples": {
+              "transfer": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "The passage does not establish that Leena deliberately keeps Sam's credit. She initially uses only her name, but \"Leena wrote both names at the top\", which shows her correcting the public record. Her reason about the one box is reported, so we cannot verify her private intention.",
+                  "review_note": "R1-R4 can be met: a bounded conclusion, relevant quotation, explained correction, and uncertainty about intention are all present.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "Leena wrote both names at the top.",
+                  "review_note": "The detail can meet the evidence criterion, but a conclusion, explained link and scope limit are still missing.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Leena is just like Mira: she takes all the credit and never changes the list.",
+                  "review_note": "The conclusion contradicts the two observed corrections and simply copies the earlier character judgment.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "observation-cause",
+      "title": "What a comparison can establish",
+      "request": {
+        "protocol": "question-lane-generation/0.1",
+        "request_id": "observation-cause",
+        "course_context": {
+          "core_knowledge": [
+            {
+              "id": "K1",
+              "claim": "Measurements and setup details differ from causal explanations.",
+              "performance": "Classify the source statements as observations/setup or causal claims."
+            },
+            {
+              "id": "K2",
+              "claim": "A comparison changing location and age together cannot isolate their contributions.",
+              "performance": "Select the conclusion that accurately reports the means and limits causal attribution."
+            },
+            {
+              "id": "K3",
+              "claim": "Evidence for unequal seedling ages differs from a repeated causal claim.",
+              "performance": "Select the source details relevant to the stated age-difference claim."
+            },
+            {
+              "id": "K4",
+              "claim": "An explanation of a comparison must state the observed difference and the reason a causal contribution cannot be isolated.",
+              "performance": "Write the recorded height comparison and explain the age/location limitation with a quotation."
+            },
+            {
+              "id": "K5",
+              "claim": "A question can require a causal limitation to be explained using the source.",
+              "performance": "Formulate an answerable reasoning question and explain the relevance of a source detail."
+            },
+            {
+              "id": "K6",
+              "claim": "Rejecting one causal certainty does not establish another.",
+              "performance": "Rebut the light-only claim with a source-supported limitation and retain causal uncertainty."
+            },
+            {
+              "id": "K7",
+              "claim": "A changed factor in a fresh domain can limit a causal comparison in the same way.",
+              "performance": "Integrate the reading-time comparison, a prior-practice quotation, an explained causal limitation and uncertainty."
+            }
+          ],
+          "prerequisites": [
+            "Read short prose, comparison sentences and basic whole-number differences; prerequisite attainment is not yet evidenced.",
+            "Use a quotation to support a claim, then explain its relevance."
+          ],
+          "source_assets": [
+            {
+              "id": "S0",
+              "text": "Team P assembled a simple model with large pieces in a mean time of 8 minutes. Team Q assembled a complex model with small pieces in a mean time of 12 minutes. A note claimed, \"Large pieces made the work 4 minutes faster.\"",
+              "revision": "authored-prototype-model-0.1",
+              "rights": "Original fictional worked example.",
+              "media_kind": "text"
+            },
+            {
+              "id": "S1",
+              "text": "Garden club notebook, Friday\nTray A stood beside the classroom window. Its eight seedlings were 18 days old. Their mean height was 9 cm.\nTray B stood on a shaded shelf. Its eight seedlings were 12 days old. Their mean height was 6 cm.\nThe club had placed the older seedlings in Tray A and the younger seedlings in Tray B. It had not assigned seedlings of the same age to the two locations.\nNia wrote, \"The window light made the seedlings 3 cm taller.\"",
+              "revision": "authored-prototype-0.1",
+              "rights": "Original authored fiction; no external factual authority claimed.",
+              "media_kind": "text"
+            },
+            {
+              "id": "S2",
+              "text": "Reading club notebook, Thursday\nGroup A read the same 400-word passage in a room with quiet music. Its mean reading time was 4 minutes. The group consisted of students who had already practised that passage.\nGroup B read it in a silent room. Its mean reading time was 6 minutes. Those students had not seen the passage before.\nStudents were placed in the groups by whether they had practised, rather than by a random draw.\nA poster said, \"Quiet music cuts reading time by 2 minutes.\"",
+              "revision": "authored-prototype-0.1",
+              "rights": "Original authored fiction; no external factual authority claimed.",
+              "media_kind": "text"
+            }
+          ],
+          "prior_exposure": [
+            {
+              "role": "procedure-and-worked-model",
+              "content": "An observation records what happened or how a comparison was set up. A causal claim says why it happened. When groups differ in several ways, their recorded difference alone does not isolate one cause. State what is observed, identify a relevant changed factor, and explain what remains uncertain.\n\nModel passage:\nTeam P assembled a simple model with large pieces in a mean time of 8 minutes. Team Q assembled a complex model with small pieces in a mean time of 12 minutes. A note claimed, \"Large pieces made the work 4 minutes faster.\"\n\nWorked example: The recorded times and piece sizes are observations or setup details; the note gives a causal explanation. Both piece size and model complexity differ. The quotation \"a complex model with small pieces\" identifies an alternative difference, so this comparison does not isolate a piece-size effect. It also does not establish that complexity caused the whole difference.",
+              "source_refs": [
+                "S0"
+              ],
+              "timing": "Before the sequence; the transfer passage is withheld until the final task."
+            }
+          ],
+          "authorized_procedure": "An observation records what happened or how a comparison was set up. A causal claim says why it happened. When groups differ in several ways, their recorded difference alone does not isolate one cause. State what is observed, identify a relevant changed factor, and explain what remains uncertain.",
+          "curriculum_revision": "authored-prototype-0.1-not-adopted-curriculum",
+          "lesson_plan": {
+            "id": "LP-observation-cause",
+            "revision": "authored-prototype-0.1",
+            "title": "What a comparison can establish",
+            "phases": [
+              {
+                "id": "F1",
+                "role": "observation",
+                "target_refs": [
+                  "K1"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C1"
+                ]
+              },
+              {
+                "id": "F2",
+                "role": "claim",
+                "target_refs": [
+                  "K2"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C2"
+                ],
+                "after": [
+                  "F1"
+                ]
+              },
+              {
+                "id": "F3",
+                "role": "evidence",
+                "target_refs": [
+                  "K3"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C3"
+                ],
+                "after": [
+                  "F2"
+                ]
+              },
+              {
+                "id": "F4",
+                "role": "explain",
+                "target_refs": [
+                  "K4"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C4"
+                ],
+                "after": [
+                  "F3"
+                ]
+              },
+              {
+                "id": "F5",
+                "role": "question",
+                "target_refs": [
+                  "K5"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C5"
+                ],
+                "after": [
+                  "F4"
+                ]
+              },
+              {
+                "id": "F6",
+                "role": "rebuttal",
+                "target_refs": [
+                  "K6"
+                ],
+                "source_refs": [
+                  "S1"
+                ],
+                "content_key_refs": [
+                  "C6"
+                ],
+                "after": [
+                  "F5"
+                ]
+              },
+              {
+                "id": "F7",
+                "role": "transfer",
+                "target_refs": [
+                  "K7"
+                ],
+                "source_refs": [
+                  "S2"
+                ],
+                "content_key_refs": [
+                  "C7"
+                ],
+                "after": [
+                  "F6"
+                ]
+              }
+            ]
+          },
+          "content_keys": [
+            {
+              "id": "C1",
+              "claim": "Measurements and setup details differ from causal explanations.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K1"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F1"
+              ]
+            },
+            {
+              "id": "C2",
+              "claim": "A comparison changing location and age together cannot isolate their contributions.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K2"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F2"
+              ]
+            },
+            {
+              "id": "C3",
+              "claim": "Evidence for unequal seedling ages differs from a repeated causal claim.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K3"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F3"
+              ]
+            },
+            {
+              "id": "C4",
+              "claim": "An explanation of a comparison must state the observed difference and the reason a causal contribution cannot be isolated.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K4"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F4"
+              ]
+            },
+            {
+              "id": "C5",
+              "claim": "A question can require a causal limitation to be explained using the source.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K5"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F5"
+              ]
+            },
+            {
+              "id": "C6",
+              "claim": "Rejecting one causal certainty does not establish another.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K6"
+              ],
+              "source_refs": [
+                "S1"
+              ],
+              "phase_refs": [
+                "F6"
+              ]
+            },
+            {
+              "id": "C7",
+              "claim": "A changed factor in a fresh domain can limit a causal comparison in the same way.",
+              "kind": "authoring-reference-needs-academic-review",
+              "target_refs": [
+                "K7"
+              ],
+              "source_refs": [
+                "S2"
+              ],
+              "phase_refs": [
+                "F7"
+              ]
+            }
+          ],
+          "knowledge_map": {
+            "revision": "authored-prototype-0.1",
+            "nodes": [
+              {
+                "id": "K1",
+                "role": "core",
+                "claim": "Measurements and setup details differ from causal explanations.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K2",
+                "role": "core",
+                "claim": "A comparison changing location and age together cannot isolate their contributions.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K3",
+                "role": "core",
+                "claim": "Evidence for unequal seedling ages differs from a repeated causal claim.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K4",
+                "role": "core",
+                "claim": "An explanation of a comparison must state the observed difference and the reason a causal contribution cannot be isolated.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K5",
+                "role": "core",
+                "claim": "A question can require a causal limitation to be explained using the source.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K6",
+                "role": "core",
+                "claim": "Rejecting one causal certainty does not establish another.",
+                "source_refs": [
+                  "S1"
+                ]
+              },
+              {
+                "id": "K7",
+                "role": "core",
+                "claim": "A changed factor in a fresh domain can limit a causal comparison in the same way.",
+                "source_refs": [
+                  "S2"
+                ]
+              }
+            ],
+            "edges": [
+              {
+                "from": "K1",
+                "to": "K2",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K2",
+                "to": "K3",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K3",
+                "to": "K4",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K4",
+                "to": "K5",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K5",
+                "to": "K6",
+                "relation": "supports-practice-sequence"
+              },
+              {
+                "from": "K6",
+                "to": "K7",
+                "relation": "supports-practice-sequence"
+              }
+            ]
+          },
+          "pairing_tables": [
+            {
+              "id": "PAIR1",
+              "purpose": "Connect declared target, task, source, phase and authored reference.",
+              "pairs": [
+                {
+                  "id": "P1",
+                  "target_ref": "K1",
+                  "source_ref": "S1",
+                  "content_key_ref": "C1",
+                  "phase_ref": "F1",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P2",
+                  "target_ref": "K2",
+                  "source_ref": "S1",
+                  "content_key_ref": "C2",
+                  "phase_ref": "F2",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P3",
+                  "target_ref": "K3",
+                  "source_ref": "S1",
+                  "content_key_ref": "C3",
+                  "phase_ref": "F3",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P4",
+                  "target_ref": "K4",
+                  "source_ref": "S1",
+                  "content_key_ref": "C4",
+                  "phase_ref": "F4",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P5",
+                  "target_ref": "K5",
+                  "source_ref": "S1",
+                  "content_key_ref": "C5",
+                  "phase_ref": "F5",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P6",
+                  "target_ref": "K6",
+                  "source_ref": "S1",
+                  "content_key_ref": "C6",
+                  "phase_ref": "F6",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                },
+                {
+                  "id": "P7",
+                  "target_ref": "K7",
+                  "source_ref": "S2",
+                  "content_key_ref": "C7",
+                  "phase_ref": "F7",
+                  "rationale": "Observable performance matched to a source and declared lesson target."
+                }
+              ]
+            }
+          ]
+        },
+        "sequence_blueprint": [
+          {
+            "role": "observation",
+            "target": [
+              "K1"
+            ],
+            "formats": [
+              "classification"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 1
+          },
+          {
+            "role": "claim",
+            "target": [
+              "K2"
+            ],
+            "formats": [
+              "single_choice"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 2
+          },
+          {
+            "role": "evidence",
+            "target": [
+              "K3"
+            ],
+            "formats": [
+              "evidence_selection"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 3
+          },
+          {
+            "role": "explain",
+            "target": [
+              "K4"
+            ],
+            "formats": [
+              "short_explanation"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 4
+          },
+          {
+            "role": "question",
+            "target": [
+              "K5"
+            ],
+            "formats": [
+              "learner_question"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 5
+          },
+          {
+            "role": "rebuttal",
+            "target": [
+              "K6"
+            ],
+            "formats": [
+              "rebuttal"
+            ],
+            "support": "source-visible; general procedure and different-source worked model previously shown",
+            "position": 6
+          },
+          {
+            "role": "transfer",
+            "target": [
+              "K7"
+            ],
+            "formats": [
+              "integrated_response"
+            ],
+            "support": "fresh-source-visible; no worked answer or sentence frame",
+            "position": 7
+          }
+        ],
+        "student_context": {
+          "language": "English",
+          "prerequisite_response_evidence": null,
+          "individual_difficulty": null,
+          "access_needs": {
+            "required_modality": "text",
+            "audio_not_required": true
+          }
+        },
+        "known_constraints": [
+          "Keep scoring references, feedback and authoring notes out of the pre-attempt learner packet.",
+          "The learner can reopen the current passage; later passages stay hidden.",
+          "No measured ZPD, difficulty, learning gain or academic approval is claimed.",
+          "A raw first attempt and all refusals remain in the teacher trace."
+        ],
+        "example_status": "Original bounded authoring example; independent academic review pending."
+      },
+      "content_notes": {
+        "version": "bounded-authored/0.1",
+        "domain": "observation-causality",
+        "authoring_status": "Original fictional data note and semantic kernel; not real experimental evidence or an adopted science curriculum.",
+        "kernels": [
+          {
+            "id": "main",
+            "source_ref": "S1",
+            "focus": {
+              "subject": "the two seedling trays",
+              "explanation_focus": "why the recorded difference in mean height does not isolate the effect of window light",
+              "question_focus": "the difference between a recorded comparison and a claim about its cause",
+              "transfer_question": "Is the poster's explanation justified by this comparison? State what the notes establish and what they leave uncertain.",
+              "feedback_direction": "Check both the location and the age of each tray's seedlings. Which differences could the comparison separate?",
+              "state_comparison_first": true
+            },
+            "categories": [
+              {
+                "id": "observation",
+                "label": "A recorded observation or setup detail"
+              },
+              {
+                "id": "cause",
+                "label": "A claim about what caused the difference"
+              }
+            ],
+            "classifications": [
+              {
+                "id": "e1",
+                "text": "Tray A's mean height was 9 cm.",
+                "category": "observation"
+              },
+              {
+                "id": "e2",
+                "text": "Window light made the seedlings 3 cm taller.",
+                "category": "cause"
+              },
+              {
+                "id": "e3",
+                "text": "The seedlings in Tray A were six days older.",
+                "category": "observation"
+              },
+              {
+                "id": "e4",
+                "text": "The club used different locations for the two trays.",
+                "category": "observation"
+              }
+            ],
+            "claim": "Tray A had the greater mean height, but the comparison does not isolate a light effect because seedling age also differed.",
+            "evidence_claim": "The two locations were compared using seedlings of different ages.",
+            "distractors": [
+              {
+                "id": "d1",
+                "claim": "Tray A had the greater mean height, and using eight seedlings in each tray leaves light as the only changed factor.",
+                "why": "Equal group size does not remove the recorded difference in seedling age."
+              },
+              {
+                "id": "d2",
+                "claim": "Tray A had the greater mean height, but the comparison does not isolate an age effect because both trays had the same light.",
+                "why": "The cautious wording conceals a wrong setup detail: the locations differed in light."
+              },
+              {
+                "id": "d3",
+                "claim": "Tray B had the greater mean height, but the comparison does not isolate a light effect because seedling age also differed.",
+                "why": "The limitation is sound but the stated measurement is reversed."
+              }
+            ],
+            "evidence": [
+              {
+                "id": "q1",
+                "quote": "Its eight seedlings were 18 days old.",
+                "supports": true,
+                "why": "In its full passage context, this records Tray A's seedling age. Compare it with Tray B's age."
+              },
+              {
+                "id": "q2",
+                "quote": "Its eight seedlings were 12 days old.",
+                "supports": true,
+                "why": "In its full passage context, this records Tray B's seedling age. It differs from Tray A's recorded age."
+              },
+              {
+                "id": "q3",
+                "quote": "It had not assigned seedlings of the same age to the two locations.",
+                "supports": true,
+                "why": "The setup explicitly states that seedlings of the same age were not assigned to the locations."
+              },
+              {
+                "id": "q4",
+                "quote": "Nia wrote, \"The window light made the seedlings 3 cm taller.\"",
+                "supports": false,
+                "why": "This reports Nia's causal claim; it supplies no evidence that the compared seedlings were of different ages."
+              }
+            ],
+            "reasoning_requirements": [
+              "State the recorded height difference accurately without treating it as a proven light effect.",
+              "Identify age as another difference between the groups and explain why the comparison cannot separate it from location.",
+              "Do not assert that age caused the whole difference or that light had no effect; this record does not decide either claim."
+            ],
+            "rival_claim": "Tray A is taller and stands by the window, so these notes prove that window light caused the entire difference.",
+            "rebuttal_requirement": "Explain that location and age change together, so the observed difference does not establish how much either factor contributed.",
+            "claim_reason": "The recorded means are 9 cm for Tray A and 6 cm for Tray B. Location differs, but age also differs, so these notes cannot separate a light contribution from an age contribution.",
+            "answer_examples": {
+              "explain": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "Tray A averaged 9 cm and Tray B 6 cm, but the trays differed in both location and age. The note says they had \"not assigned seedlings of the same age to the two locations\", so the comparison cannot isolate the effect of light. It does not tell us whether light contributed at all.",
+                  "review_note": "R1-R3 can be met: the response states the comparison, identifies the second changed factor, explains the limitation, and avoids a causal certainty.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "The taller tray was by the window and was older.",
+                  "review_note": "The setup details are relevant, but the response has not yet explained why the comparison fails to isolate a cause.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Age caused the whole difference, so window light made no difference.",
+                  "review_note": "The response replaces one unsupported causal certainty with another; the notes do not establish this.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ],
+              "rebuttal": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "Tray A averaged 9 cm and Tray B 6 cm, but the trays differed in both location and age. The note says they had \"not assigned seedlings of the same age to the two locations\", so the comparison cannot isolate the effect of light. It does not tell us whether light contributed at all.",
+                  "review_note": "R1-R3 can be met: the response states the comparison, identifies the second changed factor, explains the limitation, and avoids a causal certainty.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "The taller tray was by the window and was older.",
+                  "review_note": "The setup details are relevant, but the response has not yet explained why the comparison fails to isolate a cause.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Age caused the whole difference, so window light made no difference.",
+                  "review_note": "The response replaces one unsupported causal certainty with another; the notes do not establish this.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ],
+              "question": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "Why can the club not use these notes to isolate a light effect? The line about not assigning seedlings of the same age matters because age changes along with location.",
+                  "review_note": "The question asks for the specified causal limitation, identifies a source detail and explains its relevance; three criteria can be met.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "How tall was Tray A? Its mean height was 9 cm.",
+                  "review_note": "This is an answerable factual question, but it does not elicit the declared observation/causality distinction.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "Why did age definitely cause all 3 cm?",
+                  "review_note": "The question assumes the causal result the record cannot establish.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ]
+            },
+            "classification_feedback": "A measurement or setup detail records what was compared. A causal explanation claims why the measured difference occurred. Classify what each statement says, without accepting the explanation as established."
+          },
+          {
+            "id": "fresh",
+            "source_ref": "S2",
+            "focus": {
+              "subject": "the reading-club comparison",
+              "transfer_question": "Is the poster's explanation justified by this comparison? State what the notes establish and what they leave uncertain.",
+              "feedback_direction": "Re-read how the groups were formed and whether they had seen the passage before. Do not replace the poster's certainty with a different unsupported certainty."
+            },
+            "claim": "Group A's mean reading time was shorter, but the groups differed in prior practice as well as music, so the comparison does not isolate a music effect.",
+            "evidence": [
+              {
+                "id": "tq1",
+                "quote": "The group consisted of students who had already practised that passage.",
+                "supports": true
+              },
+              {
+                "id": "tq2",
+                "quote": "Those students had not seen the passage before.",
+                "supports": true
+              },
+              {
+                "id": "tq3",
+                "quote": "Students were placed in the groups by whether they had practised, rather than by a random draw.",
+                "supports": true
+              }
+            ],
+            "reasoning_requirements": [
+              "State that Group A recorded a shorter mean time while rejecting the claim that this comparison isolates a music effect.",
+              "Include an exact relevant quotation from the fresh passage.",
+              "Explain why prior practice is a second changed factor that limits the music claim.",
+              "Leave open whether music contributed; do not assert that practice caused the entire difference."
+            ],
+            "answer_examples": {
+              "transfer": [
+                {
+                  "level": "fully-developed-illustration",
+                  "response": "The music group recorded a shorter mean reading time, but these notes do not isolate a music effect. Its students \"had already practised that passage\", while the other group had not. Prior practice changes along with music, so either could contribute; this record does not separate them.",
+                  "review_note": "R1-R4 can be met: the recorded comparison, relevant quotation, second-factor link and causal uncertainty are all present.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "partial-illustration",
+                  "response": "Group A was faster and had practised before.",
+                  "review_note": "Relevant setup details are present, but the response needs a conclusion about the poster and an explanation of the limit.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                },
+                {
+                  "level": "unsupported-illustration",
+                  "response": "The poster is wrong because practice caused the whole difference and music had no effect.",
+                  "review_note": "The reply rules out a music contribution without evidence and assigns the entire effect to practice.",
+                  "status": "author-drafted illustration, not an independently labelled case"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

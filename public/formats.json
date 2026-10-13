@@ -1,0 +1,1317 @@
+{
+  "version": 1,
+  "status": "local_prototype_catalog_not_academic_approval",
+  "built_date": "2026-10-13",
+  "intent": "Borrow the reference lessons interaction and response shapes while defining quality from course context and source-grounded teaching knowledge.",
+  "boundaries": [
+    "Interaction format is separate from the knowledge target and cognitive operation.",
+    "Code presence, authored unit occurrence and primary quote checks do not establish question quality or learner outcomes.",
+    "Universal learnings inform conditions; historical grade and program thresholds remain scoped provenance, not global adoption.",
+    "No deployed commit is identified from public bundle string presence.",
+    "Generator uses public contracts and course inputs; private evaluator prompts, labels and holdouts are outside this catalog."
+  ],
+  "repos": [
+    {
+      "id": "ela-lessons",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "local_revision_only": true,
+      "local_worktree_modified": false
+    },
+    {
+      "id": "course-renderer",
+      "git_revision": "b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "local_revision_only": true,
+      "local_worktree_modified": true
+    },
+    {
+      "id": "courseplans",
+      "git_revision": "1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "local_revision_only": true,
+      "local_worktree_modified": false
+    }
+  ],
+  "source_files": [
+    {
+      "id": "ela-contract",
+      "repo": "ela-lessons",
+      "path": "src/contract.ts",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "sha256": "489fb2240530a623d5d4577361b119ff5b7936f569a18e0a90c1d3be44faa9a9",
+      "lines": 234,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "ela-builder",
+      "repo": "ela-lessons",
+      "path": "scripts/build-content.py",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "sha256": "7caf511c5052ff0263d7c06e4b86ac06e8e25d5954e3afbc0ebcf989614ae85e",
+      "lines": 1340,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "ela-pin",
+      "repo": "ela-lessons",
+      "path": "src/nodes/PinWords.tsx",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "sha256": "7bda6bc6f38bc3851cd767fb0168ae0ab2d5d4ed0277389d250c57f1dc44e331",
+      "lines": 258,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "ela-dose",
+      "repo": "ela-lessons",
+      "path": "src/nodes/Dose.tsx",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "sha256": "78187ee38476e801791c17d4deadb23ee5fb19d1b1bd2526f9dfe5b39f09f253",
+      "lines": 404,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "ela-content",
+      "repo": "ela-lessons",
+      "path": "src/content/othello-1-1.json",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "sha256": "04184809a63e492b54fcf82a7583bd3a0b11483285c5920ce3752929947f8337",
+      "lines": 7757,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "ela-unpick",
+      "repo": "ela-lessons",
+      "path": "src/components/unpick/Unpick.tsx",
+      "git_revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "sha256": "71cab7305b694f53030a1e37f78b39b6505aa15746813bbce2344d395e5dc8f9",
+      "lines": 87,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "renderer-contract",
+      "repo": "course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "git_revision": "b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "sha256": "7a17ed8d7430369fe16c74cc50490a738ef09738fb2a29c5641cd53ce97867f5",
+      "lines": 3083,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "renderer-dispatch",
+      "repo": "course-renderer",
+      "path": "src/components/book/questions.tsx",
+      "git_revision": "b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "sha256": "85b2dc573ff081a5593879c898459df636109db50414576741000384469b66b3",
+      "lines": 3302,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "renderer-units-3",
+      "repo": "course-renderer",
+      "path": "public/lesson-json/grade-3.json",
+      "git_revision": "b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "sha256": "6dbc44224a6d5915fa1852d6fb7891228af06b2a6875a3f36a3fbd7eca33c38c",
+      "lines": 63278,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "renderer-units-4",
+      "repo": "course-renderer",
+      "path": "public/lesson-json/grade-4.json",
+      "git_revision": "b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "sha256": "2ff9bb8a4b60445f9edf1ec09b4208e1aba2ac787b9f49ebf9a5968040941a22",
+      "lines": 6530,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "renderer-units-5",
+      "repo": "course-renderer",
+      "path": "public/lesson-json/grade-5.json",
+      "git_revision": "b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "sha256": "7b0d2cec6667ddd7796ab7e8c7bf51b51a1cc00f62cc6fec5c877751573efc78",
+      "lines": 13144,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "academic-instruction",
+      "repo": "courseplans",
+      "path": "docs/instruction-quality-standard.md",
+      "git_revision": "1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "sha256": "e72516a90654873b1e54dcac7f00d1f722a59a36a40203426e6c19cae0497426",
+      "lines": 142,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "course-authority",
+      "repo": "courseplans",
+      "path": "docs/key-quality-gates.md",
+      "git_revision": "1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "sha256": "dfb90de508bd600ed9b65b3768693e1da8a4ab9e39a7fcd8b74d1ad517295dc0",
+      "lines": 169,
+      "bytes_equal_to_git_ref": true
+    },
+    {
+      "id": "knowledge-sequence",
+      "repo": "courseplans",
+      "path": "skills/g3-reading-red-team/references/dimensions/D7-knowledge-first-curriculum.md",
+      "git_revision": "1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "sha256": "f74d6572e19d544202cc2163102980fe1980ee80a787187123ba889d918231e9",
+      "lines": 49,
+      "bytes_equal_to_git_ref": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "classification-contract",
+      "source_file": "ela-contract",
+      "claim": "PinWords payload maps each word to entity and semantic relation; verdict is distinct.",
+      "source": "ela-lessons",
+      "path": "src/contract.ts",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "191-200",
+      "quote": "words: { w: string; to: string; kind: \"is\" | \"seems\" | \"wanted\"; meaning: string }[];",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "68b9f3d475095379078e9800d16e749a17fff3facc4b076b30c0b81f4c3c363b"
+    },
+    {
+      "id": "classification-judging",
+      "source_file": "ela-pin",
+      "claim": "A placement is right only when both entity and relation match the authored key.",
+      "source": "ela-lessons",
+      "path": "src/nodes/PinWords.tsx",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "98-124",
+      "quote": "const rightMan = who === w.to, right = rightMan && section === w.kind;",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "10271e196d17c14ff0cdff061bd42afeb9bd730bef9a6b0d53f416dc8afeaa12"
+    },
+    {
+      "id": "classification-content",
+      "source_file": "ela-builder",
+      "claim": "Current word bank has 11 words spanning character is, seems and wanted relations; several values are roles or desires, not adjectives.",
+      "source": "ela-lessons",
+      "path": "scripts/build-content.py",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "1080-1099",
+      "quote": "('honest', 'iago', 'seems', 'what everyone in Venice calls Iago', 'Honest! At last, someone with an eye for character. Write that down where Othello will see it.', 'Honest? I suppose I am. And look where it has got me.', None),",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "22a7b2e7c5398019a4e3e66213f68de2ceb78acef62fc3bde895ca6c3354752f"
+    },
+    {
+      "id": "classification-finish",
+      "source_file": "ela-pin",
+      "claim": "The final contrast/quote sentence is assembled from supplied choices and checked; it is scaffolded recognition/assembly.",
+      "source": "ela-lessons",
+      "path": "src/nodes/PinWords.tsx",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "145-162",
+      "quote": "const verdict = seems && is_ && quote ? `Iago seems ${seems}, but he is ${is_}, because he says \"${quote.replace(/[.!?]$/, \"\")}.\"` : \"\";",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "4257a7d6384321c059667136532873f8478e66e9254895603960341d820e698a"
+    },
+    {
+      "id": "single-choice-contract",
+      "source_file": "ela-contract",
+      "claim": "Key term check uses options, a keyed index and authored feedback.",
+      "source": "ela-lessons",
+      "path": "src/contract.ts",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "45-50",
+      "quote": "options: { text: string; why?: string }[]; correct: number; yes: string; after?: string;",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "07f678981ea2617244bca8413de4fa9b11c9dac207ff911464ab876fc3bdec90"
+    },
+    {
+      "id": "reading-choice",
+      "source_file": "ela-builder",
+      "claim": "The source comment requires four scene-grounded options for the authored reading check.",
+      "source": "ela-lessons",
+      "path": "scripts/build-content.py",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "48-107",
+      "quote": "every question, option and reply. Four options, all from this scene (MCQ rule).",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "5c1ee60acf777b5d8cb544774e4e3db8de02ed01bdf69d9427b8cc7fb12daa74"
+    },
+    {
+      "id": "dose-contract",
+      "source_file": "ela-contract",
+      "claim": "Dose carries candidates, decoys, task rounds, sentence starters, the visible scene, and an authored verdict rubric.",
+      "source": "ela-lessons",
+      "path": "src/contract.ts",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "201-208",
+      "quote": "mission: string; close: string; time: string; chips: string[]; strong: string[]; candidates: string[]; decoys: string[]; starter: string; verdict: Rubric;",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "25d754859997c37f345a114aaeb3b06b45ea48136b166baaec31b0ed810bd3e8"
+    },
+    {
+      "id": "dose-tasks",
+      "source_file": "ela-builder",
+      "claim": "Rounds require the learner's own question, evidence explanation and reasoned rebuttal, followed by a supported verdict.",
+      "source": "ela-lessons",
+      "path": "scripts/build-content.py",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "1044-1066",
+      "quote": "'tasks': [{'label': 'Round 1 · Ask', 'task': 'Ask Iago why he still follows Othello.', 'sub': 'Type your own question, or say it.'},",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "9af2d86abb45a48e2686811eecaa9ce561ada4d3f63b9782cd51bbb56165fe03"
+    },
+    {
+      "id": "dose-own-words",
+      "source_file": "ela-dose",
+      "claim": "Starters do not count toward own-word minimum; length is an input gate, not proof of reasoning.",
+      "source": "ela-lessons",
+      "path": "src/nodes/Dose.tsx",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "167-188",
+      "quote": "// only the student's own words count: a starter they tapped is not counted",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "eb8fdcfed6edd134cbb9d439f93854e3b432e668ba3611472616486007e67596"
+    },
+    {
+      "id": "dose-evidence",
+      "source_file": "ela-dose",
+      "claim": "Dose displays two strong candidate lines and two authored decoys; multiple strong lines can be valid evidence.",
+      "source": "ela-lessons",
+      "path": "src/nodes/Dose.tsx",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "190-205",
+      "quote": "const good = node.candidates.slice(0, 2);",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "2f4a83f1e32dafb961945064fd5660b657b3c90177a2c7b7e687d255d5072892"
+    },
+    {
+      "id": "dose-explanation",
+      "source_file": "ela-dose",
+      "claim": "Explanation and rebuttal use the external runtime marker; after three misses the authored model advances the task.",
+      "source": "ela-lessons",
+      "path": "src/nodes/Dose.tsx",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "224-244",
+      "quote": "if (r.convinced) return void landLine(held, el);",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "06be84991f3657f4e8f4401fb149759ac86ba29c8b75efa0a8354e5f2a3467ee"
+    },
+    {
+      "id": "dose-verdict",
+      "source_file": "ela-builder",
+      "claim": "Verdict rubric separates a supported claim from an exact, relevant quote.",
+      "source": "ela-lessons",
+      "path": "scripts/build-content.py",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "1022-1031",
+      "quote": "{'id': 'quote', 'requirement': 'Quotes, in quotation marks, one of Iago\\'s own lines from Act 1, Scene 1 that SHOWS he only pretends (for example \"I am not what I am\", \"I follow him to serve my turn upon him\", \"In following him, I follow but myself\", \"But seeming so for my peculiar end\", \"I must show out a flag and sign of love\"); a few of its words are enough. A line of his that does not show the pretense (for example \"Call up her father\" or \"I know my price\") does not prove it, and words he never said do not count.',",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "5d51268f4cccc7b8e2f31a1f0dcaa82998004b8af4ec8b7d36c38b393eef2d3c"
+    },
+    {
+      "id": "quote-unpick",
+      "source_file": "ela-unpick",
+      "claim": "Quote analysis decomposes paraphrase, a significant word/class, and supported interpretation.",
+      "source": "ela-lessons",
+      "path": "src/components/unpick/Unpick.tsx",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "4-9",
+      "quote": "* BREAK DOWN YOUR QUOTE: three questions on the quote the student chose for their paragraph: what does it mean,",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "e09cc52ac26f407a57109acc76aa16c7a890546266846b841efd68472022a8e0"
+    },
+    {
+      "id": "guided-independent-contract",
+      "source_file": "ela-contract",
+      "claim": "Guided quote screens, model writing and independent writing have separate support fields and contextual lines.",
+      "source": "ela-lessons",
+      "path": "src/contract.ts",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "125-162",
+      "quote": "context_lines?: ContextLine[];",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "daa755fab8fb937d48bc3da4f334fe721853f1c6c5460264131e5d6c742ff61d"
+    },
+    {
+      "id": "renderer-mcq",
+      "source_file": "renderer-contract",
+      "claim": "MCQ contract includes keyed index and aligned authored feedback.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "753-765",
+      "quote": "answer_index: number;",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "cf1e1c4539a839232334b84c6d754079f352c4da762672d2cf75cefbceb01845"
+    },
+    {
+      "id": "renderer-msq",
+      "source_file": "renderer-contract",
+      "claim": "Multi-select has an explicit set of correct indices and per-option feedback.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "914-921",
+      "quote": "correct_indices: number[];",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "7a2ea89b7e380b5812f6a3177a2b53a059710e252558248a2b7e2d5c5705ea21"
+    },
+    {
+      "id": "renderer-hot-text",
+      "source_file": "renderer-contract",
+      "claim": "Evidence selection uses source sentences, explicit correct index set and candidate-specific feedback.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "968-994",
+      "quote": "correct_indices: number[];",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "7a2ea89b7e380b5812f6a3177a2b53a059710e252558248a2b7e2d5c5705ea21"
+    },
+    {
+      "id": "renderer-inline-choice",
+      "source_file": "renderer-contract",
+      "claim": "Inline-choice blanks each carry options, key and per-option feedback.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "1123-1139",
+      "quote": "answer: string;",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "80cbefa2fbc181fc5844245908530c61000b8e3b0690acadfab26b1e519aec65"
+    },
+    {
+      "id": "renderer-shared-cloze",
+      "source_file": "renderer-contract",
+      "claim": "Shared-bank cloze is declared in the contract; a claim of working book routing needs separate dispatch evidence.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "1154-1187",
+      "quote": "* blanked exactly once, filled from ONE small shared word bank (the answers",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "8c4cda4a0d17423167842fd9d35f8f83e7818320b1f22c6483f1ba9ec7d9e23c"
+    },
+    {
+      "id": "renderer-sequence-match",
+      "source_file": "renderer-contract",
+      "claim": "Ordering and matching have distinct typed keys.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "1189-1208",
+      "quote": "correct_option_for_prompt: number[];",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "5827701e3816debed866014f7dca698f18ee704d69078cf119b20b1fce449d6d"
+    },
+    {
+      "id": "renderer-ebsr",
+      "source_file": "renderer-contract",
+      "claim": "Two-part answer/evidence shape is declared.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "1210-1221",
+      "quote": "/** only graded after part_a is answered */",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "bf75c20911f098899d0be13bb1da2bbe462912e40be42ead66e5abfeede7bd2b"
+    },
+    {
+      "id": "renderer-scr-warning",
+      "source_file": "renderer-contract",
+      "claim": "Open response replaced weak substring/length scoring with an authored assessment instrument.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "1223-1240",
+      "quote": "* `ScrItem` counted six words, looked for a required term as a substring, and",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "fd2a9e525fa0e6d19916902c6a31db48df59e9db5866f0b64cb15198b6c450e0"
+    },
+    {
+      "id": "renderer-frame-instruments",
+      "source_file": "renderer-contract",
+      "claim": "Quote accuracy and open reasoning are separate marking duties; marker must receive the visible proof source.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/lib/lesson-schema/page-contract.ts",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "1277-1307",
+      "quote": "kind: \"quote\" | \"open\";",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "2f934cff8903f15e47a0154f7c338eb4404451be98e6d2a32e511ab6f26f784d"
+    },
+    {
+      "id": "renderer-book-dispatch",
+      "source_file": "renderer-dispatch",
+      "claim": "Current book dispatch routes nine bank_type values; shared-bank cloze is absent.",
+      "source": "grade3-reading/course-renderer",
+      "path": "src/components/book/questions.tsx",
+      "revision": "git:b74f456c1d79d5a84d30b018cd410a6bc07edb57",
+      "lines": "3232-3242",
+      "quote": "case \"inline_choice\": return <InlineChoice q={node} k={k} ctx={ctx} />;",
+      "origin": "pinned-native-code-or-contract",
+      "quote_sha256": "bdb4ed89d6c8af8452bb5844ae43583c31b82142b0f953150840ddf8966fb514"
+    },
+    {
+      "id": "academic-release",
+      "source_file": "academic-instruction",
+      "claim": "Model, guided and independent stages practice the same process with decreasing support.",
+      "source": "courseplans",
+      "path": "docs/instruction-quality-standard.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "11-25",
+      "quote": "- **We-do** — the *same* skill, walked together through the *same* steps, with",
+      "origin": "course-policy",
+      "quote_sha256": "43becc754c5f4ae436a4409c346814246ec99d83b7c52d9005fb97b77deab843"
+    },
+    {
+      "id": "academic-visible-evidence",
+      "source_file": "academic-instruction",
+      "claim": "Corrective feedback should be evidence anchored; cited text must be visible when needed.",
+      "source": "courseplans",
+      "path": "docs/instruction-quality-standard.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "27-40",
+      "quote": "look back at the text, the text must be visible. \"Try looking back at the text\"",
+      "origin": "course-policy",
+      "quote_sha256": "6d3f91a556387a0b620778554e9050e8f36cb9f04ec1f234c93972e978a6c2d5"
+    },
+    {
+      "id": "academic-knowledge",
+      "source_file": "academic-instruction",
+      "claim": "Knowledge is taught, sequenced and revisited; assessment-standard tags alone do not establish curriculum coherence.",
+      "source": "courseplans",
+      "path": "docs/instruction-quality-standard.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "42-58",
+      "quote": "knowledge — CASE-tag coverage is plumbing, never the curriculum claim.",
+      "origin": "course-policy",
+      "quote_sha256": "16f94621525b0bd1e5dcaed7f01e3429961b3eb9ef79205b5a9594d40a7ec575"
+    },
+    {
+      "id": "academic-format-target",
+      "source_file": "academic-instruction",
+      "claim": "Formats are conditional on learner/program constraints; items must assess the declared knowledge component.",
+      "source": "courseplans",
+      "path": "docs/instruction-quality-standard.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "75-80",
+      "quote": "- A lesson's items must assess the KC the lesson claims to teach (construct coherence",
+      "origin": "course-policy",
+      "quote_sha256": "0f34aa3974242f1308bb342aecb6bd9e14f9d362c7576d9ef9a51371b4197599"
+    },
+    {
+      "id": "academic-production",
+      "source_file": "academic-instruction",
+      "claim": "Distractors represent named misconceptions; production targets need production formats; keyword matching must not suffice.",
+      "source": "courseplans",
+      "path": "docs/instruction-quality-standard.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "127-133",
+      "quote": "one difference per near-miss pair. Production targets get production formats. Closed",
+      "origin": "course-policy",
+      "quote_sha256": "2580fd957d4edcd3836ea97ae0f352c31faa09506f1a2828c828969c09b5b44a"
+    },
+    {
+      "id": "authority-chain",
+      "source_file": "course-authority",
+      "claim": "Source census precedes authoring; the documented program authority chain separates which procedure, how it is taught and what lesson content to use.",
+      "source": "courseplans",
+      "path": "docs/key-quality-gates.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "33-44",
+      "quote": "procedure docs decide HOW steps are taught; tier 3 per-lesson designs + KB",
+      "origin": "course-policy",
+      "quote_sha256": "b9513ff1924daa5fb2e423b55f2e596d23e6a6f3a59d76b281bfcff0cd00e698"
+    },
+    {
+      "id": "threshold-scope",
+      "source_file": "course-authority",
+      "claim": "These numerical and register thresholds are specific program settings, not automatically universal question criteria.",
+      "source": "courseplans",
+      "path": "docs/key-quality-gates.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "98-115",
+      "quote": "- MCQs: ≥4 options, no yes/no, no stem echo, key never at A, no definition",
+      "origin": "course-policy",
+      "quote_sha256": "d82220de193363c48bf933ef224db85316713e93b9cabb0ef6a0bf6d4937526b"
+    },
+    {
+      "id": "knowledge-contract",
+      "source_file": "knowledge-sequence",
+      "claim": "Declared concepts, supplied knowledge, linguistic validity and a versioned curriculum graph inform questioning; the teaching generator does not own the graph.",
+      "source": "courseplans",
+      "path": "skills/g3-reading-red-team/references/dimensions/D7-knowledge-first-curriculum.md",
+      "revision": "git:1c07e430a1ffce6283afd8bfd461403161683ae2",
+      "lines": "12-33",
+      "quote": "The graph is a versioned artifact with provenance, produced by the curriculum layer — not the teaching generator",
+      "origin": "course-policy",
+      "quote_sha256": "e936ed079f9b682c75dc80b2f91292e1ce786f96ace5ac09f1c383a5c7de19a4"
+    },
+    {
+      "id": "word-web-contract",
+      "source_file": "ela-contract",
+      "source": "ela-lessons",
+      "path": "src/contract.ts",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "21-39",
+      "quote": "  type: \"word_web\"; line: string; centre: string;",
+      "origin": "pinned-native-code-or-contract",
+      "claim": "Vocabulary retrieval and meaning attempts are part of the typed lesson shape; no diagnostic validity claim is made.",
+      "quote_sha256": "c07d8fad3f3f6009b55eefbb4b0907abc50d19e221ed92deca3417ab3f8c043e"
+    },
+    {
+      "id": "mimicry-apply-evaluate-contract",
+      "source_file": "ela-contract",
+      "source": "ela-lessons",
+      "path": "src/contract.ts",
+      "revision": "git:3ed708e126aec14b7456679b9236e01c1081df16",
+      "lines": "182-184",
+      "quote": "export interface MimicryNode extends NodeBase { type: \"mimicry\"; task: string; line: string; repeat: string; definitions: { term: string; note: string }[] }\nexport interface ApplyNode extends NodeBase { type: \"apply\"; task: string; stems: string[]; how?: string; rubrics?: Rubric[]; scene?: ContextLine[] }\nexport interface EvaluateNode extends NodeBase { type: \"evaluate\"; task: string; question: string; help: string; rubric?: Rubric }",
+      "origin": "pinned-native-code-or-contract",
+      "claim": "Mimicry, apply and evaluate have separate declared typed payloads; presence is not validated scoring or independent mastery.",
+      "quote_sha256": "af42c4f12b8a21e2adcb80ae00be60b1879ffeae6abdeb2c70787e4e9498c395"
+    }
+  ],
+  "formats": [
+    {
+      "id": "classification",
+      "status": "prototype_routing_borrowed",
+      "borrowed_from": [
+        "words-1 / pin_words"
+      ],
+      "cognitive_operation": "Distinguish taught relations by classifying a source-grounded observation, not by dragging mechanics.",
+      "required_payload": [
+        "categories:[{id,label}]",
+        "entries:[{id,text}]"
+      ],
+      "payload_sketch": {
+        "categories": [
+          {
+            "id": "entity-a:observed",
+            "label": "Entity A: what the source shows"
+          },
+          {
+            "id": "entity-a:appearance",
+            "label": "Entity A: what others believe"
+          }
+        ],
+        "entries": [
+          {
+            "id": "observation-1",
+            "text": "A source-grounded description"
+          }
+        ]
+      },
+      "teacher_key": "Every entry maps to one or more defensible category IDs; if a single key is required, overlapping categories must be resolved.",
+      "conditions": [
+        "Categories express a declared knowledge distinction, not decorative bins.",
+        "Entity and semantic relation remain explicit when flattening the two-dimensional native key.",
+        "Only source-supported descriptions enter the bank; supply evidence for each classification.",
+        "Do not claim independent inference after labels or feedback have supplied the distinction."
+      ],
+      "quality_risks": [
+        "Ambiguous descriptions fit several people or relations.",
+        "Slot counts, color, order or elimination let learners solve without knowing the content.",
+        "Hardcoded is/seems/wanted relations become invalid outside character analysis."
+      ],
+      "evidence_refs": [
+        "classification-contract",
+        "classification-judging",
+        "classification-content",
+        "classification-finish",
+        "academic-format-target"
+      ],
+      "source_evidence_refs": [
+        0,
+        1,
+        2,
+        3,
+        27
+      ]
+    },
+    {
+      "id": "single_choice",
+      "status": "prototype_routing_borrowed",
+      "borrowed_from": [
+        "key_term",
+        "reading.mcqs",
+        "mcq"
+      ],
+      "cognitive_operation": "Choose the supported claim among genuinely competing interpretations or applications.",
+      "required_payload": [
+        "options:[{id,text}]"
+      ],
+      "payload_sketch": {
+        "options": [
+          {
+            "id": "option-a",
+            "text": "A supported or plausible interpretation"
+          },
+          {
+            "id": "option-b",
+            "text": "A specific competing interpretation"
+          }
+        ]
+      },
+      "teacher_key": "One defensible keyed option; each distractor has a named misconception and source-based rejection reason.",
+      "conditions": [
+        "Use recognition only where recognition assesses the target.",
+        "Give all options comparable linguistic specificity and avoid positional/length cues.",
+        "Judge whether multiple options are defensible using the complete visible source.",
+        "Treat answer-position distribution as a sequence diagnostic, not universal item truth."
+      ],
+      "quality_risks": [
+        "Invented implausible distractors make a trivial question.",
+        "The stem repeats only key wording.",
+        "Feedback previews a later independent answer."
+      ],
+      "evidence_refs": [
+        "single-choice-contract",
+        "reading-choice",
+        "renderer-mcq",
+        "academic-production",
+        "threshold-scope"
+      ],
+      "source_evidence_refs": [
+        4,
+        5,
+        14,
+        28,
+        30
+      ]
+    },
+    {
+      "id": "evidence_selection",
+      "status": "prototype_routing_borrowed",
+      "borrowed_from": [
+        "dose-1 round 2",
+        "hot_text / hunt"
+      ],
+      "cognitive_operation": "Select source evidence relevant to a specific claim and distinguish merely related text.",
+      "required_payload": [
+        "options:[{id,text}]",
+        "claim or an unambiguous claim in the prompt"
+      ],
+      "payload_sketch": {
+        "claim": "The claim to test",
+        "options": [
+          {
+            "id": "line-a",
+            "text": "Exact visible source wording"
+          },
+          {
+            "id": "line-b",
+            "text": "Another exact visible source line"
+          }
+        ]
+      },
+      "teacher_key": "An explicit set of relevant evidence choices with a claim-to-evidence warrant; multiple defensible selections are allowed when the task does not ask for one best.",
+      "conditions": [
+        "All evidence options are exact text visible to the learner, or their paraphrase status is explicit.",
+        "Ask for one best only if a defensible comparison criterion exists.",
+        "A line containing a topic word is not necessarily evidence.",
+        "Follow selection with learner-produced explanation when the target includes reasoning."
+      ],
+      "quality_risks": [
+        "Only one quotation is offered.",
+        "Correct lines are pre-highlighted for an independent check.",
+        "The text is hidden while a quote is required.",
+        "Selected evidence is counted as reasoning without an explanation."
+      ],
+      "evidence_refs": [
+        "dose-evidence",
+        "dose-verdict",
+        "renderer-hot-text",
+        "academic-visible-evidence"
+      ],
+      "source_evidence_refs": [
+        9,
+        11,
+        16,
+        25
+      ]
+    },
+    {
+      "id": "short_explanation",
+      "status": "prototype_routing_borrowed",
+      "borrowed_from": [
+        "dose-1 explanation",
+        "reading open check",
+        "quote unpick",
+        "scr"
+      ],
+      "cognitive_operation": "Produce a short reason that links source evidence to a declared interpretation.",
+      "required_payload": [
+        "response_mode:written",
+        "support:string"
+      ],
+      "payload_sketch": {
+        "response_mode": "written",
+        "support": "The visible source and a selected line; no finished explanation."
+      },
+      "teacher_key": "Atomic rubric requirements specify the claim, evidence and warrant needed; accept alternative wording and evidence consistent with the source.",
+      "conditions": [
+        "The explanation is not already written in the prompt or starter.",
+        "Learner can see all source material required by the rubric.",
+        "Rubric tests meaning, not only keywords or minimum words.",
+        "Separate quote accuracy from semantic support."
+      ],
+      "quality_risks": [
+        "Minimum word count masquerades as reasoning.",
+        "Repeating the prompt or copying a quote passes.",
+        "Rubric demands terminology or facts the lesson never taught."
+      ],
+      "evidence_refs": [
+        "dose-explanation",
+        "quote-unpick",
+        "renderer-scr-warning",
+        "renderer-frame-instruments",
+        "academic-production"
+      ],
+      "source_evidence_refs": [
+        10,
+        12,
+        21,
+        22,
+        28
+      ]
+    },
+    {
+      "id": "learner_question",
+      "status": "prototype_routing_borrowed",
+      "borrowed_from": [
+        "dose-1 round 1"
+      ],
+      "cognitive_operation": "Form a question that exposes a source-grounded inconsistency, motive or evidential gap.",
+      "required_payload": [
+        "response_mode:written",
+        "support:string"
+      ],
+      "payload_sketch": {
+        "response_mode": "written",
+        "support": "A stated role, visible source and an optional unfinished question starter."
+      },
+      "teacher_key": "The question addresses the declared contradiction or uncertainty and is answerable from the source; it need not match one authored question.",
+      "conditions": [
+        "Question formation serves the lesson target, not only character roleplay.",
+        "Starters leave a meaningful question for the learner to form.",
+        "Do not certify question quality from a word-count input gate.",
+        "This is a proposed marking duty; the native source round advances after a submitted question."
+      ],
+      "quality_risks": [
+        "The learner repeats a complete provided question.",
+        "A plausible sounding question has no relationship to the target.",
+        "Dynamic character response adds unsupported facts."
+      ],
+      "evidence_refs": [
+        "dose-contract",
+        "dose-tasks",
+        "dose-own-words"
+      ],
+      "source_evidence_refs": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "rebuttal",
+      "status": "prototype_routing_borrowed",
+      "borrowed_from": [
+        "dose-1 round 3"
+      ],
+      "cognitive_operation": "Evaluate a stated defense against source evidence and explain whether it holds.",
+      "required_payload": [
+        "response_mode:written",
+        "support:string",
+        "counterclaim or counterpart claim explicit in prompt"
+      ],
+      "payload_sketch": {
+        "response_mode": "written",
+        "support": "The counterpart claim and all source evidence needed to test it."
+      },
+      "teacher_key": "Accept support, rejection or qualification where defensible; rubric distinguishes a verdict from its evidential reason.",
+      "conditions": [
+        "Counterpart claim is explicit and frozen in the packet.",
+        "The source supplies enough evidence to test the claim.",
+        "Scoring accepts justified alternative positions where the text permits them.",
+        "Any scripted counterpart speech is marked as authored, not presented as a source quotation."
+      ],
+      "quality_risks": [
+        "The generator invents an excuse then treats it as a textual fact.",
+        "The question embeds its desired rebuttal.",
+        "A one-sided rubric rejects justified disagreement."
+      ],
+      "evidence_refs": [
+        "dose-tasks",
+        "dose-explanation",
+        "academic-visible-evidence"
+      ],
+      "source_evidence_refs": [
+        7,
+        10,
+        25
+      ]
+    },
+    {
+      "id": "integrated_response",
+      "status": "prototype_routing_extension",
+      "borrowed_from": [
+        "words-1 contrast/quote finish",
+        "dose-1 claim/quote verdict",
+        "independent paragraph"
+      ],
+      "cognitive_operation": "Combine a claim, relevant source evidence and reasoning; a changed case can probe conditional transfer.",
+      "required_payload": [
+        "response_mode:written",
+        "support:string"
+      ],
+      "payload_sketch": {
+        "response_mode": "written",
+        "support": "Visible source plus declared scaffold level; a new case only when supplied as a separate source."
+      },
+      "teacher_key": "Assess each required component and the relation among them, with defensible alternate claims and evidence.",
+      "conditions": [
+        "State whether the response is choice-assembled, guided writing or independent production.",
+        "Do not label assembly of supplied words as independent transfer.",
+        "A new related text or changed case must be supplied before making a transfer claim.",
+        "Hold final success claims open until academic review and evaluator qualification."
+      ],
+      "quality_risks": [
+        "The claimed transfer item repeats the exact same interpretation from earlier feedback.",
+        "A template reveals the claim to be tested.",
+        "Component passes are summed without checking that evidence supports the claim."
+      ],
+      "evidence_refs": [
+        "classification-finish",
+        "dose-verdict",
+        "guided-independent-contract",
+        "academic-release",
+        "knowledge-contract"
+      ],
+      "source_evidence_refs": [
+        3,
+        11,
+        13,
+        24,
+        31
+      ]
+    }
+  ],
+  "additional_native_inventory": [
+    {
+      "native_id": "mcq",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": "single_choice",
+      "evidence_refs": [
+        "renderer-mcq",
+        "renderer-book-dispatch"
+      ],
+      "source_evidence_refs": [
+        14,
+        23
+      ]
+    },
+    {
+      "native_id": "msq",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": null,
+      "evidence_refs": [
+        "renderer-msq",
+        "renderer-book-dispatch"
+      ],
+      "scope": "Multiple supported propositions; instruction must disclose selection rule. Extension beyond first prototype.",
+      "source_evidence_refs": [
+        15,
+        23
+      ]
+    },
+    {
+      "native_id": "hot_text",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": "evidence_selection",
+      "variants": [
+        "closed supplied candidates",
+        "find source spans in visible passage",
+        "gather several clues",
+        "compare best clue after gathering"
+      ],
+      "evidence_refs": [
+        "renderer-hot-text",
+        "renderer-book-dispatch"
+      ],
+      "source_evidence_refs": [
+        16,
+        23
+      ]
+    },
+    {
+      "native_id": "inline_choice",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": null,
+      "variants": [
+        "per-blank options",
+        "retell vocabulary gaps",
+        "reconstruct model analysis"
+      ],
+      "evidence_refs": [
+        "renderer-inline-choice",
+        "renderer-book-dispatch"
+      ],
+      "scope": "Current wrap-cloze authored nodes use inline_choice, not shared-bank cloze.",
+      "source_evidence_refs": [
+        17,
+        23
+      ]
+    },
+    {
+      "native_id": "cloze",
+      "observed": "contract_only_for_checked_book_surface",
+      "prototype_alias": null,
+      "evidence_refs": [
+        "renderer-shared-cloze",
+        "renderer-book-dispatch"
+      ],
+      "scope": "Declared shared word bank differs from inline_choice. It is absent from inspected book dispatch; no working-surface claim is made.",
+      "source_evidence_refs": [
+        18,
+        23
+      ]
+    },
+    {
+      "native_id": "sequence",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": null,
+      "evidence_refs": [
+        "renderer-sequence-match",
+        "renderer-book-dispatch"
+      ],
+      "scope": "Ordering story events, exposition or procedure steps; prove unique required ordering. Native contract comment says shuffled; current book sequence reviewer says authored remaining-bank order, so actual presentation needs surface check.",
+      "source_evidence_refs": [
+        19,
+        23
+      ]
+    },
+    {
+      "native_id": "match",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": null,
+      "evidence_refs": [
+        "renderer-sequence-match",
+        "renderer-book-dispatch"
+      ],
+      "scope": "Question-to-source-line or relation matching; one-to-one elimination can bypass knowledge.",
+      "source_evidence_refs": [
+        19,
+        23
+      ]
+    },
+    {
+      "native_id": "ebsr",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": null,
+      "evidence_refs": [
+        "renderer-ebsr",
+        "renderer-book-dispatch",
+        "academic-format-target"
+      ],
+      "scope": "Two-part claim/evidence selection, conditional on developmental/course policy; not automatically universal.",
+      "source_evidence_refs": [
+        20,
+        23,
+        27
+      ]
+    },
+    {
+      "native_id": "scr",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": "short_explanation",
+      "variants": [
+        "one written response",
+        "quote then own words in separately marked slots",
+        "guided claim/evidence/reasoning writing"
+      ],
+      "evidence_refs": [
+        "renderer-scr-warning",
+        "renderer-frame-instruments",
+        "renderer-book-dispatch"
+      ],
+      "source_evidence_refs": [
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "native_id": "true_false",
+      "observed": "authored_and_book_dispatch",
+      "prototype_alias": null,
+      "evidence_refs": [
+        "renderer-book-dispatch"
+      ],
+      "scope": "First observed native item pre-highlights the answer and asks for a lock; that instance is instructional refinement, not independent diagnosis. Presence is not a recommendation for two-choice assessment.",
+      "source_evidence_refs": [
+        23
+      ]
+    },
+    {
+      "native_id": "pin_words",
+      "observed": "authored_and_typed_node",
+      "prototype_alias": "classification",
+      "variants": [
+        "entity assignment",
+        "entity plus is/seems/wanted relation",
+        "choice-assembled contrast/quote finish"
+      ],
+      "evidence_refs": [
+        "classification-contract",
+        "classification-content",
+        "classification-finish"
+      ],
+      "source_evidence_refs": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "native_id": "dose",
+      "observed": "authored_and_typed_node",
+      "prototype_aliases": [
+        "learner_question",
+        "evidence_selection",
+        "short_explanation",
+        "rebuttal",
+        "integrated_response"
+      ],
+      "evidence_refs": [
+        "dose-contract",
+        "dose-tasks",
+        "dose-verdict"
+      ],
+      "scope": "Runtime marker, character performance, trust meter and timelimit are source-specific delivery behavior; they are not question-quality proof.",
+      "source_evidence_refs": [
+        6,
+        7,
+        11
+      ]
+    },
+    {
+      "native_id": "word_web",
+      "observed": "authored_and_typed_node",
+      "prototype_alias": null,
+      "scope": "Generate prior related vocabulary, attempt meanings before reveal, expand semantic relations; prior knowledge elicitation is not a universal knowledge-gap diagnosis.",
+      "evidence_refs": [
+        "word-web-contract"
+      ],
+      "source_evidence_refs": [
+        32
+      ]
+    },
+    {
+      "native_id": "mimicry/apply/evaluate",
+      "observed": "authored_and_typed_node",
+      "prototype_aliases": [
+        "short_explanation",
+        "integrated_response"
+      ],
+      "scope": "Repeat a taught claim, apply to an extract, then weigh a position. Mimicry is rehearsal, not independent knowledge proof.",
+      "evidence_refs": [
+        "mimicry-apply-evaluate-contract"
+      ],
+      "source_evidence_refs": [
+        33
+      ]
+    }
+  ],
+  "unit_inventory": [
+    {
+      "source_file": "renderer-units-3",
+      "counts_of_authored_bank_type_occurrences": {
+        "mcq": 122,
+        "true_false": 8,
+        "hot_text": 27,
+        "scr": 22,
+        "inline_choice": 19,
+        "msq": 12,
+        "sequence": 2
+      },
+      "first_example_per_type": [
+        {
+          "bank_type": "hot_text",
+          "json_path": "$.units[0].lessons[0].pages[18].nodes[4]",
+          "native_id": "tap-the-line"
+        },
+        {
+          "bank_type": "inline_choice",
+          "json_path": "$.units[0].lessons[0].pages[28].nodes[0]",
+          "native_id": "wrap-cloze"
+        },
+        {
+          "bank_type": "mcq",
+          "json_path": "$.units[0].lessons[0].pages[5].nodes[0]",
+          "native_id": "check"
+        },
+        {
+          "bank_type": "msq",
+          "json_path": "$.units[0].lessons[1].pages[15].nodes[1].know",
+          "native_id": "know"
+        },
+        {
+          "bank_type": "scr",
+          "json_path": "$.units[0].lessons[0].pages[19].nodes[4]",
+          "native_id": "step4"
+        },
+        {
+          "bank_type": "sequence",
+          "json_path": "$.units[0].lessons[3].pages[9].nodes[1]",
+          "native_id": "item-5-check-4"
+        },
+        {
+          "bank_type": "true_false",
+          "json_path": "$.units[0].lessons[0].pages[16].nodes[2]",
+          "native_id": "refine"
+        }
+      ],
+      "limit": "Nested bank_type occurrences are counted, including instructional subquestions. These counts are not independent response moments, approved items, gold labels or executed renderer coverage."
+    },
+    {
+      "source_file": "renderer-units-4",
+      "counts_of_authored_bank_type_occurrences": {
+        "mcq": 10,
+        "inline_choice": 7,
+        "hot_text": 4,
+        "sequence": 2,
+        "ebsr": 3,
+        "scr": 3,
+        "msq": 3,
+        "match": 3
+      },
+      "first_example_per_type": [
+        {
+          "bank_type": "ebsr",
+          "json_path": "$.units[0].lessons[0].pages[17].nodes[0]",
+          "native_id": "item-6-whole-text-and-detail"
+        },
+        {
+          "bank_type": "hot_text",
+          "json_path": "$.units[0].lessons[0].pages[10].nodes[0]",
+          "native_id": "item-4-general-not-example"
+        },
+        {
+          "bank_type": "inline_choice",
+          "json_path": "$.units[0].lessons[0].pages[8].nodes[0]",
+          "native_id": "item-3-part2-main-idea"
+        },
+        {
+          "bank_type": "match",
+          "json_path": "$.units[0].lessons[0].pages[20].nodes[0]",
+          "native_id": "item-10-question-to-line"
+        },
+        {
+          "bank_type": "mcq",
+          "json_path": "$.units[0].lessons[0].pages[0].nodes[1]",
+          "native_id": "item-1-activation"
+        },
+        {
+          "bank_type": "msq",
+          "json_path": "$.units[0].lessons[0].pages[19].nodes[0]",
+          "native_id": "item-8-main-idea-not-topic"
+        },
+        {
+          "bank_type": "scr",
+          "json_path": "$.units[0].lessons[0].pages[18].nodes[1]",
+          "native_id": "item-7-detail-supports-main-idea"
+        },
+        {
+          "bank_type": "sequence",
+          "json_path": "$.units[0].lessons[0].pages[16].nodes[0]",
+          "native_id": "item-5-section-order"
+        }
+      ],
+      "limit": "Nested bank_type occurrences are counted, including instructional subquestions. These counts are not independent response moments, approved items, gold labels or executed renderer coverage."
+    },
+    {
+      "source_file": "renderer-units-5",
+      "counts_of_authored_bank_type_occurrences": {
+        "mcq": 19,
+        "scr": 39,
+        "sequence": 1
+      },
+      "first_example_per_type": [
+        {
+          "bank_type": "mcq",
+          "json_path": "$.units[0].lessons[0].pages[9].nodes[1]",
+          "native_id": "reading-check"
+        },
+        {
+          "bank_type": "scr",
+          "json_path": "$.units[0].lessons[0].pages[10].nodes[2]",
+          "native_id": "model-finish"
+        },
+        {
+          "bank_type": "sequence",
+          "json_path": "$.units[1].lessons[1].pages[10].nodes[1]",
+          "native_id": "sequence"
+        }
+      ],
+      "limit": "Nested bank_type occurrences are counted, including instructional subquestions. These counts are not independent response moments, approved items, gold labels or executed renderer coverage."
+    }
+  ],
+  "design_inputs": [
+    {
+      "id": "declared-target",
+      "need": "The course-owned target and prerequisite graph; ask for clarification when absent rather than selecting curriculum authority.",
+      "evidence_refs": [
+        "academic-format-target",
+        "authority-chain",
+        "knowledge-contract"
+      ],
+      "source_evidence_refs": [
+        27,
+        29,
+        31
+      ]
+    },
+    {
+      "id": "visible-source",
+      "need": "Exact text/media state and point in the lesson, with reveal and support history.",
+      "evidence_refs": [
+        "academic-visible-evidence",
+        "guided-independent-contract"
+      ],
+      "source_evidence_refs": [
+        25,
+        13
+      ]
+    },
+    {
+      "id": "process-and-support",
+      "need": "The process the lesson models, guides and later tests; record support level and fading.",
+      "evidence_refs": [
+        "academic-release"
+      ],
+      "source_evidence_refs": [
+        24
+      ]
+    },
+    {
+      "id": "misconception-map",
+      "need": "Named confusables and plausible errors rooted in the source; production targets receive production tasks.",
+      "evidence_refs": [
+        "academic-production"
+      ],
+      "source_evidence_refs": [
+        28
+      ]
+    },
+    {
+      "id": "scope-policy",
+      "need": "Learner and setting constraints plus applicable program rulings; no copied numerical gate by default.",
+      "evidence_refs": [
+        "academic-format-target",
+        "threshold-scope"
+      ],
+      "source_evidence_refs": [
+        27,
+        30
+      ]
+    }
+  ]
+}

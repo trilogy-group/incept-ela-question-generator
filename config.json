@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "execution": "offline-only",
+  "input": "examples/lessons.json",
+  "formats": "public/formats.json",
+  "methods": "public/generation-standard.json",
+  "knowledge_manifest": "public/knowledge-manifest.json",
+  "run_root": ".local/runs"
+}

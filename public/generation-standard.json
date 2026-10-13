@@ -1,0 +1,365 @@
+{
+  "version": "0.1-draft",
+  "status": "proposed generation methods for evaluator-first development; no production policy or model selected",
+  "canonical_snapshot": "incept-learning_truths:records-sha256:8adc5f0e5026741866a01fb1978d3333f55a616e6fdabf14afd51db858df5b55",
+  "population": {
+    "all_method_records": 562,
+    "universal_scope_method_records": 553,
+    "selection": "Eight conditional cards selected from the universal-scope methods; canonical self-labels are not approval."
+  },
+  "cards": [
+    {
+      "id": "G01",
+      "title": "Write little, judge the rest",
+      "claim": "Use bounded selection from authored, checked responses when the response space is finite and the choice can be judged against supplied evidence.",
+      "unit": "interaction",
+      "applies_when": [
+        "A finite set of response or feedback moves can cover the specified task.",
+        "The choice judge has the evidence and a demonstrated abstention path."
+      ],
+      "actions": [
+        "Separate text that truly requires generation from selection, marking and routing.",
+        "Prepare response alternatives before the learner attempt where this design fits."
+      ],
+      "checks": [
+        "Trace every learner-visible line to an authored or verified source.",
+        "Test correct, wrong, partial and uncertain answers against the chooser before asserting coverage."
+      ],
+      "refusal_or_fallback": "If no alternative fits or the judge is unsure, withhold the chosen reply or use a previously verified fallback; do not invent a confident diagnosis.",
+      "limits": [
+        "The recorded latency comparison is from one Grade 9 paragraph-coach route, not a universal speed or learning result.",
+        "A live response tailored to the learner's wording may be stronger in some tasks; this card does not ban it."
+      ],
+      "canonical_record": {
+        "id": "write-little-judge-the-rest",
+        "path": "learnings/write-little-judge-the-rest.json",
+        "sha256": "81244f35281acbb676cb355971cf5c0dbd403af6d187ecf4c5844b164072509f",
+        "kind": "measured",
+        "status": "held"
+      },
+      "evidence": [
+        {
+          "source": "g9",
+          "path": "transformer/v02/QA.md",
+          "lines": "98-102",
+          "quote": "It is now a Jev choice among four authored steps, filled with the student's own words,",
+          "revision": "sha256:14b3dc70f93b7e172cbeb0f884b4eda6b464f4bbf8a5c3c273328cc61b31af11",
+          "origin": "first-party build QA, one route"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "title": "Verified facts as the factual source",
+      "claim": "Supply a pinned, verified fact and source packet for factual questions; treat it as the claim boundary and independently check the generated item's claims against it.",
+      "unit": "item",
+      "applies_when": [
+        "The item asserts checkable facts about a source, event, text or curriculum target.",
+        "The authoritative fact or source can be identified and supplied."
+      ],
+      "actions": [
+        "Select source facts at the exact target scope before drafting.",
+        "Keep source text, derived claims and model-written wording distinguishable."
+      ],
+      "checks": [
+        "For every material claim, record the supporting source span and test whether the source actually entails it.",
+        "Challenge unsupported facts introduced after retrieval; verify the key and every distractor separately."
+      ],
+      "refusal_or_fallback": "If a required fact or source cannot be verified, hold the item or use a separately verified source; do not fill the gap with plausible model research.",
+      "limits": [
+        "The source report's 25% to 100% comparison used five samples per condition and is not a general effect estimate.",
+        "Retrieval and a grounding prompt do not ensure the writer follows the source; post-retrieval claim construction failed in a separate AP analysis.",
+        "The canonical record is contested, so this is a conditional source-control method, not a universal RAG endorsement."
+      ],
+      "canonical_record": {
+        "id": "verified-facts-as-the-only-source",
+        "path": "learnings/verified-facts-as-the-only-source.json",
+        "sha256": "487eee28090e8a276390de8143c2e898a01003cf5e8d4db83d338825688f5df8",
+        "kind": "external-research",
+        "status": "contested"
+      },
+      "evidence": [
+        {
+          "source": "icloud-work",
+          "path": "ap-social-studies-generator/CHANGELOG.md",
+          "lines": "148",
+          "quote": "Flash research stage hallucinated facts that poisoned the compile step. MongoDB verified facts are better.",
+          "revision": "sha256:2698792efb8836364caa5db79ba8e94dfa831d5deb54ca693cbd5334811aab8c",
+          "origin": "first-party project observation"
+        },
+        {
+          "source": "icloud-work",
+          "path": "ap-social-studies-generator/CHANGELOG.md",
+          "lines": "123",
+          "quote": "Ran data-driven benchmarks (5 samples each) to decide what to optimize",
+          "revision": "sha256:2698792efb8836364caa5db79ba8e94dfa831d5deb54ca693cbd5334811aab8c",
+          "origin": "source-declared sample-size limit for the comparison"
+        },
+        {
+          "source": "icloud-work",
+          "path": "aptraining/workspace/comms/from_main/2026-05-21T0935Z_pipeline_analysis_findings.md",
+          "lines": "43",
+          "quote": "Pipeline grounding (retrieval, primary sources) doesn't fix this because the failure happens AFTER retrieval",
+          "revision": "sha256:a3db61b52fcb52f2f27f9abb8dd5b52f82f3e9e81e32b64f3ac0809e1f3e2cb0",
+          "origin": "first-party counterevidence; content failure after retrieval"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "title": "Examples teach form, not facts",
+      "claim": "Use vetted examples to communicate output form while keeping their incidental factual content out of a new item's evidence base.",
+      "unit": "generation-request",
+      "applies_when": [
+        "Examples are supplied to a model to demonstrate an item or response format.",
+        "The examples' facts are not independently relevant to the requested target."
+      ],
+      "actions": [
+        "Choose examples for structure and remove or replace unrelated facts where possible.",
+        "Keep target facts in a separately pinned source packet."
+      ],
+      "checks": [
+        "Inspect output for copied dates, names, source attributions, answers and topic-specific details from demonstrations.",
+        "Compare the example-bearing request with a no-example or structure-only control on fresh targets."
+      ],
+      "refusal_or_fallback": "If the item imports an example's unsupported content, discard or revise it and re-evaluate; do not treat fluent format as factual validity.",
+      "limits": [
+        "One recorded prompt sweep found contamination and a lower pass rate, but did not prove that all examples hurt.",
+        "Same-topic demonstrations may be appropriate when their content is also part of the verified source packet; no fixed example count is selected."
+      ],
+      "canonical_record": {
+        "id": "examples-teach-form-not-facts",
+        "path": "learnings/examples-teach-form-not-facts.json",
+        "sha256": "a17f3e81aa28a2da5b3d3faf62d024af1dc0ca5d2c805ffea5e4e01eda4ae820",
+        "kind": "adopted-rule",
+        "status": "held"
+      },
+      "evidence": [
+        {
+          "source": "icloud-work",
+          "path": "ML learnings/failures_and_false_starts.md",
+          "lines": "118-122",
+          "quote": "The few-shot examples gave the model specific historical content (dates, sources, attributions from the examples) that contaminated its generation.",
+          "revision": "sha256:90ff5d08e5940947c02dee8d19c30bf7989b4759d48b94f70b4c7cc597644d5a",
+          "origin": "first-party prompt-sweep report; limited comparison"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "title": "Refuse rather than ship a weak item",
+      "claim": "Make an unsatisfied source, format or quality gate visible; a fallback is eligible only when its own item and provenance have been verified for this request.",
+      "unit": "item",
+      "applies_when": [
+        "A required source or response-format input is missing, or this item type has not been evaluated for the requested route.",
+        "A fallback would otherwise create filler, fabricated sources or an untested item."
+      ],
+      "actions": [
+        "Return a typed refusal or hold with the missing requirement.",
+        "Consider a stored, separately verified item only if its target, source, version and validity conditions still match."
+      ],
+      "checks": [
+        "Verify a fallback's source and answerability independently of the failed candidate.",
+        "Record failure, verified fallback and fresh generation as different provenance states."
+      ],
+      "refusal_or_fallback": "If neither a valid candidate nor a request-matched vetted fallback exists, emit no item.",
+      "limits": [
+        "The source's DBQ rule concerns real-source documents in that route, not every question type.",
+        "The canonical record is contested: later validation allowed a marked cached fallback, so blanket rejection of all fallbacks is unsupported.",
+        "No retry count or production release threshold is selected here."
+      ],
+      "canonical_record": {
+        "id": "refuse-rather-than-ship-a-weak-item",
+        "path": "learnings/refuse-rather-than-ship-a-weak-item.json",
+        "sha256": "f61ff654da6912ab6540c95e17350d091b5cdb637830b62c3a56abdbf60b38f0",
+        "kind": "adopted-rule",
+        "status": "contested"
+      },
+      "evidence": [
+        {
+          "source": "icloud-work",
+          "path": "aptraining/helpers/shadow/output/ib_satisfaction_kit_v1/generator_prompts/system_prompt_dbq.md",
+          "lines": "135",
+          "quote": "Without D13: do not generate this DBQ. Return an error indicating \"real-source documents required\".",
+          "revision": "sha256:2ee1e0bce601b5ac85258da2e657f0e43ec4fd36cf0f460a49addf3a740cc22b",
+          "origin": "AP DBQ prompt contract, route-specific"
+        },
+        {
+          "source": "icloud-work",
+          "path": "aptraining-crystal-copy-20260521/full-copy/aptraining-root/parallel-ideas-lab/experiments/production_all_units/RUNNING_SUMMARY.md",
+          "lines": "245-247",
+          "quote": "The generic DBQ fallback padded missing source documents with curriculum facts using `Retrieved APUSH Unit {unit} source N`, which produced fake repetitive documents.",
+          "revision": "sha256:d7e33e3a2a1030941609942610d4797f59c912b6dd97cfee99e5a21a6fcd3ed1",
+          "origin": "observed fallback failure in mixed-version partial run"
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "title": "Measure a generator on one try",
+      "claim": "Report raw first-attempt item quality separately from a bank's filtered or repaired served quality.",
+      "unit": "generator-run",
+      "applies_when": [
+        "Comparing generators, versions, item types or prompt changes.",
+        "A route can retry, repair, rerank, cache, filter or substitute candidates."
+      ],
+      "actions": [
+        "Freeze input set, source packet, model/version, decoding and evaluator before the measured run.",
+        "Record the first response and every subsequent repair, selection or substitution as separate states."
+      ],
+      "checks": [
+        "Report denominators and pass/abstain/failure counts by item type and source scope.",
+        "Keep raw one-attempt, best-of-many and served-bank results in separate columns; disclose evaluator version and calibration limits."
+      ],
+      "refusal_or_fallback": "When first-attempt data or frozen versions are missing, label the comparison unmeasured rather than inferring a raw pass rate from served items.",
+      "limits": [
+        "The cited AP handoff defined a raw-K1 protocol but explicitly had not run the planned InceptBench test.",
+        "A separate one-shot baseline used its own grader and version; its percentages cannot be compared directly with later evaluator versions.",
+        "No sample quota or success threshold from that AP handoff is adopted here."
+      ],
+      "canonical_record": {
+        "id": "measure-a-generator-on-one-try",
+        "path": "learnings/measure-a-generator-on-one-try.json",
+        "sha256": "074f2d8f897a66fd95a81f4359ab0e58ccbe3fbf11d8116a1f310b962f611a20",
+        "kind": "adopted-rule",
+        "status": "held"
+      },
+      "evidence": [
+        {
+          "source": "grade3-reading",
+          "path": "knowledge_bot/knowledge/kb-0170-apush-deliverable-shape-user-pause-checkpoint.qmd",
+          "lines": "58-62",
+          "quote": "one candidate, one attempt, no retry, reranking, repair, cache substitution, rejection sampling, best-of-N, or",
+          "revision": "sha256:6af61d1297bcb932b5de99d7dcfe16fd4ce3e46819594eb13192677ecc8d1a2f",
+          "origin": "frozen AP evaluation design, not a completed run"
+        },
+        {
+          "source": "grade3-reading",
+          "path": "knowledge_bot/knowledge/kb-0170-apush-deliverable-shape-user-pause-checkpoint.qmd",
+          "lines": "64",
+          "quote": "No InceptBench run has been executed for this APUSH handoff.",
+          "revision": "sha256:6af61d1297bcb932b5de99d7dcfe16fd4ce3e46819594eb13192677ecc8d1a2f",
+          "origin": "explicit unrun limit"
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "title": "Provenance for every factual field",
+      "claim": "Track factual authority at field level when a source record mixes official text, human interpretation and generated additions.",
+      "unit": "source-packet",
+      "applies_when": [
+        "A single curriculum, source or item record contains fields from different authors or generation processes."
+      ],
+      "actions": [
+        "Label each factual field with its origin, revision and verification status.",
+        "Mark model-inferred or missing-source fields as hypotheses, not official facts."
+      ],
+      "checks": [
+        "Audit whether any generated misconception, boundary, attribution or key is being promoted by a record-level source label.",
+        "Check that downstream prompts and datasets preserve the field labels."
+      ],
+      "refusal_or_fallback": "If the required field's authority cannot be established, withhold its factual use or route it for source review.",
+      "limits": [
+        "A generated field is not automatically false; it may become usable after independent verification.",
+        "The source audit concerns one AP curriculum corpus, not a measured cross-domain error rate."
+      ],
+      "canonical_record": {
+        "id": "provenance-for-every-field",
+        "path": "learnings/provenance-for-every-field.json",
+        "sha256": "3180d8eb6b7eaed087cbb573d955ccac7a896c5ef9d3d7ee55e7a8dfb6a9d677",
+        "kind": "adopted-rule",
+        "status": "held"
+      },
+      "evidence": [
+        {
+          "source": "icloud-work",
+          "path": "auto-memory-backup/feedback_field_level_provenance.md",
+          "lines": "17",
+          "quote": "Different fields in the same record can have different provenance.",
+          "revision": "sha256:93ab2f4993002d9f51e6e64671090b057023dd2974ed233b44871b3ae1f53c3f",
+          "origin": "first-party curriculum-corpus audit and guidance"
+        }
+      ]
+    },
+    {
+      "id": "G07",
+      "title": "Write the sequence before the items",
+      "claim": "Use the course's declared progression and exposure sequence as input to item design so available questions do not silently determine what is taught.",
+      "unit": "lesson-or-course",
+      "applies_when": [
+        "Generating an ordered set for a course or lesson whose progression, prerequisites or taught content matter."
+      ],
+      "actions": [
+        "Ask for the progression policy, entry assumptions, target knowledge and planned teaching order.",
+        "Tag each candidate item's role and placement against that supplied plan."
+      ],
+      "checks": [
+        "Check that an item does not assess untaught material unless it is explicitly diagnostic or transfer.",
+        "Review repeated evidence and revealed answers across the ordered sequence."
+      ],
+      "refusal_or_fallback": "If the necessary sequence is unavailable, label the output as unplaced candidate questions and withhold claims of course fit.",
+      "limits": [
+        "The TI source is internal curriculum guidance, not evidence that one progression strategy works everywhere.",
+        "This card does not choose the course's content, grade, prerequisite strictness or sequence policy."
+      ],
+      "canonical_record": {
+        "id": "write-the-sequence-before-the-items",
+        "path": "learnings/write-the-sequence-before-the-items.json",
+        "sha256": "15490e9dba1bbf07aa10186c21ea4d3acdea20d2a361aedcbc17fbea391dbd70",
+        "kind": "adopted-rule",
+        "status": "held"
+      },
+      "evidence": [
+        {
+          "source": "courseplans",
+          "path": "feedback/feedback1/Curriculum & Knowledge BrainLift.md",
+          "lines": "47-49",
+          "quote": "You cannot outsource sequence judgement to the model; you must supply the policy.",
+          "revision": "sha256:73408abf71c49fd6d7be287ee92b13af05014d42ddfe7c6e97a78696fe847623",
+          "origin": "internal curriculum guidance, not measured learner outcome"
+        }
+      ]
+    },
+    {
+      "id": "G08",
+      "title": "Keep the writer and judge apart",
+      "claim": "Keep private evaluator scores, identities, raw returns and holdout labels outside the generator's inputs; screen student-facing text for attempts to steer the judge.",
+      "unit": "pipeline",
+      "applies_when": [
+        "An evaluator's decisions can be fed back into generation or repair.",
+        "The generator writes text later seen by a model-based judge."
+      ],
+      "actions": [
+        "Expose only the public authoring contract to the writer.",
+        "If development feedback is allowed, translate it into ordinary editorial issues without private labels or raw judge output; keep final holdout feedback sealed."
+      ],
+      "checks": [
+        "Inspect prompts, logs and artifacts for evaluator score labels, metric weights, raw judge JSON or holdout answers crossing the boundary.",
+        "Void or quarantine candidate text that addresses the judge instead of the learner."
+      ],
+      "refusal_or_fallback": "If the boundary or provenance cannot be established, do not use that run as independent evaluator evidence.",
+      "limits": [
+        "The cited source is one repair pipeline's contract; it does not prove that its note-cleaning implementation is correct.",
+        "No comparative study showed sanitized notes improve generation; final qualification still needs untouched holdouts and independent labels."
+      ],
+      "canonical_record": {
+        "id": "keep-the-writer-and-the-judge-apart",
+        "path": "learnings/keep-the-writer-and-the-judge-apart.json",
+        "sha256": "058712b8ad44037a3f969038223e4a8572f0bdf6c6591b19a69e6a3dd36befb0",
+        "kind": "adopted-rule",
+        "status": "held"
+      },
+      "evidence": [
+        {
+          "source": "icloud-work",
+          "path": "evaluatorML/.agent/memory/e2e_pipeline/iterate_repair_to_100.py",
+          "lines": "267-268",
+          "quote": "The generator must never see evaluator names, scores, metric labels, or raw",
+          "revision": "sha256:bb66a45d573954d65388ce8c8a0abaa51a833d78480141d8379538b36d82f3d9",
+          "origin": "first-party repair-pipeline code contract"
+        }
+      ]
+    }
+  ]
+}

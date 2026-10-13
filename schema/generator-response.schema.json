@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Question lane generator response 0.1",
+  "type": "object",
+  "required": [
+    "protocol",
+    "request_id",
+    "items",
+    "generation_trace",
+    "status",
+    "holds"
+  ],
+  "properties": {
+    "protocol": {
+      "const": "question-lane-generation/0.1"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "stem",
+          "knowledge_target",
+          "sequence_role",
+          "source_refs",
+          "scoring",
+          "feedback"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "stem": {
+            "type": "string"
+          },
+          "knowledge_target": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sequence_role": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "options": {
+            "type": "array"
+          },
+          "task_payload": {
+            "type": "object"
+          },
+          "scoring": {
+            "type": "object",
+            "required": [
+              "kind",
+              "key_or_rubric"
+            ]
+          },
+          "feedback": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "generation_trace": {
+      "type": "object",
+      "required": [
+        "generator_version",
+        "attempt",
+        "candidate_count",
+        "selection",
+        "repairs",
+        "source_mode"
+      ]
+    },
+    "status": {
+      "enum": [
+        "prepared-for-review",
+        "held"
+      ]
+    },
+    "holds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "detail"
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "held"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "items": {
+            "maxItems": 0
+          },
+          "holds": {
+            "minItems": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "items": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}
