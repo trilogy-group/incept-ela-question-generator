@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { adaptResponse, learnerPacket, resolve, validate, validateInputs, validateResponse } from '../model_contract.mjs';
-import { writeSequence } from '../model_generate.mjs';
+import { normalizeTransport, writeSequence } from '../model_generate.mjs';
 
 const responseSchema = JSON.parse(await readFile(new URL('../schema/writer-response.schema.json', import.meta.url)));
 const requestSchema = JSON.parse(await readFile(new URL('../schema/generator-request.schema.json', import.meta.url)));
@@ -25,6 +25,20 @@ test('typed request and response reject unresolved sources, future evidence, bro
     const changed = structuredClone(response); mutate(changed); assert.throws(() => validateResponse(changed, request, responseSchema));
   }
   assert.throws(() => validate(response, { type: 'object', unimplemented: true }), /unsupported schema/);
+});
+
+test('observed JSON fences and scalar keys normalize without changing answer positions or content', () => {
+  const { response } = fixture();
+  response.items.forEach(item => item.view.key = 2);
+  const raw = `\`\`\`json\n${JSON.stringify(response)}\n\`\`\``;
+  const normalized = normalizeTransport(raw);
+  assert.equal(normalized.operations.length, 13);
+  for (const item of normalized.response.items) {
+    assert.deepEqual(item.view.key, [2]);
+    const original = response.items.find(row => row.id === item.id);
+    assert.deepEqual({ ...item.view, key: 2 }, original.view);
+  }
+  assert.ok(raw.startsWith('```json'));
 });
 
 test('finished transport preserves sources, alignment, instruction order and exact native pointers; learner projection withholds answers', () => {

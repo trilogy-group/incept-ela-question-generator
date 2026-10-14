@@ -14,6 +14,7 @@
   "temperature": 0.4,
   "max_tokens": 24000,
   "structural_repairs": 1,
+  "transport_normalization": ["json-code-fence", "scalar-choice-key-to-array"],
   "run_root": ".local/model-runs",
   "no_automatic_network_retries": true,
   "quality_status": "Independent academic review pending; local checks are structural only."

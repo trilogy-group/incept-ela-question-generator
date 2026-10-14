@@ -73,6 +73,11 @@ remain in a fresh private `.local/model-runs/` journal. No network call is autom
 selected. A hold exits 2; execution failure exits 1. JSON schemas and deterministic checks establish transport
 integrity only. Independent academic review and learner outcomes remain pending.
 
+The transport parser also records two mechanical normalizations: removing a JSON code fence and wrapping the same
+scalar choice index in the contract's one-element key array. Neither changes wording or answer positions. A preserved
+run can be finalized offline with `node model_generate.mjs --finalize-run .local/model-runs/RUN_DIRECTORY`; the
+normalization gets a separate directory and receipt, preserves the original held journal, and adds no model call.
+
 Finished `lesson-context.json` and `question-set.json` preserve the supplied instruction nodes and insert native
 questions at the declared slots. Every item carries the original public alignment and exact source bindings.
 `learner.json` withholds keys, rubrics, sample answers and feedback until the entire sequence is complete; the

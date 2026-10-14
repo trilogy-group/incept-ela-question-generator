@@ -12,6 +12,30 @@ const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const json = async path => JSON.parse(await readFile(path, 'utf8'));
 const save = async (path, value) => writeFile(path, `${JSON.stringify(value, null, 2)}\n`, { mode: 0o600, flag: 'wx' });
 
+function localPath(path, label) {
+  const selected = absolute(path);
+  if (!selected.startsWith(`${ROOT}/`)) throw new StructuralError(`${label} must be an explicit file or directory inside this repository`);
+  return selected;
+}
+
+export function normalizeTransport(content) {
+  if (typeof content !== 'string') throw new StructuralError('Writer did not return text content');
+  const operations = [];
+  let text = content.trim();
+  const fenced = text.match(/^```(?:json)?\s*\n([\s\S]*?)\n```$/);
+  if (fenced) { text = fenced[1]; operations.push({ operation: 'remove-json-code-fence', path: '', meaning_changed: false }); }
+  const response = JSON.parse(text);
+  if (Array.isArray(response.items)) response.items.forEach((item, i) => {
+    if (['reading_mcq', 'key_term_mcq'].includes(item.kind) && Number.isInteger(item.view?.key)) {
+      operations.push({ operation: 'scalar-choice-key-to-array', path: `/items/${i}/view/key`, from: item.view.key, to: [item.view.key], meaning_changed: false });
+      item.view.key = [item.view.key];
+    }
+  });
+  return { response, operations };
+}
+
+function cost(value) { return value.cost ?? value.usage?.cost ?? value.usage?.costInUSD ?? null; }
+
 function instructions() {
   return `Write a complete, ordered English literature lesson question sequence from the supplied public course context. Return only one JSON object matching writer_response_schema. Write each declared slot once in order; do not choose, score or judge candidate quality. You may return a typed held response with no items if the supplied source makes a task unanswerable.
 
@@ -35,7 +59,7 @@ export function writerMessages(request, context, schema, publicMethods, publicFo
 }
 
 export async function writeSequence({ request, context, schema, config, messages, route, journal }) {
-  const trace = { generator_version: VERSION, writer_attempts: 1, candidate_count: 1, model_calls: 0, first_attempt: null, repairs: [], selection: [], refusals: [], quality_status: 'unmeasured; no evaluator or self-judge call', requested_model: config.model, decoding: { temperature: config.temperature, max_tokens: config.max_tokens }, calls: [] };
+  const trace = { generator_version: VERSION, writer_attempts: 1, candidate_count: 1, model_calls: 0, first_attempt: null, repairs: [], transport_normalizations: [], selection: [], refusals: [], quality_status: 'unmeasured; no evaluator or self-judge call', requested_model: config.model, decoding: { temperature: config.temperature, max_tokens: config.max_tokens }, calls: [] };
   let currentMessages = messages;
   let response;
   for (let attempt = 0; attempt <= config.structural_repairs; attempt++) {
@@ -54,7 +78,7 @@ export async function writeSequence({ request, context, schema, config, messages
     await journal(`${name}.provider.raw.json`, completion.raw, { raw: true });
     const choice = completion.value.choices?.[0];
     const content = choice?.message?.content;
-    const call = { name, requested_model: config.model, reported_model: completion.value.model ?? null, finish_reason: choice?.finish_reason ?? null, usage: completion.value.usage ?? null, reported_cost: completion.value.cost ?? completion.value.usage?.cost ?? null, cost_status: completion.value.cost === undefined && completion.value.usage?.cost === undefined ? 'not reported by gateway' : 'gateway reported', provider_response_sha256: sha256(completion.raw) };
+    const call = { name, requested_model: config.model, reported_model: completion.value.model ?? null, finish_reason: choice?.finish_reason ?? null, usage: completion.value.usage ?? null, reported_cost: cost(completion.value), cost_status: cost(completion.value) === null ? 'not reported by gateway' : 'gateway reported', provider_response_sha256: sha256(completion.raw) };
     trace.calls.push(call);
     if (attempt === 0) trace.first_attempt = call; else trace.repairs.push({ ...call, allowed_scope: 'JSON shape, identifier/reference integrity and exact quote binding only' });
     if (choice?.message?.refusal) {
@@ -64,8 +88,9 @@ export async function writeSequence({ request, context, schema, config, messages
     }
     await journal(`${name}.content.json`, { content: content ?? null });
     try {
-      if (typeof content !== 'string') throw new StructuralError('Writer did not return text content');
-      response = JSON.parse(content);
+      const normalized = normalizeTransport(content);
+      response = normalized.response;
+      if (normalized.operations.length) trace.transport_normalizations.push({ attempt: name, operations: normalized.operations, allowed_scope: 'Unwrap a JSON code fence and represent the same scalar choice index as a one-element array; no content or key position changes.' });
       validateResponse(response, request, schema);
       if (response.status === 'held') trace.refusals.push({ attempt: name, holds: response.holds });
       break;
@@ -94,7 +119,7 @@ async function verifyPublicPins() {
 }
 
 export async function execute(options) {
-  const configPath = absolute(options.config ?? absolute(ROOT, 'model-config.json'));
+  const configPath = localPath(options.config ?? absolute(ROOT, 'model-config.json'), 'Config');
   const config = await json(configPath);
   if (!Number.isInteger(config.structural_repairs) || config.structural_repairs < 0 || config.structural_repairs > 1) throw new StructuralError('Structural repair count must be zero or one');
   const route = await connect(config, await credentials(options.envFile));
@@ -105,8 +130,8 @@ export async function execute(options) {
   if (!config.route_evidence || config.route_evidence.model !== config.model || config.route_evidence.aws_bedrock !== false) throw new StructuralError('Explicit read-only non-Bedrock route evidence is required in model-config.json');
   const advertised = models.find(model => model.id === config.model);
   if (advertised.owned_by === 'virtual-model' || advertised.owned_by !== config.route_evidence.owned_by) throw new StructuralError('Configured direct provider evidence differs from current gateway metadata');
-  const requestBytes = await readFile(absolute(options.request));
-  const contextBytes = await readFile(absolute(options.context));
+  const requestBytes = await readFile(localPath(options.request, 'Request'));
+  const contextBytes = await readFile(localPath(options.context, 'Context'));
   const request = JSON.parse(requestBytes), context = JSON.parse(contextBytes);
   const requestSchema = await json(absolute(ROOT, 'schema/generator-request.schema.json'));
   const contextSchema = await json(absolute(ROOT, 'schema/lesson-context.schema.json'));
@@ -116,7 +141,8 @@ export async function execute(options) {
   const methods = await json(absolute(ROOT, 'public/generation-standard.json'));
   const formats = await json(absolute(ROOT, 'public/formats.json'));
   const run = `${new Date().toISOString().replace(/[:.]/g, '-')}-${randomUUID().slice(0, 8)}`;
-  const directory = absolute(ROOT, config.run_root, run);
+  const directory = localPath(absolute(ROOT, config.run_root, run), 'Run directory');
+  if (!directory.startsWith(`${ROOT}/.local/`)) throw new StructuralError('Model journals must stay inside private .local/');
   await mkdir(directory, { recursive: true, mode: 0o700 });
   const journal = (name, value, options) => options?.raw ? writeFile(absolute(directory, name), value, { mode: 0o600, flag: 'wx' }) : save(absolute(directory, name), value);
   await journal('source-request.json', request);
@@ -128,7 +154,7 @@ export async function execute(options) {
   await journal('writer-response.json', response);
   const codeHashes = {};
   for (const name of ['model_generate.mjs', 'model_contract.mjs', 'gateway.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
-  const provenance = { kind: 'generator-run', run, generator_version: VERSION, request_sha256: sha256(requestBytes), source_context_sha256: sha256(contextBytes), config_sha256: sha256(await readFile(configPath)), code_sha256: codeHashes, requested_model: config.model, reported_models: trace.calls.map(call => call.reported_model), route_evidence: config.route_evidence, model_calls: trace.model_calls, first_attempt_count: 1, structural_repair_count: trace.repairs.length, candidate_count: 1, writer_response_sha256: sha256(JSON.stringify(response)), knowledge_baseline_sha256: sha256(await readFile(absolute(ROOT, 'public/knowledge-baseline.json'))), source_comparison: 'Local public pinned bytes checked; original external source pin preserved, no new external Git comparison ran.', academic_quality: 'pending independent review', learner_outcome: 'unmeasured' };
+  const provenance = { kind: 'generator-run', run, generator_version: VERSION, request_sha256: sha256(requestBytes), source_context_sha256: sha256(contextBytes), config_sha256: sha256(await readFile(configPath)), code_sha256: codeHashes, requested_model: config.model, reported_models: trace.calls.map(call => call.reported_model), route_evidence: config.route_evidence, model_calls: trace.model_calls, first_attempt_count: 1, model_structural_repair_count: trace.repairs.length, deterministic_transport_repair_count: trace.transport_normalizations.length, structural_repair_count: trace.repairs.length + trace.transport_normalizations.length, candidate_count: 1, writer_response_sha256: sha256(JSON.stringify(response)), knowledge_baseline_sha256: sha256(await readFile(absolute(ROOT, 'public/knowledge-baseline.json'))), source_comparison: 'Local public pinned bytes checked; original external source pin preserved, no new external Git comparison ran.', academic_quality: 'pending independent review', learner_outcome: 'unmeasured' };
   const receipt = { ...provenance, writer_family: config.writer_family, status: response.status, items: response.items.length, calls: trace.calls.map(({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status }) => ({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status })), transport_hashes: {} };
   if (response.status === 'prepared-for-review') {
     const { context: finishedContext, questionSet } = adaptResponse(request, context, response, provenance);
@@ -143,17 +169,51 @@ export async function execute(options) {
   return { status: response.status, items: response.items.length, model_calls: trace.model_calls, structural_repairs: trace.repairs.length, directory, receipt: absolute(directory, 'receipt.json') };
 }
 
+export async function finalizeRecordedRun(runDirectory) {
+  const original = localPath(runDirectory, 'Recorded run');
+  if (!original.startsWith(`${ROOT}/.local/model-runs/`)) throw new StructuralError('Finalization reads only an explicit recorded model run');
+  const previous = await json(absolute(original, 'receipt.json'));
+  const trace = await json(absolute(original, 'trace.json'));
+  const request = await json(absolute(original, 'source-request.json'));
+  const context = await json(absolute(original, 'source-context.json'));
+  const attempt = trace.calls.at(-1)?.name;
+  if (!attempt || !/^(first-attempt|structural-repair-1)$/.test(attempt)) throw new StructuralError('No supported preserved writer return exists');
+  const normalized = normalizeTransport((await json(absolute(original, `${attempt}.content.json`))).content);
+  validateInputs(request, context, await json(absolute(ROOT, 'schema/generator-request.schema.json')), await json(absolute(ROOT, 'schema/lesson-context.schema.json')));
+  validateResponse(normalized.response, request, await json(absolute(ROOT, 'schema/writer-response.schema.json')));
+  if (normalized.response.status !== 'prepared-for-review') throw new StructuralError('A writer refusal cannot be normalized into a delivered sequence');
+  await verifyPublicPins();
+  const normalizationRun = `transport-normalization-${randomUUID().slice(0, 8)}`;
+  const directory = absolute(original, normalizationRun);
+  await mkdir(directory, { mode: 0o700 });
+  const calls = previous.calls.map(call => ({ ...call, reported_cost: cost({ usage: call.usage, cost: call.reported_cost ?? undefined }), cost_status: cost({ usage: call.usage, cost: call.reported_cost ?? undefined }) === null ? 'not reported by gateway' : 'gateway reported' }));
+  const { calls: ignoredCalls, transport_hashes: ignoredHashes, status: ignoredStatus, items: ignoredItems, ...originalProvenance } = previous;
+  const provenance = { ...originalProvenance, origin_run: previous.run, original_run_status: previous.status, raw_first_attempt_status: trace.first_attempt?.structural_error ? 'structural-check-failed' : 'structural-check-passed', raw_first_attempt_quality_status: 'unmeasured', run: `${previous.run}/${normalizationRun}`, model_structural_repair_count: trace.repairs.length, deterministic_transport_repair_count: 1, structural_repair_count: trace.repairs.length + 1, writer_response_sha256: sha256(JSON.stringify(normalized.response)), normalization_code_sha256: sha256(await readFile(absolute(ROOT, 'model_generate.mjs'))), academic_quality: 'pending independent review; transport normalization changes no substantive content or key positions' };
+  const { context: finishedContext, questionSet } = adaptResponse(request, context, normalized.response, provenance);
+  validate(finishedContext, await json(absolute(ROOT, 'schema/lesson-context.schema.json')));
+  validate(questionSet, await json(absolute(ROOT, 'schema/question-set.schema.json')));
+  await save(absolute(directory, 'normalization.json'), { source_attempt: attempt, operations: normalized.operations, model_calls_added: 0, candidate_selection: [], original_held_journal_preserved: true });
+  await save(absolute(directory, 'writer-response.json'), normalized.response);
+  await save(absolute(directory, 'lesson-context.json'), finishedContext);
+  await save(absolute(directory, 'question-set.json'), questionSet);
+  await save(absolute(directory, 'learner.json'), learnerPacket(finishedContext, questionSet));
+  const receipt = { ...provenance, status: 'prepared-for-review', items: normalized.response.items.length, calls, cost_currency: 'USD', reported_total_cost: calls.every(call => typeof call.reported_cost === 'number') ? calls.reduce((sum, call) => sum + call.reported_cost, 0) : null, transport_hashes: {} };
+  for (const name of ['lesson-context.json', 'question-set.json', 'learner.json']) receipt.transport_hashes[name] = sha256(await readFile(absolute(directory, name)));
+  await save(absolute(directory, 'receipt.json'), receipt);
+  return { status: receipt.status, items: receipt.items, model_calls: receipt.model_calls, model_structural_repairs: receipt.model_structural_repair_count, deterministic_transport_repairs: 1, directory, receipt: absolute(directory, 'receipt.json') };
+}
+
 async function main() {
   const options = {};
-  const flags = { '--request': 'request', '--context': 'context', '--config': 'config', '--env-file': 'envFile' };
+  const flags = { '--request': 'request', '--context': 'context', '--config': 'config', '--env-file': 'envFile', '--finalize-run': 'finalizeRun' };
   const args = process.argv.slice(2);
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--list-models') options.listModels = true;
     else if (flags[args[i]] && args[i + 1]) options[flags[args[i]]] = args[++i];
     else throw new StructuralError('Usage: node model_generate.mjs --request request.json --context context.json [--env-file file] [--config file], or --list-models');
   }
-  if (!options.listModels && (!options.request || !options.context)) throw new StructuralError('Both --request and --context must be supplied explicitly');
-  const result = await execute(options);
+  if (!options.finalizeRun && !options.listModels && (!options.request || !options.context)) throw new StructuralError('Both --request and --context must be supplied explicitly');
+  const result = options.finalizeRun ? await finalizeRecordedRun(options.finalizeRun) : await execute(options);
   console.log(JSON.stringify(result, null, 2));
   if (result.status === 'held') process.exitCode = 2;
 }
