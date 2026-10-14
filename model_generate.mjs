@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { createHash, randomUUID } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, rename } from 'node:fs/promises';
 import { dirname, resolve as absolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connect, credentials } from './gateway.mjs';
@@ -9,6 +9,7 @@ import { rotateChoiceDisplays } from './display_rotation.mjs';
 import { NATIVE_PROTOCOL, adaptNativeResponse, nativeLearnerPacket, nativeWriterMessages, validateNativeInputs, validateNativeResponse } from './native_formats.mjs';
 import { formatCoverage, mockNativeResponse } from './native_smoke.mjs';
 import { smokeKindMatrix } from './native_breadth.mjs';
+import { compileContextPlan, checkResponseConstraints, contextConsumptionAudit } from './context_intake.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 export const VERSION = 'source-grounded-writer/0.1';
@@ -58,7 +59,7 @@ Feedback is teacher material and is withheld until the whole sequence is complet
 export function writerMessages(request, context, schema, publicMethods, publicFormats) {
   return [
     { role: 'system', content: instructions() },
-    { role: 'user', content: JSON.stringify({ request, lesson_context: context, writer_response_schema: schema, public_methods: publicMethods.cards.map(({ id, claim, actions, limits }) => ({ id, claim, actions, limits })), presentation_formats: publicFormats.formats.map(({ id, required_payload, teacher_key, conditions }) => ({ id, required_payload, teacher_key, conditions })) }) },
+    { role: 'user', content: JSON.stringify({ request, lesson_context: context, resolved_slot_contexts: compileContextPlan(request, context), writer_response_schema: schema, public_methods: publicMethods.cards.map(({ id, claim, actions, limits }) => ({ id, claim, actions, limits })), presentation_formats: publicFormats.formats.map(({ id, required_payload, teacher_key, conditions }) => ({ id, required_payload, teacher_key, conditions })) }) },
   ];
 }
 
@@ -97,7 +98,7 @@ export async function writeSequence({ request, context, schema, config, messages
       response = normalized.response;
       if (normalized.operations.length) trace.transport_normalizations.push({ attempt: name, operations: normalized.operations, allowed_scope: 'Unwrap a JSON code fence and represent the same scalar choice index as a one-element array; no content or key position changes.' });
       if (request.protocol === NATIVE_PROTOCOL) validateNativeResponse(response, request);
-      else validateResponse(response, request, schema);
+      else { validateResponse(response, request, schema); if (response.status === 'prepared-for-review') { const plan = compileContextPlan(request, context); response.items.forEach((item, i) => checkResponseConstraints(item.view, plan.slots[i])); } }
       if (response.status === 'held') trace.refusals.push({ attempt: name, holds: response.holds });
       break;
     } catch (error) {
@@ -125,6 +126,7 @@ async function verifyPublicPins() {
 }
 
 export async function execute(options) {
+  if (options.contextCoverage) return executeContextCoverage(options);
   if (options.offlineKindMatrix) return executeNativeKindMatrix(options);
   if (options.offlineSmoke || options.prepareNative) return executeNativeOffline(options);
   const configPath = localPath(options.config ?? absolute(ROOT, 'model-config.json'), 'Config');
@@ -142,7 +144,7 @@ export async function execute(options) {
       try { validateNativeInputs(request, context, formats); }
       catch (error) { if (!(error instanceof StructuralError)) throw error; return executeNativeOffline({ request: options.request, context: options.context, prepareNative: true }); }
     }
-    else validateInputs(request, context, requestSchema, contextSchema);
+    else { validateInputs(request, context, requestSchema, contextSchema); compileContextPlan(request, context); }
     await verifyPublicPins();
   }
   const route = await connect(config, await credentials(options.envFile));
@@ -170,7 +172,7 @@ export async function execute(options) {
   await journal('display-rotation.json', { rotations: displayed.rotations, meaning_changed: false, model_calls_added: 0 });
   await journal('display-response.json', displayed.response);
   const codeHashes = {};
-  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'native_formats.mjs', 'gateway.mjs', 'display_rotation.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
+  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'native_formats.mjs', 'context_intake.mjs', 'gateway.mjs', 'display_rotation.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
   const provenance = { kind: 'generator-run', run, generator_version: VERSION, request_sha256: sha256(requestBytes), source_context_sha256: sha256(contextBytes), config_sha256: sha256(await readFile(configPath)), code_sha256: codeHashes, requested_model: config.model, reported_models: trace.calls.map(call => call.reported_model), route_evidence: config.route_evidence, model_calls: trace.model_calls, first_attempt_count: 1, model_structural_repair_count: trace.repairs.length, deterministic_transport_repair_count: trace.transport_normalizations.length, structural_repair_count: trace.repairs.length + trace.transport_normalizations.length, candidate_count: 1, writer_response_sha256: sha256(JSON.stringify(response)), display_response_sha256: sha256(JSON.stringify(displayed.response)), display_rotation: displayed.rotations, knowledge_baseline_sha256: sha256(await readFile(absolute(ROOT, 'public/knowledge-baseline.json'))), source_comparison: 'Local public pinned bytes checked; original external source pin preserved, no new external Git comparison ran.', academic_quality: 'pending independent review', learner_outcome: 'unmeasured' };
   const receipt = { ...provenance, writer_family: config.writer_family, status: response.status, items: response.items.length, calls: trace.calls.map(({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status }) => ({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status })), transport_hashes: {} };
   if (response.status === 'prepared-for-review') {
@@ -183,6 +185,23 @@ export async function execute(options) {
   }
   await journal('receipt.json', receipt);
   return { status: response.status, items: response.items.length, model_calls: trace.model_calls, structural_repairs: trace.repairs.length, directory, receipt: absolute(directory, 'receipt.json') };
+}
+
+export async function executeContextCoverage(options) {
+  if (options.envFile || options.listModels || options.finalizeRun || options.config) throw new StructuralError('Offline context coverage accepts only explicit request and context files');
+  const request = await json(localPath(options.request, 'Request')), context = await json(localPath(options.context, 'Context'));
+  await verifyPublicPins();
+  const report = contextConsumptionAudit(request, context, { validateInputs: validateNativeInputs, validateResponse: validateNativeResponse, mockResponse: mockNativeResponse, catalog: await json(absolute(ROOT, 'public/formats.json')) });
+  const legacy = compileContextPlan(await json(absolute(ROOT, 'examples/othello-1-1-request.json')), await json(absolute(ROOT, 'examples/othello-1-1-context.json')));
+  report.public_protocol_example = { slots_checked: legacy.slots.length, coverage: legacy.coverage, qualification: 'Historical public proposal shape checked locally; original source pin retained and no questions/model calls added.' };
+  report.code_sha256 = {};
+  for (const name of ['context_intake.mjs', 'native_formats.mjs', 'native_smoke.mjs', 'model_generate.mjs']) report.code_sha256[name] = sha256(await readFile(absolute(ROOT, name)));
+  const directory = absolute(ROOT, '.local/B1011'); await mkdir(directory, { recursive: true, mode: 0o700 });
+  const destination = absolute(directory, 'context-coverage.json'), temporary = absolute(directory, `context-coverage-${randomUUID()}.json`);
+  await save(temporary, report);
+  try { await rename(destination, absolute(directory, `context-coverage-previous-${randomUUID()}.json`)); } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  await rename(temporary, destination);
+  return { status: report.status, slots_checked: report.slots_checked, regression_cases_checked: report.regression_cases_checked, model_calls: 0, coverage: destination, coverage_sha256: sha256(await readFile(destination)), semantic_quality: 'unmeasured' };
 }
 
 export async function executeNativeKindMatrix(options) {
@@ -202,7 +221,7 @@ export async function executeNativeKindMatrix(options) {
   await save(absolute(directory, 'coverage.json'), coverage);
   const { rows, ...summary } = coverage;
   const codeHashes = {};
-  for (const name of ['model_generate.mjs', 'native_formats.mjs', 'native_smoke.mjs', 'native_breadth.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
+  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'native_formats.mjs', 'context_intake.mjs', 'native_smoke.mjs', 'native_breadth.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
   const receipt = { ...summary, input_hashes: { request: sha256(requestBytes), context: sha256(contextBytes) }, code_sha256: codeHashes, coverage_sha256: sha256(await readFile(absolute(directory, 'coverage.json'))), quality: 'unmeasured', independent_quality_labels: 0, original_captured_runs_preserved: true };
   await save(absolute(directory, 'receipt.json'), receipt);
   return { ...receipt, directory, coverage: absolute(directory, 'coverage.json'), receipt: absolute(directory, 'receipt.json') };
@@ -287,6 +306,7 @@ async function main() {
     else if (args[i] === '--offline-smoke') options.offlineSmoke = true;
     else if (args[i] === '--prepare-native') options.prepareNative = true;
     else if (args[i] === '--offline-kind-matrix') options.offlineKindMatrix = true;
+    else if (args[i] === '--context-coverage') options.contextCoverage = true;
     else if (flags[args[i]] && args[i + 1]) options[flags[args[i]]] = args[++i];
     else throw new StructuralError('Usage: node model_generate.mjs --request request.json --context context.json [--env-file file] [--config file], or --list-models');
   }

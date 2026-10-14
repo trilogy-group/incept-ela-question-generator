@@ -11,6 +11,10 @@ export function mockNativeResponse(request) {
     const item = { id: slot.id, kind: slot.native_kind, family, public_format: slot.public_format, view, source_bindings: [] };
     const bind = (field_ref, selectedSource = source, selectedQuote = quote) => item.source_bindings.push({ field_ref, source_ref: selectedSource.id, quote: selectedQuote, relation: 'Offline structural fixture binding only; no academic endorsement or generated question quality asserted.' });
     const rationale = 'Offline rationale fixture; content quality deliberately unmeasured.';
+    const frozen = field => { const value = slot.native_context[field]; view[field] = value; const owner = request.course_context.source_assets.find(row => phase.source_refs.includes(row.id) && row.text.includes(value)); if (!owner) throw new Error(`${slot.id}: frozen ${field} has no visible source`); bind(`/view/${field}`, owner, value); };
+    if (slot.public_format === 'rebuttal') frozen('counterclaim');
+    if (['quote_analysis', 'quote_word_selection'].includes(slot.native_kind)) frozen('quote');
+    if (['dialogue', 'dialogue_branch_prompt', 'dialogue_follow_up'].includes(slot.native_kind)) frozen('counterpart_turn');
     if (['single_choice', 'multiple_select', 'evidence_selection', 'word_selection'].includes(family)) {
       if (family === 'word_selection') view.options = [...slot.native_context.allowed_words];
       else if (family === 'evidence_selection') {

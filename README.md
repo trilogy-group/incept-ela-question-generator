@@ -68,6 +68,7 @@ Run the same Node CLI offline, with no credentials or sibling repository:
 node model_generate.mjs --prepare-native --request examples/current-native-request.json --context examples/current-native-context.json
 node model_generate.mjs --offline-smoke --request examples/current-native-request.json --context examples/current-native-context.json
 node model_generate.mjs --offline-kind-matrix --request examples/current-native-request.json --context examples/current-native-context.json
+node model_generate.mjs --context-coverage --request examples/current-native-request.json --context examples/current-native-context.json
 ```
 
 Preparation emits a reproducible neutral request/context, response schema, source pins, hashes, coverage matrix and
@@ -117,6 +118,22 @@ instruction-only roles. Spoken responses use an explicit spoken adapter extensio
 part and one later evidence part under the same parent, with the evidence depending on that claim. The current
 source's guided and dependent activities remain distinct from the synthetic breadth fixtures and from independent
 measurements of learner mastery.
+
+`--context-coverage` writes the private source-only audit to `.local/B1011/context-coverage.json`. The writer now
+receives resolved slot contexts: actual goal/performance and content claims, target/key associations, supplied
+knowledge graph links and concrete pairing tables, phase source scope, operation/support, constraints and supplied
+response history. Intake rejects contradictory phase order/targets, invisible content sources, unmatched keys or
+pairs, mixed source versions and prefilled input slots. Explicitly supplied response modes and prompt/option/answer
+caps constrain transport. Structured reveal timing affects an explicitly unexposed-target route; individual
+readiness requests remain holds because declared references and recorded responses do not establish mastery or ZPD.
+Frozen quotations, counterpart claims and scripted dialogue turns must remain learner-visible with exact source
+bindings; carrying them only in teacher metadata cannot satisfy the return contract.
+
+The current native packet's content keys are source anchors; it supplies no course-owned prerequisite graph,
+concrete source pairing tables or individual history. Those richer inputs are checked when supplied. Grade,
+language, accessibility prose and individual difficulty are forwarded to the writer, with their semantic effect
+unmeasured. Resolved context and valid source bindings cannot establish that a writer produced an academically
+aligned question or appropriate challenge. Teacher context joins remain separate from learner question payloads.
 
 `question-lane-native/0.2` and `question-set native 0.2` are explicit **adapter extensions**. Native kind, source
 pointer, parent context, role, branch alternatives and dependency survive adaptation. They do not change the pinned
