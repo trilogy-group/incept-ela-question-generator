@@ -18,7 +18,8 @@ const groups = {
   oral_response: ['dialogue', 'oral_microtask', 'oral_turn', 'spoken_response'],
   word_web: ['word_web', 'vocabulary_routine'],
   word_selection: ['quote_word_selection'],
-  inline_choice: ['cloze', 'inline_choice', 'model_rebuild_gap', 'rebuild_choice', 'vocabulary_gap'],
+  inline_choice: ['inline_choice', 'model_rebuild_gap', 'rebuild_choice', 'vocabulary_gap'],
+  shared_cloze: ['cloze'],
   matching: ['match', 'matching'],
   sequence: ['sequence'],
   self_report: ['confidence_self_report'],
@@ -26,7 +27,7 @@ const groups = {
   nonresponse: ['model_paragraph', 'worked_example'],
   composite: ['argument_round', 'ebsr', 'ebsr_part'],
 };
-const defaults = { single_choice: 'single_choice', evidence_selection: 'evidence_selection', classification: 'classification', written_response: 'short_explanation', oral_response: 'short_explanation' };
+const defaults = { single_choice: 'single_choice', evidence_selection: 'evidence_selection', classification: 'classification', written_response: 'short_explanation' };
 export const FORMAT_DISPATCH = Object.freeze(Object.fromEntries(Object.entries(groups).flatMap(([family, kinds]) => kinds.map(kind => [kind, {
   native_kind: kind, family, public_format: defaults[family] ?? `adapter_extension/${family}`,
   output_contract: `native-view/${family}/0.2`,
@@ -47,7 +48,7 @@ export function dispatch(slot) {
   } else if (!['claim', 'evidence'].includes(slot.native_context?.part) || !slot.native_context?.composite_parent || (slot.native_context.part === 'evidence' && !slot.depends_on?.length)) {
     fail(slot.id, 'EBSR requires explicit claim/evidence part, parent and evidence dependency');
   }
-  if (declared.family !== 'composite' && slot.public_format !== declared.public_format && !(['written_response', 'oral_response'].includes(slot.family) && ['short_explanation', 'learner_question', 'rebuttal', 'integrated_response'].includes(slot.public_format))) fail(slot.id, 'public format does not match native response operation');
+  if (declared.family !== 'composite' && slot.public_format !== declared.public_format && !(slot.family === 'written_response' && ['short_explanation', 'learner_question', 'rebuttal', 'integrated_response'].includes(slot.public_format))) fail(slot.id, 'public format does not match native response operation');
   return { ...declared, family: slot.family, public_format: slot.public_format };
 }
 
@@ -114,13 +115,25 @@ export function validateNativeInputs(request, context, catalog) {
     if (slot.native_kind === 'quote_analysis' && !['paraphrase', 'interpretation'].includes(slot.operation)) fail(slot.id, 'quote analysis subcheck scope required');
     if (slot.native_kind === 'quote_word_selection' && (!slot.native_context.quote || !slot.native_context.allowed_words?.length || !slot.native_context.word_class_options?.length)) fail(slot.id, 'word selection requires exact quotation, declared candidate words and class options');
     if (slot.family === 'say_back' && !slot.native_context.recall_source_ref) fail(slot.id, 'say-back requires a supplied recall statement');
-    if (slot.family === 'inline_choice' && !slot.native_context.surrounding_text) fail(slot.id, 'rebuild requires surrounding taught sentence context');
+    if (['inline_choice', 'shared_cloze'].includes(slot.family)) text(slot.native_context.surrounding_text, `${slot.id} surrounding taught sentence`);
+    if (slot.family === 'shared_cloze' && slot.native_context.shared_bank_policy !== 'single-use') fail(slot.id, 'cloze requires one shared bank with an explicit single-use key policy');
+    if (slot.family === 'shared_cloze') { list(slot.native_context.blank_ids, `${slot.id} cloze blank identifiers`); unique(slot.native_context.blank_ids, slot.id); if (slot.native_context.blank_ids.some(id => !slot.native_context.surrounding_text.includes(`[${id}]`))) fail(slot.id, 'shared cloze blanks must resolve in the surrounding text'); }
     if (slot.public_format === 'rebuttal' && !slot.native_context.counterclaim) fail(slot.id, 'rebuttal requires a frozen supplied counterpart claim');
     if (slot.family === 'classification' && !slot.native_context.category_dimensions?.length) fail(slot.id, 'classification requires supplied entity and relation dimensions');
-    if (slot.family === 'matching' && !slot.native_context.match_relation) fail(slot.id, 'matching requires a supplied relation');
-    if (slot.family === 'sequence' && !slot.native_context.ordering_rule) fail(slot.id, 'sequence requires a supplied ordering relation');
+    if (slot.family === 'matching') text(slot.native_context.match_relation, `${slot.id} matching relation`);
+    if (slot.family === 'sequence') { text(slot.native_context.ordering_rule, `${slot.id} ordering relation`); text(slot.native_context.tie_policy, `${slot.id} tie/alternative policy`); }
+    if (slot.family === 'multiple_select') text(slot.native_context.selection_rule, `${slot.id} selection rule`);
+    if (slot.family === 'oral_response' && (!c.learner_constraints.response_modes?.includes('spoken') || slot.native_context.response_mode !== 'spoken')) fail(slot.id, 'spoken adapter requires declared spoken response mode and learner constraints');
+    if (['dialogue', 'dialogue_branch_prompt', 'dialogue_follow_up'].includes(slot.native_kind)) { text(slot.native_context.counterpart_turn, `${slot.id} frozen counterpart turn`); if (!phase.source_refs.includes(slot.native_context.counterpart_source_ref)) fail(slot.id, 'frozen counterpart source must be visible'); }
+    if (['rank_board', 'relation_board', 'reflective_choice'].includes(slot.native_kind)) text(slot.native_context.course_owned_operation, `${slot.id} course-owned native operation`);
+    if (slot.family === 'nonresponse' && (slot.role !== 'instruction' || slot.native_context.exposure_placement !== 'declared-before-response')) fail(slot.id, 'instruction-only row requires instructional role and explicit exposure placement');
     if (slot.family === 'self_report' && !slot.native_context.scale?.length) fail(slot.id, 'self-report requires a supplied scale');
   });
+  for (const slot of slots.filter(row => ['ebsr', 'ebsr_part'].includes(row.native_kind))) {
+    const siblings = slots.filter(row => row.native_kind === slot.native_kind && row.native_context.composite_parent === slot.native_context.composite_parent);
+    const claim = siblings.filter(row => row.native_context.part === 'claim'), evidence = siblings.filter(row => row.native_context.part === 'evidence');
+    if (claim.length !== 1 || evidence.length !== 1 || slots.indexOf(claim[0]) >= slots.indexOf(evidence[0]) || !evidence[0].depends_on.includes(claim[0].id)) fail(slot.id, 'EBSR requires one earlier claim and one dependent evidence part under the same parent');
+  }
   return slots.length;
 }
 
@@ -148,7 +161,7 @@ export function validateNativeResponse(response, request) {
     if (Object.keys(item).some(k => !['id', 'kind', 'family', 'public_format', 'view', 'source_bindings'].includes(k))) fail(loc, 'unexpected item field');
     const v = item.view; object(v, loc); const required = [];
     const allowed = {
-      single_choice: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback'], multiple_select: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback'], evidence_selection: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback', 'claim', 'selection_rule'], word_selection: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback', 'word_classes'], classification: ['prompt', 'categories', 'entries', 'mapping', 'entry_feedback', 'correct_feedback'], written_response: ['prompt', 'response_mode', 'sample_answer', 'feedback', 'rubric', 'response_parts'], oral_response: ['prompt', 'response_mode', 'sample_answer', 'feedback', 'rubric', 'response_parts'], word_web: ['prompt', 'response_mode', 'sample_answer', 'feedback', 'rubric', 'centre', 'link_rule', 'response_parts'], inline_choice: ['prompt', 'surrounding_text', 'blanks'], matching: ['prompt', 'entries', 'options', 'mapping', 'feedback'], sequence: ['prompt', 'entries', 'key', 'feedback'], self_report: ['prompt', 'scale', 'scoring'], say_back: ['prompt', 'statement', 'scoring'], nonresponse: ['instruction'],
+      single_choice: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback'], multiple_select: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback', 'selection_rule'], evidence_selection: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback', 'claim', 'selection_rule'], word_selection: ['prompt', 'options', 'key', 'option_feedback', 'correct_feedback', 'word_classes'], classification: ['prompt', 'categories', 'entries', 'mapping', 'entry_feedback', 'correct_feedback'], written_response: ['prompt', 'response_mode', 'sample_answer', 'feedback', 'rubric', 'response_parts'], oral_response: ['prompt', 'response_mode', 'sample_answer', 'feedback', 'rubric', 'response_parts'], word_web: ['prompt', 'response_mode', 'sample_answer', 'feedback', 'rubric', 'centre', 'link_rule', 'response_parts'], inline_choice: ['prompt', 'surrounding_text', 'blanks'], shared_cloze: ['prompt', 'surrounding_text', 'bank', 'blanks', 'reuse_policy'], matching: ['prompt', 'entries', 'options', 'mapping', 'feedback'], sequence: ['prompt', 'entries', 'key', 'feedback', 'ordering_rule', 'tie_policy'], self_report: ['prompt', 'scale', 'scoring'], say_back: ['prompt', 'statement', 'scoring'], nonresponse: ['instruction'],
     };
     if (Object.keys(v).some(k => !allowed[d.family].includes(k))) fail(loc, 'unexpected view field');
     if (d.family === 'nonresponse') { text(v.instruction, loc); if (Object.hasOwn(v, 'key') || Object.hasOwn(v, 'rubric')) fail(loc, 'instruction-only row cannot have a scoring key'); required.push('/view/instruction'); }
@@ -156,12 +169,14 @@ export function validateNativeResponse(response, request) {
       text(v.prompt, loc);
       if (['single_choice', 'multiple_select', 'evidence_selection', 'word_selection'].includes(d.family)) {
         const options = list(v.options, loc, d.family === 'word_selection' ? 1 : slot.native_kind === 'true_false' ? 2 : 3); options.forEach(option => text(option, loc)); unique(options, loc);
+        if (slot.native_kind === 'true_false' && options.length !== 2 || d.family === 'single_choice' && options.length > 5) fail(loc, 'choice option count differs');
         const key = list(v.key, `${loc} key`); unique(key, loc);
         if (key.some(x => !Number.isInteger(x) || x < 0 || x >= options.length) || d.family === 'single_choice' && key.length !== 1) fail(loc, 'choice key does not resolve');
         if (list(v.option_feedback, loc).length !== options.length) fail(loc, 'choice feedback count differs'); v.option_feedback.forEach(row => text(row, loc)); text(v.correct_feedback, loc);
         options.forEach((option, n) => { required.push(`/view/options/${n}`, `/view/option_feedback/${n}`); if (d.family === 'word_selection' && !slot.native_context.allowed_words.includes(option)) fail(loc, 'selected word absent from supplied quotation'); });
         required.push('/view/correct_feedback');
         if (d.family === 'evidence_selection') { text(v.claim, loc); text(v.selection_rule, loc); required.push('/view/claim'); }
+        if (d.family === 'multiple_select' && v.selection_rule !== slot.native_context.selection_rule) fail(loc, 'declared multiple-select rule must remain visible');
         if (d.family === 'word_selection') {
           object(v.word_classes, loc);
           if (Object.keys(v.word_classes).length !== key.length || key.some(index => !slot.native_context.word_class_options.includes(v.word_classes[index]))) fail(loc, 'selected word requires a declared class');
@@ -169,7 +184,7 @@ export function validateNativeResponse(response, request) {
         }
       } else if (d.family === 'classification') {
         const categories = list(v.categories, loc, 2), entries = list(v.entries, loc); unique(categories.map(x => x.id), loc); unique(entries.map(x => x.id), loc);
-        categories.forEach(row => { text(row.id, loc); text(row.label, loc); text(row.entity, loc); text(row.relation, loc); text(row.description, loc); });
+        categories.forEach(row => { text(row.id, loc); text(row.label, loc); text(row.entity, loc); text(row.relation, loc); text(row.description, loc); if (!slot.native_context.category_dimensions.some(dimension => dimension.entity === row.entity && dimension.relation === row.relation)) fail(loc, 'classification entity/relation not declared by context'); });
         object(v.mapping, loc); object(v.entry_feedback, loc);
         if (Object.keys(v.mapping).length !== entries.length || Object.keys(v.entry_feedback).length !== entries.length) fail(loc, 'classification key/feedback count differs');
         entries.forEach((row, n) => { text(row.id, loc); text(row.text, loc); if (!categories.some(category => category.id === v.mapping[row.id])) fail(loc, 'classification category missing'); text(v.entry_feedback[row.id], loc); required.push(`/view/entries/${n}`, `/view/entry_feedback/${row.id}`); }); text(v.correct_feedback, loc); required.push('/view/correct_feedback');
@@ -181,10 +196,16 @@ export function validateNativeResponse(response, request) {
       } else if (d.family === 'inline_choice') {
         text(v.surrounding_text, loc); if (v.surrounding_text !== slot.native_context.surrounding_text) fail(loc, 'rebuild surrounding text differs'); const blanks = list(v.blanks, loc); unique(blanks.map(row => row.id), loc);
         blanks.forEach((row, n) => { text(row.id, loc); const options = list(row.options, loc, 2); unique(options, loc); options.forEach(x => text(x, loc)); if (!Number.isInteger(row.key) || row.key < 0 || row.key >= options.length) fail(loc, 'blank key missing'); if (list(row.option_feedback, loc).length !== options.length) fail(loc, 'blank feedback count differs'); options.forEach((x, j) => { text(row.option_feedback[j], loc); required.push(`/view/blanks/${n}/options/${j}`, `/view/blanks/${n}/option_feedback/${j}`); }); });
+      } else if (d.family === 'shared_cloze') {
+        if (v.surrounding_text !== slot.native_context.surrounding_text || v.reuse_policy !== 'single-use') fail(loc, 'shared cloze context or reuse policy differs');
+        const bank = list(v.bank, loc, 2), blanks = list(v.blanks, loc); unique(bank.map(row => row.id), loc); unique(blanks.map(row => row.id), loc); unique(blanks.map(row => row.key), loc);
+        if (JSON.stringify(blanks.map(row => row.id)) !== JSON.stringify(slot.native_context.blank_ids)) fail(loc, 'shared cloze blank identifiers differ from context');
+        bank.forEach((row, i) => { text(row.id, loc); text(row.text, loc); required.push(`/view/bank/${i}`); });
+        blanks.forEach((row, i) => { text(row.id, loc); if (!bank.some(option => option.id === row.key)) fail(loc, 'shared cloze bank key missing'); text(row.feedback, loc); required.push(`/view/blanks/${i}/feedback`); });
       } else if (['matching', 'sequence'].includes(d.family)) {
         const entries = list(v.entries, loc, 2); unique(entries.map(row => row.id), loc); entries.forEach((row, n) => { text(row.id, loc); text(row.text, loc); required.push(`/view/entries/${n}`); });
-        if (d.family === 'matching') { const options = list(v.options, loc, 2); unique(options.map(row => row.id), loc); object(v.mapping, loc); if (Object.keys(v.mapping).length !== entries.length) fail(loc, 'matching mapping count differs'); entries.forEach(row => { if (!options.some(option => option.id === v.mapping[row.id])) fail(loc, 'matching key missing'); }); }
-        else { const key = list(v.key, loc, entries.length); if (key.length !== entries.length || new Set(key).size !== entries.length || key.some(ref => !entries.some(row => row.id === ref))) fail(loc, 'sequence key must be full permutation'); }
+        if (d.family === 'matching') { const options = list(v.options, loc, 2); unique(options.map(row => row.id), loc); options.forEach((row, i) => { text(row.id, loc); text(row.text, loc); required.push(`/view/options/${i}`); }); object(v.mapping, loc); if (Object.keys(v.mapping).length !== entries.length) fail(loc, 'matching mapping count differs'); entries.forEach(row => { if (!options.some(option => option.id === v.mapping[row.id])) fail(loc, 'matching key missing'); }); }
+        else { const key = list(v.key, loc, entries.length); if (key.length !== entries.length || new Set(key).size !== entries.length || key.some(ref => !entries.some(row => row.id === ref))) fail(loc, 'sequence key must be full permutation'); if (v.ordering_rule !== slot.native_context.ordering_rule || v.tie_policy !== slot.native_context.tie_policy) fail(loc, 'ordering relation and alternatives must remain visible'); }
         text(v.feedback, loc); required.push('/view/feedback');
       } else if (d.family === 'self_report') {
         list(v.scale, loc, 2).forEach(x => text(x, loc)); if (JSON.stringify(v.scale) !== JSON.stringify(slot.native_context.scale)) fail(loc, 'confidence scale differs from supplied context'); if (v.scoring !== 'none' || ['key', 'rubric', 'sample_answer'].some(k => Object.hasOwn(v, k))) fail(loc, 'confidence report cannot have correctness scoring');
@@ -234,7 +255,7 @@ export function nativeWriterMessages(request, context, schema, methods, formats)
 
 export const VIEW_CONTRACTS = {
   single_choice: 'prompt, options:[string], key:[one index], option_feedback:[string], correct_feedback; bind each option, rationale and explanation',
-  multiple_select: 'prompt, options:[string], key:[distinct indices], option_feedback:[string], correct_feedback; bind all options and explanations',
+  multiple_select: 'prompt, options:[string], key:[distinct indices], option_feedback:[string], correct_feedback, selection_rule:exact supplied learner-visible rule; bind all options and explanations',
   evidence_selection: 'as multiple_select; each option equals its exact visible quote binding',
   classification: 'prompt, categories:[{id,label,entity,relation,description}], entries:[{id,text}], mapping:{entry:category}, entry_feedback:{entry:reason}, correct_feedback',
   written_response: 'prompt, response_mode:written, sample_answer, feedback, rubric:{criteria:[{id,requirement,points,full_credit,partial_credit if 2 points,no_credit,accept_alternative}],allocation,combination_rules}',
@@ -242,8 +263,9 @@ export const VIEW_CONTRACTS = {
   word_web: 'as written_response plus centre, link_rule, response_parts:[string]; classify this as guided semantic production, not independent mastery',
   word_selection: 'as multiple_select using exact supplied allowed_words from quote, plus word_classes:{selected-index:declared-class}; bind each class to its source word and grammatical relation',
   inline_choice: 'prompt, surrounding_text, blanks:[{id,options:[string],key:index,option_feedback:[string]}]; all options and explanations bound',
+  shared_cloze: 'prompt, surrounding_text, bank:[{id,text}], blanks:[{id,key:bank-id,feedback}], reuse_policy:single-use; one shared bank, distinct answer ids, bank and feedback source bindings',
   matching: 'prompt, entries:[{id,text}], options:[{id,text}], mapping:{entry:option}, feedback',
-  sequence: 'prompt, entries:[{id,text}], key:[all entry ids in order], feedback',
+  sequence: 'prompt, entries:[{id,text}], key:[all entry ids in order], feedback, ordering_rule, tie_policy; supplied ordering and alternative policy remain visible',
   self_report: 'prompt, scale:[string], scoring:none; no key or rubric or implied correctness',
   say_back: 'prompt, statement:exact supplied recall statement, scoring:unscored-recall',
   nonresponse: 'instruction:string; no question key or rubric',

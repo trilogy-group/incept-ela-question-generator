@@ -16,8 +16,9 @@ export function mockNativeResponse(request) {
       else if (family === 'evidence_selection') {
         view.options = [...new Set(phase.source_refs.flatMap(ref => request.course_context.source_assets.find(row => row.id === ref).text.split('\n')).filter(row => row.trim()))].slice(0, 3);
         view.claim = 'Offline claim fixture: evidence binding mechanism only.'; view.selection_rule = 'Select all declared fixture keys.'; bind('/view/claim');
-      } else view.options = ['Offline option A', 'Offline option B', 'Offline option C'];
-      view.key = [0]; view.option_feedback = view.options.map(() => rationale); view.correct_feedback = rationale;
+      } else view.options = slot.native_kind === 'true_false' ? ['Offline true option', 'Offline false option'] : ['Offline option A', 'Offline option B', 'Offline option C'];
+      view.key = family === 'multiple_select' ? [0, 2] : [0]; view.option_feedback = view.options.map(() => rationale); view.correct_feedback = rationale;
+      if (family === 'multiple_select') view.selection_rule = slot.native_context.selection_rule;
       view.options.forEach((option, i) => {
         const owner = family === 'evidence_selection' ? request.course_context.source_assets.find(row => phase.source_refs.includes(row.id) && row.text.includes(option)) : source;
         bind(`/view/options/${i}`, owner, family === 'evidence_selection' ? option : quote); bind(`/view/option_feedback/${i}`);
@@ -37,6 +38,20 @@ export function mockNativeResponse(request) {
     } else if (family === 'inline_choice') {
       view.surrounding_text = slot.native_context.surrounding_text; view.blanks = [{ id: 'blank-1', options: ['Offline choice A', 'Offline choice B'], key: 0, option_feedback: [rationale, rationale] }];
       [0, 1].forEach(i => { bind(`/view/blanks/0/options/${i}`); bind(`/view/blanks/0/option_feedback/${i}`); });
+    } else if (family === 'shared_cloze') {
+      view.surrounding_text = slot.native_context.surrounding_text; view.bank = [{ id: 'bank-1', text: 'Offline bank word A' }, { id: 'bank-2', text: 'Offline bank word B' }]; view.blanks = [{ id: 'blank-1', key: 'bank-1', feedback: rationale }, { id: 'blank-2', key: 'bank-2', feedback: rationale }]; view.reuse_policy = 'single-use';
+      view.bank.forEach((row, i) => bind(`/view/bank/${i}`)); view.blanks.forEach((row, i) => bind(`/view/blanks/${i}/feedback`));
+    } else if (family === 'matching' || family === 'sequence') {
+      view.entries = [{ id: 'entry-1', text: 'Offline source entry A' }, { id: 'entry-2', text: 'Offline source entry B' }];
+      view.entries.forEach((row, i) => bind(`/view/entries/${i}`));
+      if (family === 'matching') {
+        view.options = [{ id: 'option-1', text: 'Offline matching option A' }, { id: 'option-2', text: 'Offline matching option B' }];
+        view.mapping = { 'entry-1': 'option-1', 'entry-2': 'option-2' };
+        view.options.forEach((row, i) => bind(`/view/options/${i}`));
+      } else { view.key = ['entry-2', 'entry-1']; view.ordering_rule = slot.native_context.ordering_rule; view.tie_policy = slot.native_context.tie_policy; }
+      view.feedback = rationale; bind('/view/feedback');
+    } else if (family === 'nonresponse') {
+      delete view.prompt; view.instruction = 'Offline source-grounded instruction fixture; no response or score.'; bind('/view/instruction');
     } else if (family === 'say_back') {
       const recall = request.course_context.source_assets.find(row => row.id === slot.native_context.recall_source_ref);
       view.statement = recall.text; view.scoring = 'unscored-recall'; bind('/view/statement', recall, recall.text);

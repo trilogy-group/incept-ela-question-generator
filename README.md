@@ -59,6 +59,7 @@ Run the same Node CLI offline, with no credentials or sibling repository:
 ```bash
 node model_generate.mjs --prepare-native --request examples/current-native-request.json --context examples/current-native-context.json
 node model_generate.mjs --offline-smoke --request examples/current-native-request.json --context examples/current-native-context.json
+node model_generate.mjs --offline-kind-matrix --request examples/current-native-request.json --context examples/current-native-context.json
 ```
 
 Preparation emits a reproducible neutral request/context, response schema, source pins, hashes, coverage matrix and
@@ -85,12 +86,29 @@ support, learner constraints or counterpart context produces a hold before crede
 | `classify` | 1 | `classification`, preserving both entity and relation |
 | `confidence_self_report` | 1 | unscored self-report with the supplied scale |
 
-All 14 kinds have neutral context and mocked transport checks. The 62 collected authoring-kind names have an
-explicit dispatch and output-family contract; the remaining 48 have no current reference smoke fixture. Their
-matrix status is `explicit-dispatch-awaiting-context-and-format-smoke`, except `model_paragraph` and
-`worked_example`, which are instruction-only rows. This is not a claim that all historical formats have generated
-content or passed academic review. EBSR requires declared dependent parts; missing operations cannot fall through
-to a generic question.
+All 14 current kinds have neutral context and mocked transport checks. The separate `--offline-kind-matrix` run
+exercises every one of the 62 collected names through context intake and one mocked provider return per kind. Its
+14 source cases retain the current authoring context and any required earlier dependencies. Its other 48 cases are
+explicitly authored fictional family fixtures, kept outside the captured golden reference. Their status says
+`synthetic-family-transport-checked`; `model_paragraph` and `worked_example` instead have instruction-only transport.
+Every row also records a checked typed hold naming its missing source, media, operation, scale, relation or support
+prerequisite, with zero provider access for that missing-context case. The matrix and per-kind finished packets,
+receipts and holds live under a fresh `.local/native-kind-matrices/` directory. No row is left unexplained as
+awaiting smoke.
+
+These fixtures verify the declared adapter contracts and their refusal paths. They do not establish the original
+native semantics or renderer compatibility of absent source examples, real spoken/media delivery, generated
+teaching quality, or independent quality labels. In particular, a collected alias such as `rank_board` or
+`reflective_choice` requires an explicit course-owned operation; its name cannot silently decide whether the task
+is classification, ordering, source-supported choice or self-report. Actual source-native operations and context
+remain prerequisites for using those aliases on a real lesson.
+
+The broader family checks retain one shared single-use bank for `cloze`, explicit matching alternatives and source
+bindings, visible multiple-select rules, ordering and tie policies, declared entity/relation dimensions, and
+instruction-only roles. Spoken responses use an explicit spoken adapter extension. EBSR requires exactly one claim
+part and one later evidence part under the same parent, with the evidence depending on that claim. The current
+source's guided and dependent activities remain distinct from the synthetic breadth fixtures and from independent
+measurements of learner mastery.
 
 `question-lane-native/0.2` and `question-set native 0.2` are explicit **adapter extensions**. Native kind, source
 pointer, parent context, role, branch alternatives and dependency survive adaptation. They do not change the pinned

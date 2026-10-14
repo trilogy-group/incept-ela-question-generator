@@ -144,7 +144,8 @@
               "sequence",
               "self_report",
               "say_back",
-              "nonresponse"
+              "nonresponse",
+              "shared_cloze"
             ]
           },
           "public_format": {

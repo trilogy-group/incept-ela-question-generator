@@ -8,6 +8,7 @@ import { adaptResponse, learnerPacket, StructuralError, validate, validateInputs
 import { rotateChoiceDisplays } from './display_rotation.mjs';
 import { NATIVE_PROTOCOL, adaptNativeResponse, nativeLearnerPacket, nativeWriterMessages, validateNativeInputs, validateNativeResponse } from './native_formats.mjs';
 import { formatCoverage, mockNativeResponse } from './native_smoke.mjs';
+import { smokeKindMatrix } from './native_breadth.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 export const VERSION = 'source-grounded-writer/0.1';
@@ -124,6 +125,7 @@ async function verifyPublicPins() {
 }
 
 export async function execute(options) {
+  if (options.offlineKindMatrix) return executeNativeKindMatrix(options);
   if (options.offlineSmoke || options.prepareNative) return executeNativeOffline(options);
   const configPath = localPath(options.config ?? absolute(ROOT, 'model-config.json'), 'Config');
   const config = await json(configPath);
@@ -181,6 +183,29 @@ export async function execute(options) {
   }
   await journal('receipt.json', receipt);
   return { status: response.status, items: response.items.length, model_calls: trace.model_calls, structural_repairs: trace.repairs.length, directory, receipt: absolute(directory, 'receipt.json') };
+}
+
+export async function executeNativeKindMatrix(options) {
+  if (options.envFile || options.listModels || options.finalizeRun || options.config) throw new StructuralError('Offline kind matrix accepts only explicit request and context files');
+  const requestBytes = await readFile(localPath(options.request, 'Request')), contextBytes = await readFile(localPath(options.context, 'Context'));
+  const request = JSON.parse(requestBytes), context = JSON.parse(contextBytes);
+  await verifyPublicPins();
+  const catalog = await json(absolute(ROOT, 'public/formats.json')), schema = await json(absolute(ROOT, 'schema/native-writer-response.schema.json'));
+  validateNativeInputs(request, context, catalog);
+  const directory = absolute(ROOT, '.local/native-kind-matrices', `${new Date().toISOString().replace(/[:.]/g, '-')}-${randomUUID().slice(0, 8)}`);
+  await mkdir(directory, { recursive: true, mode: 0o700 });
+  const journalFor = async kind => {
+    const destination = absolute(directory, kind); await mkdir(destination, { mode: 0o700 });
+    return (name, value, opts) => opts?.raw ? writeFile(absolute(destination, name), value, { mode: 0o600, flag: 'wx' }) : save(absolute(destination, name), value);
+  };
+  const coverage = await smokeKindMatrix({ request, context, catalog, schema, writeSequence, journalFor });
+  await save(absolute(directory, 'coverage.json'), coverage);
+  const { rows, ...summary } = coverage;
+  const codeHashes = {};
+  for (const name of ['model_generate.mjs', 'native_formats.mjs', 'native_smoke.mjs', 'native_breadth.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
+  const receipt = { ...summary, input_hashes: { request: sha256(requestBytes), context: sha256(contextBytes) }, code_sha256: codeHashes, coverage_sha256: sha256(await readFile(absolute(directory, 'coverage.json'))), quality: 'unmeasured', independent_quality_labels: 0, original_captured_runs_preserved: true };
+  await save(absolute(directory, 'receipt.json'), receipt);
+  return { ...receipt, directory, coverage: absolute(directory, 'coverage.json'), receipt: absolute(directory, 'receipt.json') };
 }
 
 export async function executeNativeOffline(options) {
@@ -261,6 +286,7 @@ async function main() {
     if (args[i] === '--list-models') options.listModels = true;
     else if (args[i] === '--offline-smoke') options.offlineSmoke = true;
     else if (args[i] === '--prepare-native') options.prepareNative = true;
+    else if (args[i] === '--offline-kind-matrix') options.offlineKindMatrix = true;
     else if (flags[args[i]] && args[i + 1]) options[flags[args[i]]] = args[++i];
     else throw new StructuralError('Usage: node model_generate.mjs --request request.json --context context.json [--env-file file] [--config file], or --list-models');
   }

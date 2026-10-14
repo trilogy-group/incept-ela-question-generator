@@ -6,6 +6,7 @@ import { promisify } from 'node:util';
 import { randomUUID } from 'node:crypto';
 import { FORMAT_DISPATCH, adaptNativeResponse, nativeLearnerPacket, validateNativeInputs, validateNativeResponse } from '../native_formats.mjs';
 import { formatCoverage, mockNativeResponse } from '../native_smoke.mjs';
+import { kindCase, missingPrerequisiteCase, smokeKindMatrix } from '../native_breadth.mjs';
 import { execute, executeNativeOffline, writeSequence } from '../model_generate.mjs';
 import { resolve, validate } from '../model_contract.mjs';
 
@@ -151,4 +152,62 @@ test('portable Node CLI smoke needs no credentials or sibling repository', async
   const run = promisify(execFile);
   const { stdout } = await run(process.execPath, ['model_generate.mjs', '--offline-smoke', '--request', 'examples/current-native-request.json', '--context', 'examples/current-native-context.json'], { cwd: new URL('..', import.meta.url).pathname, env: { PATH: process.env.PATH } });
   const result = JSON.parse(stdout); assert.equal(result.status, 'mock-transport-checked'); assert.equal(result.items, 50); assert.equal(result.native_kinds, 14); assert.equal(result.model_calls, 0); assert.equal(result.mocked_provider_calls, 1);
+});
+
+test('every collected kind has a separate source or synthetic context and a specific missing-prerequisite hold', () => {
+  let captured = 0, synthetic = 0;
+  for (const kind of Object.keys(FORMAT_DISPATCH)) {
+    const sample = kindCase(kind, originalRequest, originalContext);
+    validateNativeInputs(sample.request, sample.context, catalog);
+    const response = mockNativeResponse(sample.request); validate(response, schema); validateNativeResponse(response, sample.request);
+    if (sample.captured_occurrences) captured++; else { synthetic++; assert.match(sample.context_origin, /synthetic.*not-golden/); assert.equal(sample.request.source_provenance.kind, 'synthetic-offline-fixture'); }
+    const missing = missingPrerequisiteCase(sample); assert.ok(missing.missing.trim()); assert.throws(() => validateNativeInputs(missing.request, missing.context, catalog), undefined, kind);
+  }
+  assert.equal(captured, 14); assert.equal(synthetic, 48);
+});
+
+test('all kinds reject invalid family keys/rubrics and unexposed source bindings', () => {
+  for (const kind of Object.keys(FORMAT_DISPATCH)) {
+    const sample = kindCase(kind, originalRequest, originalContext), response = mockNativeResponse(sample.request);
+    const item = response.items.find(row => row.kind === kind);
+    const altered = structuredClone(response), changed = altered.items.find(row => row.kind === kind);
+    const family = changed.family;
+    if (['single_choice', 'multiple_select', 'evidence_selection', 'word_selection'].includes(family)) changed.view.key = [999];
+    else if (family === 'classification') changed.view.categories[0].entity = 'undeclared-entity';
+    else if (['written_response', 'oral_response', 'word_web'].includes(family)) changed.view.rubric.criteria[0].accept_alternative = '';
+    else if (family === 'inline_choice') changed.view.blanks[0].key = 999;
+    else if (family === 'shared_cloze') changed.view.blanks[1].key = changed.view.blanks[0].key;
+    else if (family === 'matching') changed.view.mapping['entry-1'] = 'missing-option';
+    else if (family === 'sequence') changed.view.key = ['entry-1', 'entry-1'];
+    else if (family === 'say_back') changed.view.statement += ' Invented ending.';
+    else changed.view.key = [0];
+    assert.throws(() => validateNativeResponse(altered, sample.request), undefined, kind);
+    if (item.source_bindings.length) {
+      const futureRequest = structuredClone(sample.request), futureResponse = structuredClone(response);
+      futureRequest.course_context.source_assets.push({ id: 'UNEXPOSED', text: 'The future source is unseen.', original_pointer: '/synthetic/unexposed', provenance: { kind: 'synthetic-negative-context' } });
+      const target = futureResponse.items.find(row => row.kind === kind); target.source_bindings[0].source_ref = 'UNEXPOSED'; target.source_bindings[0].quote = 'The future source is unseen.';
+      assert.throws(() => validateNativeResponse(futureResponse, futureRequest), /visible source/, kind);
+    }
+  }
+});
+
+test('EBSR pairing, shared-bank cloze, matching alternatives and oral adapter preserve their distinct contracts', () => {
+  const ebsr = kindCase('ebsr_part', originalRequest, originalContext);
+  assert.equal(ebsr.request.sequence_blueprint.length, 2);
+  for (const change of [r => r.sequence_blueprint[1].native_context.composite_parent = 'unrelated', r => r.sequence_blueprint[1].depends_on = [], r => r.sequence_blueprint[1].native_context.part = 'claim']) {
+    const request = structuredClone(ebsr.request); change(request); assert.throws(() => validateNativeInputs(request, ebsr.context, catalog), /EBSR/);
+  }
+  const cloze = kindCase('cloze', originalRequest, originalContext), clozeResponse = mockNativeResponse(cloze.request);
+  assert.equal(cloze.request.sequence_blueprint[0].family, 'shared_cloze'); assert.equal(clozeResponse.items[0].view.bank.length, 2); assert.equal(clozeResponse.items[0].view.reuse_policy, 'single-use');
+  const match = kindCase('matching', originalRequest, originalContext), matchResponse = mockNativeResponse(match.request);
+  for (const change of [r => delete r.items[0].view.options[0].text, r => r.items[0].source_bindings = r.items[0].source_bindings.filter(row => !row.field_ref.startsWith('/view/options/'))]) { const response = structuredClone(matchResponse); change(response); assert.throws(() => validateNativeResponse(response, match.request)); }
+  const oral = kindCase('spoken_response', originalRequest, originalContext); assert.equal(oral.request.sequence_blueprint[0].public_format, 'adapter_extension/oral_response');
+  const wrong = structuredClone(oral.request); wrong.sequence_blueprint[0].public_format = 'short_explanation'; assert.throws(() => validateNativeInputs(wrong, oral.context, catalog), /public format/);
+});
+
+test('breadth pipeline preserves one mocked provider journal and typed missing-context hold per kind', async () => {
+  const files = new Map();
+  const coverage = await smokeKindMatrix({ request: originalRequest, context: originalContext, catalog, schema, writeSequence, journalFor: async kind => async (name, value) => { const key = `${kind}/${name}`; assert.equal(files.has(key), false); files.set(key, structuredClone(value)); } });
+  assert.equal(coverage.rows.length, 62); assert.equal(coverage.captured_activity_occurrences, 50); assert.equal(coverage.current_captured_kinds, 14); assert.equal(coverage.synthetic_kinds, 48); assert.equal(coverage.missing_context_holds_checked, 62); assert.equal(coverage.model_calls, 0); assert.equal(coverage.mocked_provider_calls, 62);
+  coverage.rows.forEach(row => { assert.equal(row.academic_quality, 'unmeasured'); assert.equal(row.actual_model_generation, 'not run'); assert.ok(files.has(`${row.native_kind}/first-attempt.provider.raw.json`)); const hold = files.get(`${row.native_kind}/missing-context-hold.json`); assert.equal(hold.status, 'held'); assert.deepEqual(hold.items, []); const receipt = files.get(`${row.native_kind}/receipt.json`); assert.equal(receipt.missing_context.provider_calls, 0); });
 });
