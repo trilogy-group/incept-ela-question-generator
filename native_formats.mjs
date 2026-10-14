@@ -70,6 +70,19 @@ export function validateNativeInputs(request, context, catalog) {
   const targets = list(c.core_knowledge, 'knowledge goals').map(row => row.id);
   unique(sourceIds, 'source assets'); unique(targets, 'knowledge goals');
   for (const source of c.source_assets) { text(source.id, 'source id'); text(source.text, source.id); text(source.original_pointer, source.id); object(source.provenance, source.id); }
+  for (const source of c.source_assets.filter(row => row.timed_captions)) {
+    const captions = list(source.timed_captions, `${source.id} timed captions`), anchors = list(source.caption_anchors, `${source.id} caption anchors`);
+    if (anchors.length !== captions.length) fail(source.id, 'caption anchor count differs');
+    let offset = 0;
+    captions.forEach((caption, i) => {
+      text(caption.line, source.id);
+      if (!Number.isFinite(caption.from) || !Number.isFinite(caption.to) || caption.from < 0 || caption.to <= caption.from) fail(source.id, 'caption time interval invalid');
+      const anchor = anchors[i];
+      if (anchor.source_ref !== source.id || anchor.quote !== caption.line || anchor.start !== offset || anchor.end !== offset + caption.line.length || source.text.slice(anchor.start, anchor.end) !== caption.line || JSON.stringify(anchor.time_range) !== JSON.stringify([caption.from, caption.to]) || anchor.original_pointer !== `${source.original_pointer}/${i}/line`) fail(source.id, 'timed caption source binding differs');
+      offset += caption.line.length + 1;
+    });
+    if (source.text !== captions.map(row => row.line).join('\n')) fail(source.id, 'caption transcript order or text differs');
+  }
   for (const knowledge of c.core_knowledge) { text(knowledge.claim, knowledge.id); text(knowledge.performance, knowledge.id); list(knowledge.source_refs, knowledge.id).forEach(ref => { if (!sourceIds.includes(ref)) fail(knowledge.id, 'knowledge source does not resolve'); }); }
   for (const key of ['prerequisites', 'learner_constraints', 'prior_exposure', 'content_keys', 'knowledge_map', 'pairing_map']) if (!Object.hasOwn(c, key)) fail('course context', `missing explicit ${key}`);
   object(c.learner_constraints, 'learner constraints'); text(c.learner_constraints.status, 'learner constraints status');
@@ -83,6 +96,7 @@ export function validateNativeInputs(request, context, catalog) {
   const phases = list(c.lesson_plan?.phases, 'lesson phases'); unique(phases.map(row => row.id), 'phases');
   const media = c.media_assets ?? []; list(media, 'media assets', 0); unique(media.map(row => row.id), 'media assets');
   media.forEach(row => { text(row.id, 'media id'); text(row.src, row.id); text(row.original_pointer, row.id); text(row.transcript_status, row.id); object(row.provenance, row.id); });
+  media.filter(row => row.transcript_status === 'supplied').forEach(row => { const source = c.source_assets.find(source => source.id === row.transcript_source_ref); if (!source || source.kind !== 'media-transcript' || source.media_ref !== row.src || JSON.stringify(source.timed_captions) !== JSON.stringify(row.captions)) fail(row.id, 'supplied media captions do not bind to the matching transcript source'); });
   const pages = list(context.native?.pages, 'native pages'); unique(pages.map(row => row.id), 'pages');
   if (JSON.stringify(context.native.course_context) !== JSON.stringify(c)) fail('course context', 'request and context differ');
   const publicFormats = new Set(list(catalog.formats, 'public formats').map(row => row.id));

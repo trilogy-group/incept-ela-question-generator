@@ -22,7 +22,7 @@ test('all 50 current native activities have explicit public format, scope, sourc
   const { request, context, response } = fixture();
   assert.equal(validateNativeInputs(request, context, catalog), 50);
   validate(response, schema); assert.equal(validateNativeResponse(response, request), 50);
-  assert.equal(request.source_provenance.commit, '4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892');
+  assert.equal(request.source_provenance.commit, '1839d852e7994aca776f12da916fce73d91a2cf7');
   assert.equal(request.source_provenance.sha256, inventory.source_sha256);
   const counts = Object.fromEntries(Object.keys(inventory.current_by_kind).map(kind => [kind, request.sequence_blueprint.filter(row => row.native_kind === kind).length]));
   assert.deepEqual(counts, inventory.current_by_kind);
@@ -30,20 +30,39 @@ test('all 50 current native activities have explicit public format, scope, sourc
   assert.ok(['classification', 'single_choice', 'evidence_selection', 'short_explanation', 'learner_question', 'rebuttal', 'integrated_response'].every(format => request.sequence_blueprint.some(row => row.public_format === format)));
 });
 
-test('final-main reading introduction retains exact media provenance and refuses content inference without a transcript', () => {
+test('current reading introduction retains timed source-bound captions and raw pending capture provenance', () => {
   const { request, context } = fixture();
   const media = request.course_context.media_assets.find(row => row.id === 'reading-2-intro-video');
-  assert.equal(media.src, 'archivist/reading-2-intro.mp4?v=d4fa226a19');
-  assert.equal(media.poster, 'archivist/reading-2-intro-poster.jpg');
+  assert.equal(media.src, 'archivist/reading-2-intro.mp4?v=8be7dfb932');
+  assert.equal(media.poster, 'archivist/reading-2-intro-poster.jpg?v=c67e7a9883');
   assert.equal(media.original_pointer, '/pages/7/nodes/0/intro_video');
   assert.equal(media.provenance.sha256, inventory.source_sha256);
-  assert.equal(media.transcript_status, 'not-supplied');
+  assert.equal(media.transcript_status, 'supplied');
+  assert.equal(media.captions.length, 9);
+  const source = request.course_context.source_assets.find(row => row.id === media.transcript_source_ref);
+  assert.deepEqual(source.timed_captions, media.captions);
+  assert.deepEqual(source.time_range, [0, 42.42]);
+  source.caption_anchors.forEach((anchor, i) => { assert.equal(source.text.slice(anchor.start, anchor.end), media.captions[i].line); assert.deepEqual(anchor.time_range, [media.captions[i].from, media.captions[i].to]); assert.equal(anchor.original_pointer, `/pages/7/nodes/0/intro_video/captions/${i}/line`); });
+  assert.equal(source.playback_equivalence, 'not verified');
+  assert.equal(request.source_provenance.capture_provenance_as_at_capture.admission_status, 'pending-root-review');
+  assert.equal(request.source_provenance.capture_provenance_as_at_capture.default_positive, false);
+  assert.equal(request.source_provenance.capture_receipt_state.admission_status, 'pending-root-review');
+  assert.equal(media.reported_capture_integrity.evidence.find(row => row.field === 'src').manifest_equal, true);
+  assert.equal(media.reported_capture_integrity.evidence.find(row => row.field === 'poster').manifest_equal, null);
   assert.ok(context.native.pages.find(row => row.id === 'reading-2').nodes.some(row => row.type === 'media-introduction' && row.media_ref === media.id));
   const slot = request.sequence_blueprint.find(row => row.page_ref === 'reading-2');
   const phase = request.course_context.lesson_plan.phases.find(row => row.id === slot.phase_ref);
   assert.ok(phase.media_context_refs.includes(media.id));
+  assert.ok(phase.source_refs.includes(source.id));
   slot.native_context.required_media_refs = [media.id];
-  assert.throws(() => validateNativeInputs(request, context, catalog), /required media content lacks/);
+  validateNativeInputs(request, context, catalog);
+  for (const mutate of [r => r.course_context.source_assets.find(row => row.id === source.id).timed_captions[0].line += ' Invented.', r => r.course_context.source_assets.find(row => row.id === source.id).caption_anchors[0].time_range[1] += 1, r => r.course_context.media_assets[0].transcript_source_ref = 'missing', r => r.course_context.lesson_plan.phases.find(row => row.id === slot.phase_ref).source_refs = ['reading-1']]) {
+    const altered = structuredClone(request); mutate(altered); const c = structuredClone(context); c.native.course_context = structuredClone(altered.course_context); assert.throws(() => validateNativeInputs(altered, c, catalog));
+  }
+  const response = mockNativeResponse(request);
+  const early = response.items.find(row => row.kind === 'reading_mcq');
+  early.source_bindings[0] = { source_ref: source.id, quote: media.captions[0].line, field_ref: '/view/options/0', relation: 'A future caption must not bind an earlier phase.' };
+  assert.throws(() => validateNativeResponse(response, request), /visible source/);
 });
 
 test('missing knowledge, media transcript, phase, maps, constraints, support and counterpart context refuse intake', () => {

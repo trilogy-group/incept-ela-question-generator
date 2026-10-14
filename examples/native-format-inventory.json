@@ -1,7 +1,7 @@
 {
   "version": "native-format-inventory/0.2",
-  "source_pin": "4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892",
-  "source_sha256": "d388ae850b7a1e145e4c8bfc06a228642814130d9737599ffd02c0b1acac9bd4",
+  "source_pin": "1839d852e7994aca776f12da916fce73d91a2cf7",
+  "source_sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
   "current_by_kind": {
     "argument_round": 3,
     "classify": 1,

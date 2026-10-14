@@ -9,8 +9,8 @@ import hashlib
 import json
 from pathlib import Path
 
-PIN = "4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892"
-SHA = "d388ae850b7a1e145e4c8bfc06a228642814130d9737599ffd02c0b1acac9bd4"
+PIN = "1839d852e7994aca776f12da916fce73d91a2cf7"
+SHA = "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055"
 
 
 def flatten(value):
@@ -24,11 +24,15 @@ def flatten(value):
     return ""
 
 
-def prepare(source_bytes, receipt, counterpart):
+def prepare(source_bytes, receipt, counterpart, comparison=None):
     if hashlib.sha256(source_bytes).hexdigest() != SHA or receipt["source"]["commit"] != PIN or receipt["source"]["sha256"] != SHA:
         raise ValueError("Explicit current reference differs from the frozen authored source pin")
     original = json.loads(source_bytes)
-    provenance = {"repository": receipt["repository"], "commit": PIN, "path": receipt["source"]["path"], "sha256": SHA, "version_role": "frozen-current-hosted-source", "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."}
+    provenance = {"repository": receipt.get("repository", receipt["source"]["repository"]), "commit": PIN, "path": receipt["source"]["path"], "sha256": SHA, "version_role": "frozen-current-hosted-source", "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."}
+    if receipt.get("admission_status"):
+        provenance["capture_provenance_as_at_capture"] = receipt["source"]
+        provenance["capture_receipt_state"] = {key: receipt[key] for key in ("admission_status", "default_positive", "observed_at", "prepared_at") if key in receipt}
+        provenance["context_designation"] = "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
     sources, phases, slots, pages, keys, media_assets = [], [], [], [], [], []
     source_ids = []
 
@@ -78,9 +82,22 @@ def prepare(source_bytes, receipt, counterpart):
                 activity("key_term_mcq", "question", pointer, pointer, "single_choice", "single_choice", "Check a source-grounded application of the taught key term.", "recognition", {"term": node["term"]}, [ref])
             elif kind == "reading":
                 if node.get("intro_video"):
-                    media = {"id": page["id"] + "-intro-video", "page_ref": page["id"], "src": node["intro_video"]["src"], "poster": node["intro_video"].get("poster"), "original_pointer": pointer + "/intro_video", "provenance": provenance, "transcript_status": "not-supplied", "factual_authority": "No media-content facts inferred; generated questions use the explicitly supplied reading text.", "exposure_status": "Authored media exists on this page; individual playback and content exposure are unknown."}
+                    intro = node["intro_video"]
+                    media = {"id": page["id"] + "-intro-video", "page_ref": page["id"], "src": intro["src"], "poster": intro.get("poster"), "original_pointer": pointer + "/intro_video", "provenance": provenance, "transcript_status": "not-supplied", "factual_authority": "No unsupplied media-content facts inferred.", "exposure_status": "Authored media exists on this page; individual playback and content exposure are unknown."}
+                    if intro.get("captions"):
+                        captions = intro["captions"]
+                        caption_ref = asset(page["id"] + "-intro-captions", "\n".join(row["line"] for row in captions), pointer + "/intro_video/captions", "media-transcript", media_ref=intro["src"], time_range=[captions[0]["from"], captions[-1]["to"]], timed_captions=captions, playback_equivalence="not verified")
+                        anchors, offset = [], 0
+                        for i, row in enumerate(captions):
+                            anchors.append({"source_ref": caption_ref, "quote": row["line"], "start": offset, "end": offset + len(row["line"]), "time_range": [row["from"], row["to"]], "original_pointer": pointer + f"/intro_video/captions/{i}/line"})
+                            offset += len(row["line"]) + 1
+                        sources[-1]["caption_anchors"] = anchors
+                        last_reading.append(caption_ref)
+                        media.update({"transcript_status": "supplied", "transcript_source_ref": caption_ref, "captions": captions, "factual_authority": "Exact authored timed captions supplied as text authority; no inference about unobserved audiovisual details or actual learner playback."})
+                    if comparison:
+                        media["reported_capture_integrity"] = {"evidence": [{key: row.get(key) for key in ("field", "sha256", "manifest_sha256", "manifest_equal", "query_hash_prefix_matches_observed_sha256")} for row in comparison.get("changed_media_capture", [])], "limit": comparison.get("media_integrity_limit"), "verification": "Reported by the supplied capture comparison; not a new media execution or watch."}
                     media_assets.append(media)
-                    pages[-1]["nodes"].append({"type": "media-introduction", "media_ref": media["id"], "src": media["src"], "poster": media["poster"], "original_pointer": media["original_pointer"], "transcript_status": media["transcript_status"]})
+                    pages[-1]["nodes"].append({"type": "media-introduction", "media_ref": media["id"], "src": media["src"], "poster": media["poster"], "original_pointer": media["original_pointer"], "transcript_status": media["transcript_status"], "transcript_source_ref": media.get("transcript_source_ref"), "captions": intro.get("captions", [])})
                 ref = asset(page["id"], flatten(node["blocks"]), pointer + "/blocks")
                 last_reading.append(ref)
                 pages[-1]["nodes"].append({"type": "reading", "source_ref": ref, "part": node["part"]})
@@ -144,7 +161,12 @@ def prepare(source_bytes, receipt, counterpart):
                 activity("open_check", "question", pointer + "/rubric", pointer, "written_response", "integrated_response", "Synthesize the lesson's declared knowledge with a claim, evidence and reason.", "integrated", visible=source_ids)
     # This original row sits outside the page array and remains an unscored report.
     activity("confidence_self_report", "self_report", "/record/confidence", "/record", "self_report", "adapter_extension/self_report", "Report confidence about answering the lesson question; confidence is not correctness evidence.", "self-report", {"scale": original["record"]["scale"]}, source_ids)
-    expected = receipt["current_counts"]["by_kind"]
+    expected = receipt.get("current_counts", {}).get("by_kind")
+    if expected is None:
+        counts = receipt.get("counts", {})
+        if counts.get("pending_activities") != 50 or counts.get("unchanged_activities") != 50 or any(counts.get(key) != 0 for key in ("new_activities", "removed_activities", "changed_activities")):
+            raise ValueError("New capture does not establish the unchanged 50-activity inventory")
+        expected = json.loads((Path(__file__).resolve().parents[1] / "examples/native-format-inventory.json").read_text())["current_by_kind"]
     actual = {kind: sum(row["native_kind"] == kind for row in slots) for kind in expected}
     if actual != expected or len(slots) != 50 or len(pages) != 19:
         raise ValueError(f"Native activity inventory differs: {actual}")
@@ -170,9 +192,10 @@ def main():
     parser.add_argument("--receipt", required=True)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--counterpart", required=True, help="Explicit packet-authored frozen counterpart, absent from original runtime dialogue")
+    parser.add_argument("--comparison", help="Optional original source/context and reported media-integrity comparison")
     args = parser.parse_args()
     source = Path(args.source).read_bytes()
-    request, context = prepare(source, json.loads(Path(args.receipt).read_text()), json.loads(Path(args.counterpart).read_text()))
+    request, context = prepare(source, json.loads(Path(args.receipt).read_text()), json.loads(Path(args.counterpart).read_text()), json.loads(Path(args.comparison).read_text()) if args.comparison else None)
     directory = Path(args.output_dir)
     directory.mkdir(parents=True, exist_ok=True)
     for name, packet in [("current-native-request.json", request), ("current-native-context.json", context)]:

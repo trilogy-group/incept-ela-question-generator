@@ -47,12 +47,20 @@ tasks; it does not establish that an evaluator can judge them.
 ## Model writer
 
 The optional native lane now prepares the **current hosted authoring reference**: 50 activities across 14 native
-kinds and 19 pages, frozen at final main source commit `4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892` and source SHA256
-`d388ae850b7a1e145e4c8bfc06a228642814130d9737599ffd02c0b1acac9bd4`. This is a separate source from the older
-40-unit, `3ed708e1` historical contract fixture described above. The final source adds an introduction video on
-`reading-2`; its exact URL, poster, source pointer and planned exposure survive intake. It supplies no transcript,
-so that video's content cannot be inferred. The earlier `f1565047` / `50b6d44f` offline journal remains evidence of
-the earlier context, while the refreshed journal records this final context and its hashes.
+kinds and 19 pages, frozen at current main source commit `1839d852e7994aca776f12da916fce73d91a2cf7` and source SHA256
+`56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055`. This is a separate source from the older
+40-unit, `3ed708e1` historical contract fixture described above. The current source updates the `reading-2`
+introduction video and poster and adds nine timed captions. Exact caption wording, times, order, original pointers
+and transcript offsets survive intake; their text is available only from the declared introduction phase onward.
+The supplied capture comparison reports a full video manifest hash match, while the poster has an observed hash
+and matching URL prefix with no declared full manifest hash. These are capture integrity observations; no video
+watch, audiovisual equivalence or individual learner exposure is claimed. Earlier `f1565047` / `50b6d44f` and
+`4c1e26c8` / `d388ae85` journals remain intact with their original source contexts.
+
+The raw capture's pending admission fields remain verbatim under `capture_provenance_as_at_capture` and
+`capture_receipt_state`. Selecting this source for the current context does not rewrite that historical capture
+state or introduce an admission decision as an evaluation input. Source and media integrity establish no quality
+label.
 
 Run the same Node CLI offline, with no credentials or sibling repository:
 
@@ -127,7 +135,7 @@ remain declared. Caption presence does not verify audiovisual playback or a lear
 To reproduce the projection from the two explicitly supplied original authoring files:
 
 ```bash
-python3 scripts/prepare_native_reference.py --source SOURCE.json --receipt RECEIPT.json --counterpart examples/native-counterpart.json --output-dir examples
+python3 scripts/prepare_native_reference.py --source SOURCE.json --receipt RECEIPT.json --comparison COMPARISON.json --counterpart examples/native-counterpart.json --output-dir examples
 ```
 
 The script checks the original source pin before and after projection. For later authorized writing, the existing
