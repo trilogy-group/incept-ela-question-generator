@@ -3,13 +3,14 @@
 This starter builds a lesson's questions in order from its public context. Start with [AGENTS.md](AGENTS.md).
 The first target is the authored Othello 1.1 reference in
 [learning-truths/contract/examples/othello-1-1](https://github.com/trilogy-group/incept-ela-learning-truths/tree/main/contract/examples/othello-1-1),
-starting with its reading checks. The reference has 40 extracted units, including guided tasks and paragraph
+starting with its reading checks. That historical contract reference has 40 extracted units, including guided tasks and paragraph
 subchecks; they are not 40 independent tests of mastery.
 
-The baseline fills **two authored templates, seven tasks each**: “Words, actions and credit” and “What a comparison
+The Python template baseline fills **two authored templates, seven tasks each**: “Words, actions and credit” and “What a comparison
 can establish.” The seven formats are classification, single choice, evidence selection, short explanation,
 learner-written question, rebuttal and integrated response. It uses authored content notes and no model. It does not
-yet read or generate the reference lesson. The checks establish valid output, not question quality.
+yet read or generate the reference lesson. The optional Node writer and current native context path are described
+below. The checks establish valid output, not question quality.
 
 ## Run and check
 
@@ -160,13 +161,14 @@ The script checks the original source pin before and after projection. For later
 generation or evaluation has been run in this task. Quality assessment and learner outcomes remain pending.
 
 Node 22 or later runs the model writer without an SDK, package install, Python runtime, or sibling repository.
-The two committed Othello input files contain the complete neutral source lesson, explicit exposure order and
+The two historical Othello input files contain the complete neutral source lesson, explicit exposure order and
 14 proposed interaction slots. They retain the original authored source pin and omit authored questions and keys.
 
+The following network commands are for separately authorized writing. Assessment uses the offline commands above.
+
 ```bash
-node model_generate.mjs --list-models --env-file credentials.env
-node model_generate.mjs --request examples/othello-1-1-request.json --context examples/othello-1-1-context.json --env-file credentials.env
-node --test tests/gateway.test.mjs tests/model.test.mjs tests/display.test.mjs
+node model_generate.mjs --list-models --env-file /path/outside-repository/credentials.env
+node model_generate.mjs --request examples/othello-1-1-request.json --context examples/othello-1-1-context.json --env-file /path/outside-repository/credentials.env
 ```
 
 Provide `MAAT_API_TOKEN` or `TFY_INDIVIDUAL_TOKEN` through the environment or an explicit credential file outside

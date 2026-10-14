@@ -1,6 +1,8 @@
 # Assess this starter
 
 Read [README.md](README.md), `config.json`, `examples/lessons.json`, `generator.py` and `contract_adapter.py`.
+For the optional Node writer and native context lane, also read `model_generate.mjs`, `native_formats.mjs`
+and `context_intake.mjs`; the offline commands are in README.md.
 The pinned public inputs in `public/` come from learning-truths' library and `contract/`.
 
 ## Separation rules
