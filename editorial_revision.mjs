@@ -3,7 +3,7 @@ import { createHash, randomUUID } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve as absolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { adaptResponse, learnerPacket, StructuralError, validate, validateInputs, validateResponse } from './model_contract.mjs';
+import { adaptResponse, learnerPacket, resolve, StructuralError, validate, validateInputs, validateResponse } from './model_contract.mjs';
 import { rotateChoiceDisplays } from './display_rotation.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
@@ -132,8 +132,56 @@ export async function executeRevision(sourceRun) {
   return { status: receipt.status, items: receipt.items, editorial_model_calls_added: 0, cumulative_model_calls: receipt.model_calls, directory };
 }
 
+export async function finalizeMarking(sourceRun) {
+  const source = local(sourceRun);
+  const receiptBytes = await readFile(absolute(source, 'receipt.json'));
+  const previous = JSON.parse(receiptBytes);
+  for (const [name, hash] of Object.entries(previous.transport_hashes)) if (digest(await readFile(absolute(source, name))) !== hash) throw new StructuralError('The prior revised transport changed');
+  const originalContext = await json(absolute(source, 'lesson-context.json'));
+  const originalQuestions = await json(absolute(source, 'question-set.json'));
+  const context = structuredClone(originalContext), questionSet = structuredClone(originalQuestions);
+  const notes = (await json(absolute(ROOT, 'editorial-revision.json'))).final_marking_fix;
+  if (notes.item_id !== 'Q12' || notes.field_ref !== '/view/rubric/criteria/1/full_credit') throw new StructuralError('Final marking fix must remain the one declared Q12 field');
+  const itemIndex = questionSet.items.findIndex(item => item.id === notes.item_id);
+  if (itemIndex < 0) throw new StructuralError('The final marking item is absent');
+  const item = questionSet.items[itemIndex];
+  const selected = resolve(context.native, item.pointer);
+  const before = item.view.rubric.criteria[1].full_credit;
+  if (item.native.rubric.criteria[1].full_credit !== before || selected.rubric.criteria[1].full_credit !== before) throw new StructuralError('Prior teacher and native marking fields disagree');
+  item.view.rubric.criteria[1].full_credit = notes.full_credit;
+  item.native.rubric.criteria[1].full_credit = notes.full_credit;
+  selected.rubric.criteria[1].full_credit = notes.full_credit;
+  const contentChanges = originalQuestions.items.flatMap((original, i) => changes(original.view, questionSet.items[i].view, `/items/${i}/view`));
+  if (contentChanges.length !== 1 || contentChanges[0].pointer !== `/items/${itemIndex}/view/rubric/criteria/1/full_credit`) throw new StructuralError('Final marking fix changed more than its one permitted content field');
+  const request = await json(absolute(ROOT, 'examples/othello-1-1-request.json'));
+  const response = { protocol: request.protocol, request_id: request.request_id, status: 'prepared-for-review', holds: [], items: questionSet.items.map(row => ({ id: row.id, kind: row.kind, view: row.view, source_bindings: row.source_bindings })) };
+  validateResponse(response, request, await json(absolute(ROOT, 'schema/writer-response.schema.json')));
+  const run = `final-marking-fix-${randomUUID().slice(0, 8)}`;
+  const directory = absolute(ROOT, '.local/editorial-revisions', run);
+  await mkdir(directory, { recursive: true, mode: 0o700 });
+  const metadata = { run, origin_run: previous.run, origin_receipt_sha256: digest(receiptBytes), original_first_transport_hashes: previous.origin_transport_hashes, origin_transport_hashes: previous.transport_hashes, editorial_revision_count: previous.editorial_revision_count + 1, final_marking_fix_model_calls_added: 0, final_marking_fix_field: `/items/${itemIndex}${notes.field_ref}`, writer_response_sha256: digest(JSON.stringify(response)), final_fix_code_sha256: {}, academic_quality: 'Pending independent review; one declared ordinary source/course wording clarification, no model or self-judge call.' };
+  for (const name of ['editorial_revision.mjs', 'editorial-revision.json']) metadata.final_fix_code_sha256[name] = digest(await readFile(absolute(ROOT, name)));
+  context.source = { ...context.source, ...metadata };
+  questionSet.source = structuredClone(context.source);
+  questionSet.generation_metadata = { ...questionSet.generation_metadata, ...metadata };
+  validate(context, await json(absolute(ROOT, 'schema/lesson-context.schema.json')));
+  validate(questionSet, await json(absolute(ROOT, 'schema/question-set.schema.json')));
+  const learner = learnerPacket(context, questionSet);
+  if (JSON.stringify(learner) !== JSON.stringify(await json(absolute(source, 'learner.json')))) throw new StructuralError('A teacher-only marking clarification changed learner content');
+  await save(absolute(directory, 'editorial-changes.json'), { authority: notes.authority, changes: contentChanges, model_calls_added: 0, candidate_selection: [], prior_revised_transport_preserved: true });
+  await save(absolute(directory, 'writer-response.json'), response);
+  await save(absolute(directory, 'lesson-context.json'), context);
+  await save(absolute(directory, 'question-set.json'), questionSet);
+  await save(absolute(directory, 'learner.json'), learner);
+  const receipt = { ...previous, ...metadata, prior_edited_item_ids: previous.edited_item_ids, edited_item_ids: ['Q12'], status: 'prepared-for-review', editorial_model_calls: 0, transport_hashes: {} };
+  for (const name of ['lesson-context.json', 'question-set.json', 'learner.json']) receipt.transport_hashes[name] = digest(await readFile(absolute(directory, name)));
+  await save(absolute(directory, 'receipt.json'), receipt);
+  for (const [name, hash] of Object.entries(previous.transport_hashes)) if (digest(await readFile(absolute(source, name))) !== hash) throw new StructuralError('The prior revised transport changed during finalization');
+  return { status: receipt.status, items: receipt.items, content_fields_changed: 1, learner_content_changed: false, model_calls_added: 0, cumulative_model_calls: receipt.model_calls, directory };
+}
+
 if (process.argv[1] && absolute(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
-  if (args.length !== 2 || args[0] !== '--source-run') { console.error('Usage: node editorial_revision.mjs --source-run .local/model-runs/RUN/FINISHED_RUN'); process.exitCode = 1; }
-  else executeRevision(args[1]).then(result => console.log(JSON.stringify(result, null, 2))).catch(error => { console.error(error.message); process.exitCode = 1; });
+  if (args.length !== 2 || !['--source-run', '--finalize-marking'].includes(args[0])) { console.error('Usage: node editorial_revision.mjs --source-run .local/model-runs/RUN/FINISHED_RUN, or --finalize-marking .local/editorial-revisions/REVISED_RUN'); process.exitCode = 1; }
+  else (args[0] === '--finalize-marking' ? finalizeMarking(args[1]) : executeRevision(args[1])).then(result => console.log(JSON.stringify(result, null, 2))).catch(error => { console.error(error.message); process.exitCode = 1; });
 }

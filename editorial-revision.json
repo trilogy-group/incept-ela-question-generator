@@ -88,5 +88,11 @@
       }
     }
   },
-  "display_policy": "For reading MCQ rank 0,1,2,... target answer position rank modulo option count by a circular permutation of options, feedback, keys and indexed bindings. Preserve the keyed option text. This is a proposed display policy, not a question quality score."
+  "display_policy": "For reading MCQ rank 0,1,2,... target answer position rank modulo option count by a circular permutation of options, feedback, keys and indexed bindings. Preserve the keyed option text. This is a proposed display policy, not a question quality score.",
+  "final_marking_fix": {
+    "item_id": "Q12",
+    "field_ref": "/view/rubric/criteria/1/full_credit",
+    "authority": "One ordinary source/course marking-consistency clarification; no model or evaluator feedback.",
+    "full_credit": "Explains the relation between the display of love and either Iago's admitted hatred or his stated necessity for showing it. Either source-supported explanation counts; both are not required."
+  }
 }

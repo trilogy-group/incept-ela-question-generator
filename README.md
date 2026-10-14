@@ -85,6 +85,9 @@ quality judgment. A source/course editorial revision can be made from a preserve
 `node editorial_revision.mjs --source-run .local/model-runs/RUN/FINISHED_RUN`. Its explicit edits live in
 `editorial-revision.json`; all before/after fields, source bindings and display rotations get a new private journal.
 Original finished transports and model costs remain intact. The current editorial revision makes no model call.
+The separately declared one-field Q12 marking clarification is finalized with
+`node editorial_revision.mjs --finalize-marking .local/editorial-revisions/REVISED_RUN`. It preserves the prior
+revision and verifies that learner content and all other question wording remain unchanged.
 
 Finished `lesson-context.json` and `question-set.json` preserve the supplied instruction nodes and insert native
 questions at the declared slots. Every item carries the original public alignment and exact source bindings.
