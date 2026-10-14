@@ -1,0 +1,1306 @@
+{
+  "contract": "lesson-context 0.1",
+  "source": {
+    "kind": "neutral-course-intake",
+    "repository": "trilogy-group/ela-lessons",
+    "commit": "3ed708e126aec14b7456679b9236e01c1081df16",
+    "path": "src/content/othello-1-1.json",
+    "sha256": "04184809a63e492b54fcf82a7583bd3a0b11483285c5920ce3752929947f8337",
+    "prototype_revision": "B1006-proposed-0.1",
+    "note": "Exact authored source extracts; proposed placements; no old authored questions or marker keys."
+  },
+  "lesson": {
+    "id": "G9-U1-L1-B1006-PROTOTYPE",
+    "title": "Othello Act 1, Scene 1",
+    "learning_question": "At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello?",
+    "keywords": [
+      {
+        "word": "betrayal",
+        "meaning": "breaking someone's trust",
+        "link": "what deceit does to a relationship",
+        "cls": "noun"
+      },
+      {
+        "word": "deceitful",
+        "meaning": "tricking people by hiding the truth",
+        "link": "a person full of deceit",
+        "cls": "adjective"
+      },
+      {
+        "word": "untrustworthy",
+        "meaning": "cannot be relied on",
+        "link": "how deceit makes others see you",
+        "cls": "adjective"
+      },
+      {
+        "word": "disloyal",
+        "meaning": "not faithful to someone you should support",
+        "link": "deceit toward a leader or friend",
+        "cls": "adjective"
+      },
+      {
+        "word": "pretense",
+        "meaning": "acting as if something is true when it isn't",
+        "link": "deceit in action",
+        "cls": "noun"
+      },
+      {
+        "word": "façade",
+        "meaning": "a false front that hides what is behind it",
+        "link": "the \"mask\" of deceit",
+        "cls": "noun"
+      }
+    ]
+  },
+  "native": {
+    "lessonId": "G9-U1-L1-B1006-PROTOTYPE",
+    "title": "Othello",
+    "subtitle": "Act 1, Scene 1",
+    "question": "At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello?",
+    "pages": [
+      {
+        "id": "F-ORIENT",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "instruction",
+        "nodes": [
+          {
+            "id": "orientation",
+            "type": "instruction",
+            "learning_question": "At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello?",
+            "keywords": [
+              {
+                "word": "betrayal",
+                "meaning": "breaking someone's trust",
+                "link": "what deceit does to a relationship",
+                "cls": "noun"
+              },
+              {
+                "word": "deceitful",
+                "meaning": "tricking people by hiding the truth",
+                "link": "a person full of deceit",
+                "cls": "adjective"
+              },
+              {
+                "word": "untrustworthy",
+                "meaning": "cannot be relied on",
+                "link": "how deceit makes others see you",
+                "cls": "adjective"
+              },
+              {
+                "word": "disloyal",
+                "meaning": "not faithful to someone you should support",
+                "link": "deceit toward a leader or friend",
+                "cls": "adjective"
+              },
+              {
+                "word": "pretense",
+                "meaning": "acting as if something is true when it isn't",
+                "link": "deceit in action",
+                "cls": "noun"
+              },
+              {
+                "word": "façade",
+                "meaning": "a false front that hides what is behind it",
+                "link": "the \"mask\" of deceit",
+                "cls": "noun"
+              }
+            ],
+            "key_term": {
+              "term": "Machiavellian villain",
+              "meaning": "Machiavellian: using cunning and lies to gain power. A Machiavellian villain schemes and deceives to get what he wants."
+            },
+            "glossary": [
+              {
+                "term": "Roderigo",
+                "note": "a rich young man who wants to marry Desdemona",
+                "at": {
+                  "part": 0,
+                  "block": 4,
+                  "line": 0,
+                  "match": "Roderigo"
+                }
+              },
+              {
+                "term": "Iago",
+                "note": "Othello's ensign: the officer who carries the general's flag",
+                "at": {
+                  "part": 0,
+                  "block": 4,
+                  "line": 0,
+                  "match": "Iago"
+                }
+              },
+              {
+                "term": "Desdemona",
+                "note": "Brabantio's daughter, who has secretly married Othello",
+                "at": {
+                  "part": 0,
+                  "block": 4,
+                  "line": 0,
+                  "match": "Desdemona"
+                }
+              },
+              {
+                "term": "Brabantio",
+                "note": "a powerful senator of Venice and Desdemona's father",
+                "at": {
+                  "part": 0,
+                  "block": 4,
+                  "line": 0,
+                  "match": "Brabantio"
+                }
+              },
+              {
+                "term": "Cassio",
+                "note": "Othello's new lieutenant",
+                "at": {
+                  "part": 0,
+                  "block": 5,
+                  "line": 0,
+                  "match": "Cassio"
+                }
+              },
+              {
+                "term": "lieutenant",
+                "note": "the officer second in command to the general",
+                "at": {
+                  "part": 0,
+                  "block": 5,
+                  "line": 0,
+                  "match": "lieutenant"
+                }
+              },
+              {
+                "term": "Off-capped",
+                "note": "took off their hats to show respect when they asked Othello to promote Iago",
+                "at": {
+                  "part": 1,
+                  "block": 1,
+                  "line": 10,
+                  "match": "Off-capped"
+                }
+              },
+              {
+                "term": "I know my price",
+                "note": "I know what I'm worth",
+                "at": {
+                  "part": 1,
+                  "block": 1,
+                  "line": 11,
+                  "match": "I know my price"
+                }
+              },
+              {
+                "term": "Forsooth",
+                "note": "\"in truth\", said sarcastically here",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 2,
+                  "match": "Forsooth"
+                }
+              },
+              {
+                "term": "arithmetician",
+                "note": "a man who is good with numbers, not with fighting. Iago is mocking Cassio.",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 2,
+                  "match": "arithmetician"
+                }
+              },
+              {
+                "term": "his Moorship's ancient",
+                "note": "\"ancient\" means ensign. \"Moorship\" is a mocking title Iago invents for Othello.",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 10,
+                  "match": "his Moorship's ancient"
+                }
+              },
+              {
+                "term": "Preferment",
+                "note": "promotion",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 11,
+                  "match": "Preferment"
+                }
+              },
+              {
+                "term": "letter and affection",
+                "note": "who you know and who likes you",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 11,
+                  "match": "letter and affection"
+                }
+              },
+              {
+                "term": "old gradation",
+                "note": "the old system, where you were promoted in order of experience",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 12,
+                  "match": "old gradation"
+                }
+              },
+              {
+                "term": "affined",
+                "note": "bound, or obliged",
+                "at": {
+                  "part": 1,
+                  "block": 3,
+                  "line": 14,
+                  "match": "affined"
+                }
+              }
+            ],
+            "credit": "Text: abridged from the Folger Shakespeare edition (CC BY-NC 3.0)."
+          }
+        ],
+        "question_slots": []
+      },
+      {
+        "id": "F-CONTEXT",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "independent-reading-checks",
+        "nodes": [
+          {
+            "id": "F-CONTEXT-text",
+            "type": "reading",
+            "blocks": [
+              {
+                "kind": "title",
+                "title": "Othello",
+                "by": "by William Shakespeare"
+              },
+              {
+                "kind": "heading",
+                "text": "About the play"
+              },
+              {
+                "kind": "para",
+                "text": "Othello is a tragedy by William Shakespeare, written around 1603. It tells the story of Othello, a Black African general who leads the army of Venice. Othello is respected and powerful, but in Venice he is also an outsider. One of his own officers, Iago, secretly hates him. Over the course of the play, Iago sets out to destroy Othello using nothing but lies."
+              },
+              {
+                "kind": "heading",
+                "text": "The opening scene: Act 1, Scene 1"
+              },
+              {
+                "kind": "para",
+                "text": "The play begins in the middle of the night, on a street in Venice. We meet two characters, Roderigo and Iago. They are arguing about shocking news: Othello has just secretly married Desdemona, the daughter of a powerful senator, Brabantio."
+              },
+              {
+                "kind": "para",
+                "text": "Roderigo wanted to marry Desdemona himself, and he has been paying Iago to help him. Iago has his own reason to be angry: Othello has made a man called Cassio his lieutenant instead of him. By the end of the scene, Iago has woken Brabantio with the news, and slipped away into the dark."
+              }
+            ],
+            "source_refs": [
+              "S-INTRO",
+              "S-GLOSSARY"
+            ]
+          }
+        ],
+        "question_slots": [
+          {
+            "id": "Q01",
+            "planned_kind": "reading_mcq",
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "source_refs": [
+              "S-INTRO"
+            ],
+            "alignment": {
+              "phase_ref": "F-CONTEXT",
+              "target_refs": [
+                "K-CONTEXT"
+              ],
+              "source_refs": [
+                "S-INTRO"
+              ],
+              "content_key_refs": [
+                "C-CONTEXT"
+              ],
+              "pair_refs": [
+                "T-02"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q02",
+            "planned_kind": "classify",
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "source_refs": [
+              "S-INTRO",
+              "S-GLOSSARY"
+            ],
+            "alignment": {
+              "phase_ref": "F-CONTEXT",
+              "target_refs": [
+                "K-CONTEXT"
+              ],
+              "source_refs": [
+                "S-INTRO",
+                "S-GLOSSARY"
+              ],
+              "content_key_refs": [
+                "C-CONTEXT"
+              ],
+              "pair_refs": [
+                "T-02",
+                "T-04"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "F-PROMOTION",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "independent-reading-checks",
+        "nodes": [
+          {
+            "id": "F-PROMOTION-text",
+            "type": "reading",
+            "blocks": [
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "RODERIGO",
+                    "line": "Tush, never tell me! I take it much unkindly"
+                  },
+                  {
+                    "who": null,
+                    "line": "That thou, Iago, who hast had my purse"
+                  },
+                  {
+                    "who": null,
+                    "line": "As if the strings were thine, shouldst know of this."
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "'Sblood, but you'll not hear me!"
+                  },
+                  {
+                    "who": null,
+                    "line": "If ever I did dream of such a matter,"
+                  },
+                  {
+                    "who": null,
+                    "line": "Abhor me."
+                  },
+                  {
+                    "who": "RODERIGO",
+                    "line": "Thou toldst me thou didst hold him in thy hate."
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "Despise me"
+                  },
+                  {
+                    "who": null,
+                    "line": "If I do not. Three great ones of the city,"
+                  },
+                  {
+                    "who": null,
+                    "line": "In personal suit to make me his lieutenant,"
+                  },
+                  {
+                    "who": null,
+                    "line": "Off-capped to him; and, by the faith of man,"
+                  },
+                  {
+                    "who": null,
+                    "line": "I know my price, I am worth no worse a place."
+                  }
+                ]
+              },
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "stage": "[Iago explains that Othello turned the great men down, saying he had already chosen his officer.]"
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "And what was he?"
+                  },
+                  {
+                    "who": null,
+                    "line": "Forsooth, a great arithmetician,"
+                  },
+                  {
+                    "who": null,
+                    "line": "One Michael Cassio, a Florentine,"
+                  },
+                  {
+                    "who": null,
+                    "line": "...That never set a squadron in the field..."
+                  },
+                  {
+                    "who": null,
+                    "line": "And I, of whom his eyes had seen the proof"
+                  },
+                  {
+                    "who": null,
+                    "line": "At Rhodes, at Cyprus, and on other grounds"
+                  },
+                  {
+                    "who": null,
+                    "line": "Christened and heathen, must be beleed and calmed"
+                  },
+                  {
+                    "who": null,
+                    "line": "By debitor and creditor."
+                  },
+                  {
+                    "who": null,
+                    "line": "...He, in good time, must his lieutenant be,"
+                  },
+                  {
+                    "who": null,
+                    "line": "And I, God bless the mark, his Moorship's ancient."
+                  },
+                  {
+                    "who": null,
+                    "line": "...Preferment goes by letter and affection,"
+                  },
+                  {
+                    "who": null,
+                    "line": "And not by old gradation, where each second"
+                  },
+                  {
+                    "who": null,
+                    "line": "Stood heir to th' first. Now, sir, be judge yourself"
+                  },
+                  {
+                    "who": null,
+                    "line": "Whether I in any just term am affined"
+                  },
+                  {
+                    "who": null,
+                    "line": "To love the Moor."
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              "S-PROMOTION"
+            ]
+          }
+        ],
+        "question_slots": [
+          {
+            "id": "Q03",
+            "planned_kind": "reading_mcq",
+            "target_refs": [
+              "K-GRIEVANCE"
+            ],
+            "source_refs": [
+              "S-PROMOTION"
+            ],
+            "alignment": {
+              "phase_ref": "F-PROMOTION",
+              "target_refs": [
+                "K-GRIEVANCE"
+              ],
+              "source_refs": [
+                "S-PROMOTION"
+              ],
+              "content_key_refs": [
+                "C-GRIEVANCE"
+              ],
+              "pair_refs": [
+                "T-05"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q04",
+            "planned_kind": "evidence_select",
+            "target_refs": [
+              "K-GRIEVANCE"
+            ],
+            "source_refs": [
+              "S-PROMOTION"
+            ],
+            "alignment": {
+              "phase_ref": "F-PROMOTION",
+              "target_refs": [
+                "K-GRIEVANCE"
+              ],
+              "source_refs": [
+                "S-PROMOTION"
+              ],
+              "content_key_refs": [
+                "C-GRIEVANCE"
+              ],
+              "pair_refs": [
+                "T-05"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q05",
+            "planned_kind": "open_check",
+            "target_refs": [
+              "K-GRIEVANCE"
+            ],
+            "source_refs": [
+              "S-PROMOTION"
+            ],
+            "alignment": {
+              "phase_ref": "F-PROMOTION",
+              "target_refs": [
+                "K-GRIEVANCE"
+              ],
+              "source_refs": [
+                "S-PROMOTION"
+              ],
+              "content_key_refs": [
+                "C-GRIEVANCE"
+              ],
+              "pair_refs": [
+                "T-05"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "F-SERVICE",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "independent-reading-checks",
+        "nodes": [
+          {
+            "id": "F-SERVICE-text",
+            "type": "reading",
+            "blocks": [
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "RODERIGO",
+                    "line": "I would not follow him, then."
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "O, sir, content you."
+                  },
+                  {
+                    "who": null,
+                    "line": "I follow him to serve my turn upon him."
+                  },
+                  {
+                    "who": null,
+                    "line": "We cannot all be masters, nor all masters"
+                  },
+                  {
+                    "who": null,
+                    "line": "Cannot be truly followed. (lines 45–47)"
+                  },
+                  {
+                    "who": null,
+                    "line": "...It is as sure as you are Roderigo,"
+                  },
+                  {
+                    "who": null,
+                    "line": "Were I the Moor I would not be Iago."
+                  },
+                  {
+                    "who": null,
+                    "line": "In following him, I follow but myself."
+                  },
+                  {
+                    "who": null,
+                    "line": "Heaven is my judge, not I for love and duty,"
+                  },
+                  {
+                    "who": null,
+                    "line": "But seeming so for my peculiar end."
+                  },
+                  {
+                    "who": null,
+                    "line": "For when my outward action doth demonstrate"
+                  },
+                  {
+                    "who": null,
+                    "line": "The native act and figure of my heart"
+                  },
+                  {
+                    "who": null,
+                    "line": "In complement extern, 'tis not long after"
+                  },
+                  {
+                    "who": null,
+                    "line": "But I will wear my heart upon my sleeve"
+                  },
+                  {
+                    "who": null,
+                    "line": "For daws to peck at. I am not what I am."
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              "S-SERVICE"
+            ]
+          }
+        ],
+        "question_slots": [
+          {
+            "id": "Q06",
+            "planned_kind": "reading_mcq",
+            "target_refs": [
+              "K-SELF-SERVICE"
+            ],
+            "source_refs": [
+              "S-SERVICE"
+            ],
+            "alignment": {
+              "phase_ref": "F-SERVICE",
+              "target_refs": [
+                "K-SELF-SERVICE"
+              ],
+              "source_refs": [
+                "S-SERVICE"
+              ],
+              "content_key_refs": [
+                "C-SELF-SERVICE"
+              ],
+              "pair_refs": [
+                "T-06"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q07",
+            "planned_kind": "evidence_select",
+            "target_refs": [
+              "K-SELF-SERVICE"
+            ],
+            "source_refs": [
+              "S-SERVICE"
+            ],
+            "alignment": {
+              "phase_ref": "F-SERVICE",
+              "target_refs": [
+                "K-SELF-SERVICE"
+              ],
+              "source_refs": [
+                "S-SERVICE"
+              ],
+              "content_key_refs": [
+                "C-SELF-SERVICE"
+              ],
+              "pair_refs": [
+                "T-06"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q08",
+            "planned_kind": "classify",
+            "target_refs": [
+              "K-APPEARANCE"
+            ],
+            "source_refs": [
+              "S-SERVICE"
+            ],
+            "alignment": {
+              "phase_ref": "F-SERVICE",
+              "target_refs": [
+                "K-APPEARANCE"
+              ],
+              "source_refs": [
+                "S-SERVICE"
+              ],
+              "content_key_refs": [
+                "C-APPEARANCE"
+              ],
+              "pair_refs": [
+                "T-08"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "F-MODEL",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "worked-instruction-not-assessment",
+        "nodes": [
+          {
+            "id": "worked-model",
+            "type": "worked_instruction",
+            "not_assessment": true,
+            "line": "Watch how I answer today’s Learning Question. I read, I search, I find, and I state.",
+            "quote": "\"I follow him to serve my turn upon him. / We cannot all be masters, nor all masters / Cannot be truly followed.\" (1.1.45–47)",
+            "steps": [
+              {
+                "stem": "At the beginning of the play, Shakespeare exposes Iago as…",
+                "sentence": "…deceitful and disloyal to Othello.",
+                "think": "\"I answer the Learning Question first, with two words from my web.\"",
+                "parts": [
+                  {
+                    "k": "s",
+                    "t": "At the beginning of the play, Shakespeare exposes Iago as"
+                  },
+                  {
+                    "k": "a",
+                    "t": "deceitful and disloyal to Othello."
+                  }
+                ]
+              },
+              {
+                "stem": "This is evident in the quote…",
+                "sentence": "…\"I follow him to serve my turn upon him.\"",
+                "think": "\"I choose a short quote that proves my point.\"",
+                "parts": [
+                  {
+                    "k": "s",
+                    "t": "This is evident in the quote"
+                  },
+                  {
+                    "k": "a",
+                    "t": "\"I follow him to serve my turn upon him.\""
+                  }
+                ]
+              },
+              {
+                "stem": "The [word class] \"[word]\" means… demonstrating…",
+                "sentence": "The verb \"follow\" means to obey a leader, demonstrating that on the outside Iago looks like a loyal soldier.",
+                "think": "\"Now one word. 'Follow' sounds loyal: that's the façade.\"",
+                "parts": [
+                  {
+                    "k": "s",
+                    "t": "The verb \"follow\" means"
+                  },
+                  {
+                    "k": "a",
+                    "t": "to obey a leader,"
+                  },
+                  {
+                    "k": "s",
+                    "t": "demonstrating that"
+                  },
+                  {
+                    "k": "a",
+                    "t": "on the outside Iago looks like a loyal soldier."
+                  }
+                ]
+              },
+              {
+                "stem": "Also, the [word class] \"[word]\" means… demonstrating…",
+                "sentence": "Also, the verb \"serve\" usually means to work for someone, but \"serve my turn\" means to use them for your own benefit, demonstrating that Iago plans to betray Othello.",
+                "think": "\"The second word shows what's behind the façade.\"",
+                "parts": [
+                  {
+                    "k": "s",
+                    "t": "Also, the verb \"serve\" usually means"
+                  },
+                  {
+                    "k": "a",
+                    "t": "to work for someone, but \"serve my turn\" means to use them for your own benefit,"
+                  },
+                  {
+                    "k": "s",
+                    "t": "demonstrating that"
+                  },
+                  {
+                    "k": "a",
+                    "t": "Iago plans to betray Othello."
+                  }
+                ]
+              },
+              {
+                "stem": "Therefore, Iago is clearly exposed to be…",
+                "sentence": "…a Machiavellian villain: his loyalty is only a pretense and a façade.",
+                "think": "\"I answer the Learning Question again, more strongly.\"",
+                "parts": [
+                  {
+                    "k": "s",
+                    "t": "Therefore, Iago is clearly exposed to be"
+                  },
+                  {
+                    "k": "a",
+                    "t": "a Machiavellian villain: his loyalty is only a pretense and a façade."
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              "S-MODEL"
+            ]
+          }
+        ],
+        "question_slots": []
+      },
+      {
+        "id": "F-ACTION",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "independent-reading-checks",
+        "nodes": [
+          {
+            "id": "F-ACTION-text",
+            "type": "reading",
+            "blocks": [
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "RODERIGO",
+                    "line": "What a full fortune does the thick-lips owe"
+                  },
+                  {
+                    "who": null,
+                    "line": "If he can carry 't thus!"
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "Call up her father."
+                  },
+                  {
+                    "who": null,
+                    "line": "Rouse him. Make after him, poison his delight..."
+                  },
+                  {
+                    "stage": "[They go to Brabantio's house.]"
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "Awake! What ho, Brabantio! Thieves, thieves!"
+                  },
+                  {
+                    "who": null,
+                    "line": "Look to your house, your daughter, and your bags!"
+                  },
+                  {
+                    "who": null,
+                    "line": "Thieves, thieves!"
+                  },
+                  {
+                    "stage": "[Hidden in the dark, Iago shouts crude, racist insults about Othello and Desdemona. Brabantio is horrified. Before he can be seen, Iago tells Roderigo he must leave.]"
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              "S-ACTION",
+              "S-SERVICE"
+            ]
+          }
+        ],
+        "question_slots": [
+          {
+            "id": "Q09",
+            "planned_kind": "reading_mcq",
+            "target_refs": [
+              "K-ACTION"
+            ],
+            "source_refs": [
+              "S-ACTION"
+            ],
+            "alignment": {
+              "phase_ref": "F-ACTION",
+              "target_refs": [
+                "K-ACTION"
+              ],
+              "source_refs": [
+                "S-ACTION"
+              ],
+              "content_key_refs": [
+                "C-ACTION"
+              ],
+              "pair_refs": [
+                "T-10"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q10",
+            "planned_kind": "evidence_select",
+            "target_refs": [
+              "K-ACTION"
+            ],
+            "source_refs": [
+              "S-ACTION"
+            ],
+            "alignment": {
+              "phase_ref": "F-ACTION",
+              "target_refs": [
+                "K-ACTION"
+              ],
+              "source_refs": [
+                "S-ACTION"
+              ],
+              "content_key_refs": [
+                "C-ACTION"
+              ],
+              "pair_refs": [
+                "T-10"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "F-FLAG",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "independent-reading-checks",
+        "nodes": [
+          {
+            "id": "F-FLAG-text",
+            "type": "reading",
+            "blocks": [
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "IAGO",
+                    "line": "Though I do hate him as I do hell pains,"
+                  },
+                  {
+                    "who": null,
+                    "line": "Yet, for necessity of present life,"
+                  },
+                  {
+                    "who": null,
+                    "line": "I must show out a flag and sign of love—"
+                  },
+                  {
+                    "who": null,
+                    "line": "Which is indeed but sign. (lines 171–174)"
+                  },
+                  {
+                    "stage": "[Iago leaves. Brabantio gathers his men to find Othello.]"
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              "S-FLAG"
+            ]
+          }
+        ],
+        "question_slots": [
+          {
+            "id": "Q11",
+            "planned_kind": "reading_mcq",
+            "target_refs": [
+              "K-FLAG"
+            ],
+            "source_refs": [
+              "S-FLAG"
+            ],
+            "alignment": {
+              "phase_ref": "F-FLAG",
+              "target_refs": [
+                "K-FLAG"
+              ],
+              "source_refs": [
+                "S-FLAG"
+              ],
+              "content_key_refs": [
+                "C-FLAG"
+              ],
+              "pair_refs": [
+                "T-12"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q12",
+            "planned_kind": "open_check",
+            "target_refs": [
+              "K-FLAG"
+            ],
+            "source_refs": [
+              "S-FLAG"
+            ],
+            "alignment": {
+              "phase_ref": "F-FLAG",
+              "target_refs": [
+                "K-FLAG"
+              ],
+              "source_refs": [
+                "S-FLAG"
+              ],
+              "content_key_refs": [
+                "C-FLAG"
+              ],
+              "pair_refs": [
+                "T-12"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "F-WRITING",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "instruction-not-assessment",
+        "nodes": [
+          {
+            "id": "writing-instruction",
+            "type": "instruction",
+            "not_assessment": true,
+            "text": "Read the question. Search the scene for evidence. Find a short quotation. State your interpretation and explain how words in the quotation support it.",
+            "source_refs": [
+              "S-WRITING"
+            ],
+            "wording_status": "proposed-authoring-choice"
+          }
+        ],
+        "question_slots": []
+      },
+      {
+        "id": "F-SYNTHESIS",
+        "proposal_status": "proposed-authoring-choice",
+        "phase_role": "independent-open-checks",
+        "nodes": [
+          {
+            "id": "synthesis-text",
+            "type": "reading",
+            "blocks": [
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "RODERIGO",
+                    "line": "I would not follow him, then."
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "O, sir, content you."
+                  },
+                  {
+                    "who": null,
+                    "line": "I follow him to serve my turn upon him."
+                  },
+                  {
+                    "who": null,
+                    "line": "We cannot all be masters, nor all masters"
+                  },
+                  {
+                    "who": null,
+                    "line": "Cannot be truly followed. (lines 45–47)"
+                  },
+                  {
+                    "who": null,
+                    "line": "...It is as sure as you are Roderigo,"
+                  },
+                  {
+                    "who": null,
+                    "line": "Were I the Moor I would not be Iago."
+                  },
+                  {
+                    "who": null,
+                    "line": "In following him, I follow but myself."
+                  },
+                  {
+                    "who": null,
+                    "line": "Heaven is my judge, not I for love and duty,"
+                  },
+                  {
+                    "who": null,
+                    "line": "But seeming so for my peculiar end."
+                  },
+                  {
+                    "who": null,
+                    "line": "For when my outward action doth demonstrate"
+                  },
+                  {
+                    "who": null,
+                    "line": "The native act and figure of my heart"
+                  },
+                  {
+                    "who": null,
+                    "line": "In complement extern, 'tis not long after"
+                  },
+                  {
+                    "who": null,
+                    "line": "But I will wear my heart upon my sleeve"
+                  },
+                  {
+                    "who": null,
+                    "line": "For daws to peck at. I am not what I am."
+                  }
+                ]
+              },
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "RODERIGO",
+                    "line": "What a full fortune does the thick-lips owe"
+                  },
+                  {
+                    "who": null,
+                    "line": "If he can carry 't thus!"
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "Call up her father."
+                  },
+                  {
+                    "who": null,
+                    "line": "Rouse him. Make after him, poison his delight..."
+                  },
+                  {
+                    "stage": "[They go to Brabantio's house.]"
+                  },
+                  {
+                    "who": "IAGO",
+                    "line": "Awake! What ho, Brabantio! Thieves, thieves!"
+                  },
+                  {
+                    "who": null,
+                    "line": "Look to your house, your daughter, and your bags!"
+                  },
+                  {
+                    "who": null,
+                    "line": "Thieves, thieves!"
+                  },
+                  {
+                    "stage": "[Hidden in the dark, Iago shouts crude, racist insults about Othello and Desdemona. Brabantio is horrified. Before he can be seen, Iago tells Roderigo he must leave.]"
+                  }
+                ]
+              },
+              {
+                "kind": "script",
+                "lines": [
+                  {
+                    "who": "IAGO",
+                    "line": "Though I do hate him as I do hell pains,"
+                  },
+                  {
+                    "who": null,
+                    "line": "Yet, for necessity of present life,"
+                  },
+                  {
+                    "who": null,
+                    "line": "I must show out a flag and sign of love—"
+                  },
+                  {
+                    "who": null,
+                    "line": "Which is indeed but sign. (lines 171–174)"
+                  },
+                  {
+                    "stage": "[Iago leaves. Brabantio gathers his men to find Othello.]"
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              "S-SERVICE",
+              "S-ACTION",
+              "S-FLAG"
+            ]
+          }
+        ],
+        "question_slots": [
+          {
+            "id": "Q13",
+            "planned_kind": "open_check",
+            "target_refs": [
+              "K-SYNTHESIS"
+            ],
+            "source_refs": [
+              "S-SERVICE",
+              "S-FLAG"
+            ],
+            "alignment": {
+              "phase_ref": "F-SYNTHESIS",
+              "target_refs": [
+                "K-SYNTHESIS"
+              ],
+              "source_refs": [
+                "S-SERVICE",
+                "S-FLAG"
+              ],
+              "content_key_refs": [
+                "C-SYNTHESIS"
+              ],
+              "pair_refs": [
+                "T-15",
+                "T-17"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          },
+          {
+            "id": "Q14",
+            "planned_kind": "open_prompt",
+            "target_refs": [
+              "K-SYNTHESIS"
+            ],
+            "source_refs": [
+              "S-SERVICE",
+              "S-ACTION",
+              "S-FLAG"
+            ],
+            "alignment": {
+              "phase_ref": "F-SYNTHESIS",
+              "target_refs": [
+                "K-SYNTHESIS"
+              ],
+              "source_refs": [
+                "S-SERVICE",
+                "S-ACTION",
+                "S-FLAG"
+              ],
+              "content_key_refs": [
+                "C-SYNTHESIS"
+              ],
+              "pair_refs": [
+                "T-15",
+                "T-16",
+                "T-17"
+              ],
+              "role": "independent-response-check",
+              "support": "passage-visible; glossary-available; no-answer-hint-before-first-attempt"
+            }
+          }
+        ]
+      }
+    ],
+    "source_packet": "course-source-packet.json",
+    "intake_status": "Slots describe proposed authoring placements; generator must insert finished native question units and resolve output pointers."
+  }
+}

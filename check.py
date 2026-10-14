@@ -35,7 +35,7 @@ def privacy_check():
             raise InputError(f"{relative}: repository files must not be symlinks")
         if path.suffix.lower() in {".html", ".htm"}:
             raise InputError(f"{relative}: unexpected web artifact")
-        if path.is_file() and path.suffix in {".py", ".json", ".md"}:
+        if path.is_file() and path.suffix in {".py", ".json", ".md", ".mjs"}:
             text = path.read_text(encoding="utf-8")
             if any(pattern.search(text) for pattern in patterns):
                 raise InputError(f"{relative}: privacy check failed")
@@ -48,6 +48,11 @@ def main():
     )
     if checked.returncode:
         return checked.returncode
+    node_checked = subprocess.run(
+        ["node", "--test", "tests/gateway.test.mjs", "tests/model.test.mjs"], cwd=ROOT,
+    )
+    if node_checked.returncode:
+        return node_checked.returncode
     try:
         privacy_check()
         config = read_json(ROOT / "config.json")

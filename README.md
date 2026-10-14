@@ -44,13 +44,47 @@ The generator never reads the evaluator. Its inputs are public course context an
 library and contract. Pinned copies in `public/` let this starter run alone. Format adaptation preserves native
 tasks; it does not establish that an evaluator can judge them.
 
+## Model writer
+
+Node 22 or later runs the model writer without an SDK, package install, Python runtime, or sibling repository.
+The two committed Othello input files contain the complete neutral source lesson, explicit exposure order and
+14 proposed interaction slots. They retain the original authored source pin and omit authored questions and keys.
+
+```bash
+node model_generate.mjs --list-models --env-file credentials.env
+node model_generate.mjs --request examples/othello-1-1-request.json --context examples/othello-1-1-context.json --env-file credentials.env
+node --test tests/gateway.test.mjs tests/model.test.mjs
+```
+
+Provide `MAAT_API_TOKEN` or `TFY_INDIVIDUAL_TOKEN` through the environment or an explicit credential file outside
+the repository. The filtered loader reads literal values only and never executes the file. The adapter retrieves
+the token of an existing active personal account, or an existing team development account; it creates and changes
+no account. Dashboard credentials are never used for completion calls. Keys, account names and IDs are never logged.
+
+`model-config.json` fixes the writer route and decoding. The current direct Google Pro route was selected because
+the advertised Claude aliases did not expose enough upstream metadata to establish a non-Bedrock route.
+The runner verifies the current advertised provider against the recorded route evidence and excludes AWS/Bedrock.
+Requested alias and reported model are separate provenance fields; gateway metadata does not prove a physical model
+version. A gateway cost is reported only when returned by the service.
+
+Each run makes one writer attempt and permits at most one repair for JSON shape, references or exact quotation
+binding. It makes no quality judge, reranker or evaluator call. Raw provider bytes, writer inputs, refusals and repairs
+remain in a fresh private `.local/model-runs/` journal. No network call is automatically retried and no fallback is
+selected. A hold exits 2; execution failure exits 1. JSON schemas and deterministic checks establish transport
+integrity only. Independent academic review and learner outcomes remain pending.
+
+Finished `lesson-context.json` and `question-set.json` preserve the supplied instruction nodes and insert native
+questions at the declared slots. Every item carries the original public alignment and exact source bindings.
+`learner.json` withholds keys, rubrics, sample answers and feedback until the entire sequence is complete; the
+declared worked teaching exposures remain in order. `receipt.json` contains public-safe model, attempt, usage and
+transport hash metadata. The committed neutral inputs and explicit CLI flags are the only lesson prerequisites.
+
 ## Stages
 
 - **Stage 0:** agree the format, reference and separation rules.
-- **Stage 1, current:** run the template baseline and check its output.
-- **Stage 2, next:** generate from the reference reading checks with a model, then measure question quality using
+- **Stage 1:** run the template baseline and check its output.
+- **Stage 2, current:** generate the complete reference lesson sequence with a model, then measure question quality using
   an independently qualified evaluator. Each half needs a different owner.
 
-Stage 2 has begun with offline source preparation only; model-backed writing and independent evaluation have not run.
-
-No model or production route has been selected.
+Stage 2 now has an executable writer and a complete neutral source packet. The writer's structural checks do not
+establish academic quality or independent evaluator qualification. No production route is adopted.
