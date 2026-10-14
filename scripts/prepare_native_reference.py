@@ -9,8 +9,8 @@ import hashlib
 import json
 from pathlib import Path
 
-PIN = "f1565047f1ab75f2cead15699546bc8723ac4e39"
-SHA = "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96"
+PIN = "4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892"
+SHA = "d388ae850b7a1e145e4c8bfc06a228642814130d9737599ffd02c0b1acac9bd4"
 
 
 def flatten(value):
@@ -29,7 +29,7 @@ def prepare(source_bytes, receipt, counterpart):
         raise ValueError("Explicit current reference differs from the frozen authored source pin")
     original = json.loads(source_bytes)
     provenance = {"repository": receipt["repository"], "commit": PIN, "path": receipt["source"]["path"], "sha256": SHA, "version_role": "frozen-current-hosted-source", "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."}
-    sources, phases, slots, pages, keys = [], [], [], [], []
+    sources, phases, slots, pages, keys, media_assets = [], [], [], [], [], []
     source_ids = []
 
     def asset(identifier, text, pointer, kind="text", **extra):
@@ -47,7 +47,7 @@ def prepare(source_bytes, receipt, counterpart):
         if not refs:
             raise ValueError(f"{pointer}: no visible source")
         target = "K-media" if kind == "film_mcq" else "K-language" if kind in {"word_web", "key_term_mcq", "quote_word_selection", "rebuild_choice", "say_back"} else "K-evidence"
-        phases.append({"id": phase, "role": role, "target_refs": [target], "source_refs": refs, "exposure_order": len(slots) + 1, "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."})
+        phases.append({"id": phase, "role": role, "target_refs": [target], "source_refs": refs, "media_context_refs": [row["id"] for row in media_assets if row["page_ref"] == pages[-1]["id"]], "exposure_order": len(slots) + 1, "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."})
         slot = {"id": identifier, "native_kind": kind, "family": family, "public_format": public_format, "role": role, "operation": operation, "objective": objective, "page_ref": pages[-1]["id"], "phase_ref": phase, "target_refs": [target], "content_key_refs": ["C-" + ref for ref in refs], "pair_refs": ["P-evidence-language"] if target != "K-media" else [], "support": phases[-1]["support"], "source_pointer": pointer, "context_pointer": context_pointer, "native_context": native_context or {}, "depends_on": depends or []}
         slots.append(slot)
         pages[-1]["question_slots"].append({"id": identifier})
@@ -77,6 +77,10 @@ def prepare(source_bytes, receipt, counterpart):
                 pages[-1]["nodes"].append({"type": "definition", "source_ref": ref, "exposure_status": "Authored definition available as declared guided support; no independent recall claim."})
                 activity("key_term_mcq", "question", pointer, pointer, "single_choice", "single_choice", "Check a source-grounded application of the taught key term.", "recognition", {"term": node["term"]}, [ref])
             elif kind == "reading":
+                if node.get("intro_video"):
+                    media = {"id": page["id"] + "-intro-video", "page_ref": page["id"], "src": node["intro_video"]["src"], "poster": node["intro_video"].get("poster"), "original_pointer": pointer + "/intro_video", "provenance": provenance, "transcript_status": "not-supplied", "factual_authority": "No media-content facts inferred; generated questions use the explicitly supplied reading text.", "exposure_status": "Authored media exists on this page; individual playback and content exposure are unknown."}
+                    media_assets.append(media)
+                    pages[-1]["nodes"].append({"type": "media-introduction", "media_ref": media["id"], "src": media["src"], "poster": media["poster"], "original_pointer": media["original_pointer"], "transcript_status": media["transcript_status"]})
                 ref = asset(page["id"], flatten(node["blocks"]), pointer + "/blocks")
                 last_reading.append(ref)
                 pages[-1]["nodes"].append({"type": "reading", "source_ref": ref, "part": node["part"]})
@@ -151,6 +155,9 @@ def prepare(source_bytes, receipt, counterpart):
     ]
     course = {"lesson_id": original["lessonId"], "learning_question": original["question"], "core_knowledge": goals, "source_assets": sources, "prerequisites": [{"id": "prior-literature", "status": "author-declared-only", "description": "Author references prior literary study; no individual mastery record supplied."}], "learner_constraints": {"status": "partially-specified", "grade": 9, "language": "English", "accessibility_needs": "unknown", "individual_reading_level": "unknown", "response_support": "Declared per slot; no additional learner history inferred."}, "prior_exposure": {"status": "authored-plan-not-individual-record", "events": [{"source_ref": row["id"], "original_pointer": row["original_pointer"], "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."} for row in sources], "conditional_feedback_history": "not supplied", "individual_submitted_responses": "not supplied"}, "content_keys": keys, "knowledge_map": [{"knowledge_ref": goal["id"], "content_key_ref": "C-" + ref} for goal in goals for ref in goal["source_refs"]], "pairing_map": [{"id": "P-evidence-language", "knowledge_refs": ["K-language", "K-evidence"], "relation": "Use precise source language to support and explain a claim."}], "lesson_plan": {"id": original["lessonId"], "phases": phases}}
     delivery = {"inventory_order": "Original authoring extraction order, not a claim that all rows are completed sequentially.", "branch_groups": [{"id": "selected-paragraph-quote", "policy": "choose-one", "branches": ["A", "B"], "source_offers_additional_quote_C": "Quote C has no authored breakdown in this source pin; no missing subchecks invented."}], "runtime_followups": "Not captured and not generated by this packet.", "media_timing_status": "Original timing preserved. Runtime label and captions differ; unit segment 4/5 numeric timing differs from array order. No playback-equivalence claim."}
+    course["media_assets"] = media_assets
+    course["prior_exposure"]["events"].extend({"media_ref": row["id"], "original_pointer": row["original_pointer"], "availability": row["exposure_status"], "transcript_status": row["transcript_status"]} for row in media_assets)
+    delivery["untranscribed_media"] = [row["id"] for row in media_assets if row["transcript_status"] == "not-supplied"]
     course["delivery_context"] = delivery
     request = {"protocol": "question-lane-native/0.2", "request_id": "current-reference-all-native-formats", "course_context": course, "sequence_blueprint": slots, "source_provenance": provenance, "intake_limits": ["No original question, key, feedback or rubric copied into this writer packet.", "Objectives are explicit proposed generation intentions, not recovered author answers.", "Original authored activities include guided tasks and dependent subchecks; 50 is not a mastery-measurement count.", "Media captions are supplied authoring data; video playback and audiovisual equivalence were not verified.", "Hypothetical counterpart claim is supplied packet authoring, not a source quotation.", "Question quality and learner outcomes await later independent evaluation."]}
     context = {"contract": "lesson-context 0.1", "source": provenance, "lesson": {"id": original["lessonId"], "title": original["title"], "learning_question": original["question"], "keywords": original["keywords"]}, "native": {"course_context": course, "pages": pages}, "adapter_extension": "native-activity-transport/0.2", "preparation_status": "neutral-writer-context"}

@@ -80,6 +80,8 @@ export function validateNativeInputs(request, context, catalog) {
   const pairs = list(c.pairing_map, 'pairing map', 0); unique(pairs.map(row => row.id), 'pairing map');
   pairs.forEach(row => { list(row.knowledge_refs, row.id).forEach(ref => { if (!targets.includes(ref)) fail(row.id, 'pair knowledge does not resolve'); }); });
   const phases = list(c.lesson_plan?.phases, 'lesson phases'); unique(phases.map(row => row.id), 'phases');
+  const media = c.media_assets ?? []; list(media, 'media assets', 0); unique(media.map(row => row.id), 'media assets');
+  media.forEach(row => { text(row.id, 'media id'); text(row.src, row.id); text(row.original_pointer, row.id); text(row.transcript_status, row.id); object(row.provenance, row.id); });
   const pages = list(context.native?.pages, 'native pages'); unique(pages.map(row => row.id), 'pages');
   if (JSON.stringify(context.native.course_context) !== JSON.stringify(c)) fail('course context', 'request and context differ');
   const publicFormats = new Set(list(catalog.formats, 'public formats').map(row => row.id));
@@ -93,6 +95,11 @@ export function validateNativeInputs(request, context, catalog) {
     const phase = phases.find(row => row.id === slot.phase_ref);
     if (!phase) fail(slot.id, 'phase does not resolve');
     list(phase.source_refs, phase.id).forEach(ref => { if (!sourceIds.includes(ref)) fail(phase.id, 'visible source missing'); });
+    (phase.media_context_refs ?? []).forEach(ref => { if (!media.some(row => row.id === ref)) fail(phase.id, 'media context reference does not resolve'); });
+    (slot.native_context.required_media_refs ?? []).forEach(ref => {
+      const row = media.find(row => row.id === ref);
+      if (!row || row.transcript_status !== 'supplied' || !row.transcript_source_ref || !phase.source_refs.includes(row.transcript_source_ref)) fail(slot.id, 'required media content lacks a supplied visible transcript; no media facts inferred');
+    });
     list(slot.target_refs, slot.id).forEach(ref => { if (!targets.includes(ref)) fail(slot.id, 'knowledge target does not resolve'); });
     list(slot.content_key_refs, slot.id).forEach(ref => { if (!contentKeys.includes(ref)) fail(slot.id, 'content key does not resolve'); });
     list(slot.pair_refs, slot.id, 0).forEach(ref => { if (!pairs.some(row => row.id === ref)) fail(slot.id, 'pair does not resolve'); });

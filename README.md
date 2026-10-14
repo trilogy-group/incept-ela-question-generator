@@ -47,10 +47,12 @@ tasks; it does not establish that an evaluator can judge them.
 ## Model writer
 
 The optional native lane now prepares the **current hosted authoring reference**: 50 activities across 14 native
-kinds and 19 pages, frozen at source commit `f1565047f1ab75f2cead15699546bc8723ac4e39` and source SHA256
-`50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96`. This is a separate source from the older
-40-unit, `3ed708e1` historical contract fixture described above. The subsequent introduction-video source variant
-is not silently substituted for this pin.
+kinds and 19 pages, frozen at final main source commit `4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892` and source SHA256
+`d388ae850b7a1e145e4c8bfc06a228642814130d9737599ffd02c0b1acac9bd4`. This is a separate source from the older
+40-unit, `3ed708e1` historical contract fixture described above. The final source adds an introduction video on
+`reading-2`; its exact URL, poster, source pointer and planned exposure survive intake. It supplies no transcript,
+so that video's content cannot be inferred. The earlier `f1565047` / `50b6d44f` offline journal remains evidence of
+the earlier context, while the refreshed journal records this final context and its hashes.
 
 Run the same Node CLI offline, with no credentials or sibling repository:
 

@@ -21,12 +21,28 @@ test('all 50 current native activities have explicit public format, scope, sourc
   const { request, context, response } = fixture();
   assert.equal(validateNativeInputs(request, context, catalog), 50);
   validate(response, schema); assert.equal(validateNativeResponse(response, request), 50);
-  assert.equal(request.source_provenance.commit, 'f1565047f1ab75f2cead15699546bc8723ac4e39');
+  assert.equal(request.source_provenance.commit, '4c1e26c8e87891d70cb0d9b3e9163ceb7ce25892');
   assert.equal(request.source_provenance.sha256, inventory.source_sha256);
   const counts = Object.fromEntries(Object.keys(inventory.current_by_kind).map(kind => [kind, request.sequence_blueprint.filter(row => row.native_kind === kind).length]));
   assert.deepEqual(counts, inventory.current_by_kind);
   assert.equal(new Set(request.sequence_blueprint.map(row => row.native_kind)).size, 14);
   assert.ok(['classification', 'single_choice', 'evidence_selection', 'short_explanation', 'learner_question', 'rebuttal', 'integrated_response'].every(format => request.sequence_blueprint.some(row => row.public_format === format)));
+});
+
+test('final-main reading introduction retains exact media provenance and refuses content inference without a transcript', () => {
+  const { request, context } = fixture();
+  const media = request.course_context.media_assets.find(row => row.id === 'reading-2-intro-video');
+  assert.equal(media.src, 'archivist/reading-2-intro.mp4?v=d4fa226a19');
+  assert.equal(media.poster, 'archivist/reading-2-intro-poster.jpg');
+  assert.equal(media.original_pointer, '/pages/7/nodes/0/intro_video');
+  assert.equal(media.provenance.sha256, inventory.source_sha256);
+  assert.equal(media.transcript_status, 'not-supplied');
+  assert.ok(context.native.pages.find(row => row.id === 'reading-2').nodes.some(row => row.type === 'media-introduction' && row.media_ref === media.id));
+  const slot = request.sequence_blueprint.find(row => row.page_ref === 'reading-2');
+  const phase = request.course_context.lesson_plan.phases.find(row => row.id === slot.phase_ref);
+  assert.ok(phase.media_context_refs.includes(media.id));
+  slot.native_context.required_media_refs = [media.id];
+  assert.throws(() => validateNativeInputs(request, context, catalog), /required media content lacks/);
 });
 
 test('missing knowledge, media transcript, phase, maps, constraints, support and counterpart context refuse intake', () => {
