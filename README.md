@@ -53,7 +53,7 @@ The two committed Othello input files contain the complete neutral source lesson
 ```bash
 node model_generate.mjs --list-models --env-file credentials.env
 node model_generate.mjs --request examples/othello-1-1-request.json --context examples/othello-1-1-context.json --env-file credentials.env
-node --test tests/gateway.test.mjs tests/model.test.mjs
+node --test tests/gateway.test.mjs tests/model.test.mjs tests/display.test.mjs
 ```
 
 Provide `MAAT_API_TOKEN` or `TFY_INDIVIDUAL_TOKEN` through the environment or an explicit credential file outside
@@ -77,6 +77,14 @@ The transport parser also records two mechanical normalizations: removing a JSON
 scalar choice index in the contract's one-element key array. Neither changes wording or answer positions. A preserved
 run can be finalized offline with `node model_generate.mjs --finalize-run .local/model-runs/RUN_DIRECTORY`; the
 normalization gets a separate directory and receipt, preserves the original held journal, and adds no model call.
+
+Reading MCQ displays target answer position `rank % option_count`, using the question's zero-based reading-MCQ
+rank. The generator circularly rotates options, keys, feedback and indexed source bindings together, preserving
+the keyed option text. `display-rotation.json` records the permutation; this proposed display policy makes no
+quality judgment. A source/course editorial revision can be made from a preserved finished run with
+`node editorial_revision.mjs --source-run .local/model-runs/RUN/FINISHED_RUN`. Its explicit edits live in
+`editorial-revision.json`; all before/after fields, source bindings and display rotations get a new private journal.
+Original finished transports and model costs remain intact. The current editorial revision makes no model call.
 
 Finished `lesson-context.json` and `question-set.json` preserve the supplied instruction nodes and insert native
 questions at the declared slots. Every item carries the original public alignment and exact source bindings.

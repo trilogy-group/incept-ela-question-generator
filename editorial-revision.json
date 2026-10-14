@@ -1,0 +1,92 @@
+{
+  "version": "source-course-editorial-revision/0.1",
+  "authority": "Ordinary public source and declared course-placement notes; no evaluator criteria, scores or results used.",
+  "edits": {
+    "Q05": {
+      "prompt": "Explain how Iago presents Othello's choice of Cassio as an injustice to him. Use a detail from his account to show how he builds that grievance.",
+      "sample_answer": "Iago presents the choice as unjust because he says Othello has seen his experience in battle but has promoted Cassio, whom he describes as never having commanded a squadron in the field. This contrast builds Iago's claim that he deserved the post; it is Iago's account of the decision, rather than independent proof that the decision was unfair.",
+      "feedback": "Connect a detail from Iago's account to the grievance he builds from it. Keep his claims about the officers and the decision attributed to him.",
+      "rubric": {
+        "id": "rubric-q05-revised",
+        "criteria": [{
+          "id": "integrated-grievance", "requirement": "Gives one integrated explanation of how Iago uses the promotion contrast, or his claim about favoritism rather than seniority, to present Othello's decision as unjust to him; attributes the account to Iago.",
+          "points": 2,
+          "full_credit": "Explains the connection between a relevant detail in Iago's account and his grievance, without treating his account as independent proof of objective unfairness.",
+          "partial_credit": "Identifies a relevant promotion detail or allegation of unfairness but leaves the connection incomplete, or presents the account as established impartial fact.",
+          "no_credit": "Gives no source-supported account of the grievance, reverses who received the promotion, or supplies an unrelated explanation.",
+          "accept_alternative": "Accept a supported explanation using the claimed contrast in experience, Iago's claimed worth, or 'letter and affection' rather than 'old gradation'."
+        }],
+        "allocation": "One holistic judgment: 2 points for the integrated explanation, 1 for a relevant but incomplete explanation, 0 for no supported explanation. Do not award separate event and reason points.",
+        "combination_rules": "Assess the explanation as one performance. A quotation or event named without its explained connection does not earn full credit. A contradiction of the promotion relationship prevents full credit. Equivalent source-supported wording and defensible qualifications count.",
+        "status": "proposed-course-marking-guide"
+      }
+    },
+    "Q06": {
+      "feedback_index": 2,
+      "feedback": "Incorrect. The displayed line is \"We cannot all be masters, nor all masters\nCannot be truly followed.\" It does not state that followers will automatically be rewarded. Iago explains his own purpose: \"In following him, I follow but myself.\""
+    },
+    "Q08": {
+      "prompt": "Classify each description according to the explanation suggested by Iago's conduct or the explanation he gives in confidence. Use the relationship between his service and its purpose. Put every description in one category; there is no required number in either category.",
+      "categories": [
+        {"id": "c1", "label": "Explanation suggested by his conduct", "description": "The reason for service that Iago intends others to infer from how he behaves."},
+        {"id": "c2", "label": "Explanation he gives in confidence", "description": "The reason for service that Iago admits in his conversation with Roderigo."}
+      ],
+      "entries": [
+        {"id": "e1", "text": "Following his commander is presented as a sign that he cares about him."},
+        {"id": "e2", "text": "Following his commander gives him a means to benefit himself."},
+        {"id": "e3", "text": "Continuing to do a soldier's job makes devotion look like the reason for his conduct."},
+        {"id": "e4", "text": "Continuing to do a soldier's job serves the goal he calls 'my peculiar end'."}
+      ],
+      "entry_feedback": {
+        "e1": "Iago says he seems to act for 'love and duty', although that is not the reason he admits to Roderigo.",
+        "e2": "'In following him, I follow but myself' makes his own benefit the reason for following Othello.",
+        "e3": "The link between service and devotion is what 'seeming so' presents; his next words distinguish that appearance from his goal.",
+        "e4": "'For my peculiar end' gives the purpose served by the apparently dutiful behavior."
+      },
+      "correct_feedback": "The same act of following Othello can suggest devotion to him while serving a different purpose that Iago admits to Roderigo."
+    },
+    "Q12": {
+      "feedback": "Explain how 'but sign' limits the love to a display. Connect that display to either the hatred Iago admits or the necessity he gives for showing it.",
+      "combination_rules": "Award 1 point for explaining 'but sign' as a display rather than the feeling it represents, and 1 point for an explained contextual link to either his admitted hatred OR his stated necessity. Either source-supported link can earn the second point; both are not required. Naming hatred or necessity without explaining its relation to the display is insufficient."
+    },
+    "Q13": {
+      "prompt": "Choose one short quotation from the scene other than the worked model quotation, \"I follow him to serve my turn upon him.\" State what your quotation suggests about Iago, then explain how specific words support your interpretation.",
+      "sample_answer": "Iago says, \"I am not what I am.\" I read this as an admission that the identity he presents does not match the person he is. The word \"not\" makes that contradiction explicit, supporting a reading of his loyal appearance as a façade.",
+      "feedback": "State your interpretation and explain the link between specific words in your quotation and that interpretation. Keep the claim within what those words establish in context.",
+      "rubric": {
+        "id": "rubric-q13-revised",
+        "criteria": [
+          {"id": "evidence", "requirement": "Provides an exact quotation from the supplied scene that is relevant to the learner's stated interpretation, excluding the worked model quotation.", "points": 1, "full_credit": "Quotes a relevant supplied line accurately and uses a quotation other than the worked model quotation.", "partial_credit": "", "no_credit": "No quotation, an inaccurate quotation, an irrelevant quotation, or the excluded model quotation.", "accept_alternative": "Accept any quotation in the visible supplied sources that supports the learner's defensible interpretation; listed examples are not an exhaustive key."},
+          {"id": "reasoning", "requirement": "States a defensible interpretation of Iago and explains how specific words in the chosen quotation support it in context.", "points": 1, "full_credit": "Makes the claimed relation between the wording and the interpretation clear and keeps its scope supported by the source.", "partial_credit": "", "no_credit": "Gives no interpretation, merely paraphrases the quotation, or makes a claim that the quoted wording does not support in context.", "accept_alternative": "Accept defensible source-supported readings of Iago's purpose, presentation or caution about revealing himself; do not require a preset claim that his loyalty is false."}
+        ],
+        "allocation": "Additive points. 2 points maximum.",
+        "combination_rules": "Award 1 point for relevant exact evidence and 1 point for the explained wording-to-interpretation relation. A quotation alone does not earn the reasoning point. Assess the learner's stated reading against the chosen source, rather than comparing it with the illustrative sample answer.",
+        "status": "proposed-course-marking-guide"
+      }
+    },
+    "Q14": {
+      "prompt": "For this course paragraph, write five sentences of your own answering the lesson question: At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello? Punctuation inside a quotation does not add another sentence of your own.\n\nInclude:\n1. A clear opening claim.\n2. An exact quotation from the scene other than the worked model quotation, \"I follow him to serve my turn upon him.\"\n3. Reasoning that explains how two meaningful words from your quotation support your claim.\n4. A closing claim that follows from your evidence and reasoning.",
+      "sample_answer": "At the beginning of the play, Shakespeare exposes Iago as a deceitful character whose loyalty is only a façade. This is evident in the quote, \"I must show out a flag and sign of love—\nWhich is indeed but sign.\" The word \"show\" presents his conduct as something for others to see, which supports the claim that his loyalty is performed. Furthermore, \"but\" limits that display to a sign, distinguishing it from the love it appears to represent. Therefore, the contrast between what he shows and what he admits supports a reading of Iago as pretending to be loyal.",
+      "feedback": "Bring the opening claim, exact quotation, two explained words and closing claim together in one paragraph. For this course task, also follow the supplied five-sentence form; quotation punctuation does not add author sentences.",
+      "rubric": {
+        "id": "rubric-q14-revised",
+        "criteria": [
+          {"id": "claim-evidence", "requirement": "Opens with a defensible claim answering the supplied lesson question and pairs it with an exact, relevant quotation other than the worked model quotation.", "points": 1, "full_credit": "Includes both a supported opening claim and an exact quotation that can support it.", "partial_credit": "", "no_credit": "Missing opening claim, missing or inaccurate quotation, unsupported claim-evidence pairing, or use of the excluded model quotation.", "accept_alternative": "Accept any defensible source-supported claim and quotation pairing, including a qualified reading that accounts for the context."},
+          {"id": "two-word-reasoning", "requirement": "Explains how two meaningful words in the chosen quotation support the stated claim.", "points": 1, "full_credit": "Names two words that appear in the quotation and explains each word's relevant contribution to the claim.", "partial_credit": "", "no_credit": "Explains only one word, uses words absent from the quotation, merely paraphrases, or gives analysis that does not support the claim in context.", "accept_alternative": "Accept defensible analysis of any two meaningful words in the learner's quotation; a particular pair is not required."},
+          {"id": "closing-claim", "requirement": "Ends with a closing claim that answers the lesson question and follows from the paragraph's evidence and reasoning.", "points": 1, "full_credit": "Closes by drawing a supported conclusion from the paragraph's reasoning, without adding an unsupported new assertion.", "partial_credit": "", "no_credit": "No closing claim, a closing claim unrelated to the reasoning, or an unsupported conclusion.", "accept_alternative": "Accept a supported restatement, synthesis or qualification of the opening claim; identical wording is not required.", "policy_ref": "/native/sequence_blueprint/13/support"}
+        ],
+        "format_condition": {
+          "status": "proposed-local-course-policy",
+          "policy_ref": "/native/sequence_blueprint/13/support",
+          "requirement": "One paragraph containing five sentences written by the learner. Sentence-ending punctuation wholly inside quoted source text does not count as another author sentence. A sentence introducing or framing a quotation counts once.",
+          "full_score_condition": "All three content criteria and this format condition must be met for 3 points. If the content criteria are met but the format condition is not, record content strengths separately and cap this course-task total at 2 pending revision.",
+          "scope": "This condition implements the supplied Q14 course format; it is not a universal rule about literary quality or evidence of mastery."
+        },
+        "allocation": "Assess one integrated paragraph. Award up to 1 point for each of the three content criteria, then apply the explicit local format condition; maximum 3 points.",
+        "combination_rules": "The evidence must support the opening claim, the two-word analysis must explain that relation, and the closing claim must follow from it. A quotation alone cannot earn reasoning credit. Unsupported assertions cannot satisfy the affected criterion. Accept defensible alternatives grounded in the selected text. Full credit also requires the declared five-author-sentence course form; do not count sentences within the quotation as additional author sentences.",
+        "status": "proposed-course-marking-guide"
+      }
+    }
+  },
+  "display_policy": "For reading MCQ rank 0,1,2,... target answer position rank modulo option count by a circular permutation of options, feedback, keys and indexed bindings. Preserve the keyed option text. This is a proposed display policy, not a question quality score."
+}

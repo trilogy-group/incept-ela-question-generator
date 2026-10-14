@@ -5,6 +5,7 @@ import { dirname, resolve as absolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connect, credentials } from './gateway.mjs';
 import { adaptResponse, learnerPacket, StructuralError, validate, validateInputs, validateResponse } from './model_contract.mjs';
+import { rotateChoiceDisplays } from './display_rotation.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 export const VERSION = 'source-grounded-writer/0.1';
@@ -152,12 +153,15 @@ export async function execute(options) {
   const messages = writerMessages(request, context, responseSchema, methods, formats);
   const { response, trace } = await writeSequence({ request, context, schema: responseSchema, config, messages, route, journal });
   await journal('writer-response.json', response);
+  const displayed = response.status === 'prepared-for-review' ? rotateChoiceDisplays(response) : { response, rotations: [] };
+  await journal('display-rotation.json', { rotations: displayed.rotations, meaning_changed: false, model_calls_added: 0 });
+  await journal('display-response.json', displayed.response);
   const codeHashes = {};
-  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'gateway.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
-  const provenance = { kind: 'generator-run', run, generator_version: VERSION, request_sha256: sha256(requestBytes), source_context_sha256: sha256(contextBytes), config_sha256: sha256(await readFile(configPath)), code_sha256: codeHashes, requested_model: config.model, reported_models: trace.calls.map(call => call.reported_model), route_evidence: config.route_evidence, model_calls: trace.model_calls, first_attempt_count: 1, model_structural_repair_count: trace.repairs.length, deterministic_transport_repair_count: trace.transport_normalizations.length, structural_repair_count: trace.repairs.length + trace.transport_normalizations.length, candidate_count: 1, writer_response_sha256: sha256(JSON.stringify(response)), knowledge_baseline_sha256: sha256(await readFile(absolute(ROOT, 'public/knowledge-baseline.json'))), source_comparison: 'Local public pinned bytes checked; original external source pin preserved, no new external Git comparison ran.', academic_quality: 'pending independent review', learner_outcome: 'unmeasured' };
+  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'gateway.mjs', 'display_rotation.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
+  const provenance = { kind: 'generator-run', run, generator_version: VERSION, request_sha256: sha256(requestBytes), source_context_sha256: sha256(contextBytes), config_sha256: sha256(await readFile(configPath)), code_sha256: codeHashes, requested_model: config.model, reported_models: trace.calls.map(call => call.reported_model), route_evidence: config.route_evidence, model_calls: trace.model_calls, first_attempt_count: 1, model_structural_repair_count: trace.repairs.length, deterministic_transport_repair_count: trace.transport_normalizations.length, structural_repair_count: trace.repairs.length + trace.transport_normalizations.length, candidate_count: 1, writer_response_sha256: sha256(JSON.stringify(response)), display_response_sha256: sha256(JSON.stringify(displayed.response)), display_rotation: displayed.rotations, knowledge_baseline_sha256: sha256(await readFile(absolute(ROOT, 'public/knowledge-baseline.json'))), source_comparison: 'Local public pinned bytes checked; original external source pin preserved, no new external Git comparison ran.', academic_quality: 'pending independent review', learner_outcome: 'unmeasured' };
   const receipt = { ...provenance, writer_family: config.writer_family, status: response.status, items: response.items.length, calls: trace.calls.map(({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status }) => ({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status })), transport_hashes: {} };
   if (response.status === 'prepared-for-review') {
-    const { context: finishedContext, questionSet } = adaptResponse(request, context, response, provenance);
+    const { context: finishedContext, questionSet } = adaptResponse(request, context, displayed.response, provenance);
     validate(finishedContext, contextSchema);
     validate(questionSet, await json(absolute(ROOT, 'schema/question-set.schema.json')));
     await journal('lesson-context.json', finishedContext);

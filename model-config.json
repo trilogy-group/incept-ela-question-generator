@@ -15,6 +15,7 @@
   "max_tokens": 24000,
   "structural_repairs": 1,
   "transport_normalization": ["json-code-fence", "scalar-choice-key-to-array"],
+  "choice_display_policy": "Target zero-based reading-MCQ rank modulo option count; circularly rotate options, keys, option feedback and indexed source bindings together. Proposed display policy, no quality selection.",
   "run_root": ".local/model-runs",
   "no_automatic_network_retries": true,
   "quality_status": "Independent academic review pending; local checks are structural only."
