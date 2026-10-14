@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 import { connect, credentials } from './gateway.mjs';
 import { adaptResponse, learnerPacket, StructuralError, validate, validateInputs, validateResponse } from './model_contract.mjs';
 import { rotateChoiceDisplays } from './display_rotation.mjs';
+import { NATIVE_PROTOCOL, adaptNativeResponse, nativeLearnerPacket, nativeWriterMessages, validateNativeInputs, validateNativeResponse } from './native_formats.mjs';
+import { formatCoverage, mockNativeResponse } from './native_smoke.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 export const VERSION = 'source-grounded-writer/0.1';
@@ -67,7 +69,8 @@ export async function writeSequence({ request, context, schema, config, messages
     const name = attempt === 0 ? 'first-attempt' : `structural-repair-${attempt}`;
     const body = { model: config.model, temperature: config.temperature, max_tokens: config.max_tokens, messages: currentMessages, stream: false };
     await journal(`${name}.request.json`, body);
-    trace.model_calls++;
+    if (config.offline_mock) trace.mocked_provider_calls = (trace.mocked_provider_calls ?? 0) + 1;
+    else trace.model_calls++;
     let completion;
     try { completion = await route.complete(body); }
     catch (error) {
@@ -92,7 +95,8 @@ export async function writeSequence({ request, context, schema, config, messages
       const normalized = normalizeTransport(content);
       response = normalized.response;
       if (normalized.operations.length) trace.transport_normalizations.push({ attempt: name, operations: normalized.operations, allowed_scope: 'Unwrap a JSON code fence and represent the same scalar choice index as a one-element array; no content or key position changes.' });
-      validateResponse(response, request, schema);
+      if (request.protocol === NATIVE_PROTOCOL) validateNativeResponse(response, request);
+      else validateResponse(response, request, schema);
       if (response.status === 'held') trace.refusals.push({ attempt: name, holds: response.holds });
       break;
     } catch (error) {
@@ -120,9 +124,25 @@ async function verifyPublicPins() {
 }
 
 export async function execute(options) {
+  if (options.offlineSmoke || options.prepareNative) return executeNativeOffline(options);
   const configPath = localPath(options.config ?? absolute(ROOT, 'model-config.json'), 'Config');
   const config = await json(configPath);
   if (!Number.isInteger(config.structural_repairs) || config.structural_repairs < 0 || config.structural_repairs > 1) throw new StructuralError('Structural repair count must be zero or one');
+  // Validate required context before credentials, gateway discovery or paid calls.
+  let requestBytes, contextBytes, request, context, requestSchema, contextSchema, responseSchema, methods, formats;
+  if (!options.listModels) {
+    requestBytes = await readFile(localPath(options.request, 'Request')); contextBytes = await readFile(localPath(options.context, 'Context'));
+    request = JSON.parse(requestBytes); context = JSON.parse(contextBytes);
+    requestSchema = await json(absolute(ROOT, 'schema/generator-request.schema.json')); contextSchema = await json(absolute(ROOT, 'schema/lesson-context.schema.json'));
+    responseSchema = await json(absolute(ROOT, request.protocol === NATIVE_PROTOCOL ? 'schema/native-writer-response.schema.json' : 'schema/writer-response.schema.json'));
+    formats = await json(absolute(ROOT, 'public/formats.json')); methods = await json(absolute(ROOT, 'public/generation-standard.json'));
+    if (request.protocol === NATIVE_PROTOCOL) {
+      try { validateNativeInputs(request, context, formats); }
+      catch (error) { if (!(error instanceof StructuralError)) throw error; return executeNativeOffline({ request: options.request, context: options.context, prepareNative: true }); }
+    }
+    else validateInputs(request, context, requestSchema, contextSchema);
+    await verifyPublicPins();
+  }
   const route = await connect(config, await credentials(options.envFile));
   const models = await route.models();
   if (options.listModels) return { available_models: models.map(({ id, owned_by }) => ({ id, owned_by })), model_calls: 0 };
@@ -131,16 +151,6 @@ export async function execute(options) {
   if (!config.route_evidence || config.route_evidence.model !== config.model || config.route_evidence.aws_bedrock !== false) throw new StructuralError('Explicit read-only non-Bedrock route evidence is required in model-config.json');
   const advertised = models.find(model => model.id === config.model);
   if (advertised.owned_by === 'virtual-model' || advertised.owned_by !== config.route_evidence.owned_by) throw new StructuralError('Configured direct provider evidence differs from current gateway metadata');
-  const requestBytes = await readFile(localPath(options.request, 'Request'));
-  const contextBytes = await readFile(localPath(options.context, 'Context'));
-  const request = JSON.parse(requestBytes), context = JSON.parse(contextBytes);
-  const requestSchema = await json(absolute(ROOT, 'schema/generator-request.schema.json'));
-  const contextSchema = await json(absolute(ROOT, 'schema/lesson-context.schema.json'));
-  const responseSchema = await json(absolute(ROOT, 'schema/writer-response.schema.json'));
-  validateInputs(request, context, requestSchema, contextSchema);
-  await verifyPublicPins();
-  const methods = await json(absolute(ROOT, 'public/generation-standard.json'));
-  const formats = await json(absolute(ROOT, 'public/formats.json'));
   const run = `${new Date().toISOString().replace(/[:.]/g, '-')}-${randomUUID().slice(0, 8)}`;
   const directory = localPath(absolute(ROOT, config.run_root, run), 'Run directory');
   if (!directory.startsWith(`${ROOT}/.local/`)) throw new StructuralError('Model journals must stay inside private .local/');
@@ -150,27 +160,63 @@ export async function execute(options) {
   await journal('source-context.json', context);
   await journal('config.json', config);
   await journal('models.json', { checked_at: new Date().toISOString(), models: models.map(({ id, owned_by }) => ({ id, owned_by })) });
-  const messages = writerMessages(request, context, responseSchema, methods, formats);
+  const nativeExtension = request.protocol === NATIVE_PROTOCOL;
+  const messages = nativeExtension ? nativeWriterMessages(request, context, responseSchema, methods, formats) : writerMessages(request, context, responseSchema, methods, formats);
   const { response, trace } = await writeSequence({ request, context, schema: responseSchema, config, messages, route, journal });
   await journal('writer-response.json', response);
   const displayed = response.status === 'prepared-for-review' ? rotateChoiceDisplays(response) : { response, rotations: [] };
   await journal('display-rotation.json', { rotations: displayed.rotations, meaning_changed: false, model_calls_added: 0 });
   await journal('display-response.json', displayed.response);
   const codeHashes = {};
-  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'gateway.mjs', 'display_rotation.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
+  for (const name of ['model_generate.mjs', 'model_contract.mjs', 'native_formats.mjs', 'gateway.mjs', 'display_rotation.mjs']) codeHashes[name] = sha256(await readFile(absolute(ROOT, name)));
   const provenance = { kind: 'generator-run', run, generator_version: VERSION, request_sha256: sha256(requestBytes), source_context_sha256: sha256(contextBytes), config_sha256: sha256(await readFile(configPath)), code_sha256: codeHashes, requested_model: config.model, reported_models: trace.calls.map(call => call.reported_model), route_evidence: config.route_evidence, model_calls: trace.model_calls, first_attempt_count: 1, model_structural_repair_count: trace.repairs.length, deterministic_transport_repair_count: trace.transport_normalizations.length, structural_repair_count: trace.repairs.length + trace.transport_normalizations.length, candidate_count: 1, writer_response_sha256: sha256(JSON.stringify(response)), display_response_sha256: sha256(JSON.stringify(displayed.response)), display_rotation: displayed.rotations, knowledge_baseline_sha256: sha256(await readFile(absolute(ROOT, 'public/knowledge-baseline.json'))), source_comparison: 'Local public pinned bytes checked; original external source pin preserved, no new external Git comparison ran.', academic_quality: 'pending independent review', learner_outcome: 'unmeasured' };
   const receipt = { ...provenance, writer_family: config.writer_family, status: response.status, items: response.items.length, calls: trace.calls.map(({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status }) => ({ name, requested_model, reported_model, finish_reason, usage, reported_cost, cost_status })), transport_hashes: {} };
   if (response.status === 'prepared-for-review') {
-    const { context: finishedContext, questionSet } = adaptResponse(request, context, displayed.response, provenance);
-    validate(finishedContext, contextSchema);
-    validate(questionSet, await json(absolute(ROOT, 'schema/question-set.schema.json')));
+    const { context: finishedContext, questionSet } = nativeExtension ? adaptNativeResponse(request, context, displayed.response, provenance) : adaptResponse(request, context, displayed.response, provenance);
+    if (!nativeExtension) { validate(finishedContext, contextSchema); validate(questionSet, await json(absolute(ROOT, 'schema/question-set.schema.json'))); }
     await journal('lesson-context.json', finishedContext);
     await journal('question-set.json', questionSet);
-    await journal('learner.json', learnerPacket(finishedContext, questionSet));
+    await journal('learner.json', nativeExtension ? nativeLearnerPacket(finishedContext, questionSet) : learnerPacket(finishedContext, questionSet));
     for (const name of ['lesson-context.json', 'question-set.json', 'learner.json']) receipt.transport_hashes[name] = sha256(await readFile(absolute(directory, name)));
   }
   await journal('receipt.json', receipt);
   return { status: response.status, items: response.items.length, model_calls: trace.model_calls, structural_repairs: trace.repairs.length, directory, receipt: absolute(directory, 'receipt.json') };
+}
+
+export async function executeNativeOffline(options) {
+  if (options.envFile || options.listModels || options.finalizeRun) throw new StructuralError('Offline native preparation/smoke accepts only request and context inputs');
+  const requestBytes = await readFile(localPath(options.request, 'Request')), contextBytes = await readFile(localPath(options.context, 'Context'));
+  const request = JSON.parse(requestBytes), context = JSON.parse(contextBytes);
+  const directory = absolute(ROOT, '.local/native-runs', `${new Date().toISOString().replace(/[:.]/g, '-')}-${randomUUID().slice(0, 8)}`);
+  await mkdir(directory, { recursive: true, mode: 0o700 });
+  const journal = (name, value, opts) => opts?.raw ? writeFile(absolute(directory, name), value, { mode: 0o600, flag: 'wx' }) : save(absolute(directory, name), value);
+  await journal('source-request.json', request); await journal('source-context.json', context);
+  await verifyPublicPins();
+  const methods = await json(absolute(ROOT, 'public/generation-standard.json')), formats = await json(absolute(ROOT, 'public/formats.json'));
+  try { validateNativeInputs(request, context, formats); }
+  catch (error) {
+    const receipt = { status: 'held', model_calls: 0, mocked_provider_calls: 0, holds: [{ code: 'missing-required-context', detail: error.message }], items: 0, academic_quality: 'unmeasured' };
+    await journal('receipt.json', receipt); return { ...receipt, directory };
+  }
+  const schema = await json(absolute(ROOT, 'schema/native-writer-response.schema.json'));
+  await journal('writer-response-schema.json', schema);
+  const counts = (await json(absolute(ROOT, 'examples/native-format-inventory.json'))).collected_by_kind;
+  const coverage = formatCoverage(request, counts);
+  if (options.prepareNative && !options.offlineSmoke) {
+    await journal('coverage.json', coverage);
+    const receipt = { status: 'writer-request-prepared', model_calls: 0, mocked_provider_calls: 0, planned_items: request.sequence_blueprint.length, academic_quality: 'pending later independent evaluation', source: request.source_provenance, input_hashes: { request: sha256(requestBytes), context: sha256(contextBytes) } };
+    await journal('receipt.json', receipt); return { ...receipt, directory };
+  }
+  const response = mockNativeResponse(request);
+  const route = { async complete() { const value = { model: 'offline-mocked-provider', choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(response) } }] }; return { value, raw: JSON.stringify(value) }; } };
+  const result = await writeSequence({ request, context, schema, config: { model: 'offline-mocked-provider', offline_mock: true, structural_repairs: 1 }, messages: nativeWriterMessages(request, context, schema, methods, formats), route, journal });
+  const provenance = { kind: 'offline-mocked-provider', model_calls: 0, mocked_provider_calls: result.trace.mocked_provider_calls, academic_quality: 'unmeasured; synthetic transport fixture, not a generated teaching result', learner_outcome: 'unmeasured', request_sha256: sha256(requestBytes), context_sha256: sha256(contextBytes), source: request.source_provenance };
+  const { context: finished, questionSet } = adaptNativeResponse(request, context, result.response, provenance);
+  await journal('coverage.json', formatCoverage(request, counts, true));
+  await journal('writer-response.json', result.response); await journal('lesson-context.json', finished); await journal('question-set.json', questionSet); await journal('learner.json', nativeLearnerPacket(finished, questionSet));
+  const receipt = { ...provenance, status: 'mock-transport-checked', items: result.response.items.length, native_kinds: coverage.current_native_kinds, structural_repairs: result.trace.repairs.length, coverage: 'coverage.json', transport_hashes: {} };
+  for (const name of ['lesson-context.json', 'question-set.json', 'learner.json']) receipt.transport_hashes[name] = sha256(await readFile(absolute(directory, name)));
+  await journal('receipt.json', receipt); return { ...receipt, directory };
 }
 
 export async function finalizeRecordedRun(runDirectory) {
@@ -213,6 +259,8 @@ async function main() {
   const args = process.argv.slice(2);
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--list-models') options.listModels = true;
+    else if (args[i] === '--offline-smoke') options.offlineSmoke = true;
+    else if (args[i] === '--prepare-native') options.prepareNative = true;
     else if (flags[args[i]] && args[i + 1]) options[flags[args[i]]] = args[++i];
     else throw new StructuralError('Usage: node model_generate.mjs --request request.json --context context.json [--env-file file] [--config file], or --list-models');
   }

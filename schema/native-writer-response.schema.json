@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional native writer response 0.2",
+  "type": "object",
+  "required": [
+    "protocol",
+    "request_id",
+    "status",
+    "holds",
+    "items"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "question-lane-native/0.2"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "prepared-for-review",
+        "held"
+      ]
+    },
+    "holds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "family",
+          "public_format",
+          "view",
+          "source_bindings"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "film_mcq",
+              "key_term_mcq",
+              "reading_mcq",
+              "mcq",
+              "multiple_choice",
+              "true_false",
+              "video_mcq",
+              "film_check",
+              "vocabulary_check",
+              "reflective_choice",
+              "msq",
+              "multiple_select",
+              "evidence_select",
+              "evidence_selection",
+              "hot_text",
+              "classify",
+              "relation_board",
+              "rank_board",
+              "annotation_check",
+              "closing_task",
+              "dialogue_branch_prompt",
+              "dialogue_follow_up",
+              "guided_check",
+              "guided_quote",
+              "open_check",
+              "open_prompt",
+              "paragraph_checklist",
+              "quote_analysis",
+              "reading_check",
+              "reading_note_recall",
+              "relation_name",
+              "retrieval",
+              "scaffolded_short_response",
+              "scr",
+              "soliloquy_comparison",
+              "stage_move",
+              "staging_comparison",
+              "we_do",
+              "writing_blank",
+              "writing_stem",
+              "dialogue",
+              "oral_microtask",
+              "oral_turn",
+              "spoken_response",
+              "word_web",
+              "vocabulary_routine",
+              "quote_word_selection",
+              "cloze",
+              "inline_choice",
+              "model_rebuild_gap",
+              "rebuild_choice",
+              "vocabulary_gap",
+              "match",
+              "matching",
+              "sequence",
+              "confidence_self_report",
+              "say_back",
+              "model_paragraph",
+              "worked_example",
+              "argument_round",
+              "ebsr",
+              "ebsr_part"
+            ]
+          },
+          "family": {
+            "enum": [
+              "single_choice",
+              "multiple_select",
+              "evidence_selection",
+              "classification",
+              "written_response",
+              "oral_response",
+              "word_web",
+              "word_selection",
+              "inline_choice",
+              "matching",
+              "sequence",
+              "self_report",
+              "say_back",
+              "nonresponse"
+            ]
+          },
+          "public_format": {
+            "type": "string",
+            "minLength": 1
+          },
+          "view": {
+            "type": "object",
+            "description": "Family-specific payload and semantic references validated by native_formats.mjs; explicit output contracts accompany every writer request."
+          },
+          "source_bindings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "source_ref",
+                "quote",
+                "field_ref",
+                "relation"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "source_ref": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "field_ref": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "relation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

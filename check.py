@@ -49,7 +49,7 @@ def main():
     if checked.returncode:
         return checked.returncode
     node_checked = subprocess.run(
-        ["node", "--test", "tests/gateway.test.mjs", "tests/model.test.mjs", "tests/display.test.mjs"], cwd=ROOT,
+        ["node", "--test", "tests/gateway.test.mjs", "tests/model.test.mjs", "tests/display.test.mjs", "tests/native.test.mjs"], cwd=ROOT,
     )
     if node_checked.returncode:
         return node_checked.returncode

@@ -1,0 +1,3693 @@
+{
+  "protocol": "question-lane-native/0.2",
+  "request_id": "current-reference-all-native-formats",
+  "course_context": {
+    "lesson_id": "G9-U1-L1",
+    "learning_question": "At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello?",
+    "core_knowledge": [
+      {
+        "id": "K-media",
+        "claim": "The supplied unit introduction sets out the play's context and unit purpose.",
+        "performance": "Recognize a caption-supported fact or relationship at the declared pause.",
+        "source_refs": [
+          "unit-caption-0",
+          "unit-caption-1",
+          "unit-caption-2",
+          "unit-caption-3",
+          "unit-caption-4",
+          "unit-caption-5",
+          "unit-caption-6",
+          "unit-caption-7"
+        ]
+      },
+      {
+        "id": "K-language",
+        "claim": "Taught words, word relations and quotations support precise discussion of the lesson.",
+        "performance": "Recall, classify or explain language as required by the declared native operation.",
+        "source_refs": [
+          "word-web-context",
+          "term-context",
+          "worked-teaching",
+          "recall-statement"
+        ]
+      },
+      {
+        "id": "K-evidence",
+        "claim": "Source-supported claims require relevant evidence and an explanation of its relation to the claim.",
+        "performance": "Explain or qualify a character interpretation using the supplied dramatic context.",
+        "source_refs": [
+          "reading-1",
+          "reading-2",
+          "reading-3",
+          "reading-4"
+        ]
+      }
+    ],
+    "source_assets": [
+      {
+        "id": "intro-caption",
+        "kind": "media-transcript",
+        "text": "Before the regime, there was a library.\nEvery great book lived on its shelves.\nThe regime decided that people who know things are dangerous.\nSo, they emptied the shelves and they burned what they found.\nI am the archivist.\nI was the last keeper of that library,\nand I saved what I could.\nWhat survived is here, in this app.\nI live inside it,\nin the frame around every page you see.\nI have one purpose:\nto help you learn and to help you keep what you learn.\nKnowledge you remember can never be taken from you.\nEvery lesson follows the same path.\nI walk it with you, every step of the way.\nEvery time you open a text, you will find your knowledge organizer.\nIt holds everything you have learned about that text so far.\nReturn to it whenever you need to.\nWhen you are ready,\nwe begin with retrieval practice.\nI will test you on last lesson and on the knowledge you should already own.\nRemembering is how knowledge stays.\nThen you will see the learning question.\nIt remains at the top of every screen because everything we do answers it.\nNext comes new knowledge, the part of the text we study today.\nIn guided practice,\nI work beside you.\nI will show you how to take a complex question apart, step by step.\nThen comes independent practice.\nIt is meant to make you think.\nI will be there to help,\nbut I will not think for you.\nYour mind is the most valuable thing this library has ever held,\nand it only grows when you use it.\nAt the end,\na few closing questions will help you think about what you learned today,\nand help you hold on to it.\nI could not save every book,\nbut I saved enough for you to begin.\nWhat you learn here,\nyou keep for the rest of your life.\nLet’s begin.",
+        "original_pointer": "/pages/0/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/course-intro.mp4?v=dcc55c6a7b",
+        "time_range": [
+          0.1,
+          145.9
+        ]
+      },
+      {
+        "id": "unit-caption-0",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          30.97
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/0"
+      },
+      {
+        "id": "unit-caption-1",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          39.03
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/1"
+      },
+      {
+        "id": "unit-caption-2",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          67.69
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/2"
+      },
+      {
+        "id": "unit-caption-3",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          122.31
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/3"
+      },
+      {
+        "id": "unit-caption-4",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.\nFinally, the words.\nIago’s weapon is words, not an army.\nHe tells Roderigo, “I am not what\nI am.”\nOthello never hears that admission.\nHe calls him “Honest Iago.”\nHonest means truthful.\nWe know Iago is pretending.\nThat gap—audience knowledge a character lacks—is dramatic\nirony.\nA surprise nobody anticipates is not.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          164.88
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/4"
+      },
+      {
+        "id": "unit-caption-5",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          137.45
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/5"
+      },
+      {
+        "id": "unit-caption-6",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.\nFinally, the words.\nIago’s weapon is words, not an army.\nHe tells Roderigo, “I am not what\nI am.”\nOthello never hears that admission.\nHe calls him “Honest Iago.”\nHonest means truthful.\nWe know Iago is pretending.\nThat gap—audience knowledge a character lacks—is dramatic\nirony.\nA surprise nobody anticipates is not.\nWatch jealousy: fear of losing someone’s love.\nWatch reputation: what others believe about you.\nWords can turn trust into suspicion.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          175.94
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/6"
+      },
+      {
+        "id": "unit-caption-7",
+        "kind": "media-transcript",
+        "text": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.\nFinally, the words.\nIago’s weapon is words, not an army.\nHe tells Roderigo, “I am not what\nI am.”\nOthello never hears that admission.\nHe calls him “Honest Iago.”\nHonest means truthful.\nWe know Iago is pretending.\nThat gap—audience knowledge a character lacks—is dramatic\nirony.\nA surprise nobody anticipates is not.\nWatch jealousy: fear of losing someone’s love.\nWatch reputation: what others believe about you.\nWords can turn trust into suspicion.\nYou know the ending.\nTrack who wants what, who knows what,\nand which words change a belief.\nFrom love to murder.\nNow open the text.\nBegin with deceit.",
+        "original_pointer": "/pages/1/nodes/0/captions",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        },
+        "media_ref": "archivist/othello-unit-video.mp4?v=505de258e3",
+        "time_range": [
+          0,
+          192.45
+        ],
+        "author_segment_pointer": "/pages/1/nodes/0/segments/7"
+      },
+      {
+        "id": "word-web-context",
+        "kind": "text",
+        "text": "{'lead': 'Every book in this library is built around one big idea. In Othello, that big idea is…', 'word': 'deceit', 'lines': ['People are not what they seem, and trust is broken, again and again.', 'It runs through the whole play: every lesson comes back to it.']}\ndeceit\nThink of words you would have used to describe Lady Macbeth in last year's study of Macbeth.",
+        "original_pointer": "/pages/3/nodes/0",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "term-context",
+        "kind": "text",
+        "text": "Machiavellian villain: Machiavellian: using cunning and lies to gain power. A Machiavellian villain schemes and deceives to get what he wants.",
+        "original_pointer": "/pages/4/nodes/0/meaning",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "reading-1",
+        "kind": "text",
+        "text": "Othello\nby William Shakespeare\nAbout the play\nOthello is a tragedy by William Shakespeare, written around 1603. It tells the story of Othello, a Black African general who leads the army of Venice. Othello is respected and powerful, but in Venice he is also an outsider. One of his own officers, Iago, secretly hates him. Over the course of the play, Iago sets out to destroy Othello using nothing but lies.\nThe opening scene: Act 1, Scene 1\nThe play begins in the middle of the night, on a street in Venice. We meet two characters, Roderigo and Iago. They are arguing about shocking news: Othello has just secretly married Desdemona, the daughter of a powerful senator, Brabantio.\nRoderigo wanted to marry Desdemona himself, and he has been paying Iago to help him. Iago has his own reason to be angry: Othello has made a man called Cassio his lieutenant instead of him. By the end of the scene, Iago has woken Brabantio with the news, and slipped away into the dark.",
+        "original_pointer": "/pages/6/nodes/0/blocks",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "reading-2",
+        "kind": "text",
+        "text": "Act 1, Scene 1 begins at night on a street in Venice. Roderigo is angry with Iago. He has been paying Iago to help him win Desdemona, but Iago never told him that Othello has secretly married her. To Roderigo, that action felt like a betrayal.\nIn this first section, Iago swears he knew nothing about the marriage. He then tells Roderigo how much he hates Othello. As you read, decide whether you believe him. This is a play about deceit, and Iago is at the center of it.\nRODERIGO\nTush, never tell me! I take it much unkindly\n\nThat thou, Iago, who hast had my purse\n\nAs if the strings were thine, shouldst know of this.\nIAGO\n'Sblood, but you'll not hear me!\n\nIf ever I did dream of such a matter,\n\nAbhor me.\nRODERIGO\nThou toldst me thou didst hold him in thy hate.\nIAGO\nDespise me\n\nIf I do not. Three great ones of the city,\n\nIn personal suit to make me his lieutenant,\n\nOff-capped to him; and, by the faith of man,\n\nI know my price, I am worth no worse a place.\nYou've just read that Iago swore he knew nothing about the marriage. To prove he hates Othello, he told Roderigo that three important men asked Othello to make him lieutenant.\nIn this next section, you'll read that Othello turned those men down and chose someone else. Watch how Iago mocks the man who got the job.\n\nIAGO\nAnd what was he?\n\nForsooth, a great arithmetician,\n\nOne Michael Cassio, a Florentine,\n\n...That never set a squadron in the field...\n\nAnd I, of whom his eyes had seen the proof\n\nAt Rhodes, at Cyprus, and on other grounds\n\nChristened and heathen, must be beleed and calmed\n\nBy debitor and creditor.\n\n...He, in good time, must his lieutenant be,\n\nAnd I, God bless the mark, his Moorship's ancient.\n\n...Preferment goes by letter and affection,\n\nAnd not by old gradation, where each second\n\nStood heir to th' first. Now, sir, be judge yourself\n\nWhether I in any just term am affined\n\nTo love the Moor.",
+        "original_pointer": "/pages/7/nodes/0/blocks",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "reading-3",
+        "kind": "text",
+        "text": "You've just read that Othello chose Michael Cassio as his lieutenant, a man who has never led soldiers in battle. Iago was left as ensign, the officer who carries the general's flag.\nIn this next section, Roderigo says he would never serve a man he hated, and Iago explains why he does. This is a crucial moment. Iago is about to tell Roderigo who he really is, in the most important speech of the scene.\nRODERIGO\nI would not follow him, then.\nIAGO\nO, sir, content you.\n\nI follow him to serve my turn upon him.\n\nWe cannot all be masters, nor all masters\n\nCannot be truly followed. (lines 45–47)\n\n...It is as sure as you are Roderigo,\n\nWere I the Moor I would not be Iago.\n\nIn following him, I follow but myself.\n\nHeaven is my judge, not I for love and duty,\n\nBut seeming so for my peculiar end.\n\nFor when my outward action doth demonstrate\n\nThe native act and figure of my heart\n\nIn complement extern, 'tis not long after\n\nBut I will wear my heart upon my sleeve\n\nFor daws to peck at. I am not what I am.",
+        "original_pointer": "/pages/8/nodes/0/blocks",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "reading-4",
+        "kind": "text",
+        "text": "You've just read Iago's answer: he follows Othello only to use him. \"I am not what I am\" is one of the most powerful lines in the play. Iago admits that the man everyone sees is not real. He is disloyal. His duty is a pretense, and his loyalty is a façade. Why would such a deceitful man tell Roderigo the truth?\nIn this next section, Iago stops talking and starts acting. You'll read how he and Roderigo wake Brabantio, Desdemona's father, with the news of the marriage.\nRODERIGO\nWhat a full fortune does the thick-lips owe\n\nIf he can carry 't thus!\nIAGO\nCall up her father.\n\nRouse him. Make after him, poison his delight...\n\nIAGO\nAwake! What ho, Brabantio! Thieves, thieves!\n\nLook to your house, your daughter, and your bags!\n\nThieves, thieves!\n\nYou've just read how Iago woke Brabantio by shouting that thieves had robbed him, as if Desdemona were stolen property. This is a villainous moment. Hidden in the dark, Iago used crude, racist insults to turn Brabantio against Othello, and he made sure he was never seen.\nIn this final section, Iago explains why he must slip away before anyone recognizes him. Look for the word \"flag.\"\nIAGO\nThough I do hate him as I do hell pains,\n\nYet, for necessity of present life,\n\nI must show out a flag and sign of love—\n\nWhich is indeed but sign. (lines 171–174)\n\nYou've just read why Iago must leave: he has to keep showing Othello a \"flag and sign of love,\" even though it is only a sign. Across the whole scene, he has been untrustworthy to everyone. He pretends to serve Othello, takes Roderigo's money, and abandons Brabantio. His loyalty is a façade, and no one has seen through it yet.\nWe still haven't met Othello. In the next scene, he appears for the first time, and you can judge him for yourself.",
+        "original_pointer": "/pages/9/nodes/0/blocks",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "counterpart",
+        "kind": "authored-counterpart",
+        "text": "Serving a leader can be justified by the need to maintain one's present livelihood.",
+        "original_pointer": "/claim",
+        "provenance": {
+          "kind": "packet-authoring",
+          "input": "native-counterpart.json",
+          "original_reference_relation": "Original dose names an excuse but supplies no frozen counterpart speech."
+        },
+        "authored_for_packet": true,
+        "source_status": "Supplied hypothetical claim, not dramatic text or historical event."
+      },
+      {
+        "id": "worked-teaching",
+        "kind": "worked-teaching",
+        "text": "I follow him to serve my turn upon him.\nWe cannot all be masters, nor all masters\nCannot be truly followed.\nRoderigo has just asked Iago an obvious question: if he hates Othello, why does he still serve him? Iago answers.\nIago is telling Roderigo: I only serve Othello so that I can use him. Not every leader deserves real loyalty. Let's break down the words Shakespeare uses.\nIago describes his service with the verb 'follow': 'I follow him.' 'Follow' suggests obedience, which is what a loyal soldier gives his general. This demonstrates that, on the outside, Iago appears to be a faithful ensign. However, his loyalty is only a façade.\nIago says he follows Othello 'to serve my turn upon him.' 'Serve' usually means to work for someone, but 'serve my turn' suggests using someone for your own benefit. This demonstrates that Iago's service is a pretense: he is not working for Othello, but against him. He is deceitful and disloyal.\nIago claims that not all masters can be 'truly followed,' using the adverb 'truly,' which means honestly or faithfully. 'Truly' suggests that Iago has judged Othello unworthy of real loyalty. This demonstrates Iago's hypocrisy: he decides who deserves faithful service while being completely false himself. He is untrustworthy and Machiavellian, making betrayal sound like common sense.\nThough I do hate him as I do hell pains,\nYet, for necessity of present life,\nI must show out a flag and sign of love—\nWhich is indeed but sign.\nIago is about to slip away before Brabantio sees him. He explains to Roderigo why he must keep up appearances.\nIago is telling Roderigo: I hate Othello, but for now I need to look loyal. My loyalty is only for show. Let's break down the words Shakespeare uses.\nIago compares his hatred to 'hell pains,' the tortures of hell. This imagery suggests a hatred that is extreme, burning and endless. This demonstrates that Iago's true feelings are the opposite of loyalty: beneath his outward show, he is consumed by hate.\nIago says he must 'show out a flag and sign of love.' As ensign, Iago literally carries Othello's flag, so the metaphor suggests that his loyalty is something he holds up for others to see, like a banner. This demonstrates that his loyalty is a deliberate performance: a public façade.\nIago ends with 'Which is indeed but sign.' Here, 'but' is an adverb meaning 'only.' 'But sign' suggests that the flag is empty, a sign with nothing real behind it. This demonstrates that Iago is deceitful and treacherous: he openly admits that his love for Othello is a pretense.",
+        "original_pointer": "/pages/11/nodes/0/screens",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "selected-quote-A",
+        "kind": "selected-quote",
+        "text": "\"I am not what I am.\"",
+        "original_pointer": "/pages/12/nodes/0/quotes",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "selected-quote-B",
+        "kind": "selected-quote",
+        "text": "\"not I for love and duty, / But seeming so for my peculiar end.\"",
+        "original_pointer": "/pages/12/nodes/0/quotes",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      },
+      {
+        "id": "recall-statement",
+        "kind": "taught-recall-statement",
+        "text": "Iago is a Machiavellian villain who is faithless and false.",
+        "original_pointer": "/pages/13/nodes/0/repeat",
+        "provenance": {
+          "repository": "trilogy-group/ela-lessons",
+          "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+          "path": "src/content/othello-1-1.json",
+          "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+          "version_role": "frozen-current-hosted-source",
+          "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+        }
+      }
+    ],
+    "prerequisites": [
+      {
+        "id": "prior-literature",
+        "status": "author-declared-only",
+        "description": "Author references prior literary study; no individual mastery record supplied."
+      }
+    ],
+    "learner_constraints": {
+      "status": "partially-specified",
+      "grade": 9,
+      "language": "English",
+      "accessibility_needs": "unknown",
+      "individual_reading_level": "unknown",
+      "response_support": "Declared per slot; no additional learner history inferred."
+    },
+    "prior_exposure": {
+      "status": "authored-plan-not-individual-record",
+      "events": [
+        {
+          "source_ref": "intro-caption",
+          "original_pointer": "/pages/0/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-0",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-1",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-2",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-3",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-4",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-5",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-6",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "unit-caption-7",
+          "original_pointer": "/pages/1/nodes/0/captions",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "word-web-context",
+          "original_pointer": "/pages/3/nodes/0",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "term-context",
+          "original_pointer": "/pages/4/nodes/0/meaning",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "reading-1",
+          "original_pointer": "/pages/6/nodes/0/blocks",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "reading-2",
+          "original_pointer": "/pages/7/nodes/0/blocks",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "reading-3",
+          "original_pointer": "/pages/8/nodes/0/blocks",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "reading-4",
+          "original_pointer": "/pages/9/nodes/0/blocks",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "counterpart",
+          "original_pointer": "/claim",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "worked-teaching",
+          "original_pointer": "/pages/11/nodes/0/screens",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "selected-quote-A",
+          "original_pointer": "/pages/12/nodes/0/quotes",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "selected-quote-B",
+          "original_pointer": "/pages/12/nodes/0/quotes",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        },
+        {
+          "source_ref": "recall-statement",
+          "original_pointer": "/pages/13/nodes/0/repeat",
+          "availability": "Only when listed by the current phase; worked teaching, captions and support are not evidence of mastery."
+        }
+      ],
+      "conditional_feedback_history": "not supplied",
+      "individual_submitted_responses": "not supplied"
+    },
+    "content_keys": [
+      {
+        "id": "C-intro-caption",
+        "claim": "Before the regime, there was a library.",
+        "source_refs": [
+          "intro-caption"
+        ]
+      },
+      {
+        "id": "C-unit-caption-0",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-0"
+        ]
+      },
+      {
+        "id": "C-unit-caption-1",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-1"
+        ]
+      },
+      {
+        "id": "C-unit-caption-2",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-2"
+        ]
+      },
+      {
+        "id": "C-unit-caption-3",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-3"
+        ]
+      },
+      {
+        "id": "C-unit-caption-4",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-4"
+        ]
+      },
+      {
+        "id": "C-unit-caption-5",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-5"
+        ]
+      },
+      {
+        "id": "C-unit-caption-6",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-6"
+        ]
+      },
+      {
+        "id": "C-unit-caption-7",
+        "claim": "Here is one of the books I",
+        "source_refs": [
+          "unit-caption-7"
+        ]
+      },
+      {
+        "id": "C-word-web-context",
+        "claim": "{'lead': 'Every book in this library is built around one big idea. In Othello, that big idea is…', 'word': 'deceit', 'lines': ['People are not what they seem, and trust is broken, again and again.', 'It runs through the whole play: every lesson comes back to it.']}",
+        "source_refs": [
+          "word-web-context"
+        ]
+      },
+      {
+        "id": "C-term-context",
+        "claim": "Machiavellian villain: Machiavellian: using cunning and lies to gain power. A Machiavellian villain schemes and deceives to get what he wants.",
+        "source_refs": [
+          "term-context"
+        ]
+      },
+      {
+        "id": "C-reading-1",
+        "claim": "Othello",
+        "source_refs": [
+          "reading-1"
+        ]
+      },
+      {
+        "id": "C-reading-2",
+        "claim": "Act 1, Scene 1 begins at night on a street in Venice. Roderigo is angry with Iago. He has been paying Iago to help him win Desdemona, but Iago never told him that Othello has secretly married her. To Roderigo, that action felt like a betrayal.",
+        "source_refs": [
+          "reading-2"
+        ]
+      },
+      {
+        "id": "C-reading-3",
+        "claim": "You've just read that Othello chose Michael Cassio as his lieutenant, a man who has never led soldiers in battle. Iago was left as ensign, the officer who carries the general's flag.",
+        "source_refs": [
+          "reading-3"
+        ]
+      },
+      {
+        "id": "C-reading-4",
+        "claim": "You've just read Iago's answer: he follows Othello only to use him. \"I am not what I am\" is one of the most powerful lines in the play. Iago admits that the man everyone sees is not real. He is disloyal. His duty is a pretense, and his loyalty is a façade. Why would such a deceitful man tell Roderigo the truth?",
+        "source_refs": [
+          "reading-4"
+        ]
+      },
+      {
+        "id": "C-counterpart",
+        "claim": "Serving a leader can be justified by the need to maintain one's present livelihood.",
+        "source_refs": [
+          "counterpart"
+        ]
+      },
+      {
+        "id": "C-worked-teaching",
+        "claim": "I follow him to serve my turn upon him.",
+        "source_refs": [
+          "worked-teaching"
+        ]
+      },
+      {
+        "id": "C-selected-quote-A",
+        "claim": "\"I am not what I am.\"",
+        "source_refs": [
+          "selected-quote-A"
+        ]
+      },
+      {
+        "id": "C-selected-quote-B",
+        "claim": "\"not I for love and duty, / But seeming so for my peculiar end.\"",
+        "source_refs": [
+          "selected-quote-B"
+        ]
+      },
+      {
+        "id": "C-recall-statement",
+        "claim": "Iago is a Machiavellian villain who is faithless and false.",
+        "source_refs": [
+          "recall-statement"
+        ]
+      }
+    ],
+    "knowledge_map": [
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-0"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-1"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-2"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-3"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-4"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-5"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-6"
+      },
+      {
+        "knowledge_ref": "K-media",
+        "content_key_ref": "C-unit-caption-7"
+      },
+      {
+        "knowledge_ref": "K-language",
+        "content_key_ref": "C-word-web-context"
+      },
+      {
+        "knowledge_ref": "K-language",
+        "content_key_ref": "C-term-context"
+      },
+      {
+        "knowledge_ref": "K-language",
+        "content_key_ref": "C-worked-teaching"
+      },
+      {
+        "knowledge_ref": "K-language",
+        "content_key_ref": "C-recall-statement"
+      },
+      {
+        "knowledge_ref": "K-evidence",
+        "content_key_ref": "C-reading-1"
+      },
+      {
+        "knowledge_ref": "K-evidence",
+        "content_key_ref": "C-reading-2"
+      },
+      {
+        "knowledge_ref": "K-evidence",
+        "content_key_ref": "C-reading-3"
+      },
+      {
+        "knowledge_ref": "K-evidence",
+        "content_key_ref": "C-reading-4"
+      }
+    ],
+    "pairing_map": [
+      {
+        "id": "P-evidence-language",
+        "knowledge_refs": [
+          "K-language",
+          "K-evidence"
+        ],
+        "relation": "Use precise source language to support and explain a claim."
+      }
+    ],
+    "lesson_plan": {
+      "id": "G9-U1-L1",
+      "phases": [
+        {
+          "id": "F-N01",
+          "role": "question",
+          "target_refs": [
+            "K-media"
+          ],
+          "source_refs": [
+            "unit-caption-2"
+          ],
+          "exposure_order": 1,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N02",
+          "role": "question",
+          "target_refs": [
+            "K-media"
+          ],
+          "source_refs": [
+            "unit-caption-2"
+          ],
+          "exposure_order": 2,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N03",
+          "role": "question",
+          "target_refs": [
+            "K-media"
+          ],
+          "source_refs": [
+            "unit-caption-3"
+          ],
+          "exposure_order": 3,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N04",
+          "role": "question",
+          "target_refs": [
+            "K-media"
+          ],
+          "source_refs": [
+            "unit-caption-4"
+          ],
+          "exposure_order": 4,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N05",
+          "role": "guided_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "word-web-context"
+          ],
+          "exposure_order": 5,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N06",
+          "role": "question",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "term-context"
+          ],
+          "exposure_order": 6,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N07",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1"
+          ],
+          "exposure_order": 7,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N08",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1"
+          ],
+          "exposure_order": 8,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N09",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1"
+          ],
+          "exposure_order": 9,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N10",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1"
+          ],
+          "exposure_order": 10,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N11",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2"
+          ],
+          "exposure_order": 11,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N12",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2"
+          ],
+          "exposure_order": 12,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N13",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2"
+          ],
+          "exposure_order": 13,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N14",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2"
+          ],
+          "exposure_order": 14,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N15",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3"
+          ],
+          "exposure_order": 15,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N16",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3"
+          ],
+          "exposure_order": 16,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N17",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3"
+          ],
+          "exposure_order": 17,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N18",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4"
+          ],
+          "exposure_order": 18,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N19",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4"
+          ],
+          "exposure_order": 19,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N20",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4"
+          ],
+          "exposure_order": 20,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N21",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4"
+          ],
+          "exposure_order": 21,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N22",
+          "role": "guided_task",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4"
+          ],
+          "exposure_order": 22,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N23",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4"
+          ],
+          "exposure_order": 23,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N24",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart"
+          ],
+          "exposure_order": 24,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N25",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart"
+          ],
+          "exposure_order": 25,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N26",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart"
+          ],
+          "exposure_order": 26,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N27",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart"
+          ],
+          "exposure_order": 27,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N28",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart"
+          ],
+          "exposure_order": 28,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N29",
+          "role": "recall_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "worked-teaching"
+          ],
+          "exposure_order": 29,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N30",
+          "role": "recall_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "worked-teaching"
+          ],
+          "exposure_order": 30,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N31",
+          "role": "recall_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "worked-teaching"
+          ],
+          "exposure_order": 31,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N32",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching"
+          ],
+          "exposure_order": 32,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N33",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching"
+          ],
+          "exposure_order": 33,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N34",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching"
+          ],
+          "exposure_order": 34,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N35",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching"
+          ],
+          "exposure_order": 35,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N36",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching"
+          ],
+          "exposure_order": 36,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N37",
+          "role": "guided_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A"
+          ],
+          "exposure_order": 37,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N38",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A"
+          ],
+          "exposure_order": 38,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N39",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A"
+          ],
+          "exposure_order": 39,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N40",
+          "role": "guided_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B"
+          ],
+          "exposure_order": 40,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N41",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B"
+          ],
+          "exposure_order": 41,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N42",
+          "role": "subcheck",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B"
+          ],
+          "exposure_order": 42,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N43",
+          "role": "recall_task",
+          "target_refs": [
+            "K-language"
+          ],
+          "source_refs": [
+            "recall-statement"
+          ],
+          "exposure_order": 43,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N44",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 44,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N45",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 45,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N46",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 46,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N47",
+          "role": "guided_task",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 47,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N48",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 48,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N49",
+          "role": "question",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 49,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        },
+        {
+          "id": "F-N50",
+          "role": "self_report",
+          "target_refs": [
+            "K-evidence"
+          ],
+          "source_refs": [
+            "intro-caption",
+            "unit-caption-0",
+            "unit-caption-1",
+            "unit-caption-2",
+            "unit-caption-3",
+            "unit-caption-4",
+            "unit-caption-5",
+            "unit-caption-6",
+            "unit-caption-7",
+            "word-web-context",
+            "term-context",
+            "reading-1",
+            "reading-2",
+            "reading-3",
+            "reading-4",
+            "counterpart",
+            "worked-teaching",
+            "selected-quote-A",
+            "selected-quote-B",
+            "recall-statement"
+          ],
+          "exposure_order": 50,
+          "support": "Declared preceding teaching and visible source only; no learner performance history is supplied."
+        }
+      ]
+    },
+    "delivery_context": {
+      "inventory_order": "Original authoring extraction order, not a claim that all rows are completed sequentially.",
+      "branch_groups": [
+        {
+          "id": "selected-paragraph-quote",
+          "policy": "choose-one",
+          "branches": [
+            "A",
+            "B"
+          ],
+          "source_offers_additional_quote_C": "Quote C has no authored breakdown in this source pin; no missing subchecks invented."
+        }
+      ],
+      "runtime_followups": "Not captured and not generated by this packet.",
+      "media_timing_status": "Original timing preserved. Runtime label and captions differ; unit segment 4/5 numeric timing differs from array order. No playback-equivalence claim."
+    }
+  },
+  "sequence_blueprint": [
+    {
+      "id": "N01",
+      "native_kind": "film_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct unit-context fact or relationship present in the supplied captions up to this pause.",
+      "page_ref": "unit-video",
+      "phase_ref": "F-N01",
+      "target_refs": [
+        "K-media"
+      ],
+      "content_key_refs": [
+        "C-unit-caption-2"
+      ],
+      "pair_refs": [],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/1/nodes/0/segments/2/mcq/0",
+      "context_pointer": "/pages/1/nodes/0/segments/2",
+      "native_context": {
+        "pause": 67.69
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N02",
+      "native_kind": "film_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct unit-context fact or relationship present in the supplied captions up to this pause.",
+      "page_ref": "unit-video",
+      "phase_ref": "F-N02",
+      "target_refs": [
+        "K-media"
+      ],
+      "content_key_refs": [
+        "C-unit-caption-2"
+      ],
+      "pair_refs": [],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/1/nodes/0/segments/2/mcq/1",
+      "context_pointer": "/pages/1/nodes/0/segments/2",
+      "native_context": {
+        "pause": 67.69
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N03",
+      "native_kind": "film_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct unit-context fact or relationship present in the supplied captions up to this pause.",
+      "page_ref": "unit-video",
+      "phase_ref": "F-N03",
+      "target_refs": [
+        "K-media"
+      ],
+      "content_key_refs": [
+        "C-unit-caption-3"
+      ],
+      "pair_refs": [],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/1/nodes/0/segments/3/mcq/0",
+      "context_pointer": "/pages/1/nodes/0/segments/3",
+      "native_context": {
+        "pause": 122.31
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N04",
+      "native_kind": "film_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct unit-context fact or relationship present in the supplied captions up to this pause.",
+      "page_ref": "unit-video",
+      "phase_ref": "F-N04",
+      "target_refs": [
+        "K-media"
+      ],
+      "content_key_refs": [
+        "C-unit-caption-4"
+      ],
+      "pair_refs": [],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/1/nodes/0/segments/4/mcq/0",
+      "context_pointer": "/pages/1/nodes/0/segments/4",
+      "native_context": {
+        "pause": 164.88
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N05",
+      "native_kind": "word_web",
+      "family": "word_web",
+      "public_format": "adapter_extension/word_web",
+      "role": "guided_task",
+      "operation": "semantic-association",
+      "objective": "Elicit linked vocabulary for the declared central concept, then explain a word's meaning and a semantic relation.",
+      "page_ref": "retrieval",
+      "phase_ref": "F-N05",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-word-web-context"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/3/nodes/0",
+      "context_pointer": "/pages/3/nodes/0",
+      "native_context": {
+        "centre": "deceit",
+        "history_status": "Author says prior encounters; no individual exposure record supplied.",
+        "stages": [
+          "initial-vocabulary-elicitation",
+          "authored-bank-expansion",
+          "word-meaning-turn"
+        ],
+        "authored_bank_available_after_seconds": 90,
+        "bank_status": "Original answer bank omitted; writer must author a source-supported teaching bank if needed."
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N06",
+      "native_kind": "key_term_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a source-grounded application of the taught key term.",
+      "page_ref": "key-term",
+      "phase_ref": "F-N06",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-term-context"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/4/nodes/0",
+      "context_pointer": "/pages/4/nodes/0",
+      "native_context": {
+        "term": "Machiavellian villain"
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N07",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-1",
+      "phase_ref": "F-N07",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/6/nodes/0/mcqs/0",
+      "context_pointer": "/pages/6/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N08",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-1",
+      "phase_ref": "F-N08",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/6/nodes/0/mcqs/1",
+      "context_pointer": "/pages/6/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N09",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-1",
+      "phase_ref": "F-N09",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/6/nodes/0/mcqs/2",
+      "context_pointer": "/pages/6/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N10",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "explanation",
+      "objective": "Explain a relationship established in this reading section with relevant evidence and its warrant.",
+      "page_ref": "reading-1",
+      "phase_ref": "F-N10",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/6/nodes/0/rubric",
+      "context_pointer": "/pages/6/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N11",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-2",
+      "phase_ref": "F-N11",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/7/nodes/0/mcqs/0",
+      "context_pointer": "/pages/7/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N12",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-2",
+      "phase_ref": "F-N12",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/7/nodes/0/mcqs/1",
+      "context_pointer": "/pages/7/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N13",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-2",
+      "phase_ref": "F-N13",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/7/nodes/0/mcqs/2",
+      "context_pointer": "/pages/7/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N14",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "explanation",
+      "objective": "Explain a relationship established in this reading section with relevant evidence and its warrant.",
+      "page_ref": "reading-2",
+      "phase_ref": "F-N14",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/7/nodes/0/rubric",
+      "context_pointer": "/pages/7/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N15",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-3",
+      "phase_ref": "F-N15",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/8/nodes/0/mcqs/0",
+      "context_pointer": "/pages/8/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N16",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-3",
+      "phase_ref": "F-N16",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/8/nodes/0/mcqs/1",
+      "context_pointer": "/pages/8/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N17",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "explanation",
+      "objective": "Explain a relationship established in this reading section with relevant evidence and its warrant.",
+      "page_ref": "reading-3",
+      "phase_ref": "F-N17",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/8/nodes/0/rubric",
+      "context_pointer": "/pages/8/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N18",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-4",
+      "phase_ref": "F-N18",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/9/nodes/0/mcqs/0",
+      "context_pointer": "/pages/9/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N19",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-4",
+      "phase_ref": "F-N19",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/9/nodes/0/mcqs/1",
+      "context_pointer": "/pages/9/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N20",
+      "native_kind": "reading_mcq",
+      "family": "single_choice",
+      "public_format": "single_choice",
+      "role": "question",
+      "operation": "recognition",
+      "objective": "Check a distinct source-grounded relationship in this reading section, distinguishing speech claims from established events.",
+      "page_ref": "reading-4",
+      "phase_ref": "F-N20",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/9/nodes/0/mcqs/2",
+      "context_pointer": "/pages/9/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N21",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "explanation",
+      "objective": "Explain a relationship established in this reading section with relevant evidence and its warrant.",
+      "page_ref": "reading-4",
+      "phase_ref": "F-N21",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/9/nodes/0/rubric",
+      "context_pointer": "/pages/9/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N22",
+      "native_kind": "evidence_select",
+      "family": "evidence_selection",
+      "public_format": "evidence_selection",
+      "role": "guided_task",
+      "operation": "evidence-selection",
+      "objective": "Select source quotations relevant to a declared claim about professed service and personal motive.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N22",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {
+        "scene_refs": [
+          "reading-1",
+          "reading-2",
+          "reading-3",
+          "reading-4"
+        ]
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N23",
+      "native_kind": "open_prompt",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "explanation",
+      "objective": "Explain how selected source evidence relates to the declared interpretation.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N23",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {},
+      "depends_on": [
+        "N22"
+      ]
+    },
+    {
+      "id": "N24",
+      "native_kind": "open_prompt",
+      "family": "written_response",
+      "public_format": "rebuttal",
+      "role": "question",
+      "operation": "rebut",
+      "objective": "Assess the frozen counterpart claim against the source, accepting justified rejection, support or qualification.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N24",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {
+        "counterclaim": "Serving a leader can be justified by the need to maintain one's present livelihood.",
+        "counterclaim_source_ref": "counterpart"
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N25",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "integrated_response",
+      "role": "question",
+      "operation": "integrated",
+      "objective": "Combine a supported claim, quotation and reasoning about apparent loyalty and declared motive.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N25",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0/verdict",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N26",
+      "native_kind": "argument_round",
+      "family": "written_response",
+      "public_format": "learner_question",
+      "role": "subcheck",
+      "operation": "ask",
+      "objective": "Form an answerable question exposing the relationship between professed service and personal purpose.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N26",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0/tasks/0",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {
+        "composite_parent": "/pages/10/nodes/0",
+        "round": 1,
+        "native_tasks_are_composite": true,
+        "response_parts": [
+          "learner_question"
+        ]
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N27",
+      "native_kind": "argument_round",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "explain",
+      "objective": "Explain the relevance of one visible source quotation to the declared relationship.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N27",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0/tasks/1",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {
+        "composite_parent": "/pages/10/nodes/0",
+        "round": 2,
+        "native_tasks_are_composite": true,
+        "response_parts": [
+          "selected_quotation",
+          "warrant"
+        ]
+      },
+      "depends_on": [
+        "N26",
+        "N22"
+      ]
+    },
+    {
+      "id": "N28",
+      "native_kind": "argument_round",
+      "family": "written_response",
+      "public_format": "rebuttal",
+      "role": "subcheck",
+      "operation": "rebut",
+      "objective": "Evaluate the supplied counterpart claim using source evidence.",
+      "page_ref": "dose-1",
+      "phase_ref": "F-N28",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/10/nodes/0/tasks/2",
+      "context_pointer": "/pages/10/nodes/0",
+      "native_context": {
+        "composite_parent": "/pages/10/nodes/0",
+        "round": 3,
+        "native_tasks_are_composite": true,
+        "response_parts": [
+          "verdict",
+          "source_evidence",
+          "reason"
+        ],
+        "counterclaim": "Serving a leader can be justified by the need to maintain one's present livelihood.",
+        "counterclaim_source_ref": "counterpart"
+      },
+      "depends_on": [
+        "N27"
+      ]
+    },
+    {
+      "id": "N29",
+      "native_kind": "rebuild_choice",
+      "family": "inline_choice",
+      "public_format": "adapter_extension/inline_choice",
+      "role": "recall_task",
+      "operation": "assembly",
+      "objective": "Rebuild one semantic or grammatical component of the previously shown worked sentence.",
+      "page_ref": "model",
+      "phase_ref": "F-N29",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/11/nodes/0/rebuild/1",
+      "context_pointer": "/pages/11/nodes/0/rebuild",
+      "native_context": {
+        "surrounding_text": "The [blank] \"follow\" means [blank], demonstrating that on the outside Iago looks like a [blank].",
+        "blank_source_index": 1,
+        "composite_parent": "/pages/11/nodes/0/rebuild"
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N30",
+      "native_kind": "rebuild_choice",
+      "family": "inline_choice",
+      "public_format": "adapter_extension/inline_choice",
+      "role": "recall_task",
+      "operation": "assembly",
+      "objective": "Rebuild one semantic or grammatical component of the previously shown worked sentence.",
+      "page_ref": "model",
+      "phase_ref": "F-N30",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/11/nodes/0/rebuild/3",
+      "context_pointer": "/pages/11/nodes/0/rebuild",
+      "native_context": {
+        "surrounding_text": "The [blank] \"follow\" means [blank], demonstrating that on the outside Iago looks like a [blank].",
+        "blank_source_index": 3,
+        "composite_parent": "/pages/11/nodes/0/rebuild"
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N31",
+      "native_kind": "rebuild_choice",
+      "family": "inline_choice",
+      "public_format": "adapter_extension/inline_choice",
+      "role": "recall_task",
+      "operation": "assembly",
+      "objective": "Rebuild one semantic or grammatical component of the previously shown worked sentence.",
+      "page_ref": "model",
+      "phase_ref": "F-N31",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/11/nodes/0/rebuild/5",
+      "context_pointer": "/pages/11/nodes/0/rebuild",
+      "native_context": {
+        "surrounding_text": "The [blank] \"follow\" means [blank], demonstrating that on the outside Iago looks like a [blank].",
+        "blank_source_index": 5,
+        "composite_parent": "/pages/11/nodes/0/rebuild"
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N32",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "integrated_response",
+      "role": "question",
+      "operation": "integrated",
+      "objective": "Produce a supported paragraph relating apparent loyalty to motive and character; prior worked teaching is declared.",
+      "page_ref": "write",
+      "phase_ref": "F-N32",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/rubric",
+      "context_pointer": "/pages/12/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N33",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "paragraph-component",
+      "objective": "Check one declared component of the developing paragraph in its parent paragraph context.",
+      "page_ref": "write",
+      "phase_ref": "F-N33",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/moves/rubrics/0",
+      "context_pointer": "/pages/12/nodes/0/moves",
+      "native_context": {
+        "composite_parent": "/pages/12/nodes/0",
+        "component_index": 0
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N34",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "paragraph-component",
+      "objective": "Check one declared component of the developing paragraph in its parent paragraph context.",
+      "page_ref": "write",
+      "phase_ref": "F-N34",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/moves/rubrics/1",
+      "context_pointer": "/pages/12/nodes/0/moves",
+      "native_context": {
+        "composite_parent": "/pages/12/nodes/0",
+        "component_index": 1
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N35",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "paragraph-component",
+      "objective": "Check one declared component of the developing paragraph in its parent paragraph context.",
+      "page_ref": "write",
+      "phase_ref": "F-N35",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/moves/rubrics/2",
+      "context_pointer": "/pages/12/nodes/0/moves",
+      "native_context": {
+        "composite_parent": "/pages/12/nodes/0",
+        "component_index": 2
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N36",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "paragraph-component",
+      "objective": "Check one declared component of the developing paragraph in its parent paragraph context.",
+      "page_ref": "write",
+      "phase_ref": "F-N36",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/moves/rubrics/3",
+      "context_pointer": "/pages/12/nodes/0/moves",
+      "native_context": {
+        "composite_parent": "/pages/12/nodes/0",
+        "component_index": 3
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N37",
+      "native_kind": "quote_word_selection",
+      "family": "word_selection",
+      "public_format": "adapter_extension/word_selection",
+      "role": "guided_task",
+      "operation": "word-selection",
+      "objective": "Select a significant word and its class from the supplied quotation for subsequent language analysis.",
+      "page_ref": "write",
+      "phase_ref": "F-N37",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/breakdown/A/words",
+      "context_pointer": "/pages/12/nodes/0/breakdown/A",
+      "native_context": {
+        "quote": "\"I am not what I am.\"",
+        "quote_markup": "Exact authored string retained, including quote marks and slash line-break markup.",
+        "allowed_words": [
+          "I",
+          "am",
+          "not",
+          "what"
+        ],
+        "composite_parent": "/pages/12/nodes/0",
+        "branch": "A",
+        "branch_group": "selected-paragraph-quote",
+        "branch_policy": "Retained alternative; follow only the learner-selected quote branch.",
+        "selection_operation": "word-and-class",
+        "word_class_options": [
+          "noun",
+          "verb",
+          "adverb",
+          "adjective",
+          "pronoun",
+          "other"
+        ]
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N38",
+      "native_kind": "quote_analysis",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "paraphrase",
+      "objective": "Paraphrase the exact quotation in context.",
+      "page_ref": "write",
+      "phase_ref": "F-N38",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/breakdown/A/means",
+      "context_pointer": "/pages/12/nodes/0/breakdown/A",
+      "native_context": {
+        "quote": "\"I am not what I am.\"",
+        "composite_parent": "/pages/12/nodes/0",
+        "selected_word_slot": "N37",
+        "branch": "A",
+        "branch_group": "selected-paragraph-quote",
+        "branch_policy": "Retained alternative; follow only the learner-selected quote branch."
+      },
+      "depends_on": [
+        "N37"
+      ]
+    },
+    {
+      "id": "N39",
+      "native_kind": "quote_analysis",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "interpretation",
+      "objective": "Explain what the quotation supports about character, distinguishing interpretation from paraphrase.",
+      "page_ref": "write",
+      "phase_ref": "F-N39",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/breakdown/A/shows",
+      "context_pointer": "/pages/12/nodes/0/breakdown/A",
+      "native_context": {
+        "quote": "\"I am not what I am.\"",
+        "composite_parent": "/pages/12/nodes/0",
+        "selected_word_slot": "N37",
+        "branch": "A",
+        "branch_group": "selected-paragraph-quote",
+        "branch_policy": "Retained alternative; follow only the learner-selected quote branch."
+      },
+      "depends_on": [
+        "N38"
+      ]
+    },
+    {
+      "id": "N40",
+      "native_kind": "quote_word_selection",
+      "family": "word_selection",
+      "public_format": "adapter_extension/word_selection",
+      "role": "guided_task",
+      "operation": "word-selection",
+      "objective": "Select a significant word and its class from the supplied quotation for subsequent language analysis.",
+      "page_ref": "write",
+      "phase_ref": "F-N40",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/breakdown/B/words",
+      "context_pointer": "/pages/12/nodes/0/breakdown/B",
+      "native_context": {
+        "quote": "\"not I for love and duty, / But seeming so for my peculiar end.\"",
+        "quote_markup": "Exact authored string retained, including quote marks and slash line-break markup.",
+        "allowed_words": [
+          "not",
+          "I",
+          "for",
+          "love",
+          "and",
+          "duty",
+          "But",
+          "seeming",
+          "so",
+          "my",
+          "peculiar",
+          "end"
+        ],
+        "composite_parent": "/pages/12/nodes/0",
+        "branch": "B",
+        "branch_group": "selected-paragraph-quote",
+        "branch_policy": "Retained alternative; follow only the learner-selected quote branch.",
+        "selection_operation": "word-and-class",
+        "word_class_options": [
+          "noun",
+          "verb",
+          "adverb",
+          "adjective",
+          "pronoun",
+          "other"
+        ]
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N41",
+      "native_kind": "quote_analysis",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "paraphrase",
+      "objective": "Paraphrase the exact quotation in context.",
+      "page_ref": "write",
+      "phase_ref": "F-N41",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/breakdown/B/means",
+      "context_pointer": "/pages/12/nodes/0/breakdown/B",
+      "native_context": {
+        "quote": "\"not I for love and duty, / But seeming so for my peculiar end.\"",
+        "composite_parent": "/pages/12/nodes/0",
+        "selected_word_slot": "N40",
+        "branch": "B",
+        "branch_group": "selected-paragraph-quote",
+        "branch_policy": "Retained alternative; follow only the learner-selected quote branch."
+      },
+      "depends_on": [
+        "N40"
+      ]
+    },
+    {
+      "id": "N42",
+      "native_kind": "quote_analysis",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "subcheck",
+      "operation": "interpretation",
+      "objective": "Explain what the quotation supports about character, distinguishing interpretation from paraphrase.",
+      "page_ref": "write",
+      "phase_ref": "F-N42",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/12/nodes/0/breakdown/B/shows",
+      "context_pointer": "/pages/12/nodes/0/breakdown/B",
+      "native_context": {
+        "quote": "\"not I for love and duty, / But seeming so for my peculiar end.\"",
+        "composite_parent": "/pages/12/nodes/0",
+        "selected_word_slot": "N40",
+        "branch": "B",
+        "branch_group": "selected-paragraph-quote",
+        "branch_policy": "Retained alternative; follow only the learner-selected quote branch."
+      },
+      "depends_on": [
+        "N41"
+      ]
+    },
+    {
+      "id": "N43",
+      "native_kind": "say_back",
+      "family": "say_back",
+      "public_format": "adapter_extension/say_back",
+      "role": "recall_task",
+      "operation": "repetition",
+      "objective": "Repeat the supplied taught statement; record recall only, without an independent reasoning claim.",
+      "page_ref": "close-1",
+      "phase_ref": "F-N43",
+      "target_refs": [
+        "K-language"
+      ],
+      "content_key_refs": [
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/13/nodes/0",
+      "context_pointer": "/pages/13/nodes/0",
+      "native_context": {
+        "recall_source_ref": "recall-statement"
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N44",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "application",
+      "objective": "Apply a taught term to the same supplied scene and explain its evidential basis.",
+      "page_ref": "close-2",
+      "phase_ref": "F-N44",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/14/nodes/0/rubrics/0",
+      "context_pointer": "/pages/14/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N45",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "short_explanation",
+      "role": "question",
+      "operation": "application",
+      "objective": "Apply a taught term to the same supplied scene and explain its evidential basis.",
+      "page_ref": "close-2",
+      "phase_ref": "F-N45",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/14/nodes/0/rubrics/1",
+      "context_pointer": "/pages/14/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N46",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "integrated_response",
+      "role": "question",
+      "operation": "integrated",
+      "objective": "Assess a source-grounded claim using relevant evidence and reasoning; no changed-text transfer claim.",
+      "page_ref": "close-3",
+      "phase_ref": "F-N46",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/15/nodes/0/rubric",
+      "context_pointer": "/pages/15/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N47",
+      "native_kind": "classify",
+      "family": "classification",
+      "public_format": "classification",
+      "role": "guided_task",
+      "operation": "classification",
+      "objective": "Classify source-grounded descriptions by both character and semantic relation, without fixed category quotas.",
+      "page_ref": "words-1",
+      "phase_ref": "F-N47",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/16/nodes/0",
+      "context_pointer": "/pages/16/nodes/0",
+      "native_context": {
+        "category_dimensions": [
+          {
+            "entity": "roderigo",
+            "relation": "is"
+          },
+          {
+            "entity": "roderigo",
+            "relation": "wanted"
+          },
+          {
+            "entity": "iago",
+            "relation": "is"
+          },
+          {
+            "entity": "iago",
+            "relation": "seems"
+          },
+          {
+            "entity": "iago",
+            "relation": "wanted"
+          }
+        ]
+      },
+      "depends_on": []
+    },
+    {
+      "id": "N48",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "integrated_response",
+      "role": "question",
+      "operation": "integrated",
+      "objective": "Explain the relation between a classified appearance and reality using source evidence.",
+      "page_ref": "words-1",
+      "phase_ref": "F-N48",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/16/nodes/0/verdict",
+      "context_pointer": "/pages/16/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N49",
+      "native_kind": "open_check",
+      "family": "written_response",
+      "public_format": "integrated_response",
+      "role": "question",
+      "operation": "integrated",
+      "objective": "Synthesize the lesson's declared knowledge with a claim, evidence and reason.",
+      "page_ref": "record",
+      "phase_ref": "F-N49",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/pages/17/nodes/0/rubric",
+      "context_pointer": "/pages/17/nodes/0",
+      "native_context": {},
+      "depends_on": []
+    },
+    {
+      "id": "N50",
+      "native_kind": "confidence_self_report",
+      "family": "self_report",
+      "public_format": "adapter_extension/self_report",
+      "role": "self_report",
+      "operation": "self-report",
+      "objective": "Report confidence about answering the lesson question; confidence is not correctness evidence.",
+      "page_ref": "end",
+      "phase_ref": "F-N50",
+      "target_refs": [
+        "K-evidence"
+      ],
+      "content_key_refs": [
+        "C-intro-caption",
+        "C-unit-caption-0",
+        "C-unit-caption-1",
+        "C-unit-caption-2",
+        "C-unit-caption-3",
+        "C-unit-caption-4",
+        "C-unit-caption-5",
+        "C-unit-caption-6",
+        "C-unit-caption-7",
+        "C-word-web-context",
+        "C-term-context",
+        "C-reading-1",
+        "C-reading-2",
+        "C-reading-3",
+        "C-reading-4",
+        "C-counterpart",
+        "C-worked-teaching",
+        "C-selected-quote-A",
+        "C-selected-quote-B",
+        "C-recall-statement"
+      ],
+      "pair_refs": [
+        "P-evidence-language"
+      ],
+      "support": "Declared preceding teaching and visible source only; no learner performance history is supplied.",
+      "source_pointer": "/record/confidence",
+      "context_pointer": "/record",
+      "native_context": {
+        "scale": [
+          "Not yet",
+          "Sure"
+        ]
+      },
+      "depends_on": []
+    }
+  ],
+  "source_provenance": {
+    "repository": "trilogy-group/ela-lessons",
+    "commit": "f1565047f1ab75f2cead15699546bc8723ac4e39",
+    "path": "src/content/othello-1-1.json",
+    "sha256": "50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96",
+    "version_role": "frozen-current-hosted-source",
+    "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran."
+  },
+  "intake_limits": [
+    "No original question, key, feedback or rubric copied into this writer packet.",
+    "Objectives are explicit proposed generation intentions, not recovered author answers.",
+    "Original authored activities include guided tasks and dependent subchecks; 50 is not a mastery-measurement count.",
+    "Media captions are supplied authoring data; video playback and audiovisual equivalence were not verified.",
+    "Hypothetical counterpart claim is supplied packet authoring, not a source quotation.",
+    "Question quality and learner outcomes await later independent evaluation."
+  ]
+}

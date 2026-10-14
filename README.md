@@ -46,6 +46,74 @@ tasks; it does not establish that an evaluator can judge them.
 
 ## Model writer
 
+The optional native lane now prepares the **current hosted authoring reference**: 50 activities across 14 native
+kinds and 19 pages, frozen at source commit `f1565047f1ab75f2cead15699546bc8723ac4e39` and source SHA256
+`50b6d44f206b3d4a6e27030b5cc6fd170c9d7c1b616f4d0ecd241839407b5d96`. This is a separate source from the older
+40-unit, `3ed708e1` historical contract fixture described above. The subsequent introduction-video source variant
+is not silently substituted for this pin.
+
+Run the same Node CLI offline, with no credentials or sibling repository:
+
+```bash
+node model_generate.mjs --prepare-native --request examples/current-native-request.json --context examples/current-native-context.json
+node model_generate.mjs --offline-smoke --request examples/current-native-request.json --context examples/current-native-context.json
+```
+
+Preparation emits a reproducible neutral request/context, response schema, source pins, hashes, coverage matrix and
+receipt under a fresh `.local/native-runs/` directory. Smoke adds one mocked provider return through the writer,
+finished native transport and a learner projection. It makes **zero live model calls**. Mock text is labelled as a
+synthetic transport fixture; it is not a generated teaching sequence or quality evidence. First attempts, repairs,
+typed holds and source bindings remain in the journal. Missing required source/media, knowledge, phase, maps,
+support, learner constraints or counterpart context produces a hold before credential or provider access.
+
+| Current native kind | Activities | Public format / explicit adapter extension |
+| --- | ---: | --- |
+| `film_mcq` | 4 | `single_choice`, supplied timed media captions |
+| `word_web` | 1 | word web: staged elicitation, semantic relation and meaning |
+| `key_term_mcq` | 1 | `single_choice` |
+| `reading_mcq` | 11 | `single_choice` |
+| `open_check` | 15 | `short_explanation` or `integrated_response`, explicit scope |
+| `evidence_select` | 1 | `evidence_selection`, exact source quotations |
+| `open_prompt` | 2 | `short_explanation` or `rebuttal` |
+| `argument_round` | 3 | `learner_question`, `short_explanation`, `rebuttal`; distinct parts and dependencies |
+| `rebuild_choice` | 3 | inline choices inside the supplied worked sentence |
+| `quote_word_selection` | 2 | word and class selection inside a retained quote branch |
+| `quote_analysis` | 4 | separate paraphrase and interpretation subchecks |
+| `say_back` | 1 | unscored recall of the supplied taught statement |
+| `classify` | 1 | `classification`, preserving both entity and relation |
+| `confidence_self_report` | 1 | unscored self-report with the supplied scale |
+
+All 14 kinds have neutral context and mocked transport checks. The 62 collected authoring-kind names have an
+explicit dispatch and output-family contract; the remaining 48 have no current reference smoke fixture. Their
+matrix status is `explicit-dispatch-awaiting-context-and-format-smoke`, except `model_paragraph` and
+`worked_example`, which are instruction-only rows. This is not a claim that all historical formats have generated
+content or passed academic review. EBSR requires declared dependent parts; missing operations cannot fall through
+to a generic question.
+
+`question-lane-native/0.2` and `question-set native 0.2` are explicit **adapter extensions**. Native kind, source
+pointer, parent context, role, branch alternatives and dependency survive adaptation. They do not change the pinned
+historical shared contract or promise direct compatibility with a production renderer. The 50 rows include guided
+tasks, recall, dependent paragraph subchecks and retained alternatives; they are not 50 independent measurements.
+The learner packet withholds keys, word-class answers, nested blank keys, rubrics and feedback while preserving
+declared teaching exposures and branch policy.
+
+The neutral packet omits original questions, choices, keys, feedback and rubrics. It retains source captions,
+reading passages and explicit worked teaching. Its generation objectives are proposed packet authoring. The source
+does not contain a frozen dialogue excuse, so `examples/native-counterpart.json` explicitly supplies a hypothetical
+counterpart, with separate provenance and no required verdict. Individual exposure, conditional feedback history,
+reading level and accommodations remain unknown. Source timing inconsistencies and the missing quote-C breakdown
+remain declared. Caption presence does not verify audiovisual playback or a learner's exposure.
+
+To reproduce the projection from the two explicitly supplied original authoring files:
+
+```bash
+python3 scripts/prepare_native_reference.py --source SOURCE.json --receipt RECEIPT.json --counterpart examples/native-counterpart.json --output-dir examples
+```
+
+The script checks the original source pin before and after projection. For later authorized writing, the existing
+`--request` / `--context` model command accepts this native protocol and applies its output contracts. No live native
+generation or evaluation has been run in this task. Quality assessment and learner outcomes remain pending.
+
 Node 22 or later runs the model writer without an SDK, package install, Python runtime, or sibling repository.
 The two committed Othello input files contain the complete neutral source lesson, explicit exposure order and
 14 proposed interaction slots. They retain the original authored source pin and omit authored questions and keys.
