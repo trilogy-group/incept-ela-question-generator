@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "contract_source_commit": "aa956f163a3bfb54b9c471b6ea644da8a9394a8a",
+  "files": {
+    "examples/othello-1-1/lesson-context.json": "1f8c93a0671675ab7947493053ca18da4775102419bd6fa4aa193a868213065e",
+    "examples/othello-1-1/question-set.json": "0d7b2508ecbf0eb128391c1d6c5da5edd4df4bd4f14a50fdd4aafb12494760a5",
+    "schema/question-set.schema.json": "585fb5923ddf060f17718639fac6e7d1d8a13f06f50bce6ae062b8f9ae0c06af",
+    "schema/lesson-context.schema.json": "5041b411f04e9385a2a8dde1c67062a9d90d765c1331b61e50ff8fd223141689"
+  },
+  "source_provenance": {
+    "othello-1-1": {
+      "mirror": "~/Projects/shadow/animated-build",
+      "remote": "ela-lessons (the animated build's lesson repository, read-only mirror)",
+      "commit": "3ed708e126aec14b7456679b9236e01c1081df16",
+      "path": "src/content/othello-1-1.json",
+      "sha256": "04184809a63e492b54fcf82a7583bd3a0b11483285c5920ce3752929947f8337",
+      "extracted": "2026-10-13",
+      "by": "extract-authored 0.1",
+      "redacted": [
+        {
+          "pointer": "/record/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/3/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/3/nodes/0/meaning/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/6/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/7/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/8/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/9/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/10/nodes/0/verdict/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/breakdown/A/means/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/breakdown/A/shows/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/breakdown/B/means/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/breakdown/B/shows/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/0/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/0/criteria/2/requirement",
+          "read_by": "marker"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/2/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/2/criteria/2/requirement",
+          "read_by": "marker"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/3/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/3/criteria/2/requirement",
+          "read_by": "marker"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/4/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/moves/rubrics/4/criteria/2/requirement",
+          "read_by": "marker"
+        },
+        {
+          "pointer": "/pages/12/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/14/nodes/0/rubrics/0/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/14/nodes/0/rubrics/0/criteria/2/requirement",
+          "read_by": "marker"
+        },
+        {
+          "pointer": "/pages/14/nodes/0/rubrics/1/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/14/nodes/0/rubrics/1/criteria/2/requirement",
+          "read_by": "marker"
+        },
+        {
+          "pointer": "/pages/15/nodes/0/rubric/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/16/nodes/0/verdict/source",
+          "read_by": "metadata"
+        },
+        {
+          "pointer": "/pages/17/nodes/0/rubric/source",
+          "read_by": "metadata"
+        }
+      ]
+    }
+  },
+  "meaning": "Fixture hashes preserve the folded reference snapshot. External source comparison is reported separately; hashes do not prove a new source comparison."
+}

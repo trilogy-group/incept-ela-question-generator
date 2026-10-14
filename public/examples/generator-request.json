@@ -1,0 +1,49 @@
+{
+  "protocol": "question-lane-generation/0.1",
+  "request_id": "protocol-example-only",
+  "course_context": {
+    "core_knowledge": [
+      {"id": "K1", "claim": "Compare two stated observations using textual evidence", "performance": "Identify and explain the stated comparison"},
+      {"id": "K2", "claim": "An observed difference alone does not establish its cause", "performance": "Distinguish an observation from a causal claim"}
+    ],
+    "prerequisites": ["Read a comparison sentence", "The observation/causal-claim distinction was explicitly modelled"],
+    "source_assets": [{"id": "S1", "text": "The seedlings in the shaded tray grew taller but paler than those in sunlight."}],
+    "prior_exposure": [{"role": "worked-model", "content": "An observed difference and an explanation of its cause are different claims.", "source_refs": ["S1"]}],
+    "lesson_plan": {
+      "id": "LP-example", "revision": "authored-toy-0.1", "title": "Compare a stated observation without inventing a cause",
+      "phases": [
+        {"id": "F1", "role": "source-comprehension", "target_refs": ["K1"], "source_refs": ["S1"], "content_key_refs": ["C1"]},
+        {"id": "F2", "role": "independent-explanation", "target_refs": ["K2"], "source_refs": ["S1"], "content_key_refs": ["C2"], "after": ["F1"]}
+      ]
+    },
+    "content_keys": [
+      {"id": "C1", "claim": "The source states a taller and paler comparison", "target_refs": ["K1"], "source_refs": ["S1"], "phase_refs": ["F1"]},
+      {"id": "C2", "claim": "The comparison by itself does not establish a cause", "target_refs": ["K2"], "source_refs": ["S1"], "phase_refs": ["F2"]}
+    ],
+    "knowledge_map": {
+      "revision": "authored-toy-0.1",
+      "nodes": [
+        {"id": "P0", "role": "prerequisite", "claim": "Read the comparison sentence", "source_refs": ["S1"]},
+        {"id": "K1", "role": "core", "claim": "Identify the stated comparison", "source_refs": ["S1"]},
+        {"id": "K2", "role": "core", "claim": "Separate observation from causal explanation", "source_refs": ["S1"]}
+      ],
+      "edges": [
+        {"from": "P0", "to": "K1", "relation": "prerequisite-for"},
+        {"from": "K1", "to": "K2", "relation": "supports"}
+      ]
+    },
+    "pairing_tables": [
+      {"id": "T1", "purpose": "Align each planned phase with its source and content key", "pairs": [
+        {"id": "T1a", "target_ref": "K1", "source_ref": "S1", "content_key_ref": "C1", "phase_ref": "F1"},
+        {"id": "T1b", "target_ref": "K2", "source_ref": "S1", "content_key_ref": "C2", "phase_ref": "F2"}
+      ]}
+    ]
+  },
+  "sequence_blueprint": [
+    {"role": "source-comprehension", "target": ["K1"], "formats": ["mcq"], "support": "passage-visible"},
+    {"role": "independent-explanation", "target": ["K2"], "formats": ["scr"], "support": "passage-visible, no answer hint"}
+  ],
+  "student_context": {"grade": 9, "prerequisite_response_evidence": null, "individual_difficulty": null},
+  "known_constraints": ["Use the supplied source", "Do not claim a measured difficulty or learning effect", "Retain the first attempt and all repairs"],
+  "example_status": "authored contract illustration; no adopted curriculum or measured generation"
+}

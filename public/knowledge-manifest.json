@@ -3,37 +3,81 @@
   "boundary": "public-generation-only",
   "knowledge_snapshot": {
     "git_commit": "dacbde58d6754e0c18702ec26594dd71f077a25e",
-    "dirty_worktree": false,
+    "dirty_worktree": true,
     "record_count": 1279,
     "records_sha256": "8adc5f0e5026741866a01fb1978d3333f55a616e6fdabf14afd51db858df5b55",
     "qualification": "Knowledge records retain their own scope, status and counterevidence; inclusion is not universal academic approval.",
     "repository": "https://github.com/trilogy-group/incept-ela-learning-truths"
   },
+  "knowledge_baseline": {
+    "release": "knowledge-v1",
+    "source_commit": "dacbde58d6754e0c18702ec26594dd71f077a25e",
+    "sha256": "365c0a5a2a3f460aa6fb8d8f87cf8ed9949b8863ef5df44200ec6477e8d1f8e9",
+    "verified_against_git_source": true,
+    "current_records_match": true,
+    "current_public_files_match": true
+  },
   "files": [
     {
+      "path": "public/contract-manifest.json",
+      "source_path": "contract-manifest.json",
+      "sha256": "6e696dbdc47c23df6372a9e9a6a451ebf697fe1b3e182da294b97d84b8f717e5"
+    },
+    {
+      "path": "public/examples/generator-request.json",
+      "source_path": "examples/generator-request.json",
+      "sha256": "3547fc2dc498e20c1d5ae5e3d5fcafb3bc8c13f2abe7ff0b239723a880689b00"
+    },
+    {
+      "path": "public/examples/generator-response.json",
+      "source_path": "examples/generator-response.json",
+      "sha256": "6e10e30bca9b24d799271223bfec69537b50c7d01581cefebe8d107afcd33d71"
+    },
+    {
+      "path": "public/reference/lesson-context.json",
+      "source_path": "examples/othello-1-1/lesson-context.json",
+      "sha256": "1f8c93a0671675ab7947493053ca18da4775102419bd6fa4aa193a868213065e"
+    },
+    {
+      "path": "public/reference/question-set.json",
+      "source_path": "examples/othello-1-1/question-set.json",
+      "sha256": "0d7b2508ecbf0eb128391c1d6c5da5edd4df4bd4f14a50fdd4aafb12494760a5"
+    },
+    {
+      "path": "public/knowledge-baseline.json",
+      "source_path": "knowledge-baseline.json",
+      "sha256": "365c0a5a2a3f460aa6fb8d8f87cf8ed9949b8863ef5df44200ec6477e8d1f8e9"
+    },
+    {
       "path": "public/formats.json",
+      "source_path": "public/formats.json",
       "sha256": "dce64dab974709a9dbc725978a59df7ccd0aff9a44ae1a4aa92d09ae19fbf6cd"
     },
     {
       "path": "public/generation-standard.json",
+      "source_path": "public/generation-standard.json",
       "sha256": "f3b651f7f362d04f672921db91334b9c8e8114bb672f03b22620e9be2c310d09"
     },
     {
       "path": "schema/generator-request.schema.json",
+      "source_path": "schema/generator-request.schema.json",
       "sha256": "99595b4648ac1afc016e12df0b9be75073ccbe84cbd761c569735cbf6d4d9ec2"
     },
     {
       "path": "schema/generator-response.schema.json",
+      "source_path": "schema/generator-response.schema.json",
       "sha256": "efbd8d1a0e9d219157e12fcdc3352f23d2b44be2073a4fec5761974c92a2f57e"
     },
     {
       "path": "schema/lesson-context.schema.json",
+      "source_path": "schema/lesson-context.schema.json",
       "sha256": "5041b411f04e9385a2a8dde1c67062a9d90d765c1331b61e50ff8fd223141689"
     },
     {
       "path": "schema/question-set.schema.json",
+      "source_path": "schema/question-set.schema.json",
       "sha256": "585fb5923ddf060f17718639fac6e7d1d8a13f06f50bce6ae062b8f9ae0c06af"
     }
   ],
-  "selection": "The six public method, format and schema files used by this template baseline. The reference lesson remains a target in learning-truths/contract and is not a generation input."
+  "selection": "The knowledge-v1 public generator export: methods, formats, schemas, public authoring examples, reference context and authored question set. Preparation reads only the whitelisted reference context; authored questions are not writer inputs."
 }

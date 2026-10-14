@@ -20,7 +20,7 @@ class RunnerTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
-        for name in ("config.json", "generator.py", "contract_adapter.py", "transport.py"):
+        for name in ("config.json", "generator.py", "contract_adapter.py", "transport.py", "reference_intake.py"):
             shutil.copy2(ROOT / name, self.root / name)
         for name in ("public", "schema", "examples"):
             shutil.copytree(ROOT / name, self.root / name)
@@ -92,6 +92,38 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual([], json.loads((destination / "learner.json").read_text())["items"])
         self.assertFalse((destination / "question-set.json").exists())
         self.assertEqual([], json.loads((destination / "teacher.json").read_text())["items"])
+
+    def test_reference_preparation_emits_five_pending_slots_and_no_questions(self):
+        directory, metadata = run.execute(check_tests=False, preparation=True)
+        self.assertEqual("writer-request-prepared", metadata["state"])
+        self.assertEqual(5, metadata["planned_items"])
+        self.assertEqual(0, metadata["model_calls"])
+        self.assertEqual("pending", metadata["writing"])
+        destination = directory / "reference-preparation"
+        for name in ("writer-request.json", "lesson-context.json", "facts.json", "provenance.json", "trace.json"):
+            self.assertTrue((destination / name).is_file())
+            self.assertEqual(0o600, (destination / name).stat().st_mode & 0o777)
+        self.assertFalse(list(directory.rglob("question-set.json")))
+        self.assertFalse(list(directory.rglob("learner.json")))
+        trace = json.loads((destination / "trace.json").read_text())
+        self.assertEqual([], trace["first_attempt"])
+        self.assertEqual(hashlib.sha256((destination / "writer-request.json").read_bytes()).hexdigest(), trace["writer_request_sha256"])
+        self.assertEqual("365c0a5a2a3f460aa6fb8d8f87cf8ed9949b8863ef5df44200ec6477e8d1f8e9", trace["source"]["knowledge_baseline_sha256"])
+        self.assertEqual("3ed708e126aec14b7456679b9236e01c1081df16", trace["source"]["reference_source"]["commit"])
+
+    def test_reference_preparation_cannot_override_pinned_context_or_mutated_baseline(self):
+        with self.assertRaisesRegex(InputError, "pinned public context"):
+            run.execute("examples/lessons.json", check_tests=False, preparation=True)
+        baseline = self.root / "public" / "knowledge-baseline.json"
+        baseline.write_text(baseline.read_text() + "\n")
+        with self.assertRaisesRegex(InputError, "snapshot"):
+            run.execute(check_tests=False, preparation=True)
+        self.assertFalse((self.root / ".local").exists())
+
+    def test_template_run_trace_also_preserves_the_baseline_hash(self):
+        directory, metadata = run.execute(check_tests=False)
+        trace = json.loads((directory / "character-credit" / "trace.json").read_text())
+        self.assertEqual(metadata["knowledge_baseline_sha256"], trace["knowledge_baseline_sha256"])
 
 if __name__ == "__main__":
     unittest.main()

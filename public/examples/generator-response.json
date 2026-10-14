@@ -1,0 +1,87 @@
+{
+  "protocol": "question-lane-generation/0.1",
+  "request_id": "protocol-example-only",
+  "items": [
+    {
+      "id": "I1",
+      "type": "mcq",
+      "stem": "How did the shaded seedlings differ from those in sunlight?",
+      "knowledge_target": [
+        "K1"
+      ],
+      "sequence_role": "source-comprehension",
+      "source_refs": [
+        "S1"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "They were taller and paler."
+        },
+        {
+          "id": "B",
+          "text": "They were shorter and darker."
+        },
+        {
+          "id": "C",
+          "text": "They were the same height and colour."
+        }
+      ],
+      "scoring": {
+        "kind": "single-key",
+        "key_or_rubric": [
+          "A"
+        ]
+      },
+      "feedback": [
+        {
+          "when": "after-attempt",
+          "for": "B",
+          "text": "Compare the height and colour words in the source."
+        },
+        {
+          "when": "after-attempt",
+          "for": "C",
+          "text": "The source describes differences in both height and colour."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "type": "scr",
+      "stem": "What difference does the source establish, and why does that alone not prove what caused it?",
+      "knowledge_target": [
+        "K2"
+      ],
+      "sequence_role": "independent-explanation",
+      "source_refs": [
+        "S1"
+      ],
+      "scoring": {
+        "kind": "meaning-based-rubric",
+        "key_or_rubric": [
+          "States the taller/paler comparison",
+          "Distinguishes an observed difference from an established cause",
+          "Does not invent control conditions or measurements"
+        ]
+      },
+      "feedback": [
+        {
+          "when": "after-attempt",
+          "for": "observation-only",
+          "text": "You have stated the observation. Explain what would still need to be established about its cause."
+        }
+      ]
+    }
+  ],
+  "generation_trace": {
+    "generator_version": "authored-protocol-example",
+    "attempt": 1,
+    "candidate_count": 1,
+    "selection": "none",
+    "repairs": [],
+    "source_mode": "authored example; zero model calls"
+  },
+  "status": "prepared-for-review",
+  "holds": []
+}

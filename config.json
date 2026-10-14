@@ -5,5 +5,8 @@
   "formats": "public/formats.json",
   "methods": "public/generation-standard.json",
   "knowledge_manifest": "public/knowledge-manifest.json",
-  "run_root": ".local/runs"
+  "run_root": ".local/runs",
+  "knowledge_baseline": "public/knowledge-baseline.json",
+  "reference_context": "public/reference/lesson-context.json",
+  "reference_manifest": "public/contract-manifest.json"
 }

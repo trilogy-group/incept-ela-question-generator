@@ -10,7 +10,7 @@ import sys
 
 from contract_adapter import adapt, check_pair
 from generator import InputError, generate
-from run import read_json, verify_snapshot
+from run import digest, read_json, verify_baseline, verify_snapshot
 from transport import validate
 
 
@@ -51,7 +51,10 @@ def main():
     try:
         privacy_check()
         config = read_json(ROOT / "config.json")
-        verify_snapshot(read_json(ROOT / config["knowledge_manifest"]))
+        manifest = read_json(ROOT / config["knowledge_manifest"])
+        verify_snapshot(manifest)
+        baseline_path = ROOT / config["knowledge_baseline"]
+        verify_baseline(read_json(baseline_path), manifest, digest(baseline_path.read_bytes()))
         methods = read_json(ROOT / config["methods"])
         formats = read_json(ROOT / config["formats"])
         lessons = read_json(ROOT / "examples" / "lessons.json")["lessons"]
