@@ -9,8 +9,8 @@ import hashlib
 import json
 from pathlib import Path
 
-PIN = "1839d852e7994aca776f12da916fce73d91a2cf7"
-SHA = "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055"
+PIN = "1e4f4343ed33f1094741f007df43a0773f5e642c"
+SHA = "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c"
 
 
 def flatten(value):
@@ -95,7 +95,7 @@ def prepare(source_bytes, receipt, counterpart, comparison=None):
                         last_reading.append(caption_ref)
                         media.update({"transcript_status": "supplied", "transcript_source_ref": caption_ref, "captions": captions, "factual_authority": "Exact authored timed captions supplied as text authority; no inference about unobserved audiovisual details or actual learner playback."})
                     if comparison:
-                        media["reported_capture_integrity"] = {"evidence": [{key: row.get(key) for key in ("field", "sha256", "manifest_sha256", "manifest_equal", "query_hash_prefix_matches_observed_sha256")} for row in comparison.get("changed_media_capture", [])], "limit": comparison.get("media_integrity_limit"), "verification": "Reported by the supplied capture comparison; not a new media execution or watch."}
+                        media["reported_capture_integrity"] = {"evidence": [{**{key: row.get(key) for key in ("field", "sha256", "bytes", "manifest_sha256", "manifest_bytes", "manifest_equal", "git_blob_equal_to_source_pin", "observed_git_blob_sha1", "query_hash_prefix_matches_observed_sha256")}, "frozen_git_blob_sha1": row.get("frozen_git_content", {}).get("git_blob_sha1")} for row in comparison.get("changed_media_capture", [])], "limit": comparison.get("media_integrity_limit"), "verification": "Reported by the supplied capture comparison; not a new media execution or watch."}
                     media_assets.append(media)
                     pages[-1]["nodes"].append({"type": "media-introduction", "media_ref": media["id"], "src": media["src"], "poster": media["poster"], "original_pointer": media["original_pointer"], "transcript_status": media["transcript_status"], "transcript_source_ref": media.get("transcript_source_ref"), "captions": intro.get("captions", [])})
                 ref = asset(page["id"], flatten(node["blocks"]), pointer + "/blocks")

@@ -48,15 +48,16 @@ tasks; it does not establish that an evaluator can judge them.
 ## Model writer
 
 The optional native lane now prepares the **current hosted authoring reference**: 50 activities across 14 native
-kinds and 19 pages, frozen at current main source commit `1839d852e7994aca776f12da916fce73d91a2cf7` and source SHA256
-`56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055`. This is a separate source from the older
-40-unit, `3ed708e1` historical contract fixture described above. The current source updates the `reading-2`
-introduction video and poster and adds nine timed captions. Exact caption wording, times, order, original pointers
+kinds and 19 pages, frozen at current main source commit `1e4f4343ed33f1094741f007df43a0773f5e642c` and source SHA256
+`5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c`. This is a separate source from the older
+40-unit, `3ed708e1` historical contract fixture described above. The current source changes only the `reading-2`
+introduction video and poster URLs relative to `1839d852`; all 50 activities and nine timed captions remain equal.
+Exact caption wording, times, order, original pointers
 and transcript offsets survive intake; their text is available only from the declared introduction phase onward.
-The supplied capture comparison reports a full video manifest hash match, while the poster has an observed hash
-and matching URL prefix with no declared full manifest hash. These are capture integrity observations; no video
+The supplied capture comparison reports a full video manifest hash/size match and a full poster Git blob match
+at the source pin. The poster has no declared full manifest SHA256. These are capture integrity observations; no video
 watch, audiovisual equivalence or individual learner exposure is claimed. Earlier `f1565047` / `50b6d44f` and
-`4c1e26c8` / `d388ae85` journals remain intact with their original source contexts.
+`4c1e26c8` / `d388ae85` and `1839d852` / `56ed020f` journals remain intact with their original source contexts.
 
 The raw capture's pending admission fields remain verbatim under `capture_provenance_as_at_capture` and
 `capture_receipt_state`. Selecting this source for the current context does not rewrite that historical capture

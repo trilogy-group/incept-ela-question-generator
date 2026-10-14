@@ -2,9 +2,9 @@
   "contract": "lesson-context 0.1",
   "source": {
     "repository": "trilogy-group/ela-lessons",
-    "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+    "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
     "path": "src/content/othello-1-1.json",
-    "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+    "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
     "version_role": "frozen-current-hosted-source",
     "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
     "capture_provenance_as_at_capture": {
@@ -18,36 +18,36 @@
         "designation": "pending new version of the user-designated authored positive reference; not admitted",
         "independent_quality_label": false,
         "qualification": "not established",
-        "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+        "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
       },
       "cache_repository": "animated",
-      "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+      "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
       "default_positive": false,
       "hosted": {
         "bundle_sha256": [
-          "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-          "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+          "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+          "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
         ],
         "entry_points": [
-          "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-          "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+          "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+          "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
         ],
         "lesson_semantic_equal_to_source_pin": true,
-        "observed_at": "2026-10-14T16:30:14.340886+00:00"
+        "observed_at": "2026-10-14T19:00:14.864330+00:00"
       },
-      "id": "animated-current-pending-1839d852",
+      "id": "animated-current-pending-1e4f4343",
       "path": "src/content/othello-1-1.json",
       "reference_tier": "primary-pending",
       "repository": "trilogy-group/ela-lessons",
-      "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+      "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
       "version_role": "observed-current-primary-pending-admission",
       "visibility": "private source repository"
     },
     "capture_receipt_state": {
       "admission_status": "pending-root-review",
       "default_positive": false,
-      "observed_at": "2026-10-14T16:30:14.340886+00:00",
-      "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+      "observed_at": "2026-10-14T19:00:14.864330+00:00",
+      "prepared_at": "2026-10-14T19:08:25.927327+00:00"
     },
     "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
   },
@@ -146,9 +146,9 @@
           "original_pointer": "/pages/0/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -162,36 +162,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -208,9 +208,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -224,36 +224,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -271,9 +271,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -287,36 +287,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -334,9 +334,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -350,36 +350,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -397,9 +397,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -413,36 +413,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -460,9 +460,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -476,36 +476,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -523,9 +523,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -539,36 +539,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -586,9 +586,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -602,36 +602,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -649,9 +649,9 @@
           "original_pointer": "/pages/1/nodes/0/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -665,36 +665,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -712,9 +712,9 @@
           "original_pointer": "/pages/3/nodes/0",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -728,36 +728,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -769,9 +769,9 @@
           "original_pointer": "/pages/4/nodes/0/meaning",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -785,36 +785,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -826,9 +826,9 @@
           "original_pointer": "/pages/6/nodes/0/blocks",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -842,36 +842,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -883,9 +883,9 @@
           "original_pointer": "/pages/7/nodes/0/intro_video/captions",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -899,40 +899,40 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
-          "media_ref": "archivist/reading-2-intro.mp4?v=8be7dfb932",
+          "media_ref": "archivist/reading-2-intro.mp4?v=025533ce97",
           "time_range": [
             0.0,
             42.42
@@ -1094,9 +1094,9 @@
           "original_pointer": "/pages/7/nodes/0/blocks",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1110,36 +1110,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -1151,9 +1151,9 @@
           "original_pointer": "/pages/8/nodes/0/blocks",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1167,36 +1167,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -1208,9 +1208,9 @@
           "original_pointer": "/pages/9/nodes/0/blocks",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1224,36 +1224,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -1278,9 +1278,9 @@
           "original_pointer": "/pages/11/nodes/0/screens",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1294,36 +1294,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -1335,9 +1335,9 @@
           "original_pointer": "/pages/12/nodes/0/quotes",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1351,36 +1351,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -1392,9 +1392,9 @@
           "original_pointer": "/pages/12/nodes/0/quotes",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1408,36 +1408,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -1449,9 +1449,9 @@
           "original_pointer": "/pages/13/nodes/0/repeat",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -1465,36 +1465,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           }
@@ -3008,14 +3008,14 @@
         {
           "id": "reading-2-intro-video",
           "page_ref": "reading-2",
-          "src": "archivist/reading-2-intro.mp4?v=8be7dfb932",
-          "poster": "archivist/reading-2-intro-poster.jpg?v=c67e7a9883",
+          "src": "archivist/reading-2-intro.mp4?v=025533ce97",
+          "poster": "archivist/reading-2-intro-poster.jpg?v=1444a20a01",
           "original_pointer": "/pages/7/nodes/0/intro_video",
           "provenance": {
             "repository": "trilogy-group/ela-lessons",
-            "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+            "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
             "path": "src/content/othello-1-1.json",
-            "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+            "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
             "version_role": "frozen-current-hosted-source",
             "comparison": "Original supplied source bytes checked; no external Git comparison or media execution ran.",
             "capture_provenance_as_at_capture": {
@@ -3029,36 +3029,36 @@
                 "designation": "pending new version of the user-designated authored positive reference; not admitted",
                 "independent_quality_label": false,
                 "qualification": "not established",
-                "scope": "this observed primary course snapshot only; admitted source remains unchanged"
+                "scope": "this observed primary course snapshot only; admitted1839 source remains unchanged"
               },
               "cache_repository": "animated",
-              "commit": "1839d852e7994aca776f12da916fce73d91a2cf7",
+              "commit": "1e4f4343ed33f1094741f007df43a0773f5e642c",
               "default_positive": false,
               "hosted": {
                 "bundle_sha256": [
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15",
-                  "44a2cd2501d5b3bfd9333602b3714184ce49cfbaf365e12abf04b4c6b95f0c15"
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74",
+                  "e388b4eb848fc4731d16977897ff57f985d05c987255d56a681d6ec320630e74"
                 ],
                 "entry_points": [
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro",
-                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/"
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/",
+                  "https://main.d2ugg6yjeo6j4t.amplifyapp.com/e1#/intro"
                 ],
                 "lesson_semantic_equal_to_source_pin": true,
-                "observed_at": "2026-10-14T16:30:14.340886+00:00"
+                "observed_at": "2026-10-14T19:00:14.864330+00:00"
               },
-              "id": "animated-current-pending-1839d852",
+              "id": "animated-current-pending-1e4f4343",
               "path": "src/content/othello-1-1.json",
               "reference_tier": "primary-pending",
               "repository": "trilogy-group/ela-lessons",
-              "sha256": "56ed020fa23ad6d4f2e4acba753e1bf208288183d48d106c8941d80492459055",
+              "sha256": "5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c",
               "version_role": "observed-current-primary-pending-admission",
               "visibility": "private source repository"
             },
             "capture_receipt_state": {
               "admission_status": "pending-root-review",
               "default_positive": false,
-              "observed_at": "2026-10-14T16:30:14.340886+00:00",
-              "prepared_at": "2026-10-14T16:40:38.740845+00:00"
+              "observed_at": "2026-10-14T19:00:14.864330+00:00",
+              "prepared_at": "2026-10-14T19:08:25.927327+00:00"
             },
             "context_designation": "Current source context selected by the authorized task; raw pending capture provenance remains historical. No independent quality label or video playback equivalence is asserted."
           },
@@ -3117,20 +3117,30 @@
             "evidence": [
               {
                 "field": "src",
-                "sha256": "8be7dfb932d2c91f789a104457120e4807474828fd817af275a1d231557d111d",
-                "manifest_sha256": "8be7dfb932d2c91f789a104457120e4807474828fd817af275a1d231557d111d",
+                "sha256": "025533ce97234c81ced83059179f366a08b10236b2a3e46591a4f753125efabb",
+                "bytes": 14181230,
+                "manifest_sha256": "025533ce97234c81ced83059179f366a08b10236b2a3e46591a4f753125efabb",
+                "manifest_bytes": 14181230,
                 "manifest_equal": true,
-                "query_hash_prefix_matches_observed_sha256": true
+                "git_blob_equal_to_source_pin": null,
+                "observed_git_blob_sha1": "c0bc8991cbe923b7d5f2068434e739b99db08808",
+                "query_hash_prefix_matches_observed_sha256": true,
+                "frozen_git_blob_sha1": null
               },
               {
                 "field": "poster",
-                "sha256": "c67e7a988399e8a871229a5cf9c67fa0dea4bfc02a78fbd32c16bd07a847ec5a",
+                "sha256": "1444a20a01ff4ee23264e6b6bcfd466fb58fc45984974c3261d3c5bb8e41f1ed",
+                "bytes": 56476,
                 "manifest_sha256": null,
+                "manifest_bytes": null,
                 "manifest_equal": null,
-                "query_hash_prefix_matches_observed_sha256": true
+                "git_blob_equal_to_source_pin": true,
+                "observed_git_blob_sha1": "8b3b222d5cb6f9bee652537f0800b2567e0ebb43",
+                "query_hash_prefix_matches_observed_sha256": true,
+                "frozen_git_blob_sha1": "8b3b222d5cb6f9bee652537f0800b2567e0ebb43"
               }
             ],
-            "limit": "The changed video matches the full pinned media manifest. The poster is captured with a full observed SHA256 and matches the source URL hash prefix, but no full declared poster hash or Git blob was available.",
+            "limit": "Changed video matches full frozen media manifest hash/size. Changed poster matches the full frozen source Gitblob and observed SHA256/query prefix; no full declared poster SHA256 appears in media.json. Unchanged assets are reference-compared, not freshly byte-captured.",
             "verification": "Reported by the supplied capture comparison; not a new media execution or watch."
           }
         }
@@ -3334,8 +3344,8 @@
           {
             "type": "media-introduction",
             "media_ref": "reading-2-intro-video",
-            "src": "archivist/reading-2-intro.mp4?v=8be7dfb932",
-            "poster": "archivist/reading-2-intro-poster.jpg?v=c67e7a9883",
+            "src": "archivist/reading-2-intro.mp4?v=025533ce97",
+            "poster": "archivist/reading-2-intro-poster.jpg?v=1444a20a01",
             "original_pointer": "/pages/7/nodes/0/intro_video",
             "transcript_status": "supplied",
             "transcript_source_ref": "reading-2-intro-captions",

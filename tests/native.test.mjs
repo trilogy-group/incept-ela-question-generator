@@ -22,7 +22,7 @@ test('all 50 current native activities have explicit public format, scope, sourc
   const { request, context, response } = fixture();
   assert.equal(validateNativeInputs(request, context, catalog), 50);
   validate(response, schema); assert.equal(validateNativeResponse(response, request), 50);
-  assert.equal(request.source_provenance.commit, '1839d852e7994aca776f12da916fce73d91a2cf7');
+  assert.equal(request.source_provenance.commit, '1e4f4343ed33f1094741f007df43a0773f5e642c');
   assert.equal(request.source_provenance.sha256, inventory.source_sha256);
   const counts = Object.fromEntries(Object.keys(inventory.current_by_kind).map(kind => [kind, request.sequence_blueprint.filter(row => row.native_kind === kind).length]));
   assert.deepEqual(counts, inventory.current_by_kind);
@@ -33,8 +33,8 @@ test('all 50 current native activities have explicit public format, scope, sourc
 test('current reading introduction retains timed source-bound captions and raw pending capture provenance', () => {
   const { request, context } = fixture();
   const media = request.course_context.media_assets.find(row => row.id === 'reading-2-intro-video');
-  assert.equal(media.src, 'archivist/reading-2-intro.mp4?v=8be7dfb932');
-  assert.equal(media.poster, 'archivist/reading-2-intro-poster.jpg?v=c67e7a9883');
+  assert.equal(media.src, 'archivist/reading-2-intro.mp4?v=025533ce97');
+  assert.equal(media.poster, 'archivist/reading-2-intro-poster.jpg?v=1444a20a01');
   assert.equal(media.original_pointer, '/pages/7/nodes/0/intro_video');
   assert.equal(media.provenance.sha256, inventory.source_sha256);
   assert.equal(media.transcript_status, 'supplied');
