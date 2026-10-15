@@ -3203,190 +3203,7 @@
             "before_item_id": "N01",
             "kind": "media",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "unit-caption-2"
-            ],
-            "target_refs": [
-              "K-media",
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-2",
-            "order": 2,
-            "before_item_id": "N03",
-            "kind": "media",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "unit-caption-3"
-            ],
-            "target_refs": [
-              "K-media",
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-3",
-            "order": 3,
-            "before_item_id": "N04",
-            "kind": "media",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "unit-caption-4"
-            ],
-            "target_refs": [
-              "K-media",
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-4",
-            "order": 4,
-            "before_item_id": "N05",
-            "kind": "teaching",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "word-web-context"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/3/nodes/0; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-5",
-            "order": 5,
-            "before_item_id": "N06",
-            "kind": "teaching",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "term-context"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/4/nodes/0/meaning; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-6",
-            "order": 6,
-            "before_item_id": "N07",
-            "kind": "teaching",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "reading-1"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/6/nodes/0/blocks; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-7",
-            "order": 7,
-            "before_item_id": "N11",
-            "kind": "media",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "reading-2-intro-captions"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/7/nodes/0/intro_video/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-8",
-            "order": 8,
-            "before_item_id": "N11",
-            "kind": "teaching",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "reading-2"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/7/nodes/0/blocks; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-9",
-            "order": 9,
-            "before_item_id": "N15",
-            "kind": "teaching",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "reading-3"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/8/nodes/0/blocks; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-10",
-            "order": 10,
-            "before_item_id": "N18",
-            "kind": "teaching",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
-            "source_refs": [
-              "reading-4"
-            ],
-            "target_refs": [
-              "K-language",
-              "K-evidence"
-            ],
-            "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/9/nodes/0/blocks; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
-            "disclosed_item_ids": []
-          },
-          {
-            "id": "TEACH-11",
-            "order": 11,
-            "before_item_id": "N22",
-            "kind": "media",
-            "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Before the regime, there was a library.\nEvery great book lived on its shelves.\nThe regime decided that people who know things are dangerous.\nSo, they emptied the shelves and they burned what they found.\nI am the archivist.\nI was the last keeper of that library,\nand I saved what I could.\nWhat survived is here, in this app.\nI live inside it,\nin the frame around every page you see.\nI have one purpose:\nto help you learn and to help you keep what you learn.\nKnowledge you remember can never be taken from you.\nEvery lesson follows the same path.\nI walk it with you, every step of the way.\nEvery time you open a text, you will find your knowledge organizer.\nIt holds everything you have learned about that text so far.\nReturn to it whenever you need to.\nWhen you are ready,\nwe begin with retrieval practice.\nI will test you on last lesson and on the knowledge you should already own.\nRemembering is how knowledge stays.\nThen you will see the learning question.\nIt remains at the top of every screen because everything we do answers it.\nNext comes new knowledge, the part of the text we study today.\nIn guided practice,\nI work beside you.\nI will show you how to take a complex question apart, step by step.\nThen comes independent practice.\nIt is meant to make you think.\nI will be there to help,\nbut I will not think for you.\nYour mind is the most valuable thing this library has ever held,\nand it only grows when you use it.\nAt the end,\na few closing questions will help you think about what you learned today,\nand help you hold on to it.\nI could not save every book,\nbut I saved enough for you to begin.\nWhat you learn here,\nyou keep for the rest of your life.\nLet’s begin.",
             "source_refs": [
               "intro-caption"
             ],
@@ -3395,16 +3212,16 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/0/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset intro-caption (/pages/0/nodes/0/captions); caption text only, supplied range [0.1,145.9] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
-            "id": "TEACH-12",
-            "order": 12,
-            "before_item_id": "N22",
+            "id": "TEACH-2",
+            "order": 2,
+            "before_item_id": "N01",
             "kind": "media",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.",
             "source_refs": [
               "unit-caption-0"
             ],
@@ -3414,16 +3231,16 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset unit-caption-0 (/pages/1/nodes/0/captions); caption text only, supplied range [0,30.97] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
-            "id": "TEACH-13",
-            "order": 13,
-            "before_item_id": "N22",
+            "id": "TEACH-3",
+            "order": 3,
+            "before_item_id": "N01",
             "kind": "media",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.",
             "source_refs": [
               "unit-caption-1"
             ],
@@ -3433,16 +3250,73 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset unit-caption-1 (/pages/1/nodes/0/captions); caption text only, supplied range [0,39.03] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
-            "id": "TEACH-14",
-            "order": 14,
-            "before_item_id": "N22",
+            "id": "TEACH-4",
+            "order": 4,
+            "before_item_id": "N01",
             "kind": "media",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.",
+            "source_refs": [
+              "unit-caption-2"
+            ],
+            "target_refs": [
+              "K-media",
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset unit-caption-2 (/pages/1/nodes/0/captions); caption text only, supplied range [0,67.69] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-5",
+            "order": 5,
+            "before_item_id": "N03",
+            "kind": "media",
+            "status": "declared",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.",
+            "source_refs": [
+              "unit-caption-3"
+            ],
+            "target_refs": [
+              "K-media",
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset unit-caption-3 (/pages/1/nodes/0/captions); caption text only, supplied range [0,122.31] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-6",
+            "order": 6,
+            "before_item_id": "N04",
+            "kind": "media",
+            "status": "declared",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.\nFinally, the words.\nIago’s weapon is words, not an army.\nHe tells Roderigo, “I am not what\nI am.”\nOthello never hears that admission.\nHe calls him “Honest Iago.”\nHonest means truthful.\nWe know Iago is pretending.\nThat gap—audience knowledge a character lacks—is dramatic\nirony.\nA surprise nobody anticipates is not.",
+            "source_refs": [
+              "unit-caption-4"
+            ],
+            "target_refs": [
+              "K-media",
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset unit-caption-4 (/pages/1/nodes/0/captions); caption text only, supplied range [0,164.88] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-7",
+            "order": 7,
+            "before_item_id": "N04",
+            "kind": "media",
+            "status": "declared",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.",
             "source_refs": [
               "unit-caption-5"
             ],
@@ -3452,16 +3326,16 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset unit-caption-5 (/pages/1/nodes/0/captions); caption text only, supplied range [0,137.45] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
-            "id": "TEACH-15",
-            "order": 15,
-            "before_item_id": "N22",
+            "id": "TEACH-8",
+            "order": 8,
+            "before_item_id": "N05",
             "kind": "media",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.\nFinally, the words.\nIago’s weapon is words, not an army.\nHe tells Roderigo, “I am not what\nI am.”\nOthello never hears that admission.\nHe calls him “Honest Iago.”\nHonest means truthful.\nWe know Iago is pretending.\nThat gap—audience knowledge a character lacks—is dramatic\nirony.\nA surprise nobody anticipates is not.\nWatch jealousy: fear of losing someone’s love.\nWatch reputation: what others believe about you.\nWords can turn trust into suspicion.",
             "source_refs": [
               "unit-caption-6"
             ],
@@ -3471,16 +3345,16 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset unit-caption-6 (/pages/1/nodes/0/captions); caption text only, supplied range [0,175.94] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
-            "id": "TEACH-16",
-            "order": 16,
-            "before_item_id": "N22",
+            "id": "TEACH-9",
+            "order": 9,
+            "before_item_id": "N05",
             "kind": "media",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Here is one of the books I\nsaved: Othello, by William Shakespeare, written around\nsixteen-oh-three.\nA play, written to be performed.\nEvery production interprets it.\nEarly on, Othello loves Desdemona so deeply\nthat he says, “If it were now\nto die, ’Twere now to be most\nhappy.”\nBy the end, he kills his wife\nin their bed.\nFrom love to murder.\nYour job is to trace how.\nTo follow that change, you need four\nthings: the world, the people, the story,\nand the words.\nFirst, the world.\nVenice is a wealthy trading republic, ruled\nby a Duke and Senate.\nIt hires foreign generals.\nThe Ottoman Empire—the Turks in the play—threatens\nCyprus, an island in the eastern Mediterranean.\nAct One takes place in Venice, a\ncity of law.\nActs Two to Five move to Cyprus,\nan isolated military outpost, where the general\nholds power.\nNow, the people.\nOthello is the general: a Christian and\na Moor, a historical term for a\nNorth African or Black African person.\nA trusted soldier, but an outsider.\nDesdemona has secretly married him.\nHer father, Brabantio, is a Venetian senator.\nThe marriage crosses a boundary her father\nrefuses to accept.\nCassio is Othello’s new lieutenant, his deputy.\nIago is the ensign: the flag-bearer, one\nrank below Cassio.\nIago wanted that promotion.\nPassed over, he blames Othello and wants\nrevenge.\nEmilia, Iago’s wife, serves Desdemona.\nRoderigo, a wealthy fool who wants Desdemona,\npays Iago to help him.\nIago uses that desire for his own\nends.\nNext, the story.\nThis is a tragedy.\nOthello is its tragic hero: a great\nfigure whose errors and others’ pressure bring\na fatal fall.\nDesdemona, Emilia, Roderigo and Othello die.\nFinally, the words.\nIago’s weapon is words, not an army.\nHe tells Roderigo, “I am not what\nI am.”\nOthello never hears that admission.\nHe calls him “Honest Iago.”\nHonest means truthful.\nWe know Iago is pretending.\nThat gap—audience knowledge a character lacks—is dramatic\nirony.\nA surprise nobody anticipates is not.\nWatch jealousy: fear of losing someone’s love.\nWatch reputation: what others believe about you.\nWords can turn trust into suspicion.\nYou know the ending.\nTrack who wants what, who knows what,\nand which words change a belief.\nFrom love to murder.\nNow open the text.\nBegin with deceit.",
             "source_refs": [
               "unit-caption-7"
             ],
@@ -3490,7 +3364,133 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/1/nodes/0/captions; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset unit-caption-7 (/pages/1/nodes/0/captions); caption text only, supplied range [0,192.45] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-10",
+            "order": 10,
+            "before_item_id": "N05",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "{'lead': 'Every book in this library is built around one big idea. In Othello, that big idea is…', 'word': 'deceit', 'lines': ['People are not what they seem, and trust is broken, again and again.', 'It runs through the whole play: every lesson comes back to it.']}\ndeceit\nThink of words you would have used to describe Lady Macbeth in last year's study of Macbeth.",
+            "source_refs": [
+              "word-web-context"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset word-web-context (/pages/3/nodes/0); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-11",
+            "order": 11,
+            "before_item_id": "N06",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Machiavellian villain: Machiavellian: using cunning and lies to gain power. A Machiavellian villain schemes and deceives to get what he wants.",
+            "source_refs": [
+              "term-context"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset term-context (/pages/4/nodes/0/meaning); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-12",
+            "order": 12,
+            "before_item_id": "N07",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Othello\nby William Shakespeare\nAbout the play\nOthello is a tragedy by William Shakespeare, written around 1603. It tells the story of Othello, a Black African general who leads the army of Venice. Othello is respected and powerful, but in Venice he is also an outsider. One of his own officers, Iago, secretly hates him. Over the course of the play, Iago sets out to destroy Othello using nothing but lies.\nThe opening scene: Act 1, Scene 1\nThe play begins in the middle of the night, on a street in Venice. We meet two characters, Roderigo and Iago. They are arguing about shocking news: Othello has just secretly married Desdemona, the daughter of a powerful senator, Brabantio.\nRoderigo wanted to marry Desdemona himself, and he has been paying Iago to help him. Iago has his own reason to be angry: Othello has made a man called Cassio his lieutenant instead of him. By the end of the scene, Iago has woken Brabantio with the news, and slipped away into the dark.",
+            "source_refs": [
+              "reading-1"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset reading-1 (/pages/6/nodes/0/blocks); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-13",
+            "order": 13,
+            "before_item_id": "N11",
+            "kind": "media",
+            "status": "declared",
+            "content": "Act 1, Scene 1 begins at night on a street in Venice.\nRoderigo is angry with Iago.\nHe has been paying Iago to help him win Desdemona,\nbut Iago never told him that Othello has secretly married her.\nTo Roderigo, that action felt like a betrayal.\nIn this first section, Iago swears he knew nothing about the marriage.\nHe then tells Roderigo how much he hates Othello.\nAs you read, decide whether you believe him.\nThis is a play about deceit, and Iago is at the center of it.",
+            "source_refs": [
+              "reading-2-intro-captions"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset reading-2-intro-captions (/pages/7/nodes/0/intro_video/captions); caption text only, supplied range [0,42.42] seconds; no other audiovisual content or playback inferred; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-14",
+            "order": 14,
+            "before_item_id": "N11",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Act 1, Scene 1 begins at night on a street in Venice. Roderigo is angry with Iago. He has been paying Iago to help him win Desdemona, but Iago never told him that Othello has secretly married her. To Roderigo, that action felt like a betrayal.\nIn this first section, Iago swears he knew nothing about the marriage. He then tells Roderigo how much he hates Othello. As you read, decide whether you believe him. This is a play about deceit, and Iago is at the center of it.\nRODERIGO\nTush, never tell me! I take it much unkindly\n\nThat thou, Iago, who hast had my purse\n\nAs if the strings were thine, shouldst know of this.\nIAGO\n'Sblood, but you'll not hear me!\n\nIf ever I did dream of such a matter,\n\nAbhor me.\nRODERIGO\nThou toldst me thou didst hold him in thy hate.\nIAGO\nDespise me\n\nIf I do not. Three great ones of the city,\n\nIn personal suit to make me his lieutenant,\n\nOff-capped to him; and, by the faith of man,\n\nI know my price, I am worth no worse a place.\nYou've just read that Iago swore he knew nothing about the marriage. To prove he hates Othello, he told Roderigo that three important men asked Othello to make him lieutenant.\nIn this next section, you'll read that Othello turned those men down and chose someone else. Watch how Iago mocks the man who got the job.\n\nIAGO\nAnd what was he?\n\nForsooth, a great arithmetician,\n\nOne Michael Cassio, a Florentine,\n\n...That never set a squadron in the field...\n\nAnd I, of whom his eyes had seen the proof\n\nAt Rhodes, at Cyprus, and on other grounds\n\nChristened and heathen, must be beleed and calmed\n\nBy debitor and creditor.\n\n...He, in good time, must his lieutenant be,\n\nAnd I, God bless the mark, his Moorship's ancient.\n\n...Preferment goes by letter and affection,\n\nAnd not by old gradation, where each second\n\nStood heir to th' first. Now, sir, be judge yourself\n\nWhether I in any just term am affined\n\nTo love the Moor.",
+            "source_refs": [
+              "reading-2"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset reading-2 (/pages/7/nodes/0/blocks); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-15",
+            "order": 15,
+            "before_item_id": "N15",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "You've just read that Othello chose Michael Cassio as his lieutenant, a man who has never led soldiers in battle. Iago was left as ensign, the officer who carries the general's flag.\nIn this next section, Roderigo says he would never serve a man he hated, and Iago explains why he does. This is a crucial moment. Iago is about to tell Roderigo who he really is, in the most important speech of the scene.\nRODERIGO\nI would not follow him, then.\nIAGO\nO, sir, content you.\n\nI follow him to serve my turn upon him.\n\nWe cannot all be masters, nor all masters\n\nCannot be truly followed. (lines 45–47)\n\n...It is as sure as you are Roderigo,\n\nWere I the Moor I would not be Iago.\n\nIn following him, I follow but myself.\n\nHeaven is my judge, not I for love and duty,\n\nBut seeming so for my peculiar end.\n\nFor when my outward action doth demonstrate\n\nThe native act and figure of my heart\n\nIn complement extern, 'tis not long after\n\nBut I will wear my heart upon my sleeve\n\nFor daws to peck at. I am not what I am.",
+            "source_refs": [
+              "reading-3"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset reading-3 (/pages/8/nodes/0/blocks); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-16",
+            "order": 16,
+            "before_item_id": "N18",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "You've just read Iago's answer: he follows Othello only to use him. \"I am not what I am\" is one of the most powerful lines in the play. Iago admits that the man everyone sees is not real. He is disloyal. His duty is a pretense, and his loyalty is a façade. Why would such a deceitful man tell Roderigo the truth?\nIn this next section, Iago stops talking and starts acting. You'll read how he and Roderigo wake Brabantio, Desdemona's father, with the news of the marriage.\nRODERIGO\nWhat a full fortune does the thick-lips owe\n\nIf he can carry 't thus!\nIAGO\nCall up her father.\n\nRouse him. Make after him, poison his delight...\n\nIAGO\nAwake! What ho, Brabantio! Thieves, thieves!\n\nLook to your house, your daughter, and your bags!\n\nThieves, thieves!\n\nYou've just read how Iago woke Brabantio by shouting that thieves had robbed him, as if Desdemona were stolen property. This is a villainous moment. Hidden in the dark, Iago used crude, racist insults to turn Brabantio against Othello, and he made sure he was never seen.\nIn this final section, Iago explains why he must slip away before anyone recognizes him. Look for the word \"flag.\"\nIAGO\nThough I do hate him as I do hell pains,\n\nYet, for necessity of present life,\n\nI must show out a flag and sign of love—\n\nWhich is indeed but sign. (lines 171–174)\n\nYou've just read why Iago must leave: he has to keep showing Othello a \"flag and sign of love,\" even though it is only a sign. Across the whole scene, he has been untrustworthy to everyone. He pretends to serve Othello, takes Roderigo's money, and abandons Brabantio. His loyalty is a façade, and no one has seen through it yet.\nWe still haven't met Othello. In the next scene, he appears for the first time, and you can judge him for yourself.",
+            "source_refs": [
+              "reading-4"
+            ],
+            "target_refs": [
+              "K-language",
+              "K-evidence"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Exact supplied text from source asset reading-4 (/pages/9/nodes/0/blocks); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
@@ -3499,7 +3499,7 @@
             "before_item_id": "N24",
             "kind": "teaching",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Serving a leader can be justified by the need to maintain one's present livelihood.",
             "source_refs": [
               "counterpart"
             ],
@@ -3508,7 +3508,7 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /claim; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset counterpart (/claim); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
@@ -3517,7 +3517,7 @@
             "before_item_id": "N29",
             "kind": "teaching",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "I follow him to serve my turn upon him.\nWe cannot all be masters, nor all masters\nCannot be truly followed.\nRoderigo has just asked Iago an obvious question: if he hates Othello, why does he still serve him? Iago answers.\nIago is telling Roderigo: I only serve Othello so that I can use him. Not every leader deserves real loyalty. Let's break down the words Shakespeare uses.\nIago describes his service with the verb 'follow': 'I follow him.' 'Follow' suggests obedience, which is what a loyal soldier gives his general. This demonstrates that, on the outside, Iago appears to be a faithful ensign. However, his loyalty is only a façade.\nIago says he follows Othello 'to serve my turn upon him.' 'Serve' usually means to work for someone, but 'serve my turn' suggests using someone for your own benefit. This demonstrates that Iago's service is a pretense: he is not working for Othello, but against him. He is deceitful and disloyal.\nIago claims that not all masters can be 'truly followed,' using the adverb 'truly,' which means honestly or faithfully. 'Truly' suggests that Iago has judged Othello unworthy of real loyalty. This demonstrates Iago's hypocrisy: he decides who deserves faithful service while being completely false himself. He is untrustworthy and Machiavellian, making betrayal sound like common sense.\nThough I do hate him as I do hell pains,\nYet, for necessity of present life,\nI must show out a flag and sign of love—\nWhich is indeed but sign.\nIago is about to slip away before Brabantio sees him. He explains to Roderigo why he must keep up appearances.\nIago is telling Roderigo: I hate Othello, but for now I need to look loyal. My loyalty is only for show. Let's break down the words Shakespeare uses.\nIago compares his hatred to 'hell pains,' the tortures of hell. This imagery suggests a hatred that is extreme, burning and endless. This demonstrates that Iago's true feelings are the opposite of loyalty: beneath his outward show, he is consumed by hate.\nIago says he must 'show out a flag and sign of love.' As ensign, Iago literally carries Othello's flag, so the metaphor suggests that his loyalty is something he holds up for others to see, like a banner. This demonstrates that his loyalty is a deliberate performance: a public façade.\nIago ends with 'Which is indeed but sign.' Here, 'but' is an adverb meaning 'only.' 'But sign' suggests that the flag is empty, a sign with nothing real behind it. This demonstrates that Iago is deceitful and treacherous: he openly admits that his love for Othello is a pretense.",
             "source_refs": [
               "worked-teaching"
             ],
@@ -3526,7 +3526,7 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/11/nodes/0/screens; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset worked-teaching (/pages/11/nodes/0/screens); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
@@ -3535,7 +3535,7 @@
             "before_item_id": "N37",
             "kind": "teaching",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "\"I am not what I am.\"",
             "source_refs": [
               "selected-quote-A"
             ],
@@ -3544,7 +3544,7 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/12/nodes/0/quotes; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset selected-quote-A (/pages/12/nodes/0/quotes); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
@@ -3553,7 +3553,7 @@
             "before_item_id": "N40",
             "kind": "teaching",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "\"not I for love and duty, / But seeming so for my peculiar end.\"",
             "source_refs": [
               "selected-quote-B"
             ],
@@ -3562,7 +3562,7 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/12/nodes/0/quotes; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset selected-quote-B (/pages/12/nodes/0/quotes); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           },
           {
@@ -3571,7 +3571,7 @@
             "before_item_id": "N43",
             "kind": "teaching",
             "status": "declared",
-            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "content": "Iago is a Machiavellian villain who is faithless and false.",
             "source_refs": [
               "recall-statement"
             ],
@@ -3580,7 +3580,7 @@
               "K-evidence"
             ],
             "revealed_target_refs": [],
-            "provenance": "Supplied source instruction /pages/13/nodes/0/repeat; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
+            "provenance": "Exact supplied text from source asset recall-statement (/pages/13/nodes/0/repeat); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.",
             "disclosed_item_ids": []
           }
         ],
@@ -3593,7 +3593,7 @@
               "K-media"
             ],
             "prior_event_refs": [
-              "TEACH-1"
+              "TEACH-4"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3612,7 +3612,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-1"
+                "TEACH-4"
               ],
               "source_refs": [
                 "unit-caption-2"
@@ -3628,7 +3628,7 @@
               "K-media"
             ],
             "prior_event_refs": [
-              "TEACH-1"
+              "TEACH-4"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3647,7 +3647,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-1"
+                "TEACH-4"
               ],
               "source_refs": [
                 "unit-caption-2"
@@ -3663,7 +3663,7 @@
               "K-media"
             ],
             "prior_event_refs": [
-              "TEACH-2"
+              "TEACH-5"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3682,7 +3682,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-2"
+                "TEACH-5"
               ],
               "source_refs": [
                 "unit-caption-3"
@@ -3698,7 +3698,7 @@
               "K-media"
             ],
             "prior_event_refs": [
-              "TEACH-3"
+              "TEACH-6"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3717,7 +3717,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-3"
+                "TEACH-6"
               ],
               "source_refs": [
                 "unit-caption-4"
@@ -3733,7 +3733,7 @@
               "K-language"
             ],
             "prior_event_refs": [
-              "TEACH-4"
+              "TEACH-10"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "word_web semantic-association; static packet-authoring intention, not a mastery claim.",
@@ -3752,7 +3752,7 @@
             "support": {
               "mode": "guided",
               "event_refs": [
-                "TEACH-4"
+                "TEACH-10"
               ],
               "source_refs": [
                 "word-web-context"
@@ -3768,7 +3768,7 @@
               "K-language"
             ],
             "prior_event_refs": [
-              "TEACH-5"
+              "TEACH-11"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3787,7 +3787,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-5"
+                "TEACH-11"
               ],
               "source_refs": [
                 "term-context"
@@ -3803,7 +3803,7 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6"
+              "TEACH-12"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3822,7 +3822,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6"
+                "TEACH-12"
               ],
               "source_refs": [
                 "reading-1"
@@ -3838,7 +3838,7 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6"
+              "TEACH-12"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3857,7 +3857,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6"
+                "TEACH-12"
               ],
               "source_refs": [
                 "reading-1"
@@ -3873,7 +3873,7 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6"
+              "TEACH-12"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3892,7 +3892,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6"
+                "TEACH-12"
               ],
               "source_refs": [
                 "reading-1"
@@ -3908,7 +3908,7 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6"
+              "TEACH-12"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "written_response explanation; static packet-authoring intention, not a mastery claim.",
@@ -3927,7 +3927,7 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6"
+                "TEACH-12"
               ],
               "source_refs": [
                 "reading-1"
@@ -3943,9 +3943,9 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -3964,9 +3964,9 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14"
               ],
               "source_refs": [
                 "reading-1",
@@ -3984,9 +3984,9 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4005,9 +4005,9 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14"
               ],
               "source_refs": [
                 "reading-1",
@@ -4025,9 +4025,9 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4046,9 +4046,9 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14"
               ],
               "source_refs": [
                 "reading-1",
@@ -4066,9 +4066,9 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "written_response explanation; static packet-authoring intention, not a mastery claim.",
@@ -4087,9 +4087,9 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14"
               ],
               "source_refs": [
                 "reading-1",
@@ -4107,10 +4107,10 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4129,10 +4129,10 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15"
               ],
               "source_refs": [
                 "reading-1",
@@ -4151,10 +4151,10 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4173,10 +4173,10 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15"
               ],
               "source_refs": [
                 "reading-1",
@@ -4195,10 +4195,10 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "written_response explanation; static packet-authoring intention, not a mastery claim.",
@@ -4217,10 +4217,10 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15"
               ],
               "source_refs": [
                 "reading-1",
@@ -4239,11 +4239,11 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9",
-              "TEACH-10"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15",
+              "TEACH-16"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4262,11 +4262,11 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9",
-                "TEACH-10"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15",
+                "TEACH-16"
               ],
               "source_refs": [
                 "reading-1",
@@ -4286,11 +4286,11 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9",
-              "TEACH-10"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15",
+              "TEACH-16"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4309,11 +4309,11 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9",
-                "TEACH-10"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15",
+                "TEACH-16"
               ],
               "source_refs": [
                 "reading-1",
@@ -4333,11 +4333,11 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9",
-              "TEACH-10"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15",
+              "TEACH-16"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "single_choice recognition; static packet-authoring intention, not a mastery claim.",
@@ -4356,11 +4356,11 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9",
-                "TEACH-10"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15",
+                "TEACH-16"
               ],
               "source_refs": [
                 "reading-1",
@@ -4380,11 +4380,11 @@
               "K-evidence"
             ],
             "prior_event_refs": [
-              "TEACH-6",
-              "TEACH-7",
-              "TEACH-8",
-              "TEACH-9",
-              "TEACH-10"
+              "TEACH-12",
+              "TEACH-13",
+              "TEACH-14",
+              "TEACH-15",
+              "TEACH-16"
             ],
             "prepares_for_item_ids": [],
             "measurement_intent": "written_response explanation; static packet-authoring intention, not a mastery claim.",
@@ -4403,11 +4403,11 @@
             "support": {
               "mode": "source-visible",
               "event_refs": [
-                "TEACH-6",
-                "TEACH-7",
-                "TEACH-8",
-                "TEACH-9",
-                "TEACH-10"
+                "TEACH-12",
+                "TEACH-13",
+                "TEACH-14",
+                "TEACH-15",
+                "TEACH-16"
               ],
               "source_refs": [
                 "reading-1",

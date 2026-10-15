@@ -856,7 +856,7 @@
           "before_item_id": "Q01",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "Othello\nby William Shakespeare\n\nAbout the play\n\nOthello is a tragedy by William Shakespeare, written around 1603. It tells the story of Othello, a Black African general who leads the army of Venice. Othello is respected and powerful, but in Venice he is also an outsider. One of his own officers, Iago, secretly hates him. Over the course of the play, Iago sets out to destroy Othello using nothing but lies.\n\nThe opening scene: Act 1, Scene 1\n\nThe play begins in the middle of the night, on a street in Venice. We meet two characters, Roderigo and Iago. They are arguing about shocking news: Othello has just secretly married Desdemona, the daughter of a powerful senator, Brabantio.\n\nRoderigo wanted to marry Desdemona himself, and he has been paying Iago to help him. Iago has his own reason to be angry: Othello has made a man called Cassio his lieutenant instead of him. By the end of the scene, Iago has woken Brabantio with the news, and slipped away into the dark.",
           "source_refs": [
             "S-INTRO"
           ],
@@ -864,7 +864,7 @@
             "K-CONTEXT"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-INTRO; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-INTRO (S-INTRO); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -873,7 +873,7 @@
           "before_item_id": "Q01",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "Roderigo: a rich young man who wants to marry Desdemona\nIago: Othello's ensign: the officer who carries the general's flag\nDesdemona: Brabantio's daughter, who has secretly married Othello\nBrabantio: a powerful senator of Venice and Desdemona's father\nCassio: Othello's new lieutenant\nlieutenant: the officer second in command to the general\nOff-capped: took off their hats to show respect when they asked Othello to promote Iago\nI know my price: I know what I'm worth\nForsooth: \"in truth\", said sarcastically here\narithmetician: a man who is good with numbers, not with fighting. Iago is mocking Cassio.\nhis Moorship's ancient: \"ancient\" means ensign. \"Moorship\" is a mocking title Iago invents for Othello.\nPreferment: promotion\nletter and affection: who you know and who likes you\nold gradation: the old system, where you were promoted in order of experience\naffined: bound, or obliged",
           "source_refs": [
             "S-GLOSSARY"
           ],
@@ -881,7 +881,7 @@
             "K-CONTEXT"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-GLOSSARY; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-GLOSSARY (S-GLOSSARY); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -890,7 +890,7 @@
           "before_item_id": "Q01",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "betrayal: breaking someone's trust\ndeceitful: tricking people by hiding the truth\nuntrustworthy: cannot be relied on\ndisloyal: not faithful to someone you should support\npretense: acting as if something is true when it isn't\nfaçade: a false front that hides what is behind it\nMachiavellian villain: Machiavellian: using cunning and lies to gain power. A Machiavellian villain schemes and deceives to get what he wants.",
           "source_refs": [
             "S-VOCAB"
           ],
@@ -898,7 +898,7 @@
             "K-CONTEXT"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-VOCAB; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-VOCAB (S-VOCAB); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -907,7 +907,7 @@
           "before_item_id": "Q03",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "RODERIGO\nTush, never tell me! I take it much unkindly\nThat thou, Iago, who hast had my purse\nAs if the strings were thine, shouldst know of this.\nIAGO\n'Sblood, but you'll not hear me!\nIf ever I did dream of such a matter,\nAbhor me.\nRODERIGO\nThou toldst me thou didst hold him in thy hate.\nIAGO\nDespise me\nIf I do not. Three great ones of the city,\nIn personal suit to make me his lieutenant,\nOff-capped to him; and, by the faith of man,\nI know my price, I am worth no worse a place.\n\n[Iago explains that Othello turned the great men down, saying he had already chosen his officer.]\nIAGO\nAnd what was he?\nForsooth, a great arithmetician,\nOne Michael Cassio, a Florentine,\n...That never set a squadron in the field...\nAnd I, of whom his eyes had seen the proof\nAt Rhodes, at Cyprus, and on other grounds\nChristened and heathen, must be beleed and calmed\nBy debitor and creditor.\n...He, in good time, must his lieutenant be,\nAnd I, God bless the mark, his Moorship's ancient.\n...Preferment goes by letter and affection,\nAnd not by old gradation, where each second\nStood heir to th' first. Now, sir, be judge yourself\nWhether I in any just term am affined\nTo love the Moor.",
           "source_refs": [
             "S-PROMOTION"
           ],
@@ -915,7 +915,7 @@
             "K-GRIEVANCE"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-PROMOTION; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-PROMOTION (S-PROMOTION); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -924,7 +924,7 @@
           "before_item_id": "Q06",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "RODERIGO\nI would not follow him, then.\nIAGO\nO, sir, content you.\nI follow him to serve my turn upon him.\nWe cannot all be masters, nor all masters\nCannot be truly followed. (lines 45–47)\n...It is as sure as you are Roderigo,\nWere I the Moor I would not be Iago.\nIn following him, I follow but myself.\nHeaven is my judge, not I for love and duty,\nBut seeming so for my peculiar end.\nFor when my outward action doth demonstrate\nThe native act and figure of my heart\nIn complement extern, 'tis not long after\nBut I will wear my heart upon my sleeve\nFor daws to peck at. I am not what I am.",
           "source_refs": [
             "S-SERVICE"
           ],
@@ -936,7 +936,7 @@
             "K-SYNTHESIS"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-SERVICE; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-SERVICE (S-SERVICE); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -945,7 +945,7 @@
           "before_item_id": "Q09",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "RODERIGO\nWhat a full fortune does the thick-lips owe\nIf he can carry 't thus!\nIAGO\nCall up her father.\nRouse him. Make after him, poison his delight...\n[They go to Brabantio's house.]\nIAGO\nAwake! What ho, Brabantio! Thieves, thieves!\nLook to your house, your daughter, and your bags!\nThieves, thieves!\n[Hidden in the dark, Iago shouts crude, racist insults about Othello and Desdemona. Brabantio is horrified. Before he can be seen, Iago tells Roderigo he must leave.]",
           "source_refs": [
             "S-ACTION"
           ],
@@ -956,7 +956,7 @@
             "K-SYNTHESIS"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-ACTION; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-ACTION (S-ACTION); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -965,7 +965,7 @@
           "before_item_id": "Q09",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "At the beginning of the play, Shakespeare exposes Iago as deceitful and disloyal to Othello.\n\"I answer the Learning Question first, with two words from my web.\"\n\nThis is evident in the quote \"I follow him to serve my turn upon him.\"\n\"I choose a short quote that proves my point.\"\n\nThe verb \"follow\" means to obey a leader, demonstrating that on the outside Iago looks like a loyal soldier.\n\"Now one word. 'Follow' sounds loyal: that's the façade.\"\n\nAlso, the verb \"serve\" usually means to work for someone, but \"serve my turn\" means to use them for your own benefit, demonstrating that Iago plans to betray Othello.\n\"The second word shows what's behind the façade.\"\n\nTherefore, Iago is clearly exposed to be a Machiavellian villain: his loyalty is only a pretense and a façade.\n\"I answer the Learning Question again, more strongly.\"",
           "source_refs": [
             "S-MODEL"
           ],
@@ -974,7 +974,7 @@
             "K-SYNTHESIS"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-MODEL; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-MODEL (S-MODEL); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -983,7 +983,7 @@
           "before_item_id": "Q11",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "IAGO\nThough I do hate him as I do hell pains,\nYet, for necessity of present life,\nI must show out a flag and sign of love—\nWhich is indeed but sign. (lines 171–174)\n[Iago leaves. Brabantio gathers his men to find Othello.]",
           "source_refs": [
             "S-FLAG"
           ],
@@ -993,7 +993,7 @@
             "K-SYNTHESIS"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-FLAG; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-FLAG (S-FLAG); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         },
         {
@@ -1002,7 +1002,7 @@
           "before_item_id": "Q13",
           "kind": "teaching",
           "status": "declared",
-          "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+          "content": "Read the question. Search the scene for evidence. Find a short quotation. State your interpretation and explain how words in the quotation support it.",
           "source_refs": [
             "S-WRITING"
           ],
@@ -1010,7 +1010,7 @@
             "K-SYNTHESIS"
           ],
           "revealed_target_refs": [],
-          "provenance": "Supplied source instruction S-WRITING; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+          "provenance": "Exact supplied text from source asset S-WRITING (S-WRITING); complete supplied text asset, which may be only an excerpt of a larger work; no expansion beyond this text; declared planned availability, individual exposure unknown; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
           "disclosed_item_ids": []
         }
       ],

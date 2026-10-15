@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
-import { compileInstructionalPlan } from '../instructional_plan.mjs';
+import { compileInstructionalPlan, proposeInstructionalPlan } from '../instructional_plan.mjs';
 import { compileContextPlan } from '../context_intake.mjs';
 import { nativeWriterMessages, validateNativeInputs, validateNativeResponse, adaptNativeResponse, nativeLearnerPacket } from '../native_formats.mjs';
 import { mockNativeResponse } from '../native_smoke.mjs';
@@ -13,6 +13,37 @@ const formats = await read('public/formats.json'), methods = await read('public/
 const fixture = () => ({ request: structuredClone(originalRequest), context: structuredClone(originalContext) });
 const sync = (r, c) => { c.native.course_context = structuredClone(r.course_context); };
 const packet = (r, c) => JSON.parse(nativeWriterMessages(r, c, schema, methods, formats)[1].content);
+
+test('declared events preserve exact supplied teaching text and bounded caption availability without source expansion', async () => {
+  for (const prefix of ['current-native', 'othello-1-1']) {
+    const request = await read(`examples/${prefix}-request.json`), context = await read(`examples/${prefix}-context.json`);
+    const plan = proposeInstructionalPlan(request, context);
+    for (const event of plan.events) {
+      const source = request.course_context.source_assets.find(row => row.id === event.source_refs[0]);
+      assert.equal(event.content, source.text);
+      assert.equal(event.status, 'declared');
+      assert.match(event.provenance, /individual exposure unknown/);
+      if (source.kind === 'media-transcript') assert.ok(event.provenance.includes(JSON.stringify(source.time_range)));
+    }
+    if (prefix === 'current-native') {
+      const before = ref => plan.events.find(event => event.source_refs.includes(ref)).before_item_id;
+      assert.equal(before('unit-caption-6'), 'N05');
+      assert.equal(before('unit-caption-7'), 'N05');
+      assert.equal(before('unit-caption-3'), 'N03');
+      assert.equal(before('reading-2-intro-captions'), 'N11');
+    } else {
+      for (const ref of ['S-MODEL', 'S-WRITING']) {
+        const source = request.course_context.source_assets.find(row => row.id === ref);
+        assert.ok(request.course_context.prior_exposure.some(row => row.content === source.text));
+        assert.equal(plan.events.find(event => event.source_refs.includes(ref)).content, source.text);
+      }
+    }
+    request.course_context.source_assets[0].text = 'Only this supplied excerpt is available.';
+    assert.equal(proposeInstructionalPlan(request, context).events.find(event => event.source_refs.includes(request.course_context.source_assets[0].id)).content, 'Only this supplied excerpt is available.');
+    delete request.course_context.source_assets[0].text;
+    assert.match(proposeInstructionalPlan(request, context).events.find(event => event.source_refs.includes(request.course_context.source_assets[0].id)).content, /text unavailable/);
+  }
+});
 
 test('lesson purpose, prior instruction and prerequisite changes reach resolved writer context and invalidate stale return contracts', () => {
   const { request, context } = fixture(), response = mockNativeResponse(request);

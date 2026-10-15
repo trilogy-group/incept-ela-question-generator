@@ -159,6 +159,11 @@ The shared schema is pinned to public contract commit `3dec9fad4af06b853c00324d3
 The current 50-row source projection is an explicit practice proposal. Its three broad goal buckets are marked
 `source-projected`, rather than authoritative curriculum. It preserves the supplied blueprint and does not choose
 curriculum, progression or a test target. Source projection now uses Node 22 for this explicit plan-authoring step.
+Declared source events retain the exact supplied instructional or passage text. A source reference alone does not
+mean the complete asset was seen: caption events retain their supplied cumulative time range and appear only once
+that range is available at the declared pause or next page. Full supplied text may itself be an excerpt of a larger
+work. Missing media text remains unavailable; neither captions nor scheduling comments establish actual playback
+or individual exposure. General prior-exposure policies remain declarations rather than invented learner speech.
 The older pinned public schemas and authored reference remain unchanged; the legacy writer uses the local
 `contextual-generator-request` adapter extension.
 
