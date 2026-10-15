@@ -11,6 +11,9 @@ The pinned public inputs in `public/` come from learning-truths' library and `co
 - Use only public teaching knowledge, course context and the shared contract from current snapshots.
 - Never copy private evaluation material here or use verdicts to tune this baseline.
 - An assessment must not call models, open credential files or start research.
+- Live generation and model-judged generation trials are on hold until the user assigns a different generator owner
+  and an expected-label setter outside both halves, with expected labels frozen before trial judges run.
+  Maintenance by this agent does not provide independent ownership.
 - Preserve first attempts, holds, repairs and selections; a passing transport check is not a quality verdict.
 - Context-aware writing requires an explicit instructional plan. Distinguish declared teaching, observed records
   and conditional events; target authority is a declaration, not qualification or proof of mastery.

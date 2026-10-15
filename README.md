@@ -47,6 +47,8 @@ tasks; it does not establish that an evaluator can judge them.
 
 ## Model writer
 
+Live generation and model-judged generation trials are on hold until the user assigns a different generator owner and an expected-label setter outside both halves, with expected labels frozen before judges run.
+
 The optional native lane now prepares the **current hosted authoring reference**: 50 activities across 14 native
 kinds and 19 pages, frozen at current main source commit `1e4f4343ed33f1094741f007df43a0773f5e642c` and source SHA256
 `5d077d1846b19eb583e0a5d77a8db16b6528da9efdd57521c8957614858c182c`. This is a separate source from the older
