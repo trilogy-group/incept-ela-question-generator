@@ -1,4 +1,5 @@
 // Offline fixtures exercise transport. They are never claimed generated teaching quality.
+import { mockSequencePlan } from './instructional_plan.mjs';
 import { FORMAT_DISPATCH, NATIVE_PROTOCOL, dispatch } from './native_formats.mjs';
 
 export function mockNativeResponse(request) {
@@ -63,7 +64,51 @@ export function mockNativeResponse(request) {
     else throw new Error(`No mock source fixture supplied for ${family}`);
     return item;
   });
-  return { protocol: NATIVE_PROTOCOL, request_id: request.request_id, status: 'prepared-for-review', holds: [], items };
+  const response = { protocol: NATIVE_PROTOCOL, request_id: request.request_id, status: 'prepared-for-review', holds: [], items };
+  request.course_context.instructional_plan.items.forEach((intended, i) => {
+    const item = items[i];
+    if (!item.view.rubric) return;
+    item.view.rubric.criteria = intended.expected_evidence.map((expected, j) => ({ ...structuredClone(item.view.rubric.criteria[0]), id: `criterion-${j + 1}`, requirement: expected.claim }));
+    item.source_bindings = item.source_bindings.filter(binding => !binding.field_ref.startsWith('/view/rubric/criteria/'));
+    intended.expected_evidence.forEach((expected, j) => {
+      for (const ref of expected.source_refs) {
+        const source = request.course_context.source_assets.find(row => row.id === ref);
+        item.source_bindings.push({ source_ref: ref, quote: source.text.split('\n').find(line => line.trim()), field_ref: `/view/rubric/criteria/${j}`, relation: 'Offline expected-evidence binding only; not a semantic support judgment.' });
+      }
+    });
+  });
+  response.sequence_plan = mockSequencePlan(request, response);
+  return response;
+}
+
+// Legacy text shapes use the same explicitly synthetic, source-bound offline route.
+export function mockTextResponse(request) {
+  const items = request.sequence_blueprint.map((slot, i) => {
+    const intended = request.course_context.instructional_plan.items[i], phase = request.course_context.lesson_plan.phases.find(row => row.id === slot.position.phase_ref);
+    const sources = phase.source_refs.map(ref => request.course_context.source_assets.find(row => row.id === ref)), quote = sources[0].text.split('\n').find(line => line.trim());
+    const kind = slot.formats[0], item = { id: slot.position.id, kind, view: {}, source_bindings: [] };
+    const bind = (field_ref, source = sources[0], value = quote) => item.source_bindings.push({ source_ref: source.id, quote: value, field_ref, relation: 'Offline text transport binding only; no academic support or quality judgment.' });
+    const prompt = `OFFLINE TEXT TRANSPORT FIXTURE: ${slot.support}`, reason = 'Offline source-bound rationale fixture; academic meaning is unmeasured.';
+    if (['reading_mcq', 'key_term_mcq'].includes(kind)) {
+      item.view = { stem: prompt, options: ['Offline option A', 'Offline option B', 'Offline option C'], key: [0], option_feedback: [reason, reason, reason], correct_feedback: reason };
+      item.view.options.forEach((v, j) => { bind(`/view/options/${j}`); bind(`/view/option_feedback/${j}`); }); bind('/view/correct_feedback');
+    } else if (kind === 'classify') {
+      item.view = { prompt, categories: [{ id: 'A', label: 'Offline category A', description: 'Declared fixture category A.' }, { id: 'B', label: 'Offline category B', description: 'Declared fixture category B.' }], entries: [{ id: 'one', text: 'Offline source entry A' }, { id: 'two', text: 'Offline source entry B' }], mapping: { one: 'A', two: 'B' }, entry_feedback: { one: reason, two: reason }, correct_feedback: reason };
+      bind('/view/entries/0'); bind('/view/entries/1'); bind('/view/correct_feedback');
+    } else if (kind === 'evidence_select') {
+      const candidates = [...new Set(sources.flatMap(source => source.text.split('\n')).filter(line => line.trim()))].slice(0, 3);
+      if (candidates.length < 3) throw new Error('Offline evidence fixture requires three supplied source lines; no content invented.');
+      item.view = { prompt, claim: 'Offline evidence-selection claim fixture; no academic judgment.', candidates, key: [0], selection_rule: 'Select the declared offline fixture key.', option_feedback: candidates.map(() => reason), correct_feedback: reason };
+      candidates.forEach((value, j) => bind(`/view/candidates/${j}`, sources.find(source => source.text.includes(value)), value)); bind('/view/correct_feedback');
+    } else {
+      item.view = { prompt, response_mode: 'written', suggested_length: 'Offline illustration only.', sample_answer: quote, feedback: reason, rubric: { id: `R-${item.id}`, criteria: intended.expected_evidence.map((expected, j) => ({ id: `C-${j + 1}`, requirement: expected.claim, points: 1, full_credit: 'The declared expected evidence is provided.', no_credit: 'The declared expected evidence is absent.', accept_alternative: 'Equivalent source-supported wording can be reviewed.' })), allocation: 'One illustrative point per supplied expectation.', combination_rules: 'Explicit offline marking obligations only; no semantic validation.', status: 'Proposed offline fixture, not a qualified learning standard.' } };
+      bind('/view/sample_answer'); bind('/view/feedback');
+      intended.expected_evidence.forEach((expected, j) => expected.source_refs.forEach(ref => { const source = sources.find(row => row.id === ref); bind(`/view/rubric/criteria/${j}`, source, source.text.split('\n').find(line => line.trim())); }));
+    }
+    return item;
+  });
+  const response = { protocol: request.protocol, request_id: request.request_id, status: 'prepared-for-review', holds: [], items };
+  response.sequence_plan = mockSequencePlan(request, response); return response;
 }
 
 export function formatCoverage(request, counts = {}, mockTransportChecked = false) {

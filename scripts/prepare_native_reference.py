@@ -7,6 +7,7 @@ The original pin remains provenance of the source, not of the projected bytes.
 import argparse
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 PIN = "1e4f4343ed33f1094741f007df43a0773f5e642c"
@@ -183,6 +184,14 @@ def prepare(source_bytes, receipt, counterpart, comparison=None):
     course["delivery_context"] = delivery
     request = {"protocol": "question-lane-native/0.2", "request_id": "current-reference-all-native-formats", "course_context": course, "sequence_blueprint": slots, "source_provenance": provenance, "intake_limits": ["No original question, key, feedback or rubric copied into this writer packet.", "Objectives are explicit proposed generation intentions, not recovered author answers.", "Original authored activities include guided tasks and dependent subchecks; 50 is not a mastery-measurement count.", "Media captions are supplied authoring data; video playback and audiovisual equivalence were not verified.", "Hypothetical counterpart claim is supplied packet authoring, not a source quotation.", "Question quality and learner outcomes await later independent evaluation."]}
     context = {"contract": "lesson-context 0.1", "source": provenance, "lesson": {"id": original["lessonId"], "title": original["title"], "learning_question": original["question"], "keywords": original["keywords"]}, "native": {"course_context": course, "pages": pages}, "adapter_extension": "native-activity-transport/0.2", "preparation_status": "neutral-writer-context"}
+    # Explicit proposal construction, never a runtime fallback for missing context.
+    # Authority of the three projected scaffolding buckets remains source-projected.
+    code = """import {proposeInstructionalPlan} from './instructional_plan.mjs';
+let text=''; for await (const part of process.stdin) text+=part;
+const {request,context}=JSON.parse(text);
+process.stdout.write(JSON.stringify(proposeInstructionalPlan(request,context,{authorityKind:'source-projected',note:'Explicit source-projection practice proposal. The three broad scaffolding buckets are not original authoritative curriculum goals; no individual exposure or mastery inferred.'})));"""
+    result = subprocess.run(["node", "--input-type=module", "-e", code], input=json.dumps({"request": request, "context": context}), text=True, capture_output=True, check=True, cwd=Path(__file__).resolve().parents[1])
+    course["instructional_plan"] = json.loads(result.stdout)
     return request, context
 
 

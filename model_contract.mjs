@@ -1,3 +1,4 @@
+import { validateSequencePlan } from './instructional_plan.mjs';
 export class StructuralError extends Error {}
 
 function fail(location, message) { throw new StructuralError(`${location}: ${message}`); }
@@ -14,7 +15,7 @@ export function resolve(value, pointer) {
   return selected;
 }
 
-const SUPPORTED = new Set(['$schema', 'title', 'description', 'type', 'required', 'properties', 'items', 'const', 'enum', 'additionalProperties', '$ref', '$defs', 'minLength', 'minItems', 'maxItems', 'allOf', 'if', 'then', 'else']);
+const SUPPORTED = new Set(['$schema', 'title', 'description', 'type', 'required', 'properties', 'items', 'const', 'enum', 'additionalProperties', '$ref', '$defs', 'minLength', 'minItems', 'maxItems', 'minimum', 'allOf', 'if', 'then', 'else']);
 
 export function validate(value, schema, location = 'packet', root = schema) {
   for (const key of Object.keys(schema)) if (!SUPPORTED.has(key)) fail(location, `unsupported schema keyword ${key}`);
@@ -24,6 +25,7 @@ export function validate(value, schema, location = 'packet', root = schema) {
   if (Object.hasOwn(schema, 'const') && value !== schema.const) fail(location, 'constant differs');
   if (schema.enum && !schema.enum.includes(value)) fail(location, 'unsupported value');
   if (typeof value === 'string' && value.length < (schema.minLength ?? 0)) fail(location, 'string is too short');
+  if (typeof value === 'number' && schema.minimum !== undefined && value < schema.minimum) fail(location, 'number is below minimum');
   if (Array.isArray(value)) {
     if (value.length < (schema.minItems ?? 0) || value.length > (schema.maxItems ?? Infinity)) fail(location, 'array length differs');
     if (schema.items) value.forEach((row, i) => validate(row, schema.items, `${location}[${i}]`, root));
@@ -57,7 +59,7 @@ export function validateInputs(request, context, requestSchema, contextSchema) {
   unique(course.source_assets.map(source => source.id), 'source assets');
   for (const source of sources.values()) text(source.text, `source ${source.id}`);
   const slots = request.sequence_blueprint;
-  if (slots.length < 12 || slots.length > 16) fail('sequence', 'complete lesson requires 12 to 16 explicit interactions');
+  if (!slots.length) fail('sequence', 'explicit nonempty sequence blueprint required; task count is supplied by its author');
   unique(slots.map(slotId), 'slots');
   const pages = new Map(context.native.pages.map((page, i) => [page.id, i]));
   const targets = new Set(course.core_knowledge.map(target => target.id));
@@ -142,6 +144,7 @@ export function validateResponse(response, request, schema) {
       resolve(item, binding.field_ref);
     }
   });
+  validateSequencePlan(response, request);
   return response.items.length;
 }
 
@@ -152,6 +155,9 @@ export function adaptResponse(request, suppliedContext, response, provenance) {
   context.source = { ...provenance, lesson_source: originalSource };
   context.native.course_context = structuredClone(request.course_context);
   context.native.sequence_blueprint = structuredClone(request.sequence_blueprint);
+  context.native.student_context = structuredClone(request.student_context ?? null);
+  context.native.source_provenance = structuredClone(request.source_provenance ?? null);
+  context.native.sequence_plan = structuredClone(response.sequence_plan);
   const items = response.items.map((generated, i) => {
     const slot = request.sequence_blueprint[i];
     const pageIndex = context.native.pages.findIndex(page => page.id === slotPage(slot));
@@ -163,7 +169,7 @@ export function adaptResponse(request, suppliedContext, response, provenance) {
     return { id: generated.id, page: page.id, order: i + 1, kind: generated.kind, pointer: `/pages/${pageIndex}/question_slots/${questionIndex}`, view: structuredClone(generated.view), native: structuredClone(native), alignment: structuredClone(slot.position.alignment), source_anchors: generated.source_bindings.map(binding => ({ source_ref: binding.source_ref, quote: binding.quote, pointer: `/native/course_context/source_assets/${request.course_context.source_assets.findIndex(source => source.id === binding.source_ref)}/text`, field_ref: binding.field_ref, relation: binding.relation })), source_bindings: structuredClone(generated.source_bindings) };
   });
   context.preparation_status = 'generated-for-review';
-  const questionSet = { contract: 'question-set 0.1', source: structuredClone(context.source), lesson: context.lesson.id, made_by: { kind: 'generated', note: 'One source-grounded writer attempt, with only explicitly recorded structural repairs if needed. Independent academic review pending.' }, items, generation_metadata: structuredClone(provenance) };
+  const questionSet = { contract: 'question-set 0.1', source: structuredClone(context.source), lesson: context.lesson.id, made_by: { kind: 'generated', note: 'One source-grounded writer attempt, with only explicitly recorded structural repairs if needed. Independent academic review pending.' }, items, generation_metadata: structuredClone(provenance), sequence_plan: structuredClone(response.sequence_plan) };
   for (const item of items) if (JSON.stringify(resolve(context.native, item.pointer)) !== JSON.stringify(item.native)) throw new StructuralError('Finished native pointer differs');
   return { context, questionSet };
 }
@@ -171,6 +177,11 @@ export function adaptResponse(request, suppliedContext, response, provenance) {
 export function learnerPacket(context, questionSet) {
   const privateFields = new Set(['key', 'mapping', 'entry_feedback', 'option_feedback', 'correct_feedback', 'sample_answer', 'rubric', 'feedback', 'source_bindings']);
   const native = structuredClone(context.native);
+  delete native.sequence_plan;
+  delete native.sequence_blueprint;
+  delete native.student_context;
+  delete native.source_provenance;
+  if (native.course_context) { delete native.course_context.instructional_plan; delete native.course_context.learner_history; }
   for (const page of native.pages) if (page.question_slots) page.question_slots = page.question_slots.map(question => Object.fromEntries(Object.entries(question).filter(([key]) => !privateFields.has(key))));
   return { contract: 'learner-packet 0.1', lesson: structuredClone(context.lesson), native, item_order: questionSet.items.map(item => item.id), response_release: 'All answer keys and feedback are withheld until after the complete sequence; teaching exposures remain explicit in course_context.' };
 }

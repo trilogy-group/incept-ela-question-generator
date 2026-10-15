@@ -2,7 +2,7 @@
 
 Read [README.md](README.md), `config.json`, `examples/lessons.json`, `generator.py` and `contract_adapter.py`.
 For the optional Node writer and native context lane, also read `model_generate.mjs`, `native_formats.mjs`
-and `context_intake.mjs`; the offline commands are in README.md.
+and `context_intake.mjs`, plus `instructional_plan.mjs`; the offline commands are in README.md.
 The pinned public inputs in `public/` come from learning-truths' library and `contract/`.
 
 ## Separation rules
@@ -12,6 +12,9 @@ The pinned public inputs in `public/` come from learning-truths' library and `co
 - Never copy private evaluation material here or use verdicts to tune this baseline.
 - An assessment must not call models, open credential files or start research.
 - Preserve first attempts, holds, repairs and selections; a passing transport check is not a quality verdict.
+- Context-aware writing requires an explicit instructional plan. Distinguish declared teaching, observed records
+  and conditional events; target authority is a declaration, not qualification or proof of mastery.
+- Keep planned evidence, future task intent and supplied learner response records out of learner projections.
 
 ## Check
 

@@ -1,6 +1,7 @@
 // Optional native transport extension. Historical question-set 0.1 stays pinned.
 import { StructuralError, resolve } from './model_contract.mjs';
 import { compileContextPlan, checkResponseConstraints } from './context_intake.mjs';
+import { validateSequencePlan, INSTRUCTIONAL_WRITER_RULES } from './instructional_plan.mjs';
 
 export const NATIVE_PROTOCOL = 'question-lane-native/0.2';
 const fail = (where, detail) => { throw new StructuralError(`${where}: ${detail}`); };
@@ -174,14 +175,15 @@ function rubric(view, loc, required) {
 
 export function validateNativeResponse(response, request) {
   publicBoundary(response, 'response');
-  if (!response || Object.keys(response).some(k => !['protocol', 'request_id', 'status', 'holds', 'items'].includes(k))) fail('response', 'unexpected response field');
+  if (!response || Object.keys(response).some(k => !['protocol', 'request_id', 'status', 'holds', 'items', 'sequence_plan'].includes(k))) fail('response', 'unexpected response field');
   if (response.protocol !== NATIVE_PROTOCOL || response.request_id !== request.request_id) fail('response', 'protocol or request identifier differs');
   list(response.items, 'items', 0); list(response.holds, 'holds', 0);
-  if (response.status === 'held') { if (response.items.length || !response.holds.length) fail('response', 'hold needs reasons and no items'); response.holds.forEach(row => { text(row.code, 'hold'); text(row.detail, 'hold'); }); return 0; }
+  if (response.status === 'held') { if (response.items.length || !response.holds.length) fail('response', 'hold needs reasons and no items'); response.holds.forEach(row => { object(row, 'hold'); text(row.code, 'hold'); text(row.detail, 'hold'); }); return 0; }
   if (response.status !== 'prepared-for-review' || response.holds.length || response.items.length !== request.sequence_blueprint.length) fail('response', 'slot count/status differs');
   const compiled = compileContextPlan(request);
   response.items.forEach((item, i) => {
     const slot = request.sequence_blueprint[i], d = dispatch(slot), loc = slot.id;
+    object(item, loc);
     if (item.id !== loc || item.kind !== slot.native_kind || item.public_format !== slot.public_format || item.family !== d.family) fail(loc, 'native kind, format, family or order differs');
     if (Object.keys(item).some(k => !['id', 'kind', 'family', 'public_format', 'view', 'source_bindings'].includes(k))) fail(loc, 'unexpected item field');
     const v = item.view; object(v, loc); const required = [];
@@ -246,6 +248,7 @@ export function validateNativeResponse(response, request) {
       } else fail(loc, 'output family not implemented');
     }
     const bindings = list(item.source_bindings, `${loc} bindings`, required.length ? 1 : 0);
+    bindings.forEach(binding => { object(binding, `${loc} source binding`); text(binding.field_ref, `${loc} binding field pointer`); });
     required.forEach(pointer => { if (!bindings.some(row => row.field_ref === pointer)) fail(loc, `missing binding ${pointer}`); });
     const phase = request.course_context.lesson_plan.phases.find(row => row.id === slot.phase_ref);
     bindings.forEach(binding => {
@@ -258,7 +261,7 @@ export function validateNativeResponse(response, request) {
       if (d.family === 'evidence_selection' && /^\/view\/options\//.test(binding.field_ref) && field !== binding.quote) fail(loc, 'evidence choice must equal bound source quotation');
       if (d.family === 'say_back' && binding.field_ref === '/view/statement' && (field !== binding.quote || source.id !== slot.native_context.recall_source_ref)) fail(loc, 'say-back must use supplied recall statement exactly');
     });
-  }); return response.items.length;
+  }); validateSequencePlan(response, request); return response.items.length;
 }
 
 export function adaptNativeResponse(request, suppliedContext, response, provenance) {
@@ -266,12 +269,16 @@ export function adaptNativeResponse(request, suppliedContext, response, provenan
   const context = structuredClone(suppliedContext); context.source = { ...provenance, lesson_source: structuredClone(suppliedContext.source) };
   const contextPlan = compileContextPlan(request, suppliedContext);
   context.native.resolved_slot_contexts = structuredClone(contextPlan.slots);
+  context.native.sequence_plan = structuredClone(response.sequence_plan);
+  context.native.sequence_blueprint = structuredClone(request.sequence_blueprint);
+  context.native.student_context = structuredClone(request.student_context ?? null);
+  context.native.source_provenance = structuredClone(request.source_provenance ?? null);
   const items = response.items.map((generated, i) => {
     const slot = request.sequence_blueprint[i]; const p = context.native.pages.findIndex(page => page.id === slot.page_ref); const q = context.native.pages[p].question_slots.findIndex(row => row.id === slot.id);
     const native = { ...structuredClone(generated), source_context: structuredClone(slot), academic_quality: 'unmeasured' }; context.native.pages[p].question_slots[q] = native;
     return { ...structuredClone(generated), order: i + 1, page: slot.page_ref, pointer: `/pages/${p}/question_slots/${q}`, native, alignment: { target_refs: slot.target_refs, content_key_refs: slot.content_key_refs, pair_refs: slot.pair_refs, phase_ref: slot.phase_ref, support: slot.support, role: slot.role, depends_on: slot.depends_on, source_pointer: slot.source_pointer, context_pointer: slot.context_pointer } };
   });
-  const questionSet = { contract: 'question-set native 0.2', adapter_extension: 'native-activity-transport/0.2', lesson: context.lesson.id, source: structuredClone(context.source), items, generation_metadata: provenance, context_consumption: contextPlan.coverage };
+  const questionSet = { contract: 'question-set native 0.2', adapter_extension: 'native-activity-transport/0.2', lesson: context.lesson.id, source: structuredClone(context.source), items, generation_metadata: provenance, context_consumption: contextPlan.coverage, sequence_plan: structuredClone(response.sequence_plan) };
   items.forEach(item => { if (JSON.stringify(resolve(context.native, item.pointer)) !== JSON.stringify(item.native)) fail(item.id, 'native pointer mismatch'); });
   return { context, questionSet };
 }
@@ -282,11 +289,17 @@ export function nativeLearnerPacket(context, questionSet) {
   const strip = value => Array.isArray(value) ? value.map(strip) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value).filter(([k]) => !privateKeys.has(k)).map(([k, v]) => [k, strip(v)])) : value;
   const native = structuredClone(context.native); native.pages.forEach(page => { page.question_slots = page.question_slots.map(strip); });
   delete native.resolved_slot_contexts;
+  delete native.sequence_plan;
+  delete native.sequence_blueprint;
+  delete native.student_context;
+  delete native.source_provenance;
+  delete native.course_context.instructional_plan;
+  delete native.course_context.learner_history;
   return { contract: 'learner-packet native 0.2', lesson: context.lesson, native, item_order: questionSet.items.map(row => row.id), response_release: 'Keys and feedback withheld until the complete sequence; declared teaching exposures remain visible.' };
 }
 
 export function nativeWriterMessages(request, context, schema, methods, formats) {
-  return [{ role: 'system', content: 'Write one original source-grounded activity per declared slot, in order, matching the supplied native extension contracts. Use resolved_slot_contexts to connect the actual goal/performance, selected content claims, knowledge links and concrete pairings to the permitted source scope, operation and support. Follow supplied response modes and caps. Keep frozen quotations and counterpart context learner-visible as view.quote, view.counterclaim or view.counterpart_turn, with exact source bindings. Learner response records and declared prerequisites are context, not factual authority or proof of mastery/ZPD. Preserve native kinds, public format, response family, dependency and learner constraints. Use only supplied source_assets text and media transcripts as factual authority. Never invent missing learner history, sources, media, knowledge or counterpart claims. Source reference pointers describe authoring context, not questions to copy. The packet deliberately omits original questions, keys and marking rules. Return a typed held response with no items when required context is missing. Use exact quote bindings for every factual option, option rationale, sample answer, feedback and rubric criterion; each binding has source_ref, quote, field_ref and relation. Evidence selection options must be exact quotations. Keep entity and semantic relation explicit in classification. Composite subchecks stay separate and retain dependencies. Word analysis preserves the exact supplied quote and permitted words. Rebuild choices use surrounding taught sentence context. Say-back is unscored recall; confidence is unscored self-report; worked examples are instruction only. Proposed rubrics require source-supported meaning and reasoning, alternative answers and combination rules. Do not infer quality, readiness or mastery from valid transport. No judge, evaluator or tools. Return only JSON.' }, { role: 'user', content: JSON.stringify({ request, lesson_context: context, resolved_slot_contexts: compileContextPlan(request, context), writer_response_schema: schema, output_contracts: VIEW_CONTRACTS, dispatch: FORMAT_DISPATCH, public_methods: methods.cards.map(({ id, claim, actions, limits }) => ({ id, claim, actions, limits })), public_formats: formats.formats.map(({ id, conditions, teacher_key }) => ({ id, conditions, teacher_key })) }) }];
+  return [{ role: 'system', content: 'Write one original source-grounded activity per declared slot, in order, matching the supplied native extension contracts. Use resolved_slot_contexts to connect the actual goal/performance, selected content claims, knowledge links and concrete pairings to the permitted source scope, operation and support. Follow supplied response modes and caps. Keep frozen quotations and counterpart context learner-visible as view.quote, view.counterclaim or view.counterpart_turn, with exact source bindings. Learner response records and declared prerequisites are context, not factual authority or proof of mastery/ZPD. Preserve native kinds, public format, response family, dependency and learner constraints. Use only supplied source_assets text and media transcripts as factual authority. Never invent missing learner history, sources, media, knowledge or counterpart claims. Source reference pointers describe authoring context, not questions to copy. The packet deliberately omits original questions, keys and marking rules. Return a typed held response with no items when required context is missing. Use exact quote bindings for every factual option, option rationale, sample answer, feedback and rubric criterion; each binding has source_ref, quote, field_ref and relation. Evidence selection options must be exact quotations. Keep entity and semantic relation explicit in classification. Composite subchecks stay separate and retain dependencies. Word analysis preserves the exact supplied quote and permitted words. Rebuild choices use surrounding taught sentence context. Say-back is unscored recall; confidence is unscored self-report; worked examples are instruction only. Proposed rubrics require source-supported meaning and reasoning, alternative answers and combination rules. Do not infer quality, readiness or mastery from valid transport. No judge, evaluator or tools. Return only JSON.' + '\n' + INSTRUCTIONAL_WRITER_RULES }, { role: 'user', content: JSON.stringify({ request, lesson_context: context, resolved_slot_contexts: compileContextPlan(request, context), writer_response_schema: schema, output_contracts: VIEW_CONTRACTS, dispatch: FORMAT_DISPATCH, public_methods: methods.cards.map(({ id, claim, actions, limits }) => ({ id, claim, actions, limits })), public_formats: formats.formats.map(({ id, conditions, teacher_key }) => ({ id, conditions, teacher_key })) }) }];
 }
 
 export const VIEW_CONTRACTS = {

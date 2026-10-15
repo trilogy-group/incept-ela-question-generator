@@ -9,4 +9,7 @@ Read README.md and AGENTS.md before editing.
 - Gemini only through the TrueFoundry gateway; never the original Gemini keys. Never open, print or write a key.
 - The Python baseline and Node preparation and smoke commands run offline. The optional Node model writer
   has a configured gateway route; assessment work must use offline commands and make no live calls.
+- The Node writer requires `course_context.instructional_plan` and a source-bound returned `sequence_plan`.
+  Do not infer curriculum authority, actual exposure, personalized readiness or mastery from a declared plan.
+  Preserve explicit assessment/support intent; prior teaching does not automatically disclose a task answer.
 - No people's names or job roles in paths, text or commit messages; no attribution lines.

@@ -2,32 +2,114 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Source grounded writer response 0.1",
   "type": "object",
-  "required": ["protocol", "request_id", "status", "holds", "items"],
+  "required": [
+    "protocol",
+    "request_id",
+    "status",
+    "holds",
+    "items"
+  ],
   "additionalProperties": false,
   "properties": {
-    "protocol": {"const": "question-lane-generation/0.1"},
-    "request_id": {"type": "string", "minLength": 1},
-    "status": {"enum": ["prepared-for-review", "held"]},
-    "holds": {"type": "array", "items": {
-      "type": "object", "required": ["code", "detail"], "additionalProperties": false,
-      "properties": {"code": {"type": "string"}, "detail": {"type": "string"}}
-    }},
-    "items": {"type": "array", "items": {
-      "type": "object", "required": ["id", "kind", "view", "source_bindings"], "additionalProperties": false,
-      "properties": {
-        "id": {"type": "string", "minLength": 1},
-        "kind": {"enum": ["reading_mcq", "key_term_mcq", "classify", "evidence_select", "open_check", "open_prompt"]},
-        "view": {"type": "object"},
-        "source_bindings": {"type": "array", "minItems": 1, "items": {
-          "type": "object", "required": ["source_ref", "quote", "field_ref", "relation"], "additionalProperties": false,
-          "properties": {
-            "source_ref": {"type": "string", "minLength": 1},
-            "quote": {"type": "string", "minLength": 1},
-            "field_ref": {"type": "string", "minLength": 1},
-            "relation": {"type": "string", "minLength": 1}
+    "protocol": {
+      "const": "question-lane-generation/0.1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "prepared-for-review",
+        "held"
+      ]
+    },
+    "holds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
           }
-        }}
+        }
       }
-    }}
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "view",
+          "source_bindings"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "reading_mcq",
+              "key_term_mcq",
+              "classify",
+              "evidence_select",
+              "open_check",
+              "open_prompt"
+            ]
+          },
+          "view": {
+            "type": "object"
+          },
+          "source_bindings": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "source_ref",
+                "quote",
+                "field_ref",
+                "relation"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "source_ref": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "field_ref": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "relation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sequence_plan": {
+      "type": "object",
+      "description": "Required for prepared output by runtime: binds the supplied instructional plan, expected evidence, context events, coverage and support transitions to actual return fields."
+    }
   }
 }

@@ -189,6 +189,10 @@
           }
         }
       }
+    },
+    "sequence_plan": {
+      "type": "object",
+      "description": "Required for prepared output by runtime: binds the supplied instructional plan, expected evidence, context events, coverage and support transitions to actual return fields."
     }
   }
 }

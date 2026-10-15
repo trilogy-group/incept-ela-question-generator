@@ -71,6 +71,7 @@ node model_generate.mjs --prepare-native --request examples/current-native-reque
 node model_generate.mjs --offline-smoke --request examples/current-native-request.json --context examples/current-native-context.json
 node model_generate.mjs --offline-kind-matrix --request examples/current-native-request.json --context examples/current-native-context.json
 node model_generate.mjs --context-coverage --request examples/current-native-request.json --context examples/current-native-context.json
+node model_generate.mjs --offline-smoke --request examples/othello-1-1-request.json --context examples/othello-1-1-context.json
 ```
 
 Preparation emits a reproducible neutral request/context, response schema, source pins, hashes, coverage matrix and
@@ -79,6 +80,10 @@ finished native transport and a learner projection. It makes **zero live model c
 synthetic transport fixture; it is not a generated teaching sequence or quality evidence. First attempts, repairs,
 typed holds and source bindings remain in the journal. Missing required source/media, knowledge, phase, maps,
 support, learner constraints or counterpart context produces a hold before credential or provider access.
+The same smoke flag accepts the historical text request and context. Both paths export `course-request.json`
+and `course-source-packet.json` as exact public neutral input bytes alongside finished context/question files.
+The source packet uses the existing `lesson-context 0.1` shape, before any generated questions are inserted;
+its `native.course_context` includes the complete supplied source and instructional plan.
 
 | Current native kind | Activities | Public format / explicit adapter extension |
 | --- | ---: | --- |
@@ -136,6 +141,42 @@ concrete source pairing tables or individual history. Those richer inputs are ch
 language, accessibility prose and individual difficulty are forwarded to the writer, with their semantic effect
 unmeasured. Resolved context and valid source bindings cannot establish that a writer produced an academically
 aligned question or appropriate challenge. Teacher context joins remain separate from learner question payloads.
+
+### Instructional plan and sequence return
+
+The existing Node command now requires `course_context.instructional_plan`, using the public
+[`instructional-plan/0.1` schema](schema/instructional-plan.schema.json). It declares lesson and slot purpose,
+static/individualized/mastery scope, authority for every goal, ordered teaching and interaction events anchored
+before item IDs, expected evidence, supplied support, future task intent, goal coverage and support transitions.
+Observed and conditional records remain distinct supplied declarations. Unknown individual history is valid for
+static design; this route holds individualized and mastery claims. Assessment may intentionally use prior teaching
+and visible support. Only an explicit withheld task-answer policy rejects prior disclosure of that item; teaching
+a general target does not automatically disclose every task answer.
+
+The shared schema is pinned to public contract commit `3dec9fad4af06b853c00324d3551172e9df00f2a`, SHA256
+`5e00fe79e1bb3c4510cbf525b06a3d88fe2f069a7b1f874ecea8720fec04e19e`.
+
+The current 50-row source projection is an explicit practice proposal. Its three broad goal buckets are marked
+`source-projected`, rather than authoritative curriculum. It preserves the supplied blueprint and does not choose
+curriculum, progression or a test target. Source projection now uses Node 22 for this explicit plan-authoring step.
+The older pinned public schemas and authored reference remain unchanged; the legacy writer uses the local
+`contextual-generator-request` adapter extension.
+
+Prepared returns include `sequence_plan` in the question set and teacher context. The writer must preserve purpose,
+authority, relevant prior-event refs, goal coverage and support transitions, then bind each expected-evidence claim
+to actual returned fields and its contextual sources. Written expectations must occur in source-bound marking
+criteria. Changed source, purpose, teaching, prerequisites, constraints or history invalidates a stale context hash.
+The hash is SHA256 of UTF-8 compact JSON of `{course_context, student_context, sequence_blueprint,
+source_provenance}` with recursively sorted object keys, original array order and ECMAScript scalar serialization;
+absent student context/source provenance become null. These four components are retained under finished
+`lesson-context.native`, so the binding can be independently checked from finished exports.
+
+Teacher plans, expected evidence, future intent, blueprints and supplied response history are excluded from learner
+projections. The existing offline smoke and kind-matrix commands exercise these obligations without credentials.
+The checks prove declared input/return relationships and refusal paths, not semantic writer adherence, whole-set
+academic coherence, effective load, genuine transfer or learner outcomes. No variety or repetition penalty is inferred.
+The original model prototype and earlier source/mock journals retain their original inputs and contracts; refreshed
+plans and mock exports do not regenerate or retroactively qualify those results.
 
 `question-lane-native/0.2` and `question-set native 0.2` are explicit **adapter extensions**. Native kind, source
 pointer, parent context, role, branch alternatives and dependency survive adaptation. They do not change the pinned

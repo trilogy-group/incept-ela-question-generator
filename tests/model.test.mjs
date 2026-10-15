@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { adaptResponse, learnerPacket, resolve, validate, validateInputs, validateResponse } from '../model_contract.mjs';
 import { normalizeTransport, writeSequence } from '../model_generate.mjs';
+import { proposeInstructionalPlan, mockSequencePlan } from '../instructional_plan.mjs';
 
 const responseSchema = JSON.parse(await readFile(new URL('../schema/writer-response.schema.json', import.meta.url)));
-const requestSchema = JSON.parse(await readFile(new URL('../schema/generator-request.schema.json', import.meta.url)));
+const requestSchema = JSON.parse(await readFile(new URL('../schema/contextual-generator-request.schema.json', import.meta.url)));
 const contextSchema = JSON.parse(await readFile(new URL('../schema/lesson-context.schema.json', import.meta.url)));
 function fixture() {
   const source = 'I follow him to serve my turn upon him.';
@@ -14,6 +15,9 @@ function fixture() {
   const request = { protocol: 'question-lane-generation/0.1', request_id: 'test', course_context: course, sequence_blueprint: slots };
   const context = { contract: 'lesson-context 0.1', source: { commit: 'original' }, lesson: { id: 'L1', learning_question: 'What relationship?', keywords: [] }, native: { course_context: structuredClone(course), pages: [{ id: 'P1', nodes: [{ type: 'source', text: source }], question_slots: slots.map(slot => ({ id: slot.position.id })) }] } };
   const response = { protocol: request.protocol, request_id: request.request_id, status: 'prepared-for-review', holds: [], items: slots.map(slot => ({ id: slot.position.id, kind: 'reading_mcq', view: { stem: 'What relationship is described?', options: ['A', 'B', 'C'], key: [0], option_feedback: ['Reason A', 'Reason B', 'Reason C'], correct_feedback: 'Explanation' }, source_bindings: Array.from({ length: 3 }, (_, j) => ({ source_ref: 'S1', quote: source, field_ref: `/view/options/${j}`, relation: 'Source relationship' })) })) };
+  course.instructional_plan = proposeInstructionalPlan(request, context);
+  context.native.course_context = structuredClone(course);
+  response.sequence_plan = mockSequencePlan(request, response);
   return { request, context, response };
 }
 

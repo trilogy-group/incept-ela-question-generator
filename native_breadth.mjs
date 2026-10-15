@@ -3,6 +3,7 @@ import { FORMAT_DISPATCH, NATIVE_PROTOCOL, adaptNativeResponse, nativeLearnerPac
 import { mockNativeResponse } from './native_smoke.mjs';
 import { StructuralError, validate } from './model_contract.mjs';
 import { createHash } from 'node:crypto';
+import { proposeInstructionalPlan } from './instructional_plan.mjs';
 const packetHash = value => createHash('sha256').update(`${JSON.stringify(value, null, 2)}\n`).digest('hex');
 
 function currentKindCase(kind, request, context) {
@@ -16,6 +17,8 @@ function currentKindCase(kind, request, context) {
   const selected = structuredClone(request); selected.request_id = `captured-kind-${kind}`;
   selected.sequence_blueprint = selected.sequence_blueprint.filter(row => ids.has(row.id));
   const c = structuredClone(context); c.native.pages.forEach(page => { page.question_slots = page.question_slots.filter(row => ids.has(row.id)); });
+  selected.course_context.instructional_plan = proposeInstructionalPlan(selected, c, { authorityKind: 'source-projected', note: 'Explicit subset of source-projected practice inventory; not authoritative curriculum goals.' });
+  c.native.course_context = structuredClone(selected.course_context);
   return { kind, request: selected, context: c, context_origin: 'retained-current-authoring-context', captured_occurrences: selected.sequence_blueprint.filter(row => row.native_kind === kind).length, dependency_items: selected.sequence_blueprint.filter(row => row.native_kind !== kind).length, native_source_shape: 'Source pointers and native subcheck context retained; output is the explicit adapter extension.' };
 }
 
@@ -33,6 +36,8 @@ function syntheticKindCase(kind) {
   const course = { core_knowledge: [{ id: 'K1', claim: 'The supplied text distinguishes character actions and their order.', performance: 'Perform the explicitly declared family operation using only the supplied text.', source_refs: ['S1'] }], source_assets: [{ id: 'S1', text: source, original_pointer: '/synthetic/source', provenance, ...(kind.includes('film') || kind === 'video_mcq' ? { kind: 'media-transcript', media_ref: 'synthetic://offline-film', time_range: [0, 10], media_status: 'Fictional fixture reference; no media file or playback claimed.' } : { kind: 'text' }) }, { id: 'FUTURE', text: 'This future source has not been exposed to the learner.', original_pointer: '/synthetic/future', provenance }], prerequisites: [{ id: 'READ', status: 'unknown', description: 'No prior individual mastery is asserted.' }], learner_constraints: { status: 'synthetic-declared', language: 'English', response_modes: ['written', 'spoken', 'selection', 'recall', 'self_report', 'instruction'], reading_level: 'unknown', accessibility_needs: 'unknown' }, prior_exposure: { status: 'explicit-synthetic-plan', events: [{ source_ref: 'S1', availability: 'Visible for this task.' }], individual_submitted_responses: 'not supplied', conditional_feedback_history: 'not supplied' }, content_keys: [{ id: 'C1', claim: 'Actions are explicit in the supplied fictional source.', source_refs: ['S1'] }], knowledge_map: [{ knowledge_ref: 'K1', content_key_ref: 'C1' }], pairing_map: [{ id: 'PAIR1', knowledge_refs: ['K1'], relation: 'Use supplied facts to perform the declared response operation.' }], lesson_plan: { phases: [{ id: 'F1', role: 'synthetic-family-smoke', target_refs: ['K1'], source_refs: ['S1'] }] }, delivery_context: { status: 'Synthetic sequence only; no actual learner exposure or source-native renderer equivalence claimed.' } };
   const request = { protocol: NATIVE_PROTOCOL, request_id: `synthetic-kind-${kind}`, course_context: course, sequence_blueprint: slots, source_provenance: provenance };
   const context = { contract: 'lesson-context 0.1', source: provenance, lesson: { id: `synthetic-${kind}`, learning_question: 'What does the supplied source establish?', keywords: [] }, native: { course_context: structuredClone(course), pages: [{ id: 'P1', nodes: [{ type: 'fictional-source', source_ref: 'S1' }], question_slots: slots.map(row => ({ id: row.id })) }] }, adapter_extension: 'native-activity-transport/0.2' };
+  course.instructional_plan = proposeInstructionalPlan(request, context, { note: 'Explicit synthetic family transport proposal, not golden teaching material or authoritative curriculum.' });
+  context.native.course_context = structuredClone(course);
   return { kind, request, context, context_origin: 'synthetic-family-fixture-not-golden-example', captured_occurrences: 0, dependency_items: 0, native_source_shape: 'Not supplied by the retained current reference; this exercises only the declared adapter family contract.' };
 }
 

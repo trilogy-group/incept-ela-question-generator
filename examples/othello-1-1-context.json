@@ -1301,6 +1301,1657 @@
       }
     ],
     "source_packet": "course-source-packet.json",
-    "intake_status": "Slots describe proposed authoring placements; generator must insert finished native question units and resolve output pointers."
+    "intake_status": "Slots describe proposed authoring placements; generator must insert finished native question units and resolve output pointers.",
+    "course_context": {
+      "core_knowledge": [
+        {
+          "id": "K-CONTEXT",
+          "claim": "Iago serves Othello as ensign, and Roderigo pays Iago while seeking Desdemona.",
+          "performance": "Relate the characters' stated roles to the opening conflict.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-ROLES"
+          ]
+        },
+        {
+          "id": "K-GRIEVANCE",
+          "claim": "Iago links his anger at Othello to Cassio receiving the lieutenant post he wanted.",
+          "performance": "Explain Iago's stated grievance without treating every hostile claim about Cassio as an independently established fact.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-ROLES"
+          ]
+        },
+        {
+          "id": "K-SELF-SERVICE",
+          "claim": "Iago says that following Othello serves his own purpose rather than love and duty.",
+          "performance": "Use Iago's words to explain the difference between the service he appears to give and his private purpose.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-ROLES"
+          ]
+        },
+        {
+          "id": "K-APPEARANCE",
+          "claim": "Iago distinguishes seeming loyal from his inward purpose and says 'I am not what I am.'",
+          "performance": "Classify a stated outward appearance or private purpose, then support a reading of the contrast with the scene.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-ROLES"
+          ]
+        },
+        {
+          "id": "K-ACTION",
+          "claim": "Iago directs Roderigo to rouse Brabantio and 'poison his delight', acting against Othello while preserving his own cover.",
+          "performance": "Connect a specific action against Othello with the appearance of service established in Iago's speech.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-ROLES"
+          ]
+        },
+        {
+          "id": "K-FLAG",
+          "claim": "Iago says that the flag and sign of love he must show is 'indeed but sign'.",
+          "performance": "Explain how the flag image and its qualification represent performed loyalty.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-ROLES"
+          ]
+        },
+        {
+          "id": "K-SYNTHESIS",
+          "claim": "A supported answer to the lesson question connects Iago's apparent loyalty with textual evidence of his private aims or actions.",
+          "performance": "Write a coherent interpretation using an exact scene quotation and reasoning about its wording; allow other defensible source-grounded interpretations.",
+          "prerequisite_refs": [
+            "P-READ",
+            "P-QUOTE"
+          ]
+        }
+      ],
+      "prerequisites": [
+        "P-READ: Read the supplied abridged dialogue with speaker labels, or use an equivalent accessible reading support. (hard-for-this-task; logical; no learner gate)",
+        "P-ROLES: Locate who speaks and identify ensign, lieutenant and the supplied character relationships. (soft-support; conventional; no learner gate)",
+        "P-QUOTE: Distinguish quotation from explanation and connect a claim to specific words. (soft-support; conventional; no learner gate)"
+      ],
+      "source_assets": [
+        {
+          "id": "S-INTRO",
+          "text": "Othello\nby William Shakespeare\n\nAbout the play\n\nOthello is a tragedy by William Shakespeare, written around 1603. It tells the story of Othello, a Black African general who leads the army of Venice. Othello is respected and powerful, but in Venice he is also an outsider. One of his own officers, Iago, secretly hates him. Over the course of the play, Iago sets out to destroy Othello using nothing but lies.\n\nThe opening scene: Act 1, Scene 1\n\nThe play begins in the middle of the night, on a street in Venice. We meet two characters, Roderigo and Iago. They are arguing about shocking news: Othello has just secretly married Desdemona, the daughter of a powerful senator, Brabantio.\n\nRoderigo wanted to marry Desdemona himself, and he has been paying Iago to help him. Iago has his own reason to be angry: Othello has made a man called Cassio his lieutenant instead of him. By the end of the scene, Iago has woken Brabantio with the news, and slipped away into the dark.",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-PROMOTION",
+          "text": "RODERIGO\nTush, never tell me! I take it much unkindly\nThat thou, Iago, who hast had my purse\nAs if the strings were thine, shouldst know of this.\nIAGO\n'Sblood, but you'll not hear me!\nIf ever I did dream of such a matter,\nAbhor me.\nRODERIGO\nThou toldst me thou didst hold him in thy hate.\nIAGO\nDespise me\nIf I do not. Three great ones of the city,\nIn personal suit to make me his lieutenant,\nOff-capped to him; and, by the faith of man,\nI know my price, I am worth no worse a place.\n\n[Iago explains that Othello turned the great men down, saying he had already chosen his officer.]\nIAGO\nAnd what was he?\nForsooth, a great arithmetician,\nOne Michael Cassio, a Florentine,\n...That never set a squadron in the field...\nAnd I, of whom his eyes had seen the proof\nAt Rhodes, at Cyprus, and on other grounds\nChristened and heathen, must be beleed and calmed\nBy debitor and creditor.\n...He, in good time, must his lieutenant be,\nAnd I, God bless the mark, his Moorship's ancient.\n...Preferment goes by letter and affection,\nAnd not by old gradation, where each second\nStood heir to th' first. Now, sir, be judge yourself\nWhether I in any just term am affined\nTo love the Moor.",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-SERVICE",
+          "text": "RODERIGO\nI would not follow him, then.\nIAGO\nO, sir, content you.\nI follow him to serve my turn upon him.\nWe cannot all be masters, nor all masters\nCannot be truly followed. (lines 45–47)\n...It is as sure as you are Roderigo,\nWere I the Moor I would not be Iago.\nIn following him, I follow but myself.\nHeaven is my judge, not I for love and duty,\nBut seeming so for my peculiar end.\nFor when my outward action doth demonstrate\nThe native act and figure of my heart\nIn complement extern, 'tis not long after\nBut I will wear my heart upon my sleeve\nFor daws to peck at. I am not what I am.",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-ACTION",
+          "text": "RODERIGO\nWhat a full fortune does the thick-lips owe\nIf he can carry 't thus!\nIAGO\nCall up her father.\nRouse him. Make after him, poison his delight...\n[They go to Brabantio's house.]\nIAGO\nAwake! What ho, Brabantio! Thieves, thieves!\nLook to your house, your daughter, and your bags!\nThieves, thieves!\n[Hidden in the dark, Iago shouts crude, racist insults about Othello and Desdemona. Brabantio is horrified. Before he can be seen, Iago tells Roderigo he must leave.]",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-FLAG",
+          "text": "IAGO\nThough I do hate him as I do hell pains,\nYet, for necessity of present life,\nI must show out a flag and sign of love—\nWhich is indeed but sign. (lines 171–174)\n[Iago leaves. Brabantio gathers his men to find Othello.]",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-GLOSSARY",
+          "text": "Roderigo: a rich young man who wants to marry Desdemona\nIago: Othello's ensign: the officer who carries the general's flag\nDesdemona: Brabantio's daughter, who has secretly married Othello\nBrabantio: a powerful senator of Venice and Desdemona's father\nCassio: Othello's new lieutenant\nlieutenant: the officer second in command to the general\nOff-capped: took off their hats to show respect when they asked Othello to promote Iago\nI know my price: I know what I'm worth\nForsooth: \"in truth\", said sarcastically here\narithmetician: a man who is good with numbers, not with fighting. Iago is mocking Cassio.\nhis Moorship's ancient: \"ancient\" means ensign. \"Moorship\" is a mocking title Iago invents for Othello.\nPreferment: promotion\nletter and affection: who you know and who likes you\nold gradation: the old system, where you were promoted in order of experience\naffined: bound, or obliged",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-VOCAB",
+          "text": "betrayal: breaking someone's trust\ndeceitful: tricking people by hiding the truth\nuntrustworthy: cannot be relied on\ndisloyal: not faithful to someone you should support\npretense: acting as if something is true when it isn't\nfaçade: a false front that hides what is behind it\nMachiavellian villain: Machiavellian: using cunning and lies to gain power. A Machiavellian villain schemes and deceives to get what he wants.",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-MODEL",
+          "text": "At the beginning of the play, Shakespeare exposes Iago as deceitful and disloyal to Othello.\n\"I answer the Learning Question first, with two words from my web.\"\n\nThis is evident in the quote \"I follow him to serve my turn upon him.\"\n\"I choose a short quote that proves my point.\"\n\nThe verb \"follow\" means to obey a leader, demonstrating that on the outside Iago looks like a loyal soldier.\n\"Now one word. 'Follow' sounds loyal: that's the façade.\"\n\nAlso, the verb \"serve\" usually means to work for someone, but \"serve my turn\" means to use them for your own benefit, demonstrating that Iago plans to betray Othello.\n\"The second word shows what's behind the façade.\"\n\nTherefore, Iago is clearly exposed to be a Machiavellian villain: his loyalty is only a pretense and a façade.\n\"I answer the Learning Question again, more strongly.\"",
+          "revision": "3ed708e126aec14b7456679b9236e01c1081df16",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        },
+        {
+          "id": "S-WRITING",
+          "text": "Read the question. Search the scene for evidence. Find a short quotation. State your interpretation and explain how words in the quotation support it.",
+          "revision": "B1006-proposed-0.1",
+          "media_kind": "text",
+          "rights": "Authored source credits abridged Folger Shakespeare text CC BY-NC 3.0; attribution retained; authored instructional additions have no separate rights determination."
+        }
+      ],
+      "prior_exposure": [
+        {
+          "role": "orientation-and-vocabulary",
+          "content": "Expose the supplied learning question, authored vocabulary and character-role glossary before Q01. The context explicitly says Iago secretly hates Othello and plans to destroy him; subsequent questions therefore require evidence and relationships rather than treating this as unseen knowledge.",
+          "source_refs": [
+            "S-INTRO",
+            "S-VOCAB",
+            "S-GLOSSARY"
+          ],
+          "timing": "F-ORIENT and F-CONTEXT reading; before Q01"
+        },
+        {
+          "role": "source-reading",
+          "content": "Show each complete supplied dialogue chunk before that chunk's checks, retaining speaker and stage labels. Read to each natural boundary before asking its questions.",
+          "source_refs": [
+            "S-PROMOTION",
+            "S-SERVICE",
+            "S-ACTION",
+            "S-FLAG"
+          ],
+          "timing": "F-PROMOTION before Q03; F-SERVICE before Q06; F-ACTION before Q09; F-FLAG before Q11"
+        },
+        {
+          "role": "worked-instruction-not-assessment",
+          "content": "At the beginning of the play, Shakespeare exposes Iago as deceitful and disloyal to Othello.\n\"I answer the Learning Question first, with two words from my web.\"\n\nThis is evident in the quote \"I follow him to serve my turn upon him.\"\n\"I choose a short quote that proves my point.\"\n\nThe verb \"follow\" means to obey a leader, demonstrating that on the outside Iago looks like a loyal soldier.\n\"Now one word. 'Follow' sounds loyal: that's the façade.\"\n\nAlso, the verb \"serve\" usually means to work for someone, but \"serve my turn\" means to use them for your own benefit, demonstrating that Iago plans to betray Othello.\n\"The second word shows what's behind the façade.\"\n\nTherefore, Iago is clearly exposed to be a Machiavellian villain: his loyalty is only a pretense and a façade.\n\"I answer the Learning Question again, more strongly.\"",
+          "source_refs": [
+            "S-MODEL",
+            "S-SERVICE"
+          ],
+          "timing": "F-MODEL; after Q08 first attempt and before Q09. Later checks are application after explicit teaching, not unexposed mastery."
+        },
+        {
+          "role": "procedure-instruction-not-assessment",
+          "content": "Read the question. Search the scene for evidence. Find a short quotation. State your interpretation and explain how words in the quotation support it.",
+          "source_refs": [
+            "S-WRITING"
+          ],
+          "timing": "F-WRITING; after Q12 and before Q13"
+        },
+        {
+          "role": "answer-feedback-exposure",
+          "content": "Any generated feedback shown after an earlier response may teach its target and affect later responses. Preserve actual exposure events in delivery; this intake supplies no learner response or mastery data.",
+          "source_refs": [],
+          "timing": "after each first attempt, if delivery shows feedback"
+        }
+      ],
+      "authorized_procedure": {
+        "source": "authored /procedure",
+        "steps": [
+          "Read",
+          "Search",
+          "Find",
+          "State"
+        ],
+        "status": "extracted-author-procedure; prototype placements proposed; no new curriculum approval"
+      },
+      "curriculum_revision": "authored-reference-3ed708e126aec14b7456679b9236e01c1081df16; proposed-questions-lane-B1006-0.1",
+      "lesson_position": {
+        "unit": 1,
+        "lesson": 1,
+        "act": 1,
+        "scene": 1,
+        "source_lesson_id": "G9-U1-L1",
+        "learning_question": "At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello?",
+        "status": "existing-authored-lesson; proposed-full-lesson-question-sequence"
+      },
+      "lesson_plan": {
+        "id": "LP-B1006-OTHELLO-1-1",
+        "revision": "B1006-proposed-0.1",
+        "title": "Othello Act 1, Scene 1: Iago's apparent loyalty",
+        "phases": [
+          {
+            "id": "F-ORIENT",
+            "role": "instruction",
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "source_refs": [
+              "S-VOCAB",
+              "S-GLOSSARY",
+              "S-INTRO"
+            ],
+            "content_key_refs": [
+              "C-CONTEXT"
+            ],
+            "after": []
+          },
+          {
+            "id": "F-CONTEXT",
+            "role": "independent-reading-checks",
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "source_refs": [
+              "S-INTRO",
+              "S-GLOSSARY"
+            ],
+            "content_key_refs": [
+              "C-CONTEXT"
+            ],
+            "after": [
+              "F-ORIENT"
+            ]
+          },
+          {
+            "id": "F-PROMOTION",
+            "role": "independent-reading-checks",
+            "target_refs": [
+              "K-GRIEVANCE"
+            ],
+            "source_refs": [
+              "S-PROMOTION"
+            ],
+            "content_key_refs": [
+              "C-GRIEVANCE"
+            ],
+            "after": [
+              "F-CONTEXT"
+            ]
+          },
+          {
+            "id": "F-SERVICE",
+            "role": "independent-reading-checks",
+            "target_refs": [
+              "K-SELF-SERVICE",
+              "K-APPEARANCE"
+            ],
+            "source_refs": [
+              "S-SERVICE"
+            ],
+            "content_key_refs": [
+              "C-SELF-SERVICE",
+              "C-APPEARANCE"
+            ],
+            "after": [
+              "F-PROMOTION"
+            ]
+          },
+          {
+            "id": "F-MODEL",
+            "role": "worked-instruction-not-assessment",
+            "target_refs": [
+              "K-SELF-SERVICE",
+              "K-SYNTHESIS"
+            ],
+            "source_refs": [
+              "S-MODEL",
+              "S-SERVICE"
+            ],
+            "content_key_refs": [
+              "C-SELF-SERVICE",
+              "C-SYNTHESIS"
+            ],
+            "after": [
+              "F-SERVICE"
+            ]
+          },
+          {
+            "id": "F-ACTION",
+            "role": "independent-reading-checks",
+            "target_refs": [
+              "K-ACTION"
+            ],
+            "source_refs": [
+              "S-ACTION",
+              "S-SERVICE"
+            ],
+            "content_key_refs": [
+              "C-ACTION"
+            ],
+            "after": [
+              "F-MODEL"
+            ]
+          },
+          {
+            "id": "F-FLAG",
+            "role": "independent-reading-checks",
+            "target_refs": [
+              "K-FLAG"
+            ],
+            "source_refs": [
+              "S-FLAG"
+            ],
+            "content_key_refs": [
+              "C-FLAG"
+            ],
+            "after": [
+              "F-ACTION"
+            ]
+          },
+          {
+            "id": "F-WRITING",
+            "role": "instruction-not-assessment",
+            "target_refs": [
+              "K-SYNTHESIS"
+            ],
+            "source_refs": [
+              "S-WRITING"
+            ],
+            "content_key_refs": [
+              "C-SYNTHESIS"
+            ],
+            "after": [
+              "F-FLAG"
+            ]
+          },
+          {
+            "id": "F-SYNTHESIS",
+            "role": "independent-open-checks",
+            "target_refs": [
+              "K-APPEARANCE",
+              "K-FLAG",
+              "K-SYNTHESIS"
+            ],
+            "source_refs": [
+              "S-SERVICE",
+              "S-ACTION",
+              "S-FLAG"
+            ],
+            "content_key_refs": [
+              "C-APPEARANCE",
+              "C-FLAG",
+              "C-SYNTHESIS"
+            ],
+            "after": [
+              "F-WRITING"
+            ]
+          }
+        ]
+      },
+      "content_keys": [
+        {
+          "id": "C-CONTEXT",
+          "claim": "Iago serves Othello as ensign, and Roderigo pays Iago while seeking Desdemona.",
+          "kind": "extracted-authored-context",
+          "target_refs": [
+            "K-CONTEXT"
+          ],
+          "source_refs": [
+            "S-INTRO",
+            "S-GLOSSARY"
+          ],
+          "phase_refs": [
+            "F-ORIENT",
+            "F-CONTEXT"
+          ]
+        },
+        {
+          "id": "C-GRIEVANCE",
+          "claim": "Iago links his anger at Othello to Cassio receiving the lieutenant post he wanted.",
+          "kind": "extracted-authored-target-with-proposed-speaker-boundary",
+          "target_refs": [
+            "K-GRIEVANCE"
+          ],
+          "source_refs": [
+            "S-PROMOTION"
+          ],
+          "phase_refs": [
+            "F-PROMOTION"
+          ]
+        },
+        {
+          "id": "C-SELF-SERVICE",
+          "claim": "Iago says that following Othello serves his own purpose rather than love and duty.",
+          "kind": "extracted-authored-target",
+          "target_refs": [
+            "K-SELF-SERVICE"
+          ],
+          "source_refs": [
+            "S-SERVICE"
+          ],
+          "phase_refs": [
+            "F-SERVICE",
+            "F-MODEL"
+          ]
+        },
+        {
+          "id": "C-APPEARANCE",
+          "claim": "Iago distinguishes seeming loyal from his inward purpose and says 'I am not what I am.'",
+          "kind": "extracted-authored-target",
+          "target_refs": [
+            "K-APPEARANCE"
+          ],
+          "source_refs": [
+            "S-SERVICE"
+          ],
+          "phase_refs": [
+            "F-SERVICE",
+            "F-SYNTHESIS"
+          ]
+        },
+        {
+          "id": "C-ACTION",
+          "claim": "Iago directs Roderigo to rouse Brabantio and 'poison his delight', acting against Othello while preserving his own cover.",
+          "kind": "extracted-authored-action-with-proposed-pairing",
+          "target_refs": [
+            "K-ACTION"
+          ],
+          "source_refs": [
+            "S-ACTION",
+            "S-SERVICE"
+          ],
+          "phase_refs": [
+            "F-ACTION"
+          ]
+        },
+        {
+          "id": "C-FLAG",
+          "claim": "Iago says that the flag and sign of love he must show is 'indeed but sign'.",
+          "kind": "extracted-authored-target",
+          "target_refs": [
+            "K-FLAG"
+          ],
+          "source_refs": [
+            "S-FLAG"
+          ],
+          "phase_refs": [
+            "F-FLAG",
+            "F-SYNTHESIS"
+          ]
+        },
+        {
+          "id": "C-SYNTHESIS",
+          "claim": "A supported answer to the lesson question connects Iago's apparent loyalty with textual evidence of his private aims or actions.",
+          "kind": "extracted-authored-lesson-aim-with-proposed-response-allocation",
+          "target_refs": [
+            "K-SYNTHESIS"
+          ],
+          "source_refs": [
+            "S-SERVICE",
+            "S-ACTION",
+            "S-FLAG"
+          ],
+          "phase_refs": [
+            "F-MODEL",
+            "F-WRITING",
+            "F-SYNTHESIS"
+          ]
+        }
+      ],
+      "knowledge_map": {
+        "revision": "B1006-proposed-0.1",
+        "nodes": [
+          {
+            "id": "P-READ",
+            "role": "prerequisite",
+            "claim": "Read the supplied abridged dialogue with speaker labels, or use an equivalent accessible reading support.",
+            "source_refs": [
+              "S-INTRO"
+            ]
+          },
+          {
+            "id": "P-ROLES",
+            "role": "prerequisite",
+            "claim": "Locate who speaks and identify ensign, lieutenant and the supplied character relationships.",
+            "source_refs": [
+              "S-INTRO"
+            ]
+          },
+          {
+            "id": "P-QUOTE",
+            "role": "prerequisite",
+            "claim": "Distinguish quotation from explanation and connect a claim to specific words.",
+            "source_refs": [
+              "S-MODEL"
+            ]
+          },
+          {
+            "id": "K-CONTEXT",
+            "role": "core",
+            "claim": "Iago serves Othello as ensign, and Roderigo pays Iago while seeking Desdemona.",
+            "source_refs": [
+              "S-INTRO",
+              "S-GLOSSARY"
+            ]
+          },
+          {
+            "id": "K-GRIEVANCE",
+            "role": "core",
+            "claim": "Iago links his anger at Othello to Cassio receiving the lieutenant post he wanted.",
+            "source_refs": [
+              "S-PROMOTION"
+            ]
+          },
+          {
+            "id": "K-SELF-SERVICE",
+            "role": "core",
+            "claim": "Iago says that following Othello serves his own purpose rather than love and duty.",
+            "source_refs": [
+              "S-SERVICE"
+            ]
+          },
+          {
+            "id": "K-APPEARANCE",
+            "role": "core",
+            "claim": "Iago distinguishes seeming loyal from his inward purpose and says 'I am not what I am.'",
+            "source_refs": [
+              "S-SERVICE"
+            ]
+          },
+          {
+            "id": "K-ACTION",
+            "role": "core",
+            "claim": "Iago directs Roderigo to rouse Brabantio and 'poison his delight', acting against Othello while preserving his own cover.",
+            "source_refs": [
+              "S-ACTION",
+              "S-SERVICE"
+            ]
+          },
+          {
+            "id": "K-FLAG",
+            "role": "core",
+            "claim": "Iago says that the flag and sign of love he must show is 'indeed but sign'.",
+            "source_refs": [
+              "S-FLAG"
+            ]
+          },
+          {
+            "id": "K-SYNTHESIS",
+            "role": "core",
+            "claim": "A supported answer to the lesson question connects Iago's apparent loyalty with textual evidence of his private aims or actions.",
+            "source_refs": [
+              "S-SERVICE",
+              "S-ACTION",
+              "S-FLAG"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "from": "P-READ",
+            "to": "K-CONTEXT",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-READ",
+            "to": "K-GRIEVANCE",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-READ",
+            "to": "K-SELF-SERVICE",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-READ",
+            "to": "K-APPEARANCE",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-READ",
+            "to": "K-ACTION",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-READ",
+            "to": "K-FLAG",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-READ",
+            "to": "K-SYNTHESIS",
+            "relation": "logical-access-requirement; not-a-learner-gate"
+          },
+          {
+            "from": "P-ROLES",
+            "to": "K-CONTEXT",
+            "relation": "soft-conventional-support"
+          },
+          {
+            "from": "P-QUOTE",
+            "to": "K-SYNTHESIS",
+            "relation": "soft-conventional-support"
+          },
+          {
+            "from": "K-CONTEXT",
+            "to": "K-GRIEVANCE",
+            "relation": "proposed-teaching-order"
+          },
+          {
+            "from": "K-SELF-SERVICE",
+            "to": "K-APPEARANCE",
+            "relation": "supports-interpretation; not-a-mastery-gate"
+          },
+          {
+            "from": "K-APPEARANCE",
+            "to": "K-FLAG",
+            "relation": "related-evidence; not-a-mastery-gate"
+          },
+          {
+            "from": "K-SELF-SERVICE",
+            "to": "K-SYNTHESIS",
+            "relation": "supports"
+          },
+          {
+            "from": "K-ACTION",
+            "to": "K-SYNTHESIS",
+            "relation": "supports"
+          },
+          {
+            "from": "K-FLAG",
+            "to": "K-SYNTHESIS",
+            "relation": "supports"
+          }
+        ]
+      },
+      "pairing_tables": [
+        {
+          "id": "T-SOURCE-TARGET",
+          "purpose": "Public content grounding, not evaluator labels",
+          "pairs": [
+            {
+              "id": "T-01",
+              "target_ref": "K-CONTEXT",
+              "source_ref": "S-INTRO",
+              "content_key_ref": "C-CONTEXT",
+              "phase_ref": "F-ORIENT",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-02",
+              "target_ref": "K-CONTEXT",
+              "source_ref": "S-INTRO",
+              "content_key_ref": "C-CONTEXT",
+              "phase_ref": "F-CONTEXT",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-03",
+              "target_ref": "K-CONTEXT",
+              "source_ref": "S-GLOSSARY",
+              "content_key_ref": "C-CONTEXT",
+              "phase_ref": "F-ORIENT",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-04",
+              "target_ref": "K-CONTEXT",
+              "source_ref": "S-GLOSSARY",
+              "content_key_ref": "C-CONTEXT",
+              "phase_ref": "F-CONTEXT",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-05",
+              "target_ref": "K-GRIEVANCE",
+              "source_ref": "S-PROMOTION",
+              "content_key_ref": "C-GRIEVANCE",
+              "phase_ref": "F-PROMOTION",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-06",
+              "target_ref": "K-SELF-SERVICE",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-SELF-SERVICE",
+              "phase_ref": "F-SERVICE",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-07",
+              "target_ref": "K-SELF-SERVICE",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-SELF-SERVICE",
+              "phase_ref": "F-MODEL",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-08",
+              "target_ref": "K-APPEARANCE",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-APPEARANCE",
+              "phase_ref": "F-SERVICE",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-09",
+              "target_ref": "K-APPEARANCE",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-APPEARANCE",
+              "phase_ref": "F-SYNTHESIS",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-10",
+              "target_ref": "K-ACTION",
+              "source_ref": "S-ACTION",
+              "content_key_ref": "C-ACTION",
+              "phase_ref": "F-ACTION",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-11",
+              "target_ref": "K-ACTION",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-ACTION",
+              "phase_ref": "F-ACTION",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-12",
+              "target_ref": "K-FLAG",
+              "source_ref": "S-FLAG",
+              "content_key_ref": "C-FLAG",
+              "phase_ref": "F-FLAG",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-13",
+              "target_ref": "K-FLAG",
+              "source_ref": "S-FLAG",
+              "content_key_ref": "C-FLAG",
+              "phase_ref": "F-SYNTHESIS",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-14",
+              "target_ref": "K-SYNTHESIS",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-SYNTHESIS",
+              "phase_ref": "F-MODEL",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-15",
+              "target_ref": "K-SYNTHESIS",
+              "source_ref": "S-SERVICE",
+              "content_key_ref": "C-SYNTHESIS",
+              "phase_ref": "F-SYNTHESIS",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-16",
+              "target_ref": "K-SYNTHESIS",
+              "source_ref": "S-ACTION",
+              "content_key_ref": "C-SYNTHESIS",
+              "phase_ref": "F-SYNTHESIS",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            },
+            {
+              "id": "T-17",
+              "target_ref": "K-SYNTHESIS",
+              "source_ref": "S-FLAG",
+              "content_key_ref": "C-SYNTHESIS",
+              "phase_ref": "F-SYNTHESIS",
+              "rationale": "Author target or source fact supports the proposed question placement; inspect provenance in course-source-packet.json."
+            }
+          ]
+        }
+      ],
+      "instructional_plan": {
+        "version": "instructional-plan/0.1",
+        "id": "PLAN-B1006-othello-1-1-full-lesson-prototype-0.1",
+        "lesson": {
+          "purpose": "practice",
+          "scope": "static-design",
+          "objective": "At the beginning of the play, how does Shakespeare show that Iago is only pretending to be loyal to Othello?",
+          "goal_refs": [
+            "K-CONTEXT",
+            "K-GRIEVANCE",
+            "K-SELF-SERVICE",
+            "K-APPEARANCE",
+            "K-ACTION",
+            "K-FLAG",
+            "K-SYNTHESIS"
+          ],
+          "purpose_note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+        },
+        "goal_authority": [
+          {
+            "goal_ref": "K-CONTEXT",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          },
+          {
+            "goal_ref": "K-GRIEVANCE",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          },
+          {
+            "goal_ref": "K-SELF-SERVICE",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          },
+          {
+            "goal_ref": "K-APPEARANCE",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          },
+          {
+            "goal_ref": "K-ACTION",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          },
+          {
+            "goal_ref": "K-FLAG",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          },
+          {
+            "goal_ref": "K-SYNTHESIS",
+            "kind": "packet-proposed",
+            "source_refs": [],
+            "note": "Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery."
+          }
+        ],
+        "events": [
+          {
+            "id": "TEACH-1",
+            "order": 1,
+            "before_item_id": "Q01",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-INTRO"
+            ],
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-INTRO; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-2",
+            "order": 2,
+            "before_item_id": "Q01",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-GLOSSARY"
+            ],
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-GLOSSARY; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-3",
+            "order": 3,
+            "before_item_id": "Q01",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-VOCAB"
+            ],
+            "target_refs": [
+              "K-CONTEXT"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-VOCAB; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-4",
+            "order": 4,
+            "before_item_id": "Q03",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-PROMOTION"
+            ],
+            "target_refs": [
+              "K-GRIEVANCE"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-PROMOTION; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-5",
+            "order": 5,
+            "before_item_id": "Q06",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-SERVICE"
+            ],
+            "target_refs": [
+              "K-SELF-SERVICE",
+              "K-APPEARANCE",
+              "K-ACTION",
+              "K-FLAG",
+              "K-SYNTHESIS"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-SERVICE; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-6",
+            "order": 6,
+            "before_item_id": "Q09",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-ACTION"
+            ],
+            "target_refs": [
+              "K-APPEARANCE",
+              "K-ACTION",
+              "K-FLAG",
+              "K-SYNTHESIS"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-ACTION; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-7",
+            "order": 7,
+            "before_item_id": "Q09",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-MODEL"
+            ],
+            "target_refs": [
+              "K-SELF-SERVICE",
+              "K-SYNTHESIS"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-MODEL; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-8",
+            "order": 8,
+            "before_item_id": "Q11",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-FLAG"
+            ],
+            "target_refs": [
+              "K-APPEARANCE",
+              "K-FLAG",
+              "K-SYNTHESIS"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-FLAG; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          },
+          {
+            "id": "TEACH-9",
+            "order": 9,
+            "before_item_id": "Q13",
+            "kind": "teaching",
+            "status": "declared",
+            "content": "Declared source instruction is available at this planned position; actual text is resolved from source_refs and individual exposure is unknown.",
+            "source_refs": [
+              "S-WRITING"
+            ],
+            "target_refs": [
+              "K-SYNTHESIS"
+            ],
+            "revealed_target_refs": [],
+            "provenance": "Supplied source instruction S-WRITING; Explicit authored14-slot practice proposal; source-backed factual claims do not establish authoritative curriculum or observed learner mastery.",
+            "disclosed_item_ids": []
+          }
+        ],
+        "items": [
+          {
+            "item_id": "Q01",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-CONTEXT"
+            ],
+            "prior_event_refs": [
+              "TEACH-1",
+              "TEACH-2"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q01",
+                "goal_refs": [
+                  "K-CONTEXT"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Relate Roderigo's payment to Iago and his wish to marry Desdemona; require the stated relationship, not bare name recall.",
+                "source_refs": [
+                  "S-INTRO"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-1",
+                "TEACH-2"
+              ],
+              "source_refs": [
+                "S-INTRO",
+                "S-GLOSSARY"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q02",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-CONTEXT"
+            ],
+            "prior_event_refs": [
+              "TEACH-1",
+              "TEACH-2"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "classify independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q02",
+                "goal_refs": [
+                  "K-CONTEXT"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Match a small set of distinct character-role relationships stated in the context and role glossary; use only supplied roles and keep each response unambiguous.",
+                "source_refs": [
+                  "S-INTRO"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-1",
+                "TEACH-2"
+              ],
+              "source_refs": [
+                "S-INTRO",
+                "S-GLOSSARY"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q03",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-GRIEVANCE"
+            ],
+            "prior_event_refs": [
+              "TEACH-4"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q03",
+                "goal_refs": [
+                  "K-GRIEVANCE"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Infer Iago's stated reason for resentment from the promotion contrast.",
+                "source_refs": [
+                  "S-PROMOTION"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-4"
+              ],
+              "source_refs": [
+                "S-PROMOTION"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q04",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-GRIEVANCE"
+            ],
+            "prior_event_refs": [
+              "TEACH-4"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "evidence_select independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q04",
+                "goal_refs": [
+                  "K-GRIEVANCE"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Select a complete line or coherent adjacent lines showing how Iago belittles Cassio's qualifications; include the strongest evidence in chronological order.",
+                "source_refs": [
+                  "S-PROMOTION"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-4"
+              ],
+              "source_refs": [
+                "S-PROMOTION"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q05",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-GRIEVANCE"
+            ],
+            "prior_event_refs": [
+              "TEACH-4"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "open_check independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q05",
+                "goal_refs": [
+                  "K-GRIEVANCE"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Explain how Iago's account of the promotion presents his grievance. Distinguish what Iago alleges from facts established independently; do not ask two separately scored tasks.",
+                "source_refs": [
+                  "S-PROMOTION"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-4"
+              ],
+              "source_refs": [
+                "S-PROMOTION"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q06",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-SELF-SERVICE"
+            ],
+            "prior_event_refs": [
+              "TEACH-5"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q06",
+                "goal_refs": [
+                  "K-SELF-SERVICE"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Interpret the relation between following Othello and serving Iago's own turn, using the whole statement.",
+                "source_refs": [
+                  "S-SERVICE"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5"
+              ],
+              "source_refs": [
+                "S-SERVICE"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q07",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-SELF-SERVICE"
+            ],
+            "prior_event_refs": [
+              "TEACH-5"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "evidence_select independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q07",
+                "goal_refs": [
+                  "K-SELF-SERVICE"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Select complete evidence for Iago's private purpose rather than love and duty; keep the contrast's two adjacent lines together when necessary.",
+                "source_refs": [
+                  "S-SERVICE"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5"
+              ],
+              "source_refs": [
+                "S-SERVICE"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q08",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-APPEARANCE"
+            ],
+            "prior_event_refs": [
+              "TEACH-5"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "classify independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q08",
+                "goal_refs": [
+                  "K-APPEARANCE"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Classify text-grounded descriptions as Iago's outward service or his disclosed private purpose. Each description must test a relationship rather than matching a single clue word.",
+                "source_refs": [
+                  "S-SERVICE"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5"
+              ],
+              "source_refs": [
+                "S-SERVICE"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q09",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-ACTION"
+            ],
+            "prior_event_refs": [
+              "TEACH-5",
+              "TEACH-6"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q09",
+                "goal_refs": [
+                  "K-ACTION"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Explain how Iago's direction to rouse Brabantio serves his hostility to Othello in this scene.",
+                "source_refs": [
+                  "S-ACTION"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5",
+                "TEACH-6"
+              ],
+              "source_refs": [
+                "S-ACTION",
+                "S-SERVICE"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q10",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-ACTION"
+            ],
+            "prior_event_refs": [
+              "TEACH-5",
+              "TEACH-6"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "evidence_select independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q10",
+                "goal_refs": [
+                  "K-ACTION"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Select the scene words that most directly show an intention to harm Othello's happiness, rather than a neutral report of the marriage.",
+                "source_refs": [
+                  "S-ACTION"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5",
+                "TEACH-6"
+              ],
+              "source_refs": [
+                "S-ACTION",
+                "S-SERVICE"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q11",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-FLAG"
+            ],
+            "prior_event_refs": [
+              "TEACH-8"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q11",
+                "goal_refs": [
+                  "K-FLAG"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Interpret what Iago's flag and sign of love represents in his explanation for leaving.",
+                "source_refs": [
+                  "S-FLAG"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-8"
+              ],
+              "source_refs": [
+                "S-FLAG"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q12",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-FLAG"
+            ],
+            "prior_event_refs": [
+              "TEACH-8"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "open_check independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q12",
+                "goal_refs": [
+                  "K-FLAG"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Explain what the qualification 'but sign' changes about the love Iago says he must show; use the surrounding contrast.",
+                "source_refs": [
+                  "S-FLAG"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-8"
+              ],
+              "source_refs": [
+                "S-FLAG"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q13",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-SYNTHESIS"
+            ],
+            "prior_event_refs": [
+              "TEACH-5",
+              "TEACH-6",
+              "TEACH-8"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "open_check independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q13",
+                "goal_refs": [
+                  "K-SYNTHESIS"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Explain how one quotation other than the model's 'I follow him to serve my turn upon him.' supports a reading of Iago's false loyalty. Do not preselect an interpretation or supply a sentence starter that gives it away.",
+                "source_refs": [
+                  "S-SERVICE"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5",
+                "TEACH-6",
+                "TEACH-8"
+              ],
+              "source_refs": [
+                "S-SERVICE",
+                "S-ACTION",
+                "S-FLAG"
+              ],
+              "answer_exposure": "allowed"
+            }
+          },
+          {
+            "item_id": "Q14",
+            "purpose": "practice",
+            "scope": "static-design",
+            "goal_refs": [
+              "K-SYNTHESIS"
+            ],
+            "prior_event_refs": [
+              "TEACH-5",
+              "TEACH-6",
+              "TEACH-8"
+            ],
+            "prepares_for_item_ids": [],
+            "measurement_intent": "open_prompt independent-response-check; static packet-authoring intention, not a mastery claim.",
+            "expected_evidence": [
+              {
+                "id": "E-Q14",
+                "goal_refs": [
+                  "K-SYNTHESIS"
+                ],
+                "claim": "Perform the supplied independent-response-check task using its declared target/source relationship. Source passage remains visible; glossary available; no worked answer, hint or answer feedback before first attempt. Write one five-sentence paragraph answering the supplied lesson question: a claim, an exact quotation other than the model quotation, reasoning on two meaningful words, and a closing claim. Treat this as one integrated writing performance, not five independent mastery checks; accept defensible source-grounded alternatives.",
+                "source_refs": [
+                  "S-SERVICE"
+                ]
+              }
+            ],
+            "support": {
+              "mode": "source-visible",
+              "event_refs": [
+                "TEACH-5",
+                "TEACH-6",
+                "TEACH-8"
+              ],
+              "source_refs": [
+                "S-SERVICE",
+                "S-ACTION",
+                "S-FLAG"
+              ],
+              "answer_exposure": "allowed"
+            }
+          }
+        ],
+        "sequence": {
+          "goal_coverage": [
+            {
+              "goal_ref": "K-CONTEXT",
+              "item_ids": [
+                "Q01",
+                "Q02"
+              ]
+            },
+            {
+              "goal_ref": "K-GRIEVANCE",
+              "item_ids": [
+                "Q03",
+                "Q04",
+                "Q05"
+              ]
+            },
+            {
+              "goal_ref": "K-SELF-SERVICE",
+              "item_ids": [
+                "Q06",
+                "Q07"
+              ]
+            },
+            {
+              "goal_ref": "K-APPEARANCE",
+              "item_ids": [
+                "Q08"
+              ]
+            },
+            {
+              "goal_ref": "K-ACTION",
+              "item_ids": [
+                "Q09",
+                "Q10"
+              ]
+            },
+            {
+              "goal_ref": "K-FLAG",
+              "item_ids": [
+                "Q11",
+                "Q12"
+              ]
+            },
+            {
+              "goal_ref": "K-SYNTHESIS",
+              "item_ids": [
+                "Q13",
+                "Q14"
+              ]
+            }
+          ],
+          "support_transitions": [
+            {
+              "from_item_id": "Q01",
+              "to_item_id": "Q02",
+              "reason": "Preserve the supplied blueprint from reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim. to classify independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q02",
+              "to_item_id": "Q03",
+              "reason": "Preserve the supplied blueprint from classify independent-response-check; static packet-authoring intention, not a mastery claim. to reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q03",
+              "to_item_id": "Q04",
+              "reason": "Preserve the supplied blueprint from reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim. to evidence_select independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q04",
+              "to_item_id": "Q05",
+              "reason": "Preserve the supplied blueprint from evidence_select independent-response-check; static packet-authoring intention, not a mastery claim. to open_check independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q05",
+              "to_item_id": "Q06",
+              "reason": "Preserve the supplied blueprint from open_check independent-response-check; static packet-authoring intention, not a mastery claim. to reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q06",
+              "to_item_id": "Q07",
+              "reason": "Preserve the supplied blueprint from reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim. to evidence_select independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q07",
+              "to_item_id": "Q08",
+              "reason": "Preserve the supplied blueprint from evidence_select independent-response-check; static packet-authoring intention, not a mastery claim. to classify independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q08",
+              "to_item_id": "Q09",
+              "reason": "Preserve the supplied blueprint from classify independent-response-check; static packet-authoring intention, not a mastery claim. to reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q09",
+              "to_item_id": "Q10",
+              "reason": "Preserve the supplied blueprint from reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim. to evidence_select independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q10",
+              "to_item_id": "Q11",
+              "reason": "Preserve the supplied blueprint from evidence_select independent-response-check; static packet-authoring intention, not a mastery claim. to reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q11",
+              "to_item_id": "Q12",
+              "reason": "Preserve the supplied blueprint from reading_mcq independent-response-check; static packet-authoring intention, not a mastery claim. to open_check independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q12",
+              "to_item_id": "Q13",
+              "reason": "Preserve the supplied blueprint from open_check independent-response-check; static packet-authoring intention, not a mastery claim. to open_check independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            },
+            {
+              "from_item_id": "Q13",
+              "to_item_id": "Q14",
+              "reason": "Preserve the supplied blueprint from open_check independent-response-check; static packet-authoring intention, not a mastery claim. to open_prompt independent-response-check; static packet-authoring intention, not a mastery claim.; support source-visible to source-visible. No variety or load policy inferred."
+            }
+          ]
+        }
+      }
+    }
   }
 }
